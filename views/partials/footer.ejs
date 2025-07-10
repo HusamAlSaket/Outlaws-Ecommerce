@@ -1,37 +1,83 @@
-<footer class="footer mt-auto bg-dark text-light pt-5 pb-3">
-  <div class="container">
+<footer class="footer mt-auto text-light pt-5 pb-3" style="background: linear-gradient(135deg, #001f3f 0%, #003366 100%); position: relative; overflow: hidden;">
+  <!-- Animated background elements -->
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%); pointer-events: none;"></div>
+  
+  <div class="container position-relative">
     <div class="row gy-4">
       <!-- Brand Info -->
       <div class="col-md-4">
-        <h5 class="text-white fw-bold mb-3">Ecommerce Outlaws</h5>
-        <p class="small">Outlaw your wardrobe. Gear up with bold fashion that's made to disrupt and designed to stand out.</p>
+        <h5 class="text-white fw-bold mb-3" style="display: flex; align-items: center;">
+          <i class="fas fa-bolt me-2" style="color: #ffc107;"></i>
+          Ecommerce Outlaws
+        </h5>
+        <p class="small opacity-75" style="line-height: 1.6;">Outlaw your wardrobe. Gear up with bold fashion that's made to disrupt and designed to stand out.</p>
+        <div class="mt-3">
+          <span class="badge" style="background: rgba(255, 255, 255, 0.1); color: white; padding: 0.5rem 1rem; border-radius: 20px;">
+            <i class="fas fa-shipping-fast me-1"></i>Free Shipping
+          </span>
+        </div>
       </div>
 
       <!-- Quick Links -->
       <div class="col-md-4">
-        <h6 class="text-uppercase fw-semibold mb-3">Quick Links</h6>
+        <h6 class="text-uppercase fw-semibold mb-3" style="color: #ffc107; letter-spacing: 1px;">Quick Links</h6>
         <ul class="list-unstyled small">
-          <li><a href="/" class="text-light text-decoration-none">Home</a></li>
-          <li><a href="/products" class="text-light text-decoration-none">Shop</a></li>
-          <li><a href="/about" class="text-light text-decoration-none">About Us</a></li>
-          <li><a href="/contact" class="text-light text-decoration-none">Contact</a></li>
+          <li class="mb-2">
+            <a href="/" class="text-light text-decoration-none d-flex align-items-center" style="transition: all 0.3s ease; opacity: 0.8;" onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+              <i class="fas fa-home me-2"></i>Home
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="/products" class="text-light text-decoration-none d-flex align-items-center" style="transition: all 0.3s ease; opacity: 0.8;" onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+              <i class="fas fa-shopping-bag me-2"></i>Shop
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="/about" class="text-light text-decoration-none d-flex align-items-center" style="transition: all 0.3s ease; opacity: 0.8;" onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+              <i class="fas fa-info-circle me-2"></i>About Us
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="/cart" class="text-light text-decoration-none d-flex align-items-center" style="transition: all 0.3s ease; opacity: 0.8;" onmouseover="this.style.opacity='1'; this.style.transform='translateX(5px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateX(0)'">
+              <i class="fas fa-shopping-cart me-2"></i>Cart
+            </a>
+          </li>
         </ul>
       </div>
 
-      <!-- Social Media -->
+      <!-- Social Media & Contact -->
       <div class="col-md-4">
-        <h6 class="text-uppercase fw-semibold mb-3">Follow Us</h6>
-        <a href="#" class="text-light me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="text-light me-3 fs-5"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-light me-3 fs-5"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="text-light fs-5"><i class="fab fa-tiktok"></i></a>
+        <h6 class="text-uppercase fw-semibold mb-3" style="color: #ffc107; letter-spacing: 1px;">Connect With Us</h6>
+        <div class="mb-3">
+          <a href="#" class="text-light me-3 fs-5" style="transition: all 0.3s ease; opacity: 0.8;" onmouseover="this.style.opacity='1'; this.style.transform='translateY(-3px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateY(0)'">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-light me-3 fs-5" style="transition: all 0.3s ease; opacity: 0.8;" onmouseover="this.style.opacity='1'; this.style.transform='translateY(-3px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateY(0)'">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-light me-3 fs-5" style="transition: all 0.3s ease; opacity: 0.8;" onmouseover="this.style.opacity='1'; this.style.transform='translateY(-3px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateY(0)'">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-light fs-5" style="transition: all 0.3s ease; opacity: 0.8;" onmouseover="this.style.opacity='1'; this.style.transform='translateY(-3px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateY(0)'">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+        <div class="small opacity-75">
+          <p class="mb-1"><i class="fas fa-envelope me-2"></i>hello@outlaws.com</p>
+          <p class="mb-1"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</p>
+        </div>
       </div>
     </div>
 
-    <hr class="border-light mt-4"/>
+    <hr class="border-light mt-4 opacity-25"/>
 
-    <div class="text-center small">
-      &copy; <%= new Date().getFullYear() %> Ecommerce Outlaws. All Rights Reserved.
+    <div class="text-center small d-flex justify-content-between align-items-center flex-wrap">
+      <span>&copy; <%= new Date().getFullYear() %> Ecommerce Outlaws. All Rights Reserved.</span>
+      <div class="mt-2 mt-md-0">
+        <span class="opacity-75">Made with </span>
+        <i class="fas fa-heart text-danger"></i>
+        <span class="opacity-75"> for rebels</span>
+      </div>
     </div>
   </div>
 </footer>

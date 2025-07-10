@@ -53,10 +53,38 @@ app.get('/cart/remove/:id', removeFromCart);
 // View cart (we'll build this page next)
 app.get('/cart', (req, res) => {
   const cart = req.session.cart || {};
-  res.render('cart', { cart });
+  
+  // Convert cart object to array format expected by EJS template
+  const cartItems = [];
+  let totalAmount = 0;
+  
+  for (const id in cart) {
+    const item = cart[id];
+    cartItems.push({
+      id: id,
+      title: item.title,
+      price: item.price,
+      qty: item.qty,
+      image: item.image,
+      total: item.price * item.qty
+    });
+    totalAmount += item.price * item.qty;
+  }
+  
+  res.render('cart', { cartItems, totalAmount });
 });
 
-
+// API endpoint for cart count (for navbar badge)
+app.get('/api/cart/count', (req, res) => {
+  const cart = req.session.cart || {};
+  let totalItems = 0;
+  
+  for (const id in cart) {
+    totalItems += cart[id].qty;
+  }
+  
+  res.json({ count: totalItems });
+});
 
 // Connect to MongoDB
 mongoose
