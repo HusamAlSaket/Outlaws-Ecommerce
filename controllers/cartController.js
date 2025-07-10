@@ -3,6 +3,7 @@ const Product = require('../models/Product');
 // add item to cart
 exports.addToCart = async (req, res) => {
   const productId = req.params.id;
+  const quantity = parseInt(req.query.qty) || 1; // Get quantity from query parameter
 
   try {
     const product = await Product.findById(productId);
@@ -11,15 +12,15 @@ exports.addToCart = async (req, res) => {
     const cart = req.session.cart || {};
 
     if (cart[productId]) {
-      // already in cart, increment quantity
-      cart[productId].qty += 1;
+      // already in cart, increment quantity by the specified amount
+      cart[productId].qty += quantity;
     } else {
       // new item
       cart[productId] = {
         title: product.title,
         price: product.price,
         image: product.image,
-        qty: 1,
+        qty: quantity,
       };
     }
 

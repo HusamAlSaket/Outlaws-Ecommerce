@@ -79,6 +79,7 @@ app.get('/api/cart/count', (req, res) => {
   const cart = req.session.cart || {};
   let totalItems = 0;
   
+  // Count total quantity of all items (including duplicates)
   for (const id in cart) {
     totalItems += cart[id].qty;
   }

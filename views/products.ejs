@@ -488,8 +488,8 @@
         button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Adding...';
         button.disabled = true;
 
-        // Send request
-        fetch(`/cart/add/${productId}`)
+        // Send request with quantity parameter (default 1 for products page)
+        fetch(`/cart/add/${productId}?qty=1`)
           .then((res) => {
             if (res.ok) {
               // ✅ Visual feedback success

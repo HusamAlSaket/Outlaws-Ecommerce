@@ -262,13 +262,17 @@
   <script>
     // Add to cart function
     function addToCart(productId, button) {
+      // Get quantity from input
+      const quantityInput = document.getElementById('quantity');
+      const quantity = parseInt(quantityInput.value) || 1;
+      
       // Visual feedback (before request)
       const originalText = button.innerHTML;
       button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Adding...';
       button.disabled = true;
 
-      // Send request
-      fetch(`/cart/add/${productId}`)
+      // Send request with quantity parameter
+      fetch(`/cart/add/${productId}?qty=${quantity}`)
         .then((res) => {
           if (res.ok) {
             // ✅ Visual feedback success
