@@ -16,7 +16,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // Import Controller
-const { getHomePage,getProductDetails } = require("./controllers/productController");
+const { getHomePage,getProductDetails,getProductsPage } = require("./controllers/productController");
 
 // Home Route
 app.get("/", getHomePage);
@@ -25,6 +25,11 @@ app.get("/", getHomePage);
 app.get("/about", (req, res) => {
   res.render("about");
 });
+
+// Products Route
+app.get('/products', getProductsPage);
+
+
 
 
 // product details route
