@@ -34,7 +34,8 @@ const sampleProducts = [
     price: 59.99,
     image: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/AIR+FORCE+1+%2707.png",
     category: "men-sneakers",
-    popular: true
+    popular: true,
+    quantity: 11
   },
   {
     title: "Women's Blue Jeans",
@@ -50,7 +51,8 @@ const sampleProducts = [
     price: 129.99,
     image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=600&fit=crop",
     category: "outerwear",
-    popular: true
+    popular: true,
+    quantity: 15
   },
   {
     title: "Women's Combat Boots",
@@ -74,7 +76,8 @@ const sampleProducts = [
     price: 54.99,
     image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=600&fit=crop",
     category: "women-hoodies",
-    popular: false
+    popular: false,
+    quantity: 8
   },
   {
     title: "Distressed Denim Jacket",
@@ -90,7 +93,8 @@ const sampleProducts = [
     price: 69.99,
     image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=400&h=600&fit=crop",
     category: "men-pants",
-    popular: false
+    popular: false,
+    quantity: 30
   },
   {
     title: "Women's Platform Sneakers",

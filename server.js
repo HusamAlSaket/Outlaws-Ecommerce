@@ -6,6 +6,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+const session=require("express-session");
 
 // middleware to serve static files like css
 
@@ -15,8 +16,17 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
+// set the session middleware
+
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+}))
+
 // Import Controller
 const { getHomePage,getProductDetails,getProductsPage } = require("./controllers/productController");
+const {addToCart, removeFromCart} = require("./controllers/cartController");
 
 // Home Route
 app.get("/", getHomePage);
@@ -29,11 +39,24 @@ app.get("/about", (req, res) => {
 // Products Route
 app.get('/products', getProductsPage);
 
-
-
-
 // product details route
 app.get("/products/:id", getProductDetails);
+
+// Cart Routes
+
+// Add to cart
+app.get('/cart/add/:id', addToCart);
+
+// Remove from cart
+app.get('/cart/remove/:id', removeFromCart);
+
+// View cart (we'll build this page next)
+app.get('/cart', (req, res) => {
+  const cart = req.session.cart || {};
+  res.render('cart', { cart });
+});
+
+
 
 // Connect to MongoDB
 mongoose
