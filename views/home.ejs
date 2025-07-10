@@ -96,19 +96,73 @@
       }
 
       .product-card {
-        transition: 0.3s ease;
-        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        overflow: hidden;
+        background: white;
+        height: 100%;
       }
 
       .product-card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 31, 63, 0.1);
         border-color: var(--primary);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
 
       .product-card img {
-        height: 220px;
+        height: 250px;
+        width: 100%;
         object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease;
+      }
+
+      .product-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .product-card .card-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .product-card .card-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 8px;
+      }
+
+      .product-card .card-text {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        flex-grow: 1;
+        line-height: 1.4;
+      }
+
+      .product-card .price {
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+
+      .product-card .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        margin-top: auto;
+      }
+
+      .product-card .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 31, 63, 0.3);
       }
 
       /* COUPONS */
@@ -197,9 +251,10 @@
       .popular-card {
         transition: all 0.3s ease;
         border: 1px solid #e9ecef;
-        border-radius: 8px;
+        border-radius: 12px;
         overflow: hidden;
         background: white;
+        height: 100%;
       }
 
       .popular-card:hover {
@@ -209,8 +264,10 @@
       }
 
       .popular-card img {
-        height: 180px;
+        height: 220px;
+        width: 100%;
         object-fit: cover;
+        object-position: center;
         transition: transform 0.3s ease;
       }
 
@@ -219,27 +276,38 @@
       }
 
       .popular-card .card-body {
-        padding: 15px;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
       }
 
       .popular-card .card-title {
-        font-size: 0.9rem;
-        font-weight: 600;
+        font-size: 1rem;
+        font-weight: 700;
         color: var(--text-dark);
         margin-bottom: 8px;
+      }
+
+      .popular-card .card-text {
+        color: #6c757d;
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+        flex-grow: 1;
+        line-height: 1.4;
       }
 
       .popular-card .price {
         color: var(--primary);
         font-weight: 700;
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
 
       .popular-card .btn {
         font-size: 0.85rem;
         padding: 8px 16px;
         font-weight: 600;
-        border-radius: 4px;
+        border-radius: 6px;
         transition: all 0.3s ease;
       }
 
@@ -309,10 +377,10 @@
     <section class="trending-section">
       <div class="container">
         <h2 class="section-title">🔥 Trending Products</h2>
-        <div class="row">
+        <div class="row g-4">
           <% products.forEach(product => { %>
-          <div class="col-md-4 mb-4">
-            <div class="card product-card h-100 shadow-sm">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card product-card h-100">
               <img
                 src="<%= product.image %>"
                 class="card-img-top"
@@ -320,9 +388,9 @@
               />
               <div class="card-body">
                 <h5 class="card-title"><%= product.title %></h5>
-                <p class="text-muted"><%= product.description %></p>
-                <p class="fw-bold">$<%= product.price %></p>
-                <a href="/products/<%=product._id%>" class="btn btn-primary btn-sm">View Product</a>
+                <p class="card-text"><%= product.description %></p>
+                <p class="price">$<%= product.price %></p>
+                <a href="/products/<%=product._id%>" class="btn btn-primary">View Product</a>
               </div>
             </div>
           </div>
@@ -342,16 +410,14 @@
           <% popularProducts.forEach(product => { %>
           <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
             <div class="card popular-card h-100">
-              <div class="position-relative overflow-hidden">
-                <img
-                  src="<%= product.image %>"
-                  class="card-img-top"
-                  alt="<%= product.title %>"
-                />
-              </div>
+              <img
+                src="<%= product.image %>"
+                class="card-img-top"
+                alt="<%= product.title %>"
+              />
               <div class="card-body d-flex flex-column">
                 <h6 class="card-title"><%= product.title %></h6>
-                <p class="text-muted small flex-grow-1 mb-3">
+                <p class="card-text flex-grow-1">
                   <%= product.description %>
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
