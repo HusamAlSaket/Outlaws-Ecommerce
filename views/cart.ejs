@@ -593,10 +593,21 @@
 
     <script>
       function updateQuantity(productId, change) {
-        // For now, this is a placeholder - you can implement AJAX updates later
-        console.log(`Update quantity for product ${productId} by ${change}`);
-        // In a real implementation, you would make an AJAX call to update the quantity
-        // and then refresh the cart or update the display dynamically
+        // Reuse existing addToCart endpoint with positive/negative quantity
+        fetch(`/cart/add/${productId}?qty=${change}`)
+          .then(response => {
+            if (response.ok) {
+              // Reload page to show updated cart
+              window.location.reload();
+            } else {
+              console.error('Error updating quantity');
+              alert('Error updating quantity. Please try again.');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('Error updating quantity. Please try again.');
+          });
       }
     </script>
 

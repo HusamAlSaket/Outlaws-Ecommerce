@@ -12,16 +12,26 @@ exports.addToCart = async (req, res) => {
     const cart = req.session.cart || {};
 
     if (cart[productId]) {
-      // already in cart, increment quantity by the specified amount
-      cart[productId].qty += quantity;
+      // already in cart, calculate new quantity
+      const newQuantity = cart[productId].qty + quantity;
+      
+      if (newQuantity <= 0) {
+        // Remove item if quantity becomes 0 or negative
+        delete cart[productId];
+      } else {
+        // Update quantity
+        cart[productId].qty = newQuantity;
+      }
     } else {
-      // new item
-      cart[productId] = {
-        title: product.title,
-        price: product.price,
-        image: product.image,
-        qty: quantity,
-      };
+      // new item (only if quantity is positive)
+      if (quantity > 0) {
+        cart[productId] = {
+          title: product.title,
+          price: product.price,
+          image: product.image,
+          qty: quantity,
+        };
+      }
     }
 
     req.session.cart = cart;
