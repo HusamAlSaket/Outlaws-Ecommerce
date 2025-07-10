@@ -482,63 +482,6 @@
     <%- include('partials/footer') %>
 
     <script>
-      // Add to cart function
-      function addToCart(productId, button) {
-        // Visual feedback (before request)
-        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Adding...';
-        button.disabled = true;
-
-        // Send request with quantity parameter (default 1 for products page)
-        fetch(`/cart/add/${productId}?qty=1`)
-          .then((res) => {
-            if (res.ok) {
-              // ✅ Visual feedback success
-              button.innerHTML = '<i class="fas fa-check"></i> Added!';
-              button.style.background =
-                "linear-gradient(135deg, #28a745, #20c997)";
-              
-              // Update cart badge in navbar
-              updateCartBadge();
-            } else {
-              throw new Error("Failed to add to cart");
-            }
-          })
-          .catch(() => {
-            button.innerHTML = '<i class="fas fa-times"></i> Error';
-            button.style.background = "#dc3545";
-          })
-          .finally(() => {
-            setTimeout(() => {
-              button.innerHTML =
-                '<i class="fas fa-shopping-bag"></i> Add to Bag';
-              button.style.background =
-                "linear-gradient(135deg, var(--primary), #0066cc)";
-              button.disabled = false;
-            }, 2000);
-          });
-      }
-
-      // Function to update cart badge
-      function updateCartBadge() {
-        fetch('/api/cart/count')
-          .then(response => response.json())
-          .then(data => {
-            const cartBadge = document.getElementById('cart-count');
-            if (cartBadge) {
-              if (data.count > 0) {
-                cartBadge.textContent = data.count;
-                cartBadge.classList.remove('hidden');
-                // Add animation
-                cartBadge.style.animation = 'none';
-                setTimeout(() => cartBadge.style.animation = 'pulse 0.3s ease', 10);
-              } else {
-                cartBadge.classList.add('hidden');
-              }
-            }
-          })
-          .catch(error => console.error('Error updating cart count:', error));
-      }
-
       // Stagger animation for product cards
       document.addEventListener("DOMContentLoaded", function () {
         const cards = document.querySelectorAll(".fade-in");

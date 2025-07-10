@@ -245,7 +245,7 @@
               <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="10">
             </div>
             
-            <button class="btn btn-add-cart" onclick="addToCart('<%= product._id %>', this)">
+            <button class="btn btn-add-cart" onclick="addToCartWithQuantity('<%= product._id %>', this)">
               <i class="fas fa-shopping-cart me-2"></i>Add to Cart
             </button>
           </div>
@@ -260,44 +260,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
-    // Add to cart function
-    function addToCart(productId, button) {
+    // Product details specific function that gets quantity and calls global addToCart
+    function addToCartWithQuantity(productId, button) {
       // Get quantity from input
       const quantityInput = document.getElementById('quantity');
       const quantity = parseInt(quantityInput.value) || 1;
       
-      // Visual feedback (before request)
-      const originalText = button.innerHTML;
-      button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Adding...';
-      button.disabled = true;
-
-      // Send request with quantity parameter
-      fetch(`/cart/add/${productId}?qty=${quantity}`)
-        .then((res) => {
-          if (res.ok) {
-            // ✅ Visual feedback success
-            button.innerHTML = '<i class="fas fa-check me-2"></i>Added!';
-            button.style.background = "linear-gradient(135deg, #28a745, #20c997)";
-            
-            // Update cart badge in navbar
-            if (typeof updateCartBadge === 'function') {
-              updateCartBadge();
-            }
-          } else {
-            throw new Error("Failed to add to cart");
-          }
-        })
-        .catch(() => {
-          button.innerHTML = '<i class="fas fa-times me-2"></i>Error';
-          button.style.background = "#dc3545";
-        })
-        .finally(() => {
-          setTimeout(() => {
-            button.innerHTML = originalText;
-            button.style.background = "";
-            button.disabled = false;
-          }, 2000);
-        });
+      // Call the global addToCart function with the quantity
+      addToCart(productId, button, quantity);
     }
   </script>
 </body>

@@ -422,7 +422,7 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="price">$<%= product.price %></span>
-                  <a href="#" class="btn btn-primary btn-sm">Add</a>
+                  <button onclick="addToCart('<%= product._id %>', this)" class="btn btn-primary btn-sm">Add</button>
                 </div>
               </div>
             </div>

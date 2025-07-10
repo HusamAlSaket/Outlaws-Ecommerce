@@ -176,13 +176,48 @@
             .catch(error => console.error('Error updating cart count:', error));
     }
 
+    // Global addToCart function (available on all pages)
+    function addToCart(productId, button, quantity = 1) {
+        // Visual feedback (before request)
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Adding...';
+        button.disabled = true;
+
+        // Send request with quantity parameter
+        fetch(`/cart/add/${productId}?qty=${quantity}`)
+            .then((res) => {
+                if (res.ok) {
+                    // ✅ Visual feedback success
+                    button.innerHTML = '<i class="fas fa-check"></i> Added!';
+                    button.style.background = "linear-gradient(135deg, #28a745, #20c997)";
+                    
+                    // Update cart badge in navbar
+                    updateCartBadge();
+                } else {
+                    throw new Error("Failed to add to cart");
+                }
+            })
+            .catch(() => {
+                button.innerHTML = '<i class="fas fa-times"></i> Error';
+                button.style.background = "#dc3545";
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = "";
+                    button.disabled = false;
+                }, 2000);
+            });
+    }
+
     // Update cart count on page load
     document.addEventListener('DOMContentLoaded', function () {
         updateCartBadge();
     });
 
-    // Make updateCartBadge globally accessible for other pages
+    // Make functions globally accessible
     window.updateCartBadge = updateCartBadge;
+    window.addToCart = addToCart;
 </script>
 </body>
 </html>
