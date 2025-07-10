@@ -16,10 +16,13 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // Import Controller
-const { getHomePage } = require("./controllers/productController");
+const { getHomePage,getProductDetails } = require("./controllers/productController");
 
 // Home Route
 app.get("/", getHomePage);
+
+// product details route
+app.get("/products/:id", getProductDetails);
 
 // Connect to MongoDB
 mongoose
