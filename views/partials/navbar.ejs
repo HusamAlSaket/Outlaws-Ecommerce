@@ -155,34 +155,34 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 <script>
-    // Update cart count on page load
-    document.addEventListener('DOMContentLoaded', function () {
-        updateCartCount();
-    });
-
-    function updateCartCount() {
+    // Global function to update cart count
+    function updateCartBadge() {
         fetch('/api/cart/count')
             .then(response => response.json())
             .then(data => {
                 const cartBadge = document.getElementById('cart-count');
-                if (data.count > 0) {
-                    cartBadge.textContent = data.count;
-                    cartBadge.classList.remove('hidden');
-                } else {
-                    cartBadge.classList.add('hidden');
+                if (cartBadge) {
+                    if (data.count > 0) {
+                        cartBadge.textContent = data.count;
+                        cartBadge.classList.remove('hidden');
+                        // Add pulse animation when count changes
+                        cartBadge.style.animation = 'none';
+                        setTimeout(() => cartBadge.style.animation = 'pulse 0.3s ease', 10);
+                    } else {
+                        cartBadge.classList.add('hidden');
+                    }
                 }
             })
             .catch(error => console.error('Error updating cart count:', error));
     }
 
-    // Function to be called when items are added to cart
-    window.updateCartBadge = function (count) {
-        const cartBadge = document.getElementById('cart-count');
-        cartBadge.textContent = count;
-        cartBadge.classList.remove('hidden');
-        cartBadge.style.animation = 'none';
-        setTimeout(() => cartBadge.style.animation = 'pulse 0.3s ease', 10);
-    }
+    // Update cart count on page load
+    document.addEventListener('DOMContentLoaded', function () {
+        updateCartBadge();
+    });
+
+    // Make updateCartBadge globally accessible for other pages
+    window.updateCartBadge = updateCartBadge;
 </script>
 </body>
 </html>
