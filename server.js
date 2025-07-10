@@ -21,6 +21,12 @@ const { getHomePage,getProductDetails } = require("./controllers/productControll
 // Home Route
 app.get("/", getHomePage);
 
+// About Route
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+
+
 // product details route
 app.get("/products/:id", getProductDetails);
 
