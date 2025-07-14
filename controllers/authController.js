@@ -3,93 +3,112 @@ const bcrypt = require('bcrypt');
 
 // Show registration form
 exports.getRegister = (req, res) => {
-  res.render('auth/register'); // views/auth/register.ejs
+  res.render('auth/register', { errors: null, oldInput: null });
 };
-
-// Handle user registration
 exports.postRegister = async (req, res) => {
   const { username, email, password } = req.body;
+  const errors = {};
+
+  if (!username || username.length < 3) {
+    errors.username = "Username must be at least 3 characters.";
+  }
+
+  if (!email || !email.includes("@")) {
+    errors.email = "Please enter a valid email address.";
+  }
+
+  if (!password || password.length < 6) {
+    errors.password = "Password must be at least 6 characters.";
+  }
+
+  if (Object.keys(errors).length > 0) {
+    return res.render('auth/register', { errors, oldInput: req.body });
+  }
 
   try {
-    // Check if user exists by email
     const existingEmail = await User.findOne({ email });
     if (existingEmail) {
-      return res.send("❌ Email already registered.");
+      errors.email = "Email already registered.";
+      return res.render('auth/register', { errors, oldInput: req.body });
     }
 
-    // Check if username exists
     const existingUsername = await User.findOne({ username });
     if (existingUsername) {
-      return res.send("❌ Username already taken. Please choose a different username.");
+      errors.username = "Username already taken.";
+      return res.render('auth/register', { errors, oldInput: req.body });
     }
 
-    // Create new user (password will be hashed automatically by pre-save middleware)
-    const newUser = new User({
-      username,
-      email,
-      password, // Don't hash here - let the model's pre-save middleware handle it
-    });
-
+    const newUser = new User({ username, email, password });
     await newUser.save();
 
     req.session.user = {
       _id: newUser._id,
       username: newUser.username,
       email: newUser.email,
-      isAdmin: newUser.isAdmin,
-      createdAt: newUser.createdAt
+      isAdmin: newUser.isAdmin
     };
 
-    res.redirect('/'); // or homepage or dashboard
+    res.redirect('/');
   } catch (err) {
     console.error(err);
-    
-    // Handle duplicate key errors
-    if (err.code === 11000) {
-      if (err.keyPattern.email) {
-        return res.send("❌ Email already registered.");
-      }
-      if (err.keyPattern.username) {
-        return res.send("❌ Username already taken. Please choose a different username.");
-      }
-    }
-    
-    res.status(500).send('Registration failed');
+    res.status(500).render('auth/register', { errors: { general: "Server error. Please try again." }, oldInput: req.body });
   }
 };
 
+
 // Show login form
 exports.getLogin = (req, res) => {
-  res.render('auth/login'); // Make sure you have views/auth/login.ejs
+  res.render('auth/login', { errors: null, oldInput: null });
 };
 
 // Handle user login
 exports.postLogin = async (req, res) => {
   const { email, password } = req.body;
+  const errors = {};
+
+  if (!email || !email.includes('@')) {
+    errors.email = "Please enter a valid email address.";
+  }
+
+  if (!password) {
+    errors.password = "Password is required.";
+  }
+
+  if (Object.keys(errors).length > 0) {
+    return res.render('auth/login', { errors, oldInput: req.body });
+  }
 
   try {
     const user = await User.findOne({ email });
     if (!user) {
-      return res.send("❌ Invalid credentials.");
+      return res.render('auth/login', {
+        errors: { email: "Email not found." },
+        oldInput: req.body
+      });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.send("❌ Incorrect password.");
+      return res.render('auth/login', {
+        errors: { password: "Incorrect password." },
+        oldInput: req.body
+      });
     }
 
     req.session.user = {
       _id: user._id,
       username: user.username,
       email: user.email,
-      isAdmin: user.isAdmin,
-      createdAt: user.createdAt
+      isAdmin: user.isAdmin
     };
 
     res.redirect('/');
   } catch (err) {
     console.error(err);
-    res.status(500).send('Login failed');
+    res.status(500).render('auth/login', {
+      errors: { general: "Server error. Please try again." },
+      oldInput: req.body
+    });
   }
 };
 
