@@ -6,7 +6,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const session=require("express-session");
+const session = require("express-session");
 
 // middleware to serve static files like css
 
@@ -18,15 +18,28 @@ app.set("view engine", "ejs");
 
 // set the session middleware
 
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: true,
-}))
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 // Import Controller
-const { getHomePage,getProductDetails,getProductsPage } = require("./controllers/productController");
-const {addToCart, removeFromCart} = require("./controllers/cartController");
+const {
+  getHomePage,
+  getProductDetails,
+  getProductsPage,
+} = require("./controllers/productController");
+const { addToCart, removeFromCart } = require("./controllers/cartController");
+const {
+  getRegister,
+  postRegister,
+  getLogin,
+  postLogin,
+  logout,
+} = require("./controllers/authController");
 
 // Home Route
 app.get("/", getHomePage);
@@ -37,7 +50,7 @@ app.get("/about", (req, res) => {
 });
 
 // Products Route
-app.get('/products', getProductsPage);
+app.get("/products", getProductsPage);
 
 // product details route
 app.get("/products/:id", getProductDetails);
@@ -45,19 +58,19 @@ app.get("/products/:id", getProductDetails);
 // Cart Routes
 
 // Add to cart
-app.get('/cart/add/:id', addToCart);
+app.get("/cart/add/:id", addToCart);
 
 // Remove from cart
-app.get('/cart/remove/:id', removeFromCart);
+app.get("/cart/remove/:id", removeFromCart);
 
 // View cart (we'll build this page next)
-app.get('/cart', (req, res) => {
+app.get("/cart", (req, res) => {
   const cart = req.session.cart || {};
-  
+
   // Convert cart object to array format expected by EJS template
   const cartItems = [];
   let totalAmount = 0;
-  
+
   for (const id in cart) {
     const item = cart[id];
     cartItems.push({
@@ -66,33 +79,39 @@ app.get('/cart', (req, res) => {
       price: item.price,
       qty: item.qty,
       image: item.image,
-      total: item.price * item.qty
+      total: item.price * item.qty,
     });
     totalAmount += item.price * item.qty;
   }
-  
-  res.render('cart', { cartItems, totalAmount });
+
+  res.render("cart", { cartItems, totalAmount });
 });
 
 // API endpoint for cart count (for navbar badge)
-app.get('/api/cart/count', (req, res) => {
+app.get("/api/cart/count", (req, res) => {
   const cart = req.session.cart || {};
   let totalItems = 0;
-  
+
   // Count total quantity of all items (including duplicates)
   for (const id in cart) {
     totalItems += cart[id].qty;
   }
-  
+
   res.json({ count: totalItems });
 });
 
+// Authentication Routes
+app.get("/register", getRegister);
+app.post("/register", express.urlencoded({ extended: true }), postRegister);
+
+app.get("/login", getLogin);
+app.post("/login", express.urlencoded({ extended: true }), postLogin);
+
+app.get("/logout", logout);
+
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
