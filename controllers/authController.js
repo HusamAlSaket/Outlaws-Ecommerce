@@ -8,36 +8,52 @@ exports.getRegister = (req, res) => {
 
 // Handle user registration
 exports.postRegister = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { username, email, password } = req.body;
 
   try {
-    // Check if user exists
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
+    // Check if user exists by email
+    const existingEmail = await User.findOne({ email });
+    if (existingEmail) {
       return res.send("❌ Email already registered.");
     }
 
-    // Hash password
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // Check if username exists
+    const existingUsername = await User.findOne({ username });
+    if (existingUsername) {
+      return res.send("❌ Username already taken. Please choose a different username.");
+    }
 
-    // Create new user
+    // Create new user (password will be hashed automatically by pre-save middleware)
     const newUser = new User({
-      name,
+      username,
       email,
-      password: hashedPassword,
+      password, // Don't hash here - let the model's pre-save middleware handle it
     });
 
     await newUser.save();
 
     req.session.user = {
       _id: newUser._id,
-      name: newUser.name,
-      email: newUser.email
+      username: newUser.username,
+      email: newUser.email,
+      isAdmin: newUser.isAdmin,
+      createdAt: newUser.createdAt
     };
 
-    res.redirect('/profile'); // or homepage or dashboard
+    res.redirect('/'); // or homepage or dashboard
   } catch (err) {
     console.error(err);
+    
+    // Handle duplicate key errors
+    if (err.code === 11000) {
+      if (err.keyPattern.email) {
+        return res.send("❌ Email already registered.");
+      }
+      if (err.keyPattern.username) {
+        return res.send("❌ Username already taken. Please choose a different username.");
+      }
+    }
+    
     res.status(500).send('Registration failed');
   }
 };
@@ -64,11 +80,13 @@ exports.postLogin = async (req, res) => {
 
     req.session.user = {
       _id: user._id,
-      name: user.name,
-      email: user.email
+      username: user.username,
+      email: user.email,
+      isAdmin: user.isAdmin,
+      createdAt: user.createdAt
     };
 
-    res.redirect('/profile');
+    res.redirect('/');
   } catch (err) {
     console.error(err);
     res.status(500).send('Login failed');
@@ -80,4 +98,14 @@ exports.logout = (req, res) => {
   req.session.destroy(() => {
     res.redirect('/');
   });
+};
+
+// Show profile page
+exports.getProfile = (req, res) => {
+  // Check if user is logged in
+  if (!req.session.user) {
+    return res.redirect('/login');
+  }
+  
+  res.render('profile', { user: req.session.user });
 };

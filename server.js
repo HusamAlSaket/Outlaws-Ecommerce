@@ -16,6 +16,10 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
+// Body parsing middleware - MUST come before routes
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // set the session middleware
 
 app.use(
@@ -25,6 +29,12 @@ app.use(
     saveUninitialized: true,
   })
 );
+
+// Global middleware to make user available in all templates
+app.use((req, res, next) => {
+  res.locals.user = req.session.user || null;
+  next();
+});
 
 // Import Controller
 const {
@@ -39,6 +49,7 @@ const {
   getLogin,
   postLogin,
   logout,
+  getProfile,
 } = require("./controllers/authController");
 
 // Home Route
@@ -102,10 +113,12 @@ app.get("/api/cart/count", (req, res) => {
 
 // Authentication Routes
 app.get("/register", getRegister);
-app.post("/register", express.urlencoded({ extended: true }), postRegister);
+app.post("/register", postRegister);
 
 app.get("/login", getLogin);
-app.post("/login", express.urlencoded({ extended: true }), postLogin);
+app.post("/login", postLogin);
+
+app.get("/profile", getProfile);
 
 app.get("/logout", logout);
 
