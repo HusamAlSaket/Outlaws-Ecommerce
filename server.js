@@ -52,6 +52,12 @@ const {
   getProfile,
 } = require("./controllers/authController");
 
+const {
+  getCheckout,
+  postCheckout,
+  getOrders,
+} = require("./controllers/orderController");
+
 // Home Route
 app.get("/", getHomePage);
 
@@ -110,6 +116,13 @@ app.get("/api/cart/count", (req, res) => {
 
   res.json({ count: totalItems });
 });
+
+// Checkout Routes
+app.get("/checkout", getCheckout);
+app.post("/checkout", express.urlencoded({ extended: true }), postCheckout);
+
+// Orders Route
+app.get("/orders", getOrders);
 
 // Authentication Routes
 app.get("/register", getRegister);

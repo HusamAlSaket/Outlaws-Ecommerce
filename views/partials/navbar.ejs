@@ -124,25 +124,30 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Main navigation closer to logo -->
+            <ul class="navbar-nav ms-4">
+                <li class="nav-item">
+                    <a class="nav-link px-4" href="/" style="transition: all 0.3s ease; color: white; font-size: 1.1rem; font-weight: 500;">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4" href="/products" style="transition: all 0.3s ease; color: white; font-size: 1.1rem; font-weight: 500;">
+                        Products
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4" href="/about" style="transition: all 0.3s ease; color: white; font-size: 1.1rem; font-weight: 500;">
+                        About
+                    </a>
+                </li>
+            </ul>
+
+            <!-- User actions on the right -->
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="/" style="transition: all 0.3s ease;">
-                        <i class="fas fa-home me-1"></i>Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="/about" style="transition: all 0.3s ease;">
-                        <i class="fas fa-info-circle me-1"></i>About
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-3" href="/products" style="transition: all 0.3s ease;">
-                        <i class="fas fa-shopping-bag me-1"></i>Products
-                    </a>
-                </li>
                 <li class="nav-item cart-item">
-                    <a class="nav-link px-3" href="/cart" style="position: relative; transition: all 0.3s ease;">
-                        <i class="fas fa-shopping-cart" style="font-size: 1.2rem;"></i>
+                    <a class="nav-link px-3" href="/cart" style="position: relative; transition: all 0.3s ease; color: white;" title="Cart">
+                        <i class="fas fa-shopping-cart" style="font-size: 1.3rem;"></i>
                         <span class="cart-badge" id="cart-count">0</span>
                     </a>
                 </li>
@@ -151,25 +156,25 @@
                 <% if (typeof user !== 'undefined' && user) { %>
                     <!-- User is logged in -->
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="/profile" style="transition: all 0.3s ease;">
-                            <i class="fas fa-user me-1"></i>Profile
+                        <a class="nav-link px-3" href="/profile" style="transition: all 0.3s ease; color: white;" title="Profile">
+                            <i class="fas fa-user" style="font-size: 1.3rem;"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="/logout" style="transition: all 0.3s ease; color: #ff6b6b;">
-                            <i class="fas fa-sign-out-alt me-1"></i>Logout
+                        <a class="nav-link px-3" href="/logout" style="transition: all 0.3s ease; color: #ff6b6b;" title="Logout">
+                            <i class="fas fa-sign-out-alt" style="font-size: 1.3rem;"></i>
                         </a>
                     </li>
                 <% } else { %>
                     <!-- User is not logged in -->
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="/login" style="transition: all 0.3s ease;">
-                            <i class="fas fa-sign-in-alt me-1"></i>Login
+                        <a class="nav-link px-3" href="/login" style="transition: all 0.3s ease; color: white;" title="Login">
+                            <i class="fas fa-sign-in-alt" style="font-size: 1.3rem;"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="/register" style="transition: all 0.3s ease;">
-                            <i class="fas fa-user-plus me-1"></i>Register
+                        <a class="nav-link px-3" href="/register" style="transition: all 0.3s ease; color: white;" title="Register">
+                            <i class="fas fa-user-plus" style="font-size: 1.3rem;"></i>
                         </a>
                     </li>
                 <% } %>

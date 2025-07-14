@@ -570,10 +570,13 @@
                 <span>$<%= (totalAmount * 1.08).toFixed(2) %></span>
               </div>
 
-              <button class="btn-checkout">
-                <i class="fas fa-credit-card me-2"></i>
-                Proceed to Checkout
-              </button>
+   <form action="/checkout" method="GET">
+  <button class="btn-checkout">
+    <i class="fas fa-credit-card me-2"></i>
+    Proceed to Checkout
+  </button>
+</form>
+
 
               <div class="text-center mt-3">
                 <a
