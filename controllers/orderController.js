@@ -53,7 +53,8 @@ exports.postCheckout = async (req, res) => {
       productId: id,
       title: item.title,
       price: item.price,
-      qty: item.qty
+      qty: item.qty,
+      image: item.image
     });
   }
 
