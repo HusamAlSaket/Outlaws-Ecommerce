@@ -120,11 +120,29 @@ exports.logout = (req, res) => {
 };
 
 // Show profile page
-exports.getProfile = (req, res) => {
-  // Check if user is logged in
-  if (!req.session.user) {
-    return res.redirect('/login');
+exports.getProfile = async (req, res) => {
+  try {
+    // Check if user is logged in
+    if (!req.session.user) {
+      return res.redirect('/login');
+    }
+    
+    // Import Order model
+    const Order = require('../models/Order');
+    
+    // Fetch user's orders
+    const orders = await Order.find({ user: req.session.user._id })
+      .sort({ createdAt: -1 }); // Sort by newest first
+    
+    res.render('profile', { 
+      user: req.session.user,
+      orders: orders 
+    });
+  } catch (error) {
+    console.error('Error fetching profile data:', error);
+    res.render('profile', { 
+      user: req.session.user,
+      orders: [] 
+    });
   }
-  
-  res.render('profile', { user: req.session.user });
 };
