@@ -1,4 +1,5 @@
 const Order = require('../models/Order');
+const Product = require('../models/Product');
 
 exports.getCheckout = (req, res) => {
   if (!req.session.user) return res.redirect('/login');
@@ -43,31 +44,70 @@ exports.postCheckout = async (req, res) => {
     return res.redirect('/cart');
   }
 
-  // Prepare items and total
-  const items = [];
-  let total = 0;
-  for (const id in cart) {
-    const item = cart[id];
-    total += item.price * item.qty;
-    items.push({
-      productId: id,
-      title: item.title,
-      price: item.price,
-      qty: item.qty,
-      image: item.image
+  try {
+    // Validate stock for all items before processing order
+    const stockValidation = [];
+    for (const id in cart) {
+      const product = await Product.findById(id);
+      if (!product) {
+        return res.status(400).send(`Product not found: ${cart[id].title}`);
+      }
+      if (product.quantity < cart[id].qty) {
+        stockValidation.push({
+          title: product.title,
+          requested: cart[id].qty,
+          available: product.quantity
+        });
+      }
+    }
+
+    // If any items are out of stock, return error
+    if (stockValidation.length > 0) {
+      let errorMessage = 'Insufficient stock for the following items:\n';
+      stockValidation.forEach(item => {
+        errorMessage += `${item.title}: Requested ${item.requested}, Available ${item.available}\n`;
+      });
+      return res.status(400).send(errorMessage);
+    }
+
+    // Prepare items and total
+    const items = [];
+    let total = 0;
+    for (const id in cart) {
+      const item = cart[id];
+      total += item.price * item.qty;
+      items.push({
+        productId: id,
+        title: item.title,
+        price: item.price,
+        qty: item.qty,
+        image: item.image
+      });
+    }
+
+    // Create order
+    const order = new Order({
+      user: req.session.user._id,
+      items,
+      shippingInfo: { fullName, address, city, postalCode, country },
+      totalAmount: total
     });
+
+    await order.save();
+
+    // Update product quantities
+    for (const id in cart) {
+      await Product.findByIdAndUpdate(id, {
+        $inc: { quantity: -cart[id].qty }
+      });
+    }
+
+    req.session.cart = {}; // Clear cart
+    res.redirect('/orders');
+  } catch (err) {
+    console.error('Checkout error:', err);
+    res.status(500).send('Error processing order');
   }
-
-  const order = new Order({
-    user: req.session.user._id,
-    items,
-    shippingInfo: { fullName, address, city, postalCode, country },
-    totalAmount: total
-  });
-
-  await order.save();
-  req.session.cart = {}; // Clear cart
-  res.redirect('/orders'); // Add this route later
 };
 
 // Get user's orders

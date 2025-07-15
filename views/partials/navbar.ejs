@@ -141,6 +141,11 @@
                         About
                     </a>
                 </li>
+                           <li class="nav-item">
+                    <a class="nav-link px-4" href="/orders" style="transition: all 0.3s ease; color: white; font-size: 1.1rem; font-weight: 500;">
+                        Orders
+                    </a>
+                </li>
             </ul>
 
             <!-- User actions on the right -->
@@ -216,7 +221,7 @@
 
         // Send request with quantity parameter
         fetch(`/cart/add/${productId}?qty=${quantity}`)
-            .then((res) => {
+            .then(async (res) => {
                 if (res.ok) {
                     // ✅ Visual feedback success
                     button.innerHTML = '<i class="fas fa-check"></i> Added!';
@@ -225,12 +230,21 @@
                     // Update cart badge in navbar
                     updateCartBadge();
                 } else {
-                    throw new Error("Failed to add to cart");
+                    // Handle error response (stock issues)
+                    const errorData = await res.json();
+                    throw new Error(errorData.error || "Failed to add to cart");
                 }
             })
-            .catch(() => {
+            .catch((error) => {
                 button.innerHTML = '<i class="fas fa-times"></i> Error';
                 button.style.background = "#dc3545";
+                
+                // Show stock error message
+                if (error.message.includes('stock') || error.message.includes('available')) {
+                    alert(error.message);
+                } else {
+                    alert('Error adding item to cart');
+                }
             })
             .finally(() => {
                 setTimeout(() => {

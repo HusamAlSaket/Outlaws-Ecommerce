@@ -9,12 +9,36 @@ exports.addToCart = async (req, res) => {
     const product = await Product.findById(productId);
     if (!product) return res.status(404).send('Product not found');
 
+    // Check if product is in stock
+    if (product.quantity <= 0) {
+      const errorMsg = 'Product is out of stock';
+      
+      // Check if it's an AJAX request
+      if (req.headers.accept && req.headers.accept.includes('application/json')) {
+        return res.status(400).json({ error: errorMsg });
+      } else {
+        return res.status(400).send(errorMsg);
+      }
+    }
+
     const cart = req.session.cart || {};
+    let currentCartQuantity = cart[productId] ? cart[productId].qty : 0;
+    let newQuantity = currentCartQuantity + quantity;
+
+    // Check if requested quantity exceeds available stock
+    if (newQuantity > product.quantity) {
+      const errorMsg = `Only ${product.quantity} items available. You have ${currentCartQuantity} in cart.`;
+      
+      // Check if it's an AJAX request
+      if (req.headers.accept && req.headers.accept.includes('application/json')) {
+        return res.status(400).json({ error: errorMsg });
+      } else {
+        return res.status(400).send(errorMsg);
+      }
+    }
 
     if (cart[productId]) {
       // already in cart, calculate new quantity
-      const newQuantity = cart[productId].qty + quantity;
-      
       if (newQuantity <= 0) {
         // Remove item if quantity becomes 0 or negative
         delete cart[productId];

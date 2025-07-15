@@ -597,14 +597,19 @@
     <script>
       function updateQuantity(productId, change) {
         // Reuse existing addToCart endpoint with positive/negative quantity
-        fetch(`/cart/add/${productId}?qty=${change}`)
-          .then(response => {
+        fetch(`/cart/add/${productId}?qty=${change}`, {
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+          .then(async response => {
             if (response.ok) {
               // Reload page to show updated cart
               window.location.reload();
             } else {
-              console.error('Error updating quantity');
-              alert('Error updating quantity. Please try again.');
+              // Handle stock errors
+              const errorData = await response.json();
+              alert(errorData.error || 'Error updating quantity. Please try again.');
             }
           })
           .catch(error => {

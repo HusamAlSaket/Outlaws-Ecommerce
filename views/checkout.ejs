@@ -3,6 +3,8 @@
   <head>
     <%- include('partials/head') %>
     <title>Checkout - Outlaws</title>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
       .product-image {
         width: 50px;
@@ -56,6 +58,67 @@
         background: #001f3f !important;
         margin-left: 0.5rem;
       }
+
+      .btn-place-order {
+        background: linear-gradient(135deg, #001f3f, #003366);
+        border: none;
+        color: white;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 31, 63, 0.3);
+      }
+
+      .btn-place-order:hover {
+        background: linear-gradient(135deg, #003366, #004080);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 31, 63, 0.4);
+        color: white;
+      }
+
+      /* Custom SweetAlert styles */
+      .swal2-popup {
+        border-radius: 15px !important;
+        box-shadow: 0 20px 40px rgba(0, 31, 63, 0.15) !important;
+      }
+
+      .swal2-title {
+        color: #001f3f !important;
+        font-weight: 700 !important;
+      }
+
+      .swal2-content {
+        color: #6c757d !important;
+      }
+
+      .swal2-confirm {
+        background: linear-gradient(135deg, #001f3f, #003366) !important;
+        border: none !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        padding: 10px 25px !important;
+        box-shadow: 0 4px 15px rgba(0, 31, 63, 0.3) !important;
+      }
+
+      .swal2-confirm:hover {
+        background: linear-gradient(135deg, #003366, #004080) !important;
+        transform: translateY(-1px) !important;
+      }
+
+      .swal2-cancel {
+        background: #6c757d !important;
+        border: none !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        padding: 10px 25px !important;
+      }
+
+      .swal2-cancel:hover {
+        background: #5a6268 !important;
+        transform: translateY(-1px) !important;
+      }
     </style>
   </head>
   <body>
@@ -64,11 +127,11 @@
     <div class="container py-5">
       <h2 class="mb-4">Shipping Information</h2>
 
-      <form action="/checkout" method="POST">
+      <form id="checkoutForm" action="/checkout" method="POST">
         <div class="row">
           <div class="col-md-6">
             <label class="form-label">Full Name</label>
-            <input type="text" name="name" required class="form-control mb-3" />
+            <input type="text" name="fullName" required class="form-control mb-3" />
 
             <label class="form-label">Address</label>
             <input
@@ -121,11 +184,94 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-success mt-4">
-          <i class="fas fa-check-circle me-2"></i>Place Order (Cash)
+        <button type="button" onclick="confirmOrder()" class="btn btn-place-order mt-4">
+          <i class="fas fa-check-circle me-2"></i>Place Order (Cash on Delivery)
         </button>
       </form>
     </div>
+
+    <script>
+      function confirmOrder() {
+        // Get form data for validation
+        const form = document.getElementById('checkoutForm');
+        const formData = new FormData(form);
+        
+        // Check if all required fields are filled
+        let isValid = true;
+        const requiredFields = ['fullName', 'address', 'city', 'postalCode', 'country'];
+        
+        requiredFields.forEach(field => {
+          if (!formData.get(field) || formData.get(field).trim() === '') {
+            isValid = false;
+          }
+        });
+
+        if (!isValid) {
+          Swal.fire({
+            icon: 'warning',
+            title: 'Missing Information',
+            text: 'Please fill in all required shipping information fields.',
+            confirmButtonText: 'OK',
+            customClass: {
+              popup: 'swal2-popup',
+              title: 'swal2-title',
+              content: 'swal2-content',
+              confirmButton: 'swal2-confirm'
+            }
+          });
+          return;
+        }
+
+        // Show confirmation dialog
+        Swal.fire({
+          icon: 'question',
+          title: 'Confirm Your Order',
+          html: `
+            <div style="text-align: left; margin: 20px 0;">
+              <p><strong>Total Amount:</strong> $<%= totalAmount.toFixed(2) %></p>
+              <p><strong>Payment Method:</strong> Cash on Delivery</p>
+              <p style="color: #6c757d; font-size: 0.9rem; margin-top: 15px;">
+                Your order will be processed and shipped to the provided address. 
+                You'll pay when the package is delivered.
+              </p>
+            </div>
+          `,
+          showCancelButton: true,
+          confirmButtonText: 'Yes, Place Order',
+          cancelButtonText: 'Cancel',
+          reverseButtons: true,
+          customClass: {
+            popup: 'swal2-popup',
+            title: 'swal2-title',
+            content: 'swal2-content',
+            confirmButton: 'swal2-confirm',
+            cancelButton: 'swal2-cancel'
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Show loading state
+            Swal.fire({
+              title: 'Processing Order...',
+              text: 'Please wait while we process your order.',
+              allowOutsideClick: false,
+              allowEscapeKey: false,
+              showConfirmButton: false,
+              didOpen: () => {
+                Swal.showLoading();
+              },
+              customClass: {
+                popup: 'swal2-popup',
+                title: 'swal2-title',
+                content: 'swal2-content'
+              }
+            });
+            
+            // Submit the form
+            form.submit();
+          }
+        });
+      }
+    </script>
 
     <%- include('partials/footer') %>
   </body>

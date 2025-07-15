@@ -79,6 +79,34 @@
       animation: fadeInUp 0.6s ease-out 0.8s both;
     }
 
+    .stock-status {
+      margin-bottom: 30px;
+      animation: fadeInUp 0.6s ease-out 0.9s both;
+    }
+
+    .stock-available {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #28a745;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .stock-out {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #dc3545;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .stock-available i,
+    .stock-out i {
+      font-size: 1.2rem;
+    }
+
     .quantity-selector {
       display: flex;
       align-items: center;
@@ -131,6 +159,18 @@
 
     .btn-add-cart:active {
       transform: translateY(-1px);
+    }
+
+    .btn-add-cart.btn-disabled {
+      background: #6c757d;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .btn-add-cart.btn-disabled:hover {
+      background: #6c757d;
+      transform: none;
+      box-shadow: none;
     }
 
     .breadcrumb-nav {
@@ -240,14 +280,34 @@
             <div class="product-price">$<%= product.price %></div>
             <span class="product-category"><%= product.category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()) %></span>
             
-            <div class="quantity-selector">
-              <label for="quantity">Quantity:</label>
-              <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="10">
+            <div class="stock-status">
+              <% if (product.quantity > 0) { %>
+                <div class="stock-available">
+                  <i class="fas fa-check-circle"></i>
+                  <span><%= product.quantity %> items available</span>
+                </div>
+              <% } else { %>
+                <div class="stock-out">
+                  <i class="fas fa-times-circle"></i>
+                  <span>Out of stock</span>
+                </div>
+              <% } %>
             </div>
             
-            <button class="btn btn-add-cart" onclick="addToCartWithQuantity('<%= product._id %>', this)">
-              <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-            </button>
+            <% if (product.quantity > 0) { %>
+              <div class="quantity-selector">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="<%= product.quantity %>">
+              </div>
+              
+              <button class="btn btn-add-cart" onclick="addToCartWithQuantity('<%= product._id %>', this)">
+                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+              </button>
+            <% } else { %>
+              <button class="btn btn-add-cart btn-disabled" disabled>
+                <i class="fas fa-ban me-2"></i>Out of Stock
+              </button>
+            <% } %>
           </div>
         </div>
       </div>
