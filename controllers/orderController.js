@@ -1,6 +1,14 @@
 const Order = require('../models/Order');
 const Product = require('../models/Product');
 
+// generate a unique order number
+function generateOrderNumber() {
+  const prefix = 'OUTLAW';
+  const date = new Date().toISOString().slice(2, 10).replace(/-/g, ''); // YYMMDD
+  const random = Math.floor(1000 + Math.random() * 9000); // 4-digit random
+  return `${prefix}-${date}-${random}`;
+}
+
 exports.getCheckout = (req, res) => {
   if (!req.session.user) return res.redirect('/login');
 
@@ -87,6 +95,7 @@ exports.postCheckout = async (req, res) => {
 
     // Create order
     const order = new Order({
+      orderNumber: generateOrderNumber(), // Unique order number
       user: req.session.user._id,
       items,
       shippingInfo: { fullName, address, city, postalCode, country },
@@ -127,3 +136,4 @@ exports.getOrders = async (req, res) => {
     res.status(500).send('Error fetching orders');
   }
 };
+
