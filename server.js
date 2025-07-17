@@ -57,6 +57,9 @@ const {
   postCheckout,
   getOrders,
 } = require("./controllers/orderController");
+const contactController = require('./controllers/contactController');
+
+
 
 // Home Route
 app.get("/", getHomePage);
@@ -134,6 +137,10 @@ app.post("/login", postLogin);
 app.get("/profile", getProfile);
 
 app.get("/logout", logout);
+
+// Contact Routes
+app.get('/contact', contactController.getContactPage);
+app.post('/contact', contactController.postContact);
 
 // Connect to MongoDB
 mongoose
