@@ -142,6 +142,10 @@ app.get("/logout", logout);
 app.get('/contact', contactController.getContactPage);
 app.post('/contact', contactController.postContact);
 
+// Global Error Handler - MUST be last middleware
+const { globalErrorHandler } = require('./utils/errorHandler');
+app.use(globalErrorHandler);
+
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI, {

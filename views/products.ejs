@@ -443,6 +443,41 @@
           transform: translateY(0);
         }
       }
+
+      /* PAGINATION STYLING */
+      .pagination {
+        gap: 0.5rem;
+      }
+
+      .pagination .page-link {
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        background: white;
+        border-radius: 8px;
+        padding: 10px 15px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin: 0 2px;
+      }
+
+      .pagination .page-item.active .page-link {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: white;
+        box-shadow: 0 4px 15px rgba(0, 31, 63, 0.3);
+      }
+
+      .pagination .page-link:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 31, 63, 0.3);
+      }
+
+      .pagination .page-link i {
+        font-size: 0.8rem;
+      }
     </style>
   </head>
   <body>
@@ -532,6 +567,53 @@
           </div>
           <% }) %>
         </div>
+        
+        <!-- ✅ PAGINATION -->
+        <% if (pagination && pagination.pages > 1) { %>
+        <%
+          // Build query parameters properly
+          let queryParams = [];
+          if (query.search) queryParams.push('search=' + encodeURIComponent(query.search));
+          if (query.category) queryParams.push('category=' + encodeURIComponent(query.category));
+          let baseQuery = queryParams.length > 0 ? '&' + queryParams.join('&') : '';
+        %>
+        <nav aria-label="Product pagination" class="mt-5">
+          <ul class="pagination justify-content-center">
+            <% if (pagination.current > 1) { %>
+              <li class="page-item">
+                <a class="page-link" href="/products?page=<%= pagination.current - 1 %><%= baseQuery %>">
+                  <i class="fas fa-chevron-left"></i> Previous
+                </a>
+              </li>
+            <% } %>
+            
+            <% for(let i = 1; i <= pagination.pages; i++) { %>
+              <li class="page-item <%= pagination.current == i ? 'active' : '' %>">
+                <a class="page-link" href="/products?page=<%= i %><%= baseQuery %>">
+                  <%= i %>
+                </a>
+              </li>
+            <% } %>
+            
+            <% if (pagination.current < pagination.pages) { %>
+              <li class="page-item">
+                <a class="page-link" href="/products?page=<%= pagination.current + 1 %><%= baseQuery %>">
+                  Next <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+            <% } %>
+          </ul>
+          
+          <!-- Pagination Info -->
+          <div class="text-center mt-3">
+            <small class="text-muted">
+              Showing <%= ((pagination.current - 1) * pagination.limit) + 1 %> to 
+              <%= Math.min(pagination.current * pagination.limit, pagination.total) %> 
+              of <%= pagination.total %> products
+            </small>
+          </div>
+        </nav>
+        <% } %>
       </div>
     </section>
 

@@ -1,0 +1,352 @@
+2025-07-20 12:52:36 [INFO]: Home page requested
+2025-07-20 12:52:36 [INFO]: Fetching trending products
+2025-07-20 12:52:36 [INFO]: Found 6 trending products
+2025-07-20 12:52:36 [INFO]: Fetching popular products
+2025-07-20 12:52:36 [INFO]: Found 6 popular products
+2025-07-20 12:52:36 [INFO]: Home page data loaded successfully
+2025-07-20 12:52:46 [INFO]: Products page requested
+2025-07-20 12:52:46 [INFO]: Fetching all products with filters:
+2025-07-20 12:52:46 [INFO]: Found 10 products (12 total)
+2025-07-20 12:52:46 [INFO]: Products page data loaded successfully
+2025-07-20 12:52:49 [INFO]: Products page requested
+2025-07-20 12:52:49 [INFO]: Fetching all products with filters:
+2025-07-20 12:52:49 [INFO]: Found 2 products (12 total)
+2025-07-20 12:52:49 [INFO]: Products page data loaded successfully
+2025-07-20 12:52:53 [INFO]: Products page requested
+2025-07-20 12:52:53 [INFO]: Fetching all products with filters:
+2025-07-20 12:52:54 [INFO]: Found 10 products (12 total)
+2025-07-20 12:52:54 [INFO]: Products page data loaded successfully
+2025-07-20 12:53:00 [INFO]: Products page requested
+2025-07-20 12:53:00 [INFO]: Fetching all products with filters:
+2025-07-20 12:53:01 [INFO]: Found 0 products (12 total)
+2025-07-20 12:53:01 [INFO]: Products page data loaded successfully
+2025-07-20 12:55:39 [INFO]: Products page requested
+2025-07-20 12:55:39 [INFO]: Fetching all products with filters:
+2025-07-20 12:55:40 [INFO]: Found 10 products (12 total)
+2025-07-20 12:55:40 [INFO]: Products page data loaded successfully
+2025-07-20 12:55:43 [INFO]: Products page requested
+2025-07-20 12:55:43 [INFO]: Fetching all products with filters:
+2025-07-20 12:55:44 [INFO]: Found 2 products (12 total)
+2025-07-20 12:55:44 [INFO]: Products page data loaded successfully
+2025-07-20 12:55:48 [INFO]: Products page requested
+2025-07-20 12:55:48 [INFO]: Fetching all products with filters:
+2025-07-20 12:55:48 [INFO]: Found 10 products (12 total)
+2025-07-20 12:55:48 [INFO]: Products page data loaded successfully
+2025-07-20 12:55:50 [INFO]: Products page requested
+2025-07-20 12:55:50 [INFO]: Fetching all products with filters:
+2025-07-20 12:55:50 [INFO]: Found 0 products (12 total)
+2025-07-20 12:55:50 [INFO]: Products page data loaded successfully
+2025-07-20 12:55:52 [INFO]: Products page requested
+2025-07-20 12:55:52 [INFO]: Fetching all products with filters:
+2025-07-20 12:55:52 [INFO]: Found 0 products (12 total)
+2025-07-20 12:55:52 [INFO]: Products page data loaded successfully
+2025-07-20 12:55:54 [INFO]: Products page requested
+2025-07-20 12:55:54 [INFO]: Fetching all products with filters:
+2025-07-20 12:55:54 [INFO]: Found 10 products (12 total)
+2025-07-20 12:55:54 [INFO]: Products page data loaded successfully
+2025-07-20 12:56:53 [INFO]: Products page requested
+2025-07-20 12:56:53 [INFO]: Fetching all products with filters:
+2025-07-20 12:56:53 [INFO]: Found 0 products (12 total)
+2025-07-20 12:56:53 [INFO]: Products page data loaded successfully
+2025-07-20 12:58:39 [INFO]: Products page requested
+2025-07-20 12:58:39 [INFO]: Fetching all products with filters:
+2025-07-20 12:58:39 [INFO]: Found 0 products (12 total)
+2025-07-20 12:58:39 [INFO]: Products page data loaded successfully
+2025-07-20 12:58:41 [INFO]: Products page requested
+2025-07-20 12:58:41 [INFO]: Fetching all products with filters:
+2025-07-20 12:58:41 [INFO]: Found 10 products (12 total)
+2025-07-20 12:58:41 [INFO]: Products page data loaded successfully
+2025-07-20 12:58:44 [INFO]: Products page requested
+2025-07-20 12:58:44 [INFO]: Fetching all products with filters:
+2025-07-20 12:58:44 [INFO]: Found 2 products (12 total)
+2025-07-20 12:58:44 [INFO]: Products page data loaded successfully
+2025-07-20 12:58:46 [INFO]: Products page requested
+2025-07-20 12:58:46 [INFO]: Fetching all products with filters:
+2025-07-20 12:58:46 [INFO]: Found 10 products (12 total)
+2025-07-20 12:58:46 [INFO]: Products page data loaded successfully
+2025-07-20 12:58:51 [INFO]: Products page requested
+2025-07-20 12:58:51 [INFO]: Fetching all products with filters:
+2025-07-20 12:58:51 [INFO]: Found 0 products (12 total)
+2025-07-20 12:58:51 [INFO]: Products page data loaded successfully
+2025-07-20 12:58:54 [INFO]: Products page requested
+2025-07-20 12:58:54 [INFO]: Fetching all products with filters:
+2025-07-20 12:58:54 [INFO]: Found 0 products (12 total)
+2025-07-20 12:58:54 [INFO]: Products page data loaded successfully
+2025-07-20 12:58:57 [INFO]: Products page requested
+2025-07-20 12:58:57 [INFO]: Fetching all products with filters:
+2025-07-20 12:58:57 [INFO]: Found 0 products (12 total)
+2025-07-20 12:58:57 [INFO]: Products page data loaded successfully
+2025-07-20 12:59:01 [INFO]: Products page requested
+2025-07-20 12:59:01 [INFO]: Fetching all products with filters:
+2025-07-20 12:59:01 [INFO]: Found 0 products (12 total)
+2025-07-20 12:59:01 [INFO]: Products page data loaded successfully
+2025-07-20 12:59:06 [INFO]: Products page requested
+2025-07-20 12:59:06 [INFO]: Fetching all products with filters:
+2025-07-20 12:59:06 [INFO]: Found 10 products (12 total)
+2025-07-20 12:59:06 [INFO]: Products page data loaded successfully
+2025-07-20 12:59:10 [INFO]: Products page requested
+2025-07-20 12:59:10 [INFO]: Fetching all products with filters:
+2025-07-20 12:59:10 [INFO]: Found 2 products (12 total)
+2025-07-20 12:59:10 [INFO]: Products page data loaded successfully
+2025-07-20 12:59:13 [INFO]: Products page requested
+2025-07-20 12:59:13 [INFO]: Fetching all products with filters:
+2025-07-20 12:59:13 [INFO]: Found 10 products (12 total)
+2025-07-20 12:59:13 [INFO]: Products page data loaded successfully
+2025-07-20 12:59:17 [INFO]: Products page requested
+2025-07-20 12:59:17 [INFO]: Fetching all products with filters:
+2025-07-20 12:59:17 [INFO]: Found 0 products (12 total)
+2025-07-20 12:59:17 [INFO]: Products page data loaded successfully
+2025-07-20 12:59:20 [INFO]: Products page requested
+2025-07-20 12:59:20 [INFO]: Fetching all products with filters:
+2025-07-20 12:59:20 [INFO]: Found 0 products (12 total)
+2025-07-20 12:59:20 [INFO]: Products page data loaded successfully
+2025-07-20 12:59:22 [INFO]: Products page requested
+2025-07-20 12:59:22 [INFO]: Fetching all products with filters:
+2025-07-20 12:59:23 [INFO]: Found 10 products (12 total)
+2025-07-20 12:59:23 [INFO]: Products page data loaded successfully
+2025-07-20 12:59:49 [INFO]: Products page requested
+2025-07-20 12:59:49 [INFO]: Fetching all products with filters:
+2025-07-20 12:59:49 [INFO]: Found 0 products (12 total)
+2025-07-20 12:59:49 [INFO]: Products page data loaded successfully
+2025-07-20 13:01:14 [INFO]: Products page requested
+2025-07-20 13:01:14 [INFO]: Fetching all products with filters:
+2025-07-20 13:01:14 [INFO]: Found 0 products (12 total)
+2025-07-20 13:01:14 [INFO]: Products page data loaded successfully
+2025-07-20 13:01:16 [INFO]: Products page requested
+2025-07-20 13:01:16 [INFO]: Fetching all products with filters:
+2025-07-20 13:01:16 [INFO]: Found 10 products (12 total)
+2025-07-20 13:01:16 [INFO]: Products page data loaded successfully
+2025-07-20 13:01:18 [INFO]: Products page requested
+2025-07-20 13:01:18 [INFO]: Fetching all products with filters:
+2025-07-20 13:01:18 [INFO]: Found 2 products (12 total)
+2025-07-20 13:01:18 [INFO]: Products page data loaded successfully
+2025-07-20 13:01:20 [INFO]: Products page requested
+2025-07-20 13:01:20 [INFO]: Fetching all products with filters:
+2025-07-20 13:01:20 [INFO]: Found 10 products (12 total)
+2025-07-20 13:01:20 [INFO]: Products page data loaded successfully
+2025-07-20 13:01:23 [INFO]: Products page requested
+2025-07-20 13:01:23 [INFO]: Fetching all products with filters:
+2025-07-20 13:01:23 [INFO]: Found 2 products (12 total)
+2025-07-20 13:01:23 [INFO]: Products page data loaded successfully
+2025-07-20 13:01:25 [INFO]: Products page requested
+2025-07-20 13:01:25 [INFO]: Fetching all products with filters:
+2025-07-20 13:01:25 [INFO]: Found 10 products (12 total)
+2025-07-20 13:01:25 [INFO]: Products page data loaded successfully
+2025-07-20 13:04:19 [INFO]: Products page requested
+2025-07-20 13:04:19 [INFO]: Fetching all products with filters:
+2025-07-20 13:04:19 [INFO]: Found 10 products (12 total)
+2025-07-20 13:04:19 [INFO]: Products page data loaded successfully
+2025-07-20 13:04:21 [INFO]: Product details requested
+2025-07-20 13:04:21 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc7
+2025-07-20 13:04:21 [INFO]: Product details loaded successfully
+2025-07-20 13:04:27 [INFO]: Product details requested
+2025-07-20 13:04:27 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc7ss
+2025-07-20 13:04:27 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "686f8e6a2000c13fde444dc7ss" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "686f8e6a2000c13fde444dc7ss" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:04:27 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:04:38 [INFO]: Product details requested
+2025-07-20 13:04:38 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc7
+2025-07-20 13:04:38 [INFO]: Product details loaded successfully
+2025-07-20 13:05:52 [INFO]: Products page requested
+2025-07-20 13:05:52 [INFO]: Fetching all products with filters:
+2025-07-20 13:05:52 [INFO]: Found 10 products (12 total)
+2025-07-20 13:05:52 [INFO]: Products page data loaded successfully
+2025-07-20 13:05:57 [INFO]: Products page requested
+2025-07-20 13:05:57 [INFO]: Fetching all products with filters:
+2025-07-20 13:05:57 [INFO]: Found 2 products (12 total)
+2025-07-20 13:05:57 [INFO]: Products page data loaded successfully
+2025-07-20 13:09:12 [INFO]: Home page requested
+2025-07-20 13:09:12 [INFO]: Fetching trending products
+2025-07-20 13:09:12 [INFO]: Found 6 trending products
+2025-07-20 13:09:12 [INFO]: Fetching popular products
+2025-07-20 13:09:13 [INFO]: Found 6 popular products
+2025-07-20 13:09:13 [INFO]: Home page data loaded successfully
+2025-07-20 13:09:14 [INFO]: Home page requested
+2025-07-20 13:09:14 [INFO]: Fetching trending products
+2025-07-20 13:09:15 [INFO]: Found 6 trending products
+2025-07-20 13:09:15 [INFO]: Fetching popular products
+2025-07-20 13:09:15 [INFO]: Found 6 popular products
+2025-07-20 13:09:15 [INFO]: Home page data loaded successfully
+2025-07-20 13:09:17 [INFO]: Products page requested
+2025-07-20 13:09:17 [INFO]: Fetching all products with filters:
+2025-07-20 13:09:17 [INFO]: Found 10 products (12 total)
+2025-07-20 13:09:17 [INFO]: Products page data loaded successfully
+2025-07-20 13:09:21 [INFO]: Home page requested
+2025-07-20 13:09:21 [INFO]: Fetching trending products
+2025-07-20 13:09:21 [INFO]: Found 6 trending products
+2025-07-20 13:09:21 [INFO]: Fetching popular products
+2025-07-20 13:09:21 [INFO]: Found 6 popular products
+2025-07-20 13:09:21 [INFO]: Home page data loaded successfully
+2025-07-20 13:11:28 [INFO]: Product details requested
+2025-07-20 13:11:28 [INFO]: Fetching product with ID: invalid1
+2025-07-20 13:11:28 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid1" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid1" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:28 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:32 [INFO]: Product details requested
+2025-07-20 13:11:32 [INFO]: Fetching product with ID: invalid2
+2025-07-20 13:11:32 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid2" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid2" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:32 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:35 [INFO]: Product details requested
+2025-07-20 13:11:35 [INFO]: Fetching product with ID: invalid3
+2025-07-20 13:11:35 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid3" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid3" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:35 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:37 [INFO]: Product details requested
+2025-07-20 13:11:37 [INFO]: Fetching product with ID: invalid4
+2025-07-20 13:11:37 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid4" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid4" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:37 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:40 [INFO]: Product details requested
+2025-07-20 13:11:40 [INFO]: Fetching product with ID: invalid5
+2025-07-20 13:11:40 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid5" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid5" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:40 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:46 [INFO]: Product details requested
+2025-07-20 13:11:46 [INFO]: Fetching product with ID: invalid6
+2025-07-20 13:11:46 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid6" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid6" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:46 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:55 [INFO]: Product details requested
+2025-07-20 13:11:55 [INFO]: Fetching product with ID: invalid7
+2025-07-20 13:11:55 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid7" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid7" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:55 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:12:03 [INFO]: Home page requested
+2025-07-20 13:12:03 [INFO]: Fetching trending products
+2025-07-20 13:12:03 [INFO]: Found 6 trending products
+2025-07-20 13:12:03 [INFO]: Fetching popular products
+2025-07-20 13:12:03 [INFO]: Found 6 popular products
+2025-07-20 13:12:03 [INFO]: Home page data loaded successfully
+2025-07-20 13:12:04 [INFO]: Home page requested
+2025-07-20 13:12:04 [INFO]: Fetching trending products
+2025-07-20 13:12:04 [INFO]: Found 6 trending products
+2025-07-20 13:12:04 [INFO]: Fetching popular products
+2025-07-20 13:12:04 [INFO]: Found 6 popular products
+2025-07-20 13:12:04 [INFO]: Home page data loaded successfully
+2025-07-20 13:13:16 [INFO]: Products page requested
+2025-07-20 13:13:16 [INFO]: Fetching all products with filters:
+2025-07-20 13:13:16 [INFO]: Found 10 products (12 total)
+2025-07-20 13:13:16 [INFO]: Products page data loaded successfully
+2025-07-20 13:13:18 [INFO]: Products page requested
+2025-07-20 13:13:18 [INFO]: Fetching all products with filters:
+2025-07-20 13:13:19 [INFO]: Found 10 products (12 total)
+2025-07-20 13:13:19 [INFO]: Products page data loaded successfully
+2025-07-20 13:13:31 [INFO]: Home page requested
+2025-07-20 13:13:31 [INFO]: Fetching trending products
+2025-07-20 13:13:31 [INFO]: Found 6 trending products
+2025-07-20 13:13:31 [INFO]: Fetching popular products
+2025-07-20 13:13:31 [INFO]: Found 6 popular products
+2025-07-20 13:13:31 [INFO]: Home page data loaded successfully

@@ -1,0 +1,136 @@
+2025-07-20 13:04:27 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "686f8e6a2000c13fde444dc7ss" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "686f8e6a2000c13fde444dc7ss" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:04:27 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:28 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid1" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid1" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:28 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:32 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid2" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid2" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:32 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:35 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid3" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid3" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:35 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:37 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid4" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid4" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:37 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:40 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid5" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid5" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:40 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:46 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid6" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid6" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:46 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-20 13:11:55 [ERROR]: Error fetching product by ID: Cast to ObjectId failed for value "invalid7" (type string) at path "_id" for model "Product"
+CastError: Cast to ObjectId failed for value "invalid7" (type string) at path "_id" for model "Product"
+    at SchemaObjectId.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1258:12)
+    at SchemaType.castForQuery (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\schemaType.js:1676:17)
+    at cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:5055:12)
+    at Query._castConditions (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2351:10)
+    at model.Query._findOne (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:2674:8)
+    at model.Query.exec (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:4604:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:52:23)
+2025-07-20 13:11:55 [ERROR]: Application Error Failed to fetch product
+AppError: Failed to fetch product
+    at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
