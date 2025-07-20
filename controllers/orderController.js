@@ -1,122 +1,94 @@
-const Order = require('../models/Order');
-const Product = require('../models/Product');
+const orderService = require('../services/orderService');
 const cartService = require('../services/cartService');
+const { asyncHandler } = require('../utils/errorHandler');
+const { HTTP_STATUS } = require('../config/constants');
+const logger = require('../utils/logger');
 
-// generate a unique order number
-function generateOrderNumber() {
-  const prefix = 'OUTLAW';
-  const date = new Date().toISOString().slice(2, 10).replace(/-/g, ''); // YYMMDD
-  const random = Math.floor(1000 + Math.random() * 9000); // 4-digit random
-  return `${prefix}-${date}-${random}`;
-}
-
-exports.getCheckout = (req, res) => {
+// Get checkout page
+exports.getCheckout = asyncHandler(async (req, res) => {
   if (!req.session.user) return res.redirect('/login');
+
+  logger.info('Checkout page requested', { userId: req.session.user._id, ip: req.ip });
 
   // Use cart service to get clean cart data
   const cartSummary = cartService.calculateCartSummary(req.session.cart || {});
 
   // Redirect if cart is empty
-  if (cartSummary.isEmpty) return res.redirect('/cart');
+  if (cartSummary.isEmpty) {
+    logger.warn('Checkout attempted with empty cart', { userId: req.session.user._id });
+    return res.redirect('/cart');
+  }
+
+  logger.info('Checkout page loaded', { 
+    userId: req.session.user._id,
+    itemCount: cartSummary.items.length,
+    totalAmount: cartSummary.totalAmount 
+  });
 
   res.render('checkout', {
     user: req.session.user,
     cartItems: cartSummary.items,
     totalAmount: cartSummary.totalAmount
   });
-};
+});
 
-exports.postCheckout = async (req, res) => {
+// Process checkout
+exports.postCheckout = asyncHandler(async (req, res) => {
   const { fullName, address, city, postalCode, country } = req.body;
+  const userId = req.session.user?._id;
   const cart = req.session.cart || {};
 
-  if (!req.session.user || Object.keys(cart).length === 0) {
+  logger.info('Processing checkout', { userId, ip: req.ip });
+
+  // Validation
+  if (!userId) {
+    logger.warn('Checkout attempted without authentication');
+    return res.redirect('/login');
+  }
+
+  if (Object.keys(cart).length === 0) {
+    logger.warn('Checkout attempted with empty cart', { userId });
     return res.redirect('/cart');
   }
 
-  try {
-    // Validate stock for all items before processing order
-    const stockValidation = [];
-    for (const id in cart) {
-      const product = await Product.findById(id);
-      if (!product) {
-        return res.status(400).send(`Product not found: ${cart[id].title}`);
-      }
-      if (product.quantity < cart[id].qty) {
-        stockValidation.push({
-          title: product.title,
-          requested: cart[id].qty,
-          available: product.quantity
-        });
-      }
-    }
+  // Prepare shipping info
+  const shippingInfo = { fullName, address, city, postalCode, country };
 
-    // If any items are out of stock, return error
-    if (stockValidation.length > 0) {
-      let errorMessage = 'Insufficient stock for the following items:\n';
-      stockValidation.forEach(item => {
-        errorMessage += `${item.title}: Requested ${item.requested}, Available ${item.available}\n`;
-      });
-      return res.status(400).send(errorMessage);
-    }
+  // Use order service to create order
+  const order = await orderService.createOrder(userId, cart, shippingInfo);
 
-    // Prepare items and total
-    const items = [];
-    let total = 0;
-    for (const id in cart) {
-      const item = cart[id];
-      total += item.price * item.qty;
-      items.push({
-        productId: id,
-        title: item.title,
-        price: item.price,
-        qty: item.qty,
-        image: item.image
-      });
-    }
+  // Clear cart after successful order
+  req.session.cart = cartService.clearCart();
 
-    // Create order
-    const order = new Order({
-      orderNumber: generateOrderNumber(), // Unique order number
-      user: req.session.user._id,
-      items,
-      shippingInfo: { fullName, address, city, postalCode, country },
-      totalAmount: total
-    });
+  logger.info('Checkout completed successfully', { 
+    userId, 
+    orderNumber: order.orderNumber,
+    totalAmount: order.totalAmount 
+  });
 
-    await order.save();
-
-    // Update product quantities
-    for (const id in cart) {
-      await Product.findByIdAndUpdate(id, {
-        $inc: { quantity: -cart[id].qty }
-      });
-    }
-
-    req.session.cart = {}; // Clear cart
-    res.redirect('/orders');
-  } catch (err) {
-    console.error('Checkout error:', err);
-    res.status(500).send('Error processing order');
-  }
-};
+  res.redirect('/orders');
+});
 
 // Get user's orders
-exports.getOrders = async (req, res) => {
+exports.getOrders = asyncHandler(async (req, res) => {
   if (!req.session.user) return res.redirect('/login');
 
-  try {
-    const orders = await Order.find({ user: req.session.user._id })
-      .sort({ createdAt: -1 }); // Most recent first
+  const userId = req.session.user._id;
+  
+  logger.info('Orders page requested', { userId, ip: req.ip });
 
-    res.render('orders', {
-      user: req.session.user,
-      orders
-    });
-  } catch (error) {
-    console.error('Error fetching orders:', error);
-    res.status(500).send('Error fetching orders');
-  }
-};
+  // Use order service to get orders
+  const orders = await orderService.getUserOrders(userId);
+
+  logger.info('Orders page loaded', { 
+    userId, 
+    orderCount: orders.length 
+  });
+
+  res.render('orders', {
+    user: req.session.user,
+    orders
+  });
+});
 
 
