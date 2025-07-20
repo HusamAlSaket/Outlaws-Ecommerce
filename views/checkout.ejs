@@ -78,7 +78,7 @@
 
     <script>
       // Pass total amount to JavaScript for checkout.js
-      window.totalAmount = <%= totalAmount.toFixed(2) %>;
+      window.totalAmount = parseFloat('<%= totalAmount.toFixed(2) %>');
     </script>
     <script src="/js/checkout.js"></script>
 
