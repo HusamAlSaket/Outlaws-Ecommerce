@@ -8,7 +8,10 @@ exports.postContact = async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   if (!name || !email || !message) {
-    return res.status(400).send('Missing required fields');
+    return res.status(400).json({ 
+      success: false, 
+      message: 'Missing required fields: name, email, and message are required.' 
+    });
   }
 
   const transporter = nodemailer.createTransport({

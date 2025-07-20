@@ -142,7 +142,7 @@
         <div class="row g-4">
           <div class="col-lg-8">
             <div class="contact-form">
-              <form action="/contact" method="POST">
+              <form id="contactForm" action="/contact" method="POST">
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="name" class="form-label">Name</label>
@@ -223,6 +223,12 @@
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         
+        // Convert FormData to URLSearchParams for proper form encoding
+        const urlEncodedData = new URLSearchParams();
+        for (const [key, value] of formData) {
+          urlEncodedData.append(key, value);
+        }
+        
         // Show loading state
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
@@ -230,7 +236,10 @@
         try {
           const response = await fetch('/contact', {
             method: 'POST',
-            body: formData
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: urlEncodedData
           });
           
           const result = await response.json();
