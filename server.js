@@ -144,9 +144,18 @@ app.post('/contact', contactController.postContact);
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, {
+    serverSelectionTimeoutMS: 30000, // Timeout after 30s 
+    socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
+  })
   .then(() => console.log("✅ Connected to MongoDB"))
-  .catch((err) => console.error("❌ MongoDB connection error:", err));
+  .catch((err) => {
+    console.error("❌ MongoDB connection error:", err);
+    console.error("💡 Common solutions:");
+    console.error("   1. Check if your IP is whitelisted in MongoDB Atlas");
+    console.error("   2. Verify your username and password");
+    console.error("   3. Check your internet connection");
+  });
 
 // Start the server
 const PORT = process.env.PORT || 3000;
