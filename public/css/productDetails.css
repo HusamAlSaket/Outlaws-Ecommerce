@@ -1,0 +1,244 @@
+/* Product Details Specific Styles */
+.product-details {
+  padding: 80px 0;
+}
+
+.product-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 31, 63, 0.1);
+  transition: all 0.3s ease;
+}
+
+.product-image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 31, 63, 0.15);
+}
+
+.product-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  animation: slideInRight 0.6s ease-out;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #6c757d;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.product-price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 25px;
+  animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+.product-category {
+  display: inline-block;
+  background: var(--light-gray);
+  color: var(--text-dark);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease-out 0.8s both;
+}
+
+.stock-status {
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease-out 0.9s both;
+}
+
+.stock-available {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #28a745;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.stock-out {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #dc3545;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.stock-available i,
+.stock-out i {
+  font-size: 1.2rem;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease-out 1s both;
+}
+
+.quantity-selector label {
+  font-weight: 600;
+  margin-right: 15px;
+  color: var(--text-dark);
+}
+
+.quantity-input {
+  width: 80px;
+  padding: 10px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.btn-add-cart {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease-out 1.2s both;
+}
+
+.btn-add-cart:hover {
+  background: #003366;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 31, 63, 0.3);
+}
+
+.btn-add-cart:active {
+  transform: translateY(-1px);
+}
+
+.btn-add-cart.btn-disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn-add-cart.btn-disabled:hover {
+  background: #6c757d;
+  transform: none;
+  box-shadow: none;
+}
+
+.breadcrumb-nav {
+  background: none;
+  padding: 20px 0;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-details {
+    padding: 40px 0;
+  }
+  
+  .product-info {
+    padding: 30px 20px;
+    margin-top: 30px;
+  }
+  
+  .product-title {
+    font-size: 2rem;
+  }
+  
+  .product-price {
+    font-size: 1.8rem;
+  }
+}

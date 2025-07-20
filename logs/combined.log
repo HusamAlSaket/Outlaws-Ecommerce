@@ -541,3 +541,55 @@ AppError: Failed to fetch product
 2025-07-20 14:25:40 [INFO]: Fetching user orders
 2025-07-20 14:25:40 [INFO]: Orders retrieved successfully
 2025-07-20 14:25:40 [INFO]: Orders page loaded
+2025-07-20 15:58:24 [INFO]: Home page requested
+2025-07-20 15:58:24 [INFO]: Fetching trending products
+2025-07-20 15:58:24 [INFO]: Found 6 trending products
+2025-07-20 15:58:24 [INFO]: Fetching popular products
+2025-07-20 15:58:24 [INFO]: Found 6 popular products
+2025-07-20 15:58:24 [INFO]: Home page data loaded successfully
+2025-07-20 15:58:31 [INFO]: Products page requested
+2025-07-20 15:58:31 [INFO]: Fetching all products with filters:
+2025-07-20 15:58:31 [INFO]: Found 5 products (12 total)
+2025-07-20 15:58:31 [INFO]: Products page data loaded successfully
+2025-07-20 15:58:34 [INFO]: Product details requested
+2025-07-20 15:58:34 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc7
+2025-07-20 15:58:34 [INFO]: Product details loaded successfully
+2025-07-20 15:58:37 [INFO]: Cart page requested
+2025-07-20 15:58:37 [INFO]: Cart page loaded
+2025-07-20 15:58:44 [INFO]: Products page requested
+2025-07-20 15:58:44 [INFO]: Fetching all products with filters:
+2025-07-20 15:58:44 [INFO]: Found 5 products (12 total)
+2025-07-20 15:58:44 [INFO]: Products page data loaded successfully
+2025-07-20 15:58:46 [INFO]: Cart add request
+2025-07-20 15:58:46 [INFO]: Adding item to cart
+2025-07-20 15:58:46 [INFO]: Item added to cart successfully
+2025-07-20 15:58:46 [INFO]: Cart page requested
+2025-07-20 15:58:46 [INFO]: Cart page loaded
+2025-07-20 15:58:48 [INFO]: Cart page requested
+2025-07-20 15:58:48 [INFO]: Cart page loaded
+2025-07-20 16:05:51 [INFO]: Cart page requested
+2025-07-20 16:05:51 [INFO]: Cart page loaded
+2025-07-20 16:05:54 [INFO]: Products page requested
+2025-07-20 16:05:54 [INFO]: Fetching all products with filters:
+2025-07-20 16:05:54 [INFO]: Found 5 products (12 total)
+2025-07-20 16:05:54 [INFO]: Products page data loaded successfully
+2025-07-20 16:05:56 [INFO]: Cart add request
+2025-07-20 16:05:56 [INFO]: Adding item to cart
+2025-07-20 16:05:56 [INFO]: Item added to cart successfully
+2025-07-20 16:05:56 [INFO]: Cart page requested
+2025-07-20 16:05:56 [INFO]: Cart page loaded
+2025-07-20 16:05:57 [INFO]: Product details requested
+2025-07-20 16:05:57 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc7
+2025-07-20 16:05:57 [INFO]: Product details loaded successfully
+2025-07-20 16:05:59 [INFO]: Cart page requested
+2025-07-20 16:05:59 [INFO]: Cart page loaded
+2025-07-20 16:06:09 [INFO]: Home page requested
+2025-07-20 16:06:09 [INFO]: Fetching trending products
+2025-07-20 16:06:09 [INFO]: Found 6 trending products
+2025-07-20 16:06:09 [INFO]: Fetching popular products
+2025-07-20 16:06:10 [INFO]: Found 6 popular products
+2025-07-20 16:06:10 [INFO]: Home page data loaded successfully
+2025-07-20 16:06:12 [INFO]: Cart page requested
+2025-07-20 16:06:12 [INFO]: Cart page loaded
+2025-07-20 16:06:13 [INFO]: Checkout page requested
+2025-07-20 16:06:13 [INFO]: Checkout page loaded
