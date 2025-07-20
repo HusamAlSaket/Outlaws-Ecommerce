@@ -350,3 +350,69 @@ AppError: Failed to fetch product
 2025-07-20 13:13:31 [INFO]: Fetching popular products
 2025-07-20 13:13:31 [INFO]: Found 6 popular products
 2025-07-20 13:13:31 [INFO]: Home page data loaded successfully
+2025-07-20 13:44:20 [INFO]: Home page requested
+2025-07-20 13:44:20 [INFO]: Fetching trending products
+2025-07-20 13:44:21 [INFO]: Found 6 trending products
+2025-07-20 13:44:21 [INFO]: Fetching popular products
+2025-07-20 13:44:22 [INFO]: Found 6 popular products
+2025-07-20 13:44:22 [INFO]: Home page data loaded successfully
+2025-07-20 13:44:27 [INFO]: Products page requested
+2025-07-20 13:44:27 [INFO]: Fetching all products with filters:
+2025-07-20 13:44:27 [INFO]: Found 10 products (12 total)
+2025-07-20 13:44:27 [INFO]: Products page data loaded successfully
+2025-07-20 13:44:32 [INFO]: Products page requested
+2025-07-20 13:44:32 [INFO]: Fetching all products with filters:
+2025-07-20 13:44:32 [INFO]: Found 2 products (12 total)
+2025-07-20 13:44:32 [INFO]: Products page data loaded successfully
+2025-07-20 13:44:52 [INFO]: Products page requested
+2025-07-20 13:44:52 [INFO]: Fetching all products with filters:
+2025-07-20 13:44:54 [INFO]: Found 5 products (12 total)
+2025-07-20 13:44:54 [INFO]: Products page data loaded successfully
+2025-07-20 13:44:59 [INFO]: Products page requested
+2025-07-20 13:44:59 [INFO]: Fetching all products with filters:
+2025-07-20 13:44:59 [INFO]: Found 2 products (12 total)
+2025-07-20 13:44:59 [INFO]: Products page data loaded successfully
+2025-07-20 13:45:01 [INFO]: Products page requested
+2025-07-20 13:45:01 [INFO]: Fetching all products with filters:
+2025-07-20 13:45:02 [INFO]: Found 5 products (12 total)
+2025-07-20 13:45:02 [INFO]: Products page data loaded successfully
+2025-07-20 13:45:05 [INFO]: Products page requested
+2025-07-20 13:45:05 [INFO]: Fetching all products with filters:
+2025-07-20 13:45:05 [INFO]: Found 5 products (12 total)
+2025-07-20 13:45:05 [INFO]: Products page data loaded successfully
+2025-07-20 13:45:14 [INFO]: Products page requested
+2025-07-20 13:45:14 [INFO]: Fetching all products with filters:
+2025-07-20 13:45:14 [INFO]: Found 5 products (12 total)
+2025-07-20 13:45:14 [INFO]: Products page data loaded successfully
+2025-07-20 13:45:18 [INFO]: Products page requested
+2025-07-20 13:45:18 [INFO]: Fetching all products with filters:
+2025-07-20 13:45:18 [INFO]: Found 5 products (12 total)
+2025-07-20 13:45:18 [INFO]: Products page data loaded successfully
+2025-07-20 13:45:19 [INFO]: Products page requested
+2025-07-20 13:45:19 [INFO]: Fetching all products with filters:
+2025-07-20 13:45:21 [INFO]: Products page requested
+2025-07-20 13:45:21 [INFO]: Fetching all products with filters:
+2025-07-20 13:45:22 [INFO]: Found 10 products (12 total)
+2025-07-20 13:45:22 [INFO]: Products page data loaded successfully
+2025-07-20 13:45:22 [INFO]: Found 10 products (12 total)
+2025-07-20 13:45:22 [INFO]: Products page data loaded successfully
+2025-07-20 13:45:28 [INFO]: Products page requested
+2025-07-20 13:45:28 [INFO]: Fetching all products with filters:
+2025-07-20 13:45:28 [INFO]: Found 2 products (12 total)
+2025-07-20 13:45:28 [INFO]: Products page data loaded successfully
+2025-07-20 13:45:31 [INFO]: Products page requested
+2025-07-20 13:45:31 [INFO]: Fetching all products with filters:
+2025-07-20 13:45:31 [INFO]: Found 10 products (12 total)
+2025-07-20 13:45:31 [INFO]: Products page data loaded successfully
+2025-07-20 13:45:38 [INFO]: Products page requested
+2025-07-20 13:45:38 [INFO]: Fetching all products with filters:
+2025-07-20 13:45:40 [INFO]: Found 5 products (12 total)
+2025-07-20 13:45:40 [INFO]: Products page data loaded successfully
+2025-07-20 13:45:43 [INFO]: Products page requested
+2025-07-20 13:45:43 [INFO]: Fetching all products with filters:
+2025-07-20 13:45:43 [INFO]: Found 5 products (12 total)
+2025-07-20 13:45:43 [INFO]: Products page data loaded successfully
+2025-07-20 13:46:47 [INFO]: Products page requested
+2025-07-20 13:46:47 [INFO]: Fetching all products with filters:
+2025-07-20 13:46:47 [INFO]: Found 2 products (12 total)
+2025-07-20 13:46:47 [INFO]: Products page data loaded successfully

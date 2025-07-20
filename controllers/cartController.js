@@ -1,101 +1,68 @@
-const Product = require('../models/Product');
+const cartService = require('../services/cartService');
+const { asyncHandler } = require('../utils/errorHandler');
+const { HTTP_STATUS } = require('../config/constants');
+const logger = require('../utils/logger');
 
-// add item to cart
-exports.addToCart = async (req, res) => {
+// Add item to cart
+exports.addToCart = asyncHandler(async (req, res) => {
   const productId = req.params.id;
-  const quantity = parseInt(req.query.qty) || 1; // Get quantity from query parameter
+  const quantity = parseInt(req.query.qty) || 1;
 
-  try {
-    const product = await Product.findById(productId);
-    if (!product) return res.status(404).send('Product not found');
+  logger.info('Cart add request', { productId, quantity, ip: req.ip });
 
-    // Check if product is in stock
-    if (product.quantity <= 0) {
-      const errorMsg = 'Product is out of stock';
-      
-      // Check if it's an AJAX request
-      if (req.headers.accept && req.headers.accept.includes('application/json')) {
-        return res.status(400).json({ error: errorMsg });
-      } else {
-        return res.status(400).send(errorMsg);
-      }
-    }
+  // Use service layer for business logic
+  const updatedCart = await cartService.addToCart(productId, quantity, req.session.cart || {});
+  
+  // Update session
+  req.session.cart = updatedCart;
+  
+  logger.info('Item added to cart successfully', { productId, quantity });
 
-    const cart = req.session.cart || {};
-    let currentCartQuantity = cart[productId] ? cart[productId].qty : 0;
-    let newQuantity = currentCartQuantity + quantity;
-
-    // Check if requested quantity exceeds available stock
-    if (newQuantity > product.quantity) {
-      const errorMsg = `Only ${product.quantity} items available. You have ${currentCartQuantity} in cart.`;
-      
-      // Check if it's an AJAX request
-      if (req.headers.accept && req.headers.accept.includes('application/json')) {
-        return res.status(400).json({ error: errorMsg });
-      } else {
-        return res.status(400).send(errorMsg);
-      }
-    }
-
-    if (cart[productId]) {
-      // already in cart, calculate new quantity
-      if (newQuantity <= 0) {
-        // Remove item if quantity becomes 0 or negative
-        delete cart[productId];
-      } else {
-        // Update quantity
-        cart[productId].qty = newQuantity;
-      }
-    } else {
-      // new item (only if quantity is positive)
-      if (quantity > 0) {
-        cart[productId] = {
-          title: product.title,
-          price: product.price,
-          image: product.image,
-          qty: quantity,
-        };
-      }
-    }
-
-    req.session.cart = cart;
-    res.redirect('/cart'); 
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Error adding to cart');
+  // Check if it's an AJAX request (for quantity updates)
+  if (req.headers.accept && req.headers.accept.includes('application/json')) {
+    const cartSummary = cartService.calculateCartSummary(updatedCart);
+    return res.json({ 
+      success: true, 
+      message: 'Cart updated successfully',
+      cartSummary 
+    });
   }
-};
+  
+  res.redirect('/cart');
+});
 
-// remove item from cart
-exports.removeFromCart = (req, res) => {
+// Remove item from cart
+exports.removeFromCart = asyncHandler(async (req, res) => {
   const productId = req.params.id;
 
-  if (!req.session.cart) return res.redirect("/cart");
+  logger.info('Cart remove request', { productId, ip: req.ip });
 
-  delete req.session.cart[productId];
+  // Use service layer
+  const updatedCart = cartService.removeFromCart(productId, req.session.cart || {});
+  
+  // Update session
+  req.session.cart = updatedCart;
+  
+  logger.info('Item removed from cart successfully', { productId });
+  res.redirect('/cart');
+});
 
-  res.redirect("/cart");
-};
+// Display cart page
+exports.getCartPage = asyncHandler(async (req, res) => {
+  logger.info('Cart page requested', { ip: req.ip });
 
-// Display the cart page
-exports.getCartPage = (req, res) => {
-  const cart = req.session.cart || {};
+  // Use service layer to calculate cart summary
+  const cartSummary = cartService.calculateCartSummary(req.session.cart || {});
 
-  const cartItems = Object.entries(cart).map(([productId, item]) => {
-    return {
-      id: productId,
-      title: item.title,
-      price: item.price,
-      image: item.image,
-      qty: item.qty,
-      total: item.qty * item.price
-    };
+  logger.info('Cart page loaded', { 
+    itemCount: cartSummary.items.length,
+    totalAmount: cartSummary.totalAmount 
   });
-
-  const totalAmount = cartItems.reduce((sum, item) => sum + item.total, 0);
 
   res.render('cart', {
-    cartItems,
-    totalAmount
+    cartItems: cartSummary.items,
+    totalAmount: cartSummary.totalAmount,
+    totalItems: cartSummary.totalItems,
+    isEmpty: cartSummary.isEmpty
   });
-};
+});

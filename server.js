@@ -42,7 +42,7 @@ const {
   getProductDetails,
   getProductsPage,
 } = require("./controllers/productController");
-const { addToCart, removeFromCart } = require("./controllers/cartController");
+const { addToCart, removeFromCart, getCartPage } = require("./controllers/cartController");
 const {
   getRegister,
   postRegister,
@@ -83,41 +83,16 @@ app.get("/cart/add/:id", addToCart);
 // Remove from cart
 app.get("/cart/remove/:id", removeFromCart);
 
-// View cart (we'll build this page next)
-app.get("/cart", (req, res) => {
-  const cart = req.session.cart || {};
+// View cart - now uses clean service layer
+app.get("/cart", getCartPage);
 
-  // Convert cart object to array format expected by EJS template
-  const cartItems = [];
-  let totalAmount = 0;
-
-  for (const id in cart) {
-    const item = cart[id];
-    cartItems.push({
-      id: id,
-      title: item.title,
-      price: item.price,
-      qty: item.qty,
-      image: item.image,
-      total: item.price * item.qty,
-    });
-    totalAmount += item.price * item.qty;
-  }
-
-  res.render("cart", { cartItems, totalAmount });
-});
+// Import cart service
+const cartService = require('./services/cartService');
 
 // API endpoint for cart count (for navbar badge)
 app.get("/api/cart/count", (req, res) => {
-  const cart = req.session.cart || {};
-  let totalItems = 0;
-
-  // Count total quantity of all items (including duplicates)
-  for (const id in cart) {
-    totalItems += cart[id].qty;
-  }
-
-  res.json({ count: totalItems });
+  const cartSummary = cartService.calculateCartSummary(req.session.cart || {});
+  res.json({ count: cartSummary.totalItems });
 });
 
 // Checkout Routes

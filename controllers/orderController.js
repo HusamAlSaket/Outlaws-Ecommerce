@@ -1,5 +1,6 @@
 const Order = require('../models/Order');
 const Product = require('../models/Product');
+const cartService = require('../services/cartService');
 
 // generate a unique order number
 function generateOrderNumber() {
@@ -12,35 +13,16 @@ function generateOrderNumber() {
 exports.getCheckout = (req, res) => {
   if (!req.session.user) return res.redirect('/login');
 
-  const cart = req.session.cart || {};
+  // Use cart service to get clean cart data
+  const cartSummary = cartService.calculateCartSummary(req.session.cart || {});
 
   // Redirect if cart is empty
-  if (Object.keys(cart).length === 0) return res.redirect('/cart');
-
-  // Transform cart object into an array
-  const cartItems = [];
-  let totalAmount = 0;
-
-  for (const id in cart) {
-    const item = cart[id];
-    const itemTotal = item.price * item.qty;
-
-    cartItems.push({
-      id,
-      title: item.title,
-      price: item.price,
-      qty: item.qty,
-      image: item.image,
-      total: itemTotal
-    });
-
-    totalAmount += itemTotal;
-  }
+  if (cartSummary.isEmpty) return res.redirect('/cart');
 
   res.render('checkout', {
     user: req.session.user,
-    cartItems,
-    totalAmount
+    cartItems: cartSummary.items,
+    totalAmount: cartSummary.totalAmount
   });
 };
 
