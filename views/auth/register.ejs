@@ -47,16 +47,25 @@
       <div class="divider"></div>
     </div>
 
-    <% if (showPasswordInfo) { %>
-    <div class="alert alert-warning mb-3">
-      <small><i class="fas fa-exclamation-triangle me-2"></i>Password must be at least 8 characters with uppercase, lowercase, and numbers</small>
-    </div>
-    <% } %>
+    <!-- Password requirements info is now shown only as a field error below password input -->
 
-    <% if (errors && errors.general) { %>
-      <div class="alert alert-danger text-center mb-4">
-        <i class="fas fa-exclamation-triangle me-2"></i>
-        <%= errors.general %>
+    <% if (errors) { %>
+      <div class="custom-auth-error-navy mb-4" style="display: flex; align-items: flex-start; gap: 12px;">
+        <i class="fas fa-exclamation-circle me-2" style="margin-top: 3px;"></i>
+        <div>
+          <% if (errors.general) { %>
+            <div><%= errors.general %></div>
+          <% } %>
+          <% if (errors.username) { %>
+            <div><%= errors.username %></div>
+          <% } %>
+          <% if (errors.email) { %>
+            <div><%= errors.email %></div>
+          <% } %>
+          <% if (errors.password) { %>
+            <div><%= errors.password %></div>
+          <% } %>
+        </div>
       </div>
     <% } %>
 
@@ -72,9 +81,6 @@
           value="<%= oldInput?.username || '' %>"
           required
         >
-        <% if (errors && errors.username) { %>
-          <small class="error-msg"><%= errors.username %></small>
-        <% } %>
       </div>
 
       <div class="form-group">
@@ -88,9 +94,6 @@
           value="<%= oldInput?.email || '' %>"
           required
         >
-        <% if (errors && errors.email) { %>
-          <small class="error-msg"><%= errors.email %></small>
-        <% } %>
       </div>
 
       <div class="form-group">
@@ -103,8 +106,8 @@
           placeholder="Password" 
           required
         >
-        <% if (errors && errors.password) { %>
-          <small class="error-msg"><%= errors.password %></small>
+        <% if (showPasswordInfo) { %>
+          <div style="margin-top: 10px;"><small class="error-msg"><i class="fas fa-info-circle me-1"></i> Password must be at least 8 characters with uppercase, lowercase, and numbers</small></div>
         <% } %>
       </div>
 

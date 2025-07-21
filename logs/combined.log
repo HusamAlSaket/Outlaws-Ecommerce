@@ -1232,3 +1232,347 @@ orders is not defined
 2025-07-21 12:49:06 [INFO]: Login attempt: aaa@gmail.com, userFound: false
 2025-07-21 12:49:06 [ERROR]: Login failed: user not found for email aaa@gmail.com
 2025-07-21 12:49:06 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 12:50:19 [ERROR]: Validation errors on registration
+2025-07-21 12:50:28 [ERROR]: Validation errors on registration
+2025-07-21 12:50:34 [ERROR]: Validation errors on registration
+2025-07-21 12:50:38 [ERROR]: Validation errors on registration
+2025-07-21 12:51:28 [INFO]: Home page requested
+2025-07-21 12:51:28 [INFO]: Fetching trending products
+2025-07-21 12:51:28 [INFO]: Found 6 trending products
+2025-07-21 12:51:28 [INFO]: Fetching popular products
+2025-07-21 12:51:28 [INFO]: Found 6 popular products
+2025-07-21 12:51:28 [INFO]: Home page data loaded successfully
+2025-07-21 12:51:29 [INFO]: Home page requested
+2025-07-21 12:51:29 [INFO]: Fetching trending products
+2025-07-21 12:51:29 [INFO]: Found 6 trending products
+2025-07-21 12:51:29 [INFO]: Fetching popular products
+2025-07-21 12:51:29 [INFO]: Found 6 popular products
+2025-07-21 12:51:29 [INFO]: Home page data loaded successfully
+2025-07-21 12:51:37 [INFO]: Login attempt: aaa@gmail.com, userFound: false
+2025-07-21 12:51:37 [ERROR]: Login failed: user not found for email aaa@gmail.com
+2025-07-21 12:51:37 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 12:52:12 [ERROR]: Validation errors on registration
+2025-07-21 12:52:46 [INFO]: Home page requested
+2025-07-21 12:52:46 [INFO]: Fetching trending products
+2025-07-21 12:52:46 [INFO]: Found 6 trending products
+2025-07-21 12:52:46 [INFO]: Fetching popular products
+2025-07-21 12:52:46 [INFO]: Found 6 popular products
+2025-07-21 12:52:46 [INFO]: Home page data loaded successfully
+2025-07-21 12:52:55 [INFO]: Login attempt: aa@gmail.com, userFound: false
+2025-07-21 12:52:55 [ERROR]: Login failed: user not found for email aa@gmail.com
+2025-07-21 12:52:55 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 12:55:26 [ERROR]: Validation errors on registration
+2025-07-21 12:57:30 [INFO]: Home page requested
+2025-07-21 12:57:30 [INFO]: Fetching trending products
+2025-07-21 12:57:30 [INFO]: Found 6 trending products
+2025-07-21 12:57:30 [INFO]: Fetching popular products
+2025-07-21 12:57:30 [INFO]: Found 6 popular products
+2025-07-21 12:57:30 [INFO]: Home page data loaded successfully
+2025-07-21 12:57:42 [ERROR]: Validation errors on registration
+2025-07-21 12:57:53 [INFO]: Home page requested
+2025-07-21 12:57:53 [INFO]: Fetching trending products
+2025-07-21 12:57:53 [INFO]: Found 6 trending products
+2025-07-21 12:57:53 [INFO]: Fetching popular products
+2025-07-21 12:57:53 [INFO]: Found 6 popular products
+2025-07-21 12:57:53 [INFO]: Home page data loaded successfully
+2025-07-21 12:57:54 [INFO]: Home page requested
+2025-07-21 12:57:54 [INFO]: Fetching trending products
+2025-07-21 12:57:54 [INFO]: Found 6 trending products
+2025-07-21 12:57:54 [INFO]: Fetching popular products
+2025-07-21 12:57:54 [INFO]: Found 6 popular products
+2025-07-21 12:57:54 [INFO]: Home page data loaded successfully
+2025-07-21 12:58:09 [ERROR]: Validation errors on registration
+2025-07-21 12:59:48 [ERROR]: Validation errors on registration
+2025-07-21 13:01:46 [ERROR]: Validation errors on registration
+2025-07-21 13:01:47 [ERROR]: Validation errors on registration
+2025-07-21 13:01:49 [INFO]: Home page requested
+2025-07-21 13:01:49 [INFO]: Fetching trending products
+2025-07-21 13:01:49 [INFO]: Found 6 trending products
+2025-07-21 13:01:49 [INFO]: Fetching popular products
+2025-07-21 13:01:49 [INFO]: Found 6 popular products
+2025-07-21 13:01:49 [INFO]: Home page data loaded successfully
+2025-07-21 13:01:56 [INFO]: Login attempt: alsakethusam@gmail.com, userFound: false
+2025-07-21 13:01:56 [ERROR]: Login failed: user not found for email alsakethusam@gmail.com
+2025-07-21 13:01:56 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 13:01:59 [INFO]: Login attempt: alsakethusam@gmail.com, userFound: false
+2025-07-21 13:01:59 [ERROR]: Login failed: user not found for email alsakethusam@gmail.com
+2025-07-21 13:01:59 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 13:02:01 [INFO]: Login attempt: alsakethusam@gmail.com, userFound: false
+2025-07-21 13:02:01 [ERROR]: Login failed: user not found for email alsakethusam@gmail.com
+2025-07-21 13:02:01 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 13:02:07 [INFO]: Login attempt: alsakethusam@gmail.com, userFound: false
+2025-07-21 13:02:07 [ERROR]: Login failed: user not found for email alsakethusam@gmail.com
+2025-07-21 13:02:07 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 13:02:10 [INFO]: Login attempt: alsakethusam@gmail.com, userFound: false
+2025-07-21 13:02:10 [ERROR]: Login failed: user not found for email alsakethusam@gmail.com
+2025-07-21 13:02:10 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 13:02:18 [INFO]: Login attempt: alsakethusam@gmail.com, userFound: false
+2025-07-21 13:02:18 [ERROR]: Login failed: user not found for email alsakethusam@gmail.com
+2025-07-21 13:02:18 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 13:02:25 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-21 13:02:25 [INFO]: PasswordService compare: true
+2025-07-21 13:02:25 [INFO]: User logged in: tesla@gmail.com
+2025-07-21 13:02:25 [INFO]: Home page requested
+2025-07-21 13:02:25 [INFO]: Fetching trending products
+2025-07-21 13:02:25 [INFO]: Found 6 trending products
+2025-07-21 13:02:25 [INFO]: Fetching popular products
+2025-07-21 13:02:25 [INFO]: Found 6 popular products
+2025-07-21 13:02:25 [INFO]: Home page data loaded successfully
+2025-07-21 13:02:28 [INFO]: User logged out: tesla@gmail.com
+2025-07-21 13:02:28 [INFO]: Home page requested
+2025-07-21 13:02:28 [INFO]: Fetching trending products
+2025-07-21 13:02:28 [INFO]: Found 6 trending products
+2025-07-21 13:02:28 [INFO]: Fetching popular products
+2025-07-21 13:02:28 [INFO]: Found 6 popular products
+2025-07-21 13:02:28 [INFO]: Home page data loaded successfully
+2025-07-21 13:02:45 [ERROR]: Validation errors on registration
+2025-07-21 13:03:08 [ERROR]: Validation errors on registration
+2025-07-21 13:03:14 [ERROR]: Validation errors on registration
+2025-07-21 13:03:25 [ERROR]: Validation errors on registration
+2025-07-21 13:07:39 [ERROR]: Validation errors on registration
+2025-07-21 13:07:42 [ERROR]: Validation errors on registration
+2025-07-21 13:07:45 [ERROR]: Validation errors on registration
+2025-07-21 13:07:55 [INFO]: Home page requested
+2025-07-21 13:07:55 [INFO]: Fetching trending products
+2025-07-21 13:07:55 [INFO]: Found 6 trending products
+2025-07-21 13:07:55 [INFO]: Fetching popular products
+2025-07-21 13:07:55 [INFO]: Found 6 popular products
+2025-07-21 13:07:55 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:55 [INFO]: Home page requested
+2025-07-21 13:07:55 [INFO]: Fetching trending products
+2025-07-21 13:07:56 [INFO]: Found 6 trending products
+2025-07-21 13:07:56 [INFO]: Fetching popular products
+2025-07-21 13:07:56 [INFO]: Found 6 popular products
+2025-07-21 13:07:56 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:56 [INFO]: Home page requested
+2025-07-21 13:07:56 [INFO]: Fetching trending products
+2025-07-21 13:07:56 [INFO]: Found 6 trending products
+2025-07-21 13:07:56 [INFO]: Fetching popular products
+2025-07-21 13:07:56 [INFO]: Found 6 popular products
+2025-07-21 13:07:56 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:56 [INFO]: Home page requested
+2025-07-21 13:07:56 [INFO]: Fetching trending products
+2025-07-21 13:07:56 [INFO]: Found 6 trending products
+2025-07-21 13:07:56 [INFO]: Fetching popular products
+2025-07-21 13:07:56 [INFO]: Found 6 popular products
+2025-07-21 13:07:56 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:56 [INFO]: Home page requested
+2025-07-21 13:07:56 [INFO]: Fetching trending products
+2025-07-21 13:07:56 [INFO]: Found 6 trending products
+2025-07-21 13:07:56 [INFO]: Fetching popular products
+2025-07-21 13:07:56 [INFO]: Found 6 popular products
+2025-07-21 13:07:56 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:56 [INFO]: Home page requested
+2025-07-21 13:07:56 [INFO]: Fetching trending products
+2025-07-21 13:07:56 [INFO]: Found 6 trending products
+2025-07-21 13:07:56 [INFO]: Fetching popular products
+2025-07-21 13:07:56 [INFO]: Found 6 popular products
+2025-07-21 13:07:56 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:56 [INFO]: Home page requested
+2025-07-21 13:07:56 [INFO]: Fetching trending products
+2025-07-21 13:07:56 [INFO]: Found 6 trending products
+2025-07-21 13:07:56 [INFO]: Fetching popular products
+2025-07-21 13:07:57 [INFO]: Found 6 popular products
+2025-07-21 13:07:57 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:57 [INFO]: Home page requested
+2025-07-21 13:07:57 [INFO]: Fetching trending products
+2025-07-21 13:07:57 [INFO]: Found 6 trending products
+2025-07-21 13:07:57 [INFO]: Fetching popular products
+2025-07-21 13:07:57 [INFO]: Found 6 popular products
+2025-07-21 13:07:57 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:57 [INFO]: Home page requested
+2025-07-21 13:07:57 [INFO]: Fetching trending products
+2025-07-21 13:07:57 [INFO]: Found 6 trending products
+2025-07-21 13:07:57 [INFO]: Fetching popular products
+2025-07-21 13:07:57 [INFO]: Found 6 popular products
+2025-07-21 13:07:57 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:57 [INFO]: Home page requested
+2025-07-21 13:07:57 [INFO]: Fetching trending products
+2025-07-21 13:07:57 [INFO]: Found 6 trending products
+2025-07-21 13:07:57 [INFO]: Fetching popular products
+2025-07-21 13:07:57 [INFO]: Found 6 popular products
+2025-07-21 13:07:57 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:57 [INFO]: Home page requested
+2025-07-21 13:07:57 [INFO]: Fetching trending products
+2025-07-21 13:07:57 [INFO]: Found 6 trending products
+2025-07-21 13:07:57 [INFO]: Fetching popular products
+2025-07-21 13:07:57 [INFO]: Found 6 popular products
+2025-07-21 13:07:57 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:57 [INFO]: Home page requested
+2025-07-21 13:07:57 [INFO]: Fetching trending products
+2025-07-21 13:07:57 [INFO]: Found 6 trending products
+2025-07-21 13:07:57 [INFO]: Fetching popular products
+2025-07-21 13:07:57 [INFO]: Found 6 popular products
+2025-07-21 13:07:57 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:57 [INFO]: Home page requested
+2025-07-21 13:07:57 [INFO]: Fetching trending products
+2025-07-21 13:07:57 [INFO]: Found 6 trending products
+2025-07-21 13:07:57 [INFO]: Fetching popular products
+2025-07-21 13:07:57 [INFO]: Found 6 popular products
+2025-07-21 13:07:57 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:57 [INFO]: Home page requested
+2025-07-21 13:07:57 [INFO]: Fetching trending products
+2025-07-21 13:07:57 [INFO]: Found 6 trending products
+2025-07-21 13:07:57 [INFO]: Fetching popular products
+2025-07-21 13:07:57 [INFO]: Found 6 popular products
+2025-07-21 13:07:57 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:58 [INFO]: Home page requested
+2025-07-21 13:07:58 [INFO]: Fetching trending products
+2025-07-21 13:07:58 [INFO]: Found 6 trending products
+2025-07-21 13:07:58 [INFO]: Fetching popular products
+2025-07-21 13:07:58 [INFO]: Found 6 popular products
+2025-07-21 13:07:58 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:58 [INFO]: Home page requested
+2025-07-21 13:07:58 [INFO]: Fetching trending products
+2025-07-21 13:07:58 [INFO]: Found 6 trending products
+2025-07-21 13:07:58 [INFO]: Fetching popular products
+2025-07-21 13:07:58 [INFO]: Home page requested
+2025-07-21 13:07:58 [INFO]: Fetching trending products
+2025-07-21 13:07:58 [INFO]: Found 6 popular products
+2025-07-21 13:07:58 [INFO]: Home page data loaded successfully
+2025-07-21 13:07:58 [INFO]: Found 6 trending products
+2025-07-21 13:07:58 [INFO]: Fetching popular products
+2025-07-21 13:07:58 [INFO]: Found 6 popular products
+2025-07-21 13:07:58 [INFO]: Home page data loaded successfully
+2025-07-21 13:08:10 [ERROR]: Validation errors on registration
+2025-07-21 13:08:16 [ERROR]: Validation errors on registration
+2025-07-21 13:08:19 [ERROR]: Validation errors on registration
+2025-07-21 13:08:23 [ERROR]: Validation errors on registration
+2025-07-21 13:08:38 [ERROR]: Validation errors on registration
+2025-07-21 13:08:45 [ERROR]: Validation errors on registration
+2025-07-21 13:14:26 [INFO]: Home page requested
+2025-07-21 13:14:26 [INFO]: Fetching trending products
+2025-07-21 13:14:26 [INFO]: Found 6 trending products
+2025-07-21 13:14:26 [INFO]: Fetching popular products
+2025-07-21 13:14:26 [INFO]: Found 6 popular products
+2025-07-21 13:14:26 [INFO]: Home page data loaded successfully
+2025-07-21 13:14:27 [INFO]: Home page requested
+2025-07-21 13:14:27 [INFO]: Fetching trending products
+2025-07-21 13:14:27 [INFO]: Found 6 trending products
+2025-07-21 13:14:27 [INFO]: Fetching popular products
+2025-07-21 13:14:27 [INFO]: Found 6 popular products
+2025-07-21 13:14:27 [INFO]: Home page data loaded successfully
+2025-07-21 13:14:31 [INFO]: Cart page requested
+2025-07-21 13:14:31 [INFO]: Cart page loaded
+2025-07-21 13:14:45 [INFO]: Login attempt: aaa@gmail.com, userFound: false
+2025-07-21 13:14:45 [ERROR]: Login failed: user not found for email aaa@gmail.com
+2025-07-21 13:14:45 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 13:14:55 [ERROR]: Validation errors on registration
+2025-07-21 13:16:50 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-21 13:16:50 [INFO]: PasswordService compare: true
+2025-07-21 13:16:50 [INFO]: User logged in: tesla@gmail.com
+2025-07-21 13:16:50 [INFO]: Home page requested
+2025-07-21 13:16:50 [INFO]: Fetching trending products
+2025-07-21 13:16:50 [INFO]: Found 6 trending products
+2025-07-21 13:16:50 [INFO]: Fetching popular products
+2025-07-21 13:16:50 [INFO]: Found 6 popular products
+2025-07-21 13:16:50 [INFO]: Home page data loaded successfully
+2025-07-21 13:17:51 [INFO]: User logged out: tesla@gmail.com
+2025-07-21 13:17:51 [INFO]: Home page requested
+2025-07-21 13:17:51 [INFO]: Fetching trending products
+2025-07-21 13:17:51 [INFO]: Found 6 trending products
+2025-07-21 13:17:51 [INFO]: Fetching popular products
+2025-07-21 13:17:51 [INFO]: Found 6 popular products
+2025-07-21 13:17:51 [INFO]: Home page data loaded successfully
+2025-07-21 13:30:41 [ERROR]: Validation errors on registration
+2025-07-21 13:30:55 [ERROR]: Validation errors on registration
+2025-07-21 13:31:01 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:31:08 [ERROR]: Validation errors on registration
+2025-07-21 13:31:25 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:34:27 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:34:30 [ERROR]: Validation errors on registration
+2025-07-21 13:34:53 [ERROR]: Validation errors on registration
+2025-07-21 13:34:56 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:35:08 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:35:10 [ERROR]: Validation errors on registration
+2025-07-21 13:35:12 [ERROR]: Validation errors on registration
+2025-07-21 13:35:15 [ERROR]: Validation errors on registration
+2025-07-21 13:35:20 [ERROR]: Validation errors on registration
+2025-07-21 13:35:21 [ERROR]: Validation errors on registration
+2025-07-21 13:35:24 [ERROR]: Validation errors on registration
+2025-07-21 13:35:29 [ERROR]: Validation errors on registration
+2025-07-21 13:35:32 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:39:06 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:39:08 [ERROR]: Validation errors on registration
+2025-07-21 13:39:15 [ERROR]: Validation errors on registration
+2025-07-21 13:39:15 [ERROR]: Validation errors on registration
+2025-07-21 13:39:16 [ERROR]: Validation errors on registration
+2025-07-21 13:39:18 [ERROR]: Validation errors on registration
+2025-07-21 13:39:22 [ERROR]: Validation errors on registration
+2025-07-21 13:39:27 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:39:29 [ERROR]: Validation errors on registration
+2025-07-21 13:40:37 [ERROR]: Validation errors on registration
+2025-07-21 13:40:38 [ERROR]: Validation errors on registration
+2025-07-21 13:40:40 [ERROR]: Validation errors on registration
+2025-07-21 13:40:43 [ERROR]: Validation errors on registration
+2025-07-21 13:40:46 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:42:35 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:42:38 [INFO]: Home page requested
+2025-07-21 13:42:38 [INFO]: Fetching trending products
+2025-07-21 13:42:38 [INFO]: Found 6 trending products
+2025-07-21 13:42:38 [INFO]: Fetching popular products
+2025-07-21 13:42:38 [INFO]: Found 6 popular products
+2025-07-21 13:42:38 [INFO]: Home page data loaded successfully
+2025-07-21 13:42:39 [INFO]: Home page requested
+2025-07-21 13:42:39 [INFO]: Fetching trending products
+2025-07-21 13:42:39 [INFO]: Found 6 trending products
+2025-07-21 13:42:39 [INFO]: Fetching popular products
+2025-07-21 13:42:39 [INFO]: Found 6 popular products
+2025-07-21 13:42:39 [INFO]: Home page data loaded successfully
+2025-07-21 13:42:40 [INFO]: Home page requested
+2025-07-21 13:42:40 [INFO]: Fetching trending products
+2025-07-21 13:42:40 [INFO]: Found 6 trending products
+2025-07-21 13:42:40 [INFO]: Fetching popular products
+2025-07-21 13:42:40 [INFO]: Found 6 popular products
+2025-07-21 13:42:40 [INFO]: Home page data loaded successfully
+2025-07-21 13:42:40 [INFO]: Home page requested
+2025-07-21 13:42:40 [INFO]: Fetching trending products
+2025-07-21 13:42:40 [INFO]: Found 6 trending products
+2025-07-21 13:42:40 [INFO]: Fetching popular products
+2025-07-21 13:42:40 [INFO]: Found 6 popular products
+2025-07-21 13:42:40 [INFO]: Home page data loaded successfully
+2025-07-21 13:42:40 [INFO]: Home page requested
+2025-07-21 13:42:40 [INFO]: Fetching trending products
+2025-07-21 13:42:40 [INFO]: Found 6 trending products
+2025-07-21 13:42:40 [INFO]: Fetching popular products
+2025-07-21 13:42:40 [INFO]: Found 6 popular products
+2025-07-21 13:42:40 [INFO]: Home page data loaded successfully
+2025-07-21 13:42:40 [INFO]: Home page requested
+2025-07-21 13:42:40 [INFO]: Fetching trending products
+2025-07-21 13:42:40 [INFO]: Found 6 trending products
+2025-07-21 13:42:40 [INFO]: Fetching popular products
+2025-07-21 13:42:40 [INFO]: Found 6 popular products
+2025-07-21 13:42:40 [INFO]: Home page data loaded successfully
+2025-07-21 13:42:40 [INFO]: Home page requested
+2025-07-21 13:42:40 [INFO]: Fetching trending products
+2025-07-21 13:42:40 [INFO]: Found 6 trending products
+2025-07-21 13:42:40 [INFO]: Fetching popular products
+2025-07-21 13:42:41 [INFO]: Found 6 popular products
+2025-07-21 13:42:41 [INFO]: Home page data loaded successfully
+2025-07-21 13:42:41 [INFO]: Home page requested
+2025-07-21 13:42:41 [INFO]: Fetching trending products
+2025-07-21 13:42:41 [INFO]: Found 6 trending products
+2025-07-21 13:42:41 [INFO]: Fetching popular products
+2025-07-21 13:42:41 [INFO]: Found 6 popular products
+2025-07-21 13:42:41 [INFO]: Home page data loaded successfully
+2025-07-21 13:42:41 [INFO]: Home page requested
+2025-07-21 13:42:41 [INFO]: Fetching trending products
+2025-07-21 13:42:41 [INFO]: Found 6 trending products
+2025-07-21 13:42:41 [INFO]: Fetching popular products
+2025-07-21 13:42:41 [INFO]: Found 6 popular products
+2025-07-21 13:42:41 [INFO]: Home page data loaded successfully
+2025-07-21 13:42:41 [INFO]: Home page requested
+2025-07-21 13:42:41 [INFO]: Fetching trending products
+2025-07-21 13:42:41 [INFO]: Found 6 trending products
+2025-07-21 13:42:41 [INFO]: Fetching popular products
+2025-07-21 13:42:41 [INFO]: Found 6 popular products
+2025-07-21 13:42:41 [INFO]: Home page data loaded successfully
+2025-07-21 13:42:52 [ERROR]: Validation errors on registration
+2025-07-21 13:43:01 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:43:04 [ERROR]: Validation errors on registration
+2025-07-21 13:43:47 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:45:52 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:45:55 [ERROR]: Validation errors on registration
+2025-07-21 13:45:59 [ERROR]: Validation errors on registration
+2025-07-21 13:46:04 [ERROR]: Registration error from service: Email already registered
+2025-07-21 13:46:08 [ERROR]: Validation errors on registration
