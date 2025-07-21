@@ -1,4 +1,6 @@
+
 const jwt = require('jsonwebtoken');
+const logger = require('../../utils/logger');
 
 class TokenService {
     static generateAuthToken(user) {
@@ -32,6 +34,7 @@ class TokenService {
                 process.env.JWT_SECRET || 'outlaws@319rZeUVAbk7!ECkhgkpi0C3'
             );
         } catch (error) {
+            logger.error(`JWT verification failed: ${error.message}`, { error: error.stack });
             return null;
         }
     }
@@ -43,11 +46,10 @@ class TokenService {
                 process.env.JWT_REFRESH_SECRET || 'outlaws-refresh-token-3x8Kp!Q2R7TvZs9WyX4mD6bN1cF5gH'
             );
         } catch (error) {
+            logger.error(`JWT refresh verification failed: ${error.message}`, { error: error.stack });
             return null;
         }
     }
 }
-
-module.exports = TokenService;
 
 module.exports = TokenService;

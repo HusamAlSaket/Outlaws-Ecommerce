@@ -1058,3 +1058,177 @@ orders is not defined
 2025-07-21 12:06:24 [INFO]: Fetching all products with filters:
 2025-07-21 12:06:24 [INFO]: Found 5 products (12 total)
 2025-07-21 12:06:24 [INFO]: Products page data loaded successfully
+2025-07-21 12:07:11 [INFO]: Home page requested
+2025-07-21 12:07:11 [INFO]: Fetching trending products
+2025-07-21 12:07:11 [INFO]: Found 6 trending products
+2025-07-21 12:07:11 [INFO]: Fetching popular products
+2025-07-21 12:07:12 [INFO]: Found 6 popular products
+2025-07-21 12:07:12 [INFO]: Home page data loaded successfully
+2025-07-21 12:07:22 [INFO]: Product details requested
+2025-07-21 12:07:22 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc7
+2025-07-21 12:07:22 [INFO]: Product details loaded successfully
+2025-07-21 12:07:24 [WARN]: Authentication required but no token provided
+2025-07-21 12:07:37 [ERROR]: Login error: Invalid email or password
+2025-07-21 12:07:41 [ERROR]: Login error: Invalid email or password
+2025-07-21 12:07:58 [INFO]: User logged in: tesla@gmail.com
+2025-07-21 12:07:58 [INFO]: Home page requested
+2025-07-21 12:07:58 [INFO]: Fetching trending products
+2025-07-21 12:07:58 [INFO]: Found 6 trending products
+2025-07-21 12:07:58 [INFO]: Fetching popular products
+2025-07-21 12:07:58 [INFO]: Found 6 popular products
+2025-07-21 12:07:58 [INFO]: Home page data loaded successfully
+2025-07-21 12:08:07 [INFO]: Orders page requested
+2025-07-21 12:08:07 [INFO]: Fetching user orders
+2025-07-21 12:08:07 [INFO]: Orders retrieved successfully
+2025-07-21 12:08:07 [INFO]: Orders page loaded
+2025-07-21 12:08:18 [INFO]: Orders page requested
+2025-07-21 12:08:18 [INFO]: Fetching user orders
+2025-07-21 12:08:18 [INFO]: Orders retrieved successfully
+2025-07-21 12:08:18 [INFO]: Orders page loaded
+2025-07-21 12:08:21 [INFO]: Home page requested
+2025-07-21 12:08:21 [INFO]: Fetching trending products
+2025-07-21 12:08:21 [INFO]: Found 6 trending products
+2025-07-21 12:08:21 [INFO]: Fetching popular products
+2025-07-21 12:08:21 [INFO]: Found 6 popular products
+2025-07-21 12:08:21 [INFO]: Home page data loaded successfully
+2025-07-21 12:08:47 [INFO]: User logged out: tesla@gmail.com
+2025-07-21 12:08:47 [INFO]: Home page requested
+2025-07-21 12:08:47 [INFO]: Fetching trending products
+2025-07-21 12:08:47 [INFO]: Found 6 trending products
+2025-07-21 12:08:47 [INFO]: Fetching popular products
+2025-07-21 12:08:47 [INFO]: Found 6 popular products
+2025-07-21 12:08:47 [INFO]: Home page data loaded successfully
+2025-07-21 12:10:50 [INFO]: User logged in: tesla@gmail.com
+2025-07-21 12:10:50 [INFO]: Home page requested
+2025-07-21 12:10:50 [INFO]: Fetching trending products
+2025-07-21 12:10:50 [INFO]: Found 6 trending products
+2025-07-21 12:10:50 [INFO]: Fetching popular products
+2025-07-21 12:10:50 [INFO]: Found 6 popular products
+2025-07-21 12:10:50 [INFO]: Home page data loaded successfully
+2025-07-21 12:10:53 [INFO]: User logged out: tesla@gmail.com
+2025-07-21 12:10:53 [INFO]: Home page requested
+2025-07-21 12:10:53 [INFO]: Fetching trending products
+2025-07-21 12:10:54 [INFO]: Found 6 trending products
+2025-07-21 12:10:54 [INFO]: Fetching popular products
+2025-07-21 12:10:54 [INFO]: Found 6 popular products
+2025-07-21 12:10:54 [INFO]: Home page data loaded successfully
+2025-07-21 12:11:01 [ERROR]: Login error: Invalid email or password
+2025-07-21 12:11:01 [ERROR]: Login error: Invalid email or password
+2025-07-21 12:11:34 [INFO]: User logged in: tesla@gmail.com
+2025-07-21 12:11:34 [INFO]: Home page requested
+2025-07-21 12:11:34 [INFO]: Fetching trending products
+2025-07-21 12:11:34 [INFO]: Found 6 trending products
+2025-07-21 12:11:34 [INFO]: Fetching popular products
+2025-07-21 12:11:34 [INFO]: Found 6 popular products
+2025-07-21 12:11:34 [INFO]: Home page data loaded successfully
+2025-07-21 12:23:35 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 12:24:00 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 12:24:16 [INFO]: User logged in: tesla@gmail.com
+2025-07-21 12:24:16 [INFO]: Home page requested
+2025-07-21 12:24:16 [INFO]: Fetching trending products
+2025-07-21 12:24:16 [INFO]: Found 6 trending products
+2025-07-21 12:24:16 [INFO]: Fetching popular products
+2025-07-21 12:24:16 [INFO]: Found 6 popular products
+2025-07-21 12:24:16 [INFO]: Home page data loaded successfully
+2025-07-21 12:24:19 [INFO]: Orders page requested
+2025-07-21 12:24:19 [INFO]: Fetching user orders
+2025-07-21 12:24:19 [INFO]: Orders retrieved successfully
+2025-07-21 12:24:19 [INFO]: Orders page loaded
+2025-07-21 12:24:21 [INFO]: User logged out: tesla@gmail.com
+2025-07-21 12:24:21 [INFO]: Home page requested
+2025-07-21 12:24:21 [INFO]: Fetching trending products
+2025-07-21 12:24:21 [INFO]: Found 6 trending products
+2025-07-21 12:24:21 [INFO]: Fetching popular products
+2025-07-21 12:24:21 [INFO]: Found 6 popular products
+2025-07-21 12:24:21 [INFO]: Home page data loaded successfully
+2025-07-21 12:24:49 [INFO]: User registered successfully: hamzah@gmail.com
+2025-07-21 12:24:49 [INFO]: Home page requested
+2025-07-21 12:24:49 [INFO]: Fetching trending products
+2025-07-21 12:24:49 [INFO]: Found 6 trending products
+2025-07-21 12:24:49 [INFO]: Fetching popular products
+2025-07-21 12:24:49 [INFO]: Found 6 popular products
+2025-07-21 12:24:49 [INFO]: Home page data loaded successfully
+2025-07-21 12:24:52 [INFO]: User logged out: hamzah@gmail.com
+2025-07-21 12:24:52 [INFO]: Home page requested
+2025-07-21 12:24:52 [INFO]: Fetching trending products
+2025-07-21 12:24:52 [INFO]: Found 6 trending products
+2025-07-21 12:24:52 [INFO]: Fetching popular products
+2025-07-21 12:24:52 [INFO]: Found 6 popular products
+2025-07-21 12:24:52 [INFO]: Home page data loaded successfully
+2025-07-21 12:32:54 [INFO]: User registered successfully: ooo@gmail.com
+2025-07-21 12:32:54 [INFO]: Home page requested
+2025-07-21 12:32:54 [INFO]: Fetching trending products
+2025-07-21 12:32:54 [INFO]: Found 6 trending products
+2025-07-21 12:32:54 [INFO]: Fetching popular products
+2025-07-21 12:32:54 [INFO]: Found 6 popular products
+2025-07-21 12:32:54 [INFO]: Home page data loaded successfully
+2025-07-21 12:32:58 [INFO]: User logged out: ooo@gmail.com
+2025-07-21 12:32:58 [INFO]: Home page requested
+2025-07-21 12:32:58 [INFO]: Fetching trending products
+2025-07-21 12:32:58 [INFO]: Found 6 trending products
+2025-07-21 12:32:58 [INFO]: Fetching popular products
+2025-07-21 12:32:58 [INFO]: Found 6 popular products
+2025-07-21 12:32:58 [INFO]: Home page data loaded successfully
+2025-07-21 12:33:12 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 12:33:26 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 12:33:33 [INFO]: User logged in: ooo@gmail.com
+2025-07-21 12:33:33 [INFO]: Home page requested
+2025-07-21 12:33:33 [INFO]: Fetching trending products
+2025-07-21 12:33:33 [INFO]: Found 6 trending products
+2025-07-21 12:33:33 [INFO]: Fetching popular products
+2025-07-21 12:33:33 [INFO]: Found 6 popular products
+2025-07-21 12:33:33 [INFO]: Home page data loaded successfully
+2025-07-21 12:33:37 [INFO]: User logged out: ooo@gmail.com
+2025-07-21 12:33:37 [INFO]: Home page requested
+2025-07-21 12:33:37 [INFO]: Fetching trending products
+2025-07-21 12:33:37 [INFO]: Found 6 trending products
+2025-07-21 12:33:37 [INFO]: Fetching popular products
+2025-07-21 12:33:38 [INFO]: Found 6 popular products
+2025-07-21 12:33:38 [INFO]: Home page data loaded successfully
+2025-07-21 12:38:04 [INFO]: Home page requested
+2025-07-21 12:38:04 [INFO]: Fetching trending products
+2025-07-21 12:38:04 [INFO]: Found 6 trending products
+2025-07-21 12:38:04 [INFO]: Fetching popular products
+2025-07-21 12:38:04 [INFO]: Found 6 popular products
+2025-07-21 12:38:04 [INFO]: Home page data loaded successfully
+2025-07-21 12:38:13 [INFO]: Login attempt: ooo@gmail.com, userFound: true
+2025-07-21 12:38:13 [INFO]: PasswordService compare: false
+2025-07-21 12:38:13 [INFO]: User model matchPassword: false
+2025-07-21 12:38:13 [INFO]: Direct bcryptjs compare: false
+2025-07-21 12:38:13 [ERROR]: Login failed: invalid password for email ooo@gmail.com
+2025-07-21 12:38:13 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 12:41:32 [ERROR]: Validation errors on registration
+2025-07-21 12:41:39 [INFO]: Home page requested
+2025-07-21 12:41:39 [INFO]: Fetching trending products
+2025-07-21 12:41:39 [INFO]: Found 6 trending products
+2025-07-21 12:41:39 [INFO]: Fetching popular products
+2025-07-21 12:41:40 [INFO]: Found 6 popular products
+2025-07-21 12:41:40 [INFO]: Home page data loaded successfully
+2025-07-21 12:41:41 [INFO]: Home page requested
+2025-07-21 12:41:41 [INFO]: Fetching trending products
+2025-07-21 12:41:41 [INFO]: Found 6 trending products
+2025-07-21 12:41:41 [INFO]: Fetching popular products
+2025-07-21 12:41:41 [INFO]: Found 6 popular products
+2025-07-21 12:41:41 [INFO]: Home page data loaded successfully
+2025-07-21 12:41:55 [ERROR]: Validation errors on registration
+2025-07-21 12:44:04 [ERROR]: Validation errors on registration
+2025-07-21 12:44:13 [ERROR]: Validation errors on registration
+2025-07-21 12:44:16 [ERROR]: Validation errors on registration
+2025-07-21 12:44:19 [ERROR]: Validation errors on registration
+2025-07-21 12:44:24 [INFO]: User registered successfully: ss@gmail.com
+2025-07-21 12:44:24 [INFO]: Home page requested
+2025-07-21 12:44:24 [INFO]: Fetching trending products
+2025-07-21 12:44:24 [INFO]: Found 6 trending products
+2025-07-21 12:44:24 [INFO]: Fetching popular products
+2025-07-21 12:44:24 [INFO]: Found 6 popular products
+2025-07-21 12:44:24 [INFO]: Home page data loaded successfully
+2025-07-21 12:44:26 [INFO]: User logged out: ss@gmail.com
+2025-07-21 12:44:26 [INFO]: Home page requested
+2025-07-21 12:44:26 [INFO]: Fetching trending products
+2025-07-21 12:44:26 [INFO]: Found 6 trending products
+2025-07-21 12:44:26 [INFO]: Fetching popular products
+2025-07-21 12:44:26 [INFO]: Found 6 popular products
+2025-07-21 12:44:26 [INFO]: Home page data loaded successfully
+2025-07-21 12:49:06 [INFO]: Login attempt: aaa@gmail.com, userFound: false
+2025-07-21 12:49:06 [ERROR]: Login failed: user not found for email aaa@gmail.com
+2025-07-21 12:49:06 [ERROR]: Login error from service: Invalid email or password

@@ -4,7 +4,7 @@ const logger = require('../utils/logger');  // Import the logger you created
 
 // Show registration form
 exports.getRegister = (req, res) => {
-  res.render('auth/register', { errors: null, oldInput: null });
+  res.render('auth/register', { errors: null, oldInput: null, showPasswordInfo: false });
 };
 
 exports.postRegister = async (req, res) => {
@@ -14,34 +14,70 @@ exports.postRegister = async (req, res) => {
     if (!errors.isEmpty()) {
       // Format the error messages and map them to the form fields
       const formattedErrors = {};
-      
-      // Properly extract errors for each field
       for (const error of errors.array()) {
-        formattedErrors[error.param] = error.msg;
+        // Only assign if param exists, otherwise use 'general'
+        if (error.param && error.param !== '_error') {
+          formattedErrors[error.param] = error.msg;
+        } else {
+          formattedErrors.general = error.msg;
+        }
       }
-      
+      logger.error('Validation errors on registration', { errors: formattedErrors, body: req.body });
       return res.render('auth/register', { 
         errors: formattedErrors, 
-        oldInput: req.body 
+        oldInput: req.body,
+        showPasswordInfo: false
       });
     }
 
-    // Register user
-    const { user, authToken, refreshToken } = await AuthService.registerUser(req.body);
-    
-    // Set session
-    req.session.user = user;
-    req.session.isLoggedIn = true;
-    req.session.authToken = authToken; // Store auth token in session
-    
-    // Log successful registration
-    logger.info(`User registered successfully: ${user.email}`);
-    
-    // Set a welcome flash message
-    req.flash("success", `Welcome to Outlaws, ${user.username}! Your account has been created successfully.`);
-    
-    // Redirect to home
-    res.redirect('/');
+    try {
+      // Register user
+      const { user, authToken, refreshToken } = await AuthService.registerUser(req.body);
+      
+      // Set session
+      req.session.user = user;
+      req.session.isLoggedIn = true;
+      req.session.authToken = authToken; // Store auth token in session
+      
+      // Log successful registration
+      logger.info(`User registered successfully: ${user.email}`);
+      
+      // Set a welcome flash message
+      req.flash("success", `Welcome to Outlaws, ${user.username}! Your account has been created successfully.`);
+      
+      // Redirect to home
+      res.redirect('/');
+    } catch (serviceError) {
+      logger.error(`Registration error from service: ${serviceError.message}`, { 
+        email: req.body.email,
+        error: serviceError.stack
+      });
+      
+      // Create a properly formatted error object
+      const errorObj = {};
+      
+      // Map specific errors to form fields
+      if (serviceError.message.includes('Password must be')) {
+        errorObj.password = "Password doesn't meet requirements";
+        return res.render('auth/register', { 
+          errors: errorObj, 
+          oldInput: req.body,
+          showPasswordInfo: true
+        });
+      } else if (serviceError.message.includes('Email already registered')) {
+        errorObj.email = serviceError.message;
+      } else if (serviceError.message.includes('Username already taken')) {
+        errorObj.username = serviceError.message;
+      } else {
+        errorObj.general = serviceError.message;
+      }
+      
+      return res.render('auth/register', { 
+        errors: errorObj, 
+        oldInput: req.body,
+        showPasswordInfo: false
+      });
+    }
   } catch (error) {
     logger.error(`Registration error: ${error.message}`, { 
       email: req.body.email,
@@ -49,17 +85,12 @@ exports.postRegister = async (req, res) => {
     });
     
     // Create a properly formatted error object
-    const errorObj = { general: error.message };
-    
-    // If it's a password error, add it to the password field specifically
-    if (error.message.includes('Password must be')) {
-      errorObj.password = error.message;
-      delete errorObj.general;
-    }
+    const errorObj = { general: "An unexpected error occurred. Please try again." };
     
     res.render('auth/register', { 
       errors: errorObj, 
-      oldInput: req.body 
+      oldInput: req.body,
+      showPasswordInfo: false
     });
   }
 };
@@ -89,22 +120,38 @@ exports.postLogin = async (req, res) => {
     
     const { email, password } = req.body;
     
-    // Login user
-    const { user, authToken } = await AuthService.loginUser(email, password);
-    
-    // Set session
-    req.session.user = user;
-    req.session.isLoggedIn = true;
-    req.session.authToken = authToken; // Store token in session
-    
-    // Log successful login
-    logger.info(`User logged in: ${user.email}`);
-    
-    // Set a welcome back flash message
-    req.flash("success", `Welcome back, ${user.username}!`);
-    
-    // Redirect to home
-    res.redirect('/');
+    try {
+      // Login user
+      const { user, authToken } = await AuthService.loginUser(email, password);
+      
+      // Set session
+      req.session.user = user;
+      req.session.isLoggedIn = true;
+      req.session.authToken = authToken; // Store token in session
+      
+      // Log successful login
+      logger.info(`User logged in: ${user.email}`);
+      
+      // Set a welcome back flash message
+      req.flash("success", `Welcome back, ${user.username}!`);
+      
+      // Redirect to home
+      res.redirect('/');
+    } catch (serviceError) {
+      logger.error(`Login error from service: ${serviceError.message}`, {
+        email: req.body.email,
+        error: serviceError.stack
+      });
+      
+      // For security reasons, we don't want to reveal exactly what's wrong
+      const errorMessage = "Invalid email or password. Please check your credentials and try again.";
+      
+      // Return to login page with general error message
+      return res.render('auth/login', { 
+        errors: { general: errorMessage }, 
+        oldInput: req.body 
+      });
+    }
   } catch (error) {
     logger.error(`Login error: ${error.message}`, {
       email: req.body.email,
@@ -112,7 +159,7 @@ exports.postLogin = async (req, res) => {
     });
     
     res.render('auth/login', { 
-      errors: { general: error.message }, 
+      errors: { general: "An unexpected error occurred. Please try again." }, 
       oldInput: req.body 
     });
   }

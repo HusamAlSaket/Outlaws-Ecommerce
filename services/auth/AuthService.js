@@ -1,6 +1,7 @@
 const User = require("../../models/User");
 const PasswordService = require("./PasswordService");
 const TokenService = require("./TokenService");
+const logger = require("../../utils/logger");
 const { validationResult } = require("express-validator");
 
 class AuthService {
@@ -49,45 +50,37 @@ class AuthService {
   }
 
   static async loginUser(email, password) {
+
     // Find user
     const user = await User.findOne({ email });
-    console.log('Login attempt:', { email, userFound: !!user });
-    
+    logger.info(`Login attempt: ${email}, userFound: ${!!user}`);
     if (!user) {
+      logger.error(`Login failed: user not found for email ${email}`);
       throw new Error("Invalid email or password");
     }
 
-    // Debug log the password values
-    console.log('Password comparison:', {
-      providedPassword: password,
-      storedPasswordHash: user.password.substring(0, 10) + '...' // Only log the first 10 chars for security
-    });
-
     // Try multiple methods to compare passwords to ensure compatibility
     let isPasswordValid = false;
-    
     try {
       // Method 1: Using PasswordService
       isPasswordValid = await PasswordService.comparePasswords(password, user.password);
-      console.log('Method 1 (PasswordService):', isPasswordValid);
-      
+      logger.info(`PasswordService compare: ${isPasswordValid}`);
       // Method 2: Using User model method
       if (!isPasswordValid) {
         isPasswordValid = await user.matchPassword(password);
-        console.log('Method 2 (User model):', isPasswordValid);
+        logger.info(`User model matchPassword: ${isPasswordValid}`);
       }
-      
       // Method 3: Direct bcryptjs compare as last resort
       if (!isPasswordValid) {
         const bcryptjs = require('bcryptjs');
         isPasswordValid = await bcryptjs.compare(password, user.password);
-        console.log('Method 3 (Direct bcryptjs):', isPasswordValid);
+        logger.info(`Direct bcryptjs compare: ${isPasswordValid}`);
       }
     } catch (err) {
-      console.error('Password comparison error:', err);
+      logger.error(`Password comparison error for email ${email}: ${err.message}`, { error: err.stack });
     }
-    
     if (!isPasswordValid) {
+      logger.error(`Login failed: invalid password for email ${email}`);
       throw new Error("Invalid email or password");
     }
 
