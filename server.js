@@ -7,6 +7,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const session = require("express-session");
+const flash = require("connect-flash");
 
 // middleware to serve static files like css
 
@@ -30,9 +31,14 @@ app.use(
   })
 );
 
-// Global middleware to make user available in all templates
+// Initialize flash middleware
+app.use(flash());
+
+// Global middleware to make user and flash messages available in all templates
 app.use((req, res, next) => {
   res.locals.user = req.session.user || null;
+  res.locals.successMessage = req.flash("success");
+  res.locals.errorMessage = req.flash("error");
   next();
 });
 
@@ -111,10 +117,20 @@ app.get("/orders", requireAuth, getOrders);
 // Authentication Routes
 app.get("/register", getRegister);
 app.post("/register", [
-  body('username').trim().isLength({ min: 3 }).withMessage('Username must be at least 3 characters'),
-  body('email').isEmail().normalizeEmail().withMessage('Please enter a valid email'),
-  body('password').isLength({ min: 8 }).withMessage('Password must be at least 8 characters')
-    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*$/).withMessage('Password must contain at least one number, one lowercase and one uppercase letter')
+  body('username')
+    .trim()
+    .notEmpty().withMessage('Username is required')
+    .isLength({ min: 3 }).withMessage('Username must be at least 3 characters'),
+  body('email')
+    .notEmpty().withMessage('Email is required')
+    .isEmail().withMessage('Please enter a valid email')
+    .normalizeEmail(),
+  body('password')
+    .notEmpty().withMessage('Password is required')
+    .isLength({ min: 8 }).withMessage('Password must be at least 8 characters')
+    .matches(/[A-Z]/).withMessage('Password must contain at least one uppercase letter')
+    .matches(/[a-z]/).withMessage('Password must contain at least one lowercase letter')
+    .matches(/[0-9]/).withMessage('Password must contain at least one number')
 ], postRegister);
 
 app.get("/login", getLogin);

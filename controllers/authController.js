@@ -12,21 +12,33 @@ exports.postRegister = async (req, res) => {
     // Validate request
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
+      // Format the error messages and map them to the form fields
+      const formattedErrors = {};
+      
+      // Properly extract errors for each field
+      for (const error of errors.array()) {
+        formattedErrors[error.param] = error.msg;
+      }
+      
       return res.render('auth/register', { 
-        errors: errors.mapped(), 
+        errors: formattedErrors, 
         oldInput: req.body 
       });
     }
 
     // Register user
-    const user = await AuthService.registerUser(req.body);
+    const { user, authToken, refreshToken } = await AuthService.registerUser(req.body);
     
     // Set session
     req.session.user = user;
     req.session.isLoggedIn = true;
+    req.session.authToken = authToken; // Store auth token in session
     
     // Log successful registration
     logger.info(`User registered successfully: ${user.email}`);
+    
+    // Set a welcome flash message
+    req.flash("success", `Welcome to Outlaws, ${user.username}! Your account has been created successfully.`);
     
     // Redirect to home
     res.redirect('/');
@@ -58,6 +70,23 @@ exports.getLogin = (req, res) => {
 
 exports.postLogin = async (req, res) => {
   try {
+    // Check for validation errors first
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      // Format the error messages and map them to the form fields
+      const formattedErrors = {};
+      
+      // Properly extract errors for each field
+      for (const error of errors.array()) {
+        formattedErrors[error.param] = error.msg;
+      }
+      
+      return res.render('auth/login', { 
+        errors: formattedErrors, 
+        oldInput: req.body 
+      });
+    }
+    
     const { email, password } = req.body;
     
     // Login user
@@ -70,6 +99,9 @@ exports.postLogin = async (req, res) => {
     
     // Log successful login
     logger.info(`User logged in: ${user.email}`);
+    
+    // Set a welcome back flash message
+    req.flash("success", `Welcome back, ${user.username}!`);
     
     // Redirect to home
     res.redirect('/');

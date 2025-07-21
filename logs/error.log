@@ -203,3 +203,7 @@ orders is not defined
     at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
     at exports.getProfile (C:\Users\ADMIN\Documents\node-ecommerce\controllers\authController.js:100:9)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-21 11:53:02 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:53:11 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:56:25 [ERROR]: Registration error: Username already taken
+2025-07-21 12:05:15 [ERROR]: Login error: Invalid email or password

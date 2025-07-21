@@ -48,7 +48,10 @@
     </div>
 
     <% if (errors && errors.general) { %>
-      <div class="alert alert-danger text-center"><%= errors.general %></div>
+      <div class="alert alert-danger text-center mb-4">
+        <i class="fas fa-exclamation-triangle me-2"></i>
+        <%= errors.general %>
+      </div>
     <% } %>
 
     <form action="/register" method="POST">

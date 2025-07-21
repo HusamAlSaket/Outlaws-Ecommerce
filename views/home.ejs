@@ -21,6 +21,22 @@
   <body>
     <%- include('partials/navbar') %>
 
+    <% if (successMessage && successMessage.length > 0) { %>
+      <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+        <i class="fas fa-check-circle me-2"></i>
+        <%= successMessage %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% } %>
+
+    <% if (errorMessage && errorMessage.length > 0) { %>
+      <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+        <i class="fas fa-exclamation-triangle me-2"></i>
+        <%= errorMessage %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% } %>
+    
     <!-- ✅ HERO -->
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">

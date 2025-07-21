@@ -859,3 +859,202 @@ orders is not defined
 2025-07-21 11:49:12 [INFO]: Cart page loaded
 2025-07-21 11:49:14 [INFO]: Checkout page requested
 2025-07-21 11:49:14 [INFO]: Checkout page loaded
+2025-07-21 11:50:26 [WARN]: Authentication required but no token provided
+2025-07-21 11:50:53 [INFO]: User logged in: salemqundilw@gmail.com
+2025-07-21 11:50:53 [INFO]: Home page requested
+2025-07-21 11:50:53 [INFO]: Fetching trending products
+2025-07-21 11:50:53 [INFO]: Found 6 trending products
+2025-07-21 11:50:53 [INFO]: Fetching popular products
+2025-07-21 11:50:53 [INFO]: Found 6 popular products
+2025-07-21 11:50:53 [INFO]: Home page data loaded successfully
+2025-07-21 11:50:57 [INFO]: Cart page requested
+2025-07-21 11:50:57 [INFO]: Cart page loaded
+2025-07-21 11:51:00 [INFO]: Products page requested
+2025-07-21 11:51:00 [INFO]: Fetching all products with filters:
+2025-07-21 11:51:00 [INFO]: Found 5 products (12 total)
+2025-07-21 11:51:01 [INFO]: Products page data loaded successfully
+2025-07-21 11:51:02 [INFO]: Cart add request
+2025-07-21 11:51:02 [INFO]: Adding item to cart
+2025-07-21 11:51:02 [INFO]: Item added to cart successfully
+2025-07-21 11:51:02 [INFO]: Cart page requested
+2025-07-21 11:51:02 [INFO]: Cart page loaded
+2025-07-21 11:51:04 [INFO]: Cart page requested
+2025-07-21 11:51:04 [INFO]: Cart page loaded
+2025-07-21 11:51:06 [INFO]: Checkout page requested
+2025-07-21 11:51:06 [INFO]: Checkout page loaded
+2025-07-21 11:51:17 [INFO]: Processing checkout
+2025-07-21 11:51:17 [INFO]: Creating new order
+2025-07-21 11:51:17 [INFO]: Validating cart for checkout
+2025-07-21 11:51:17 [INFO]: Cart validation successful
+2025-07-21 11:51:17 [INFO]: Updating product stock
+2025-07-21 11:51:17 [INFO]: Stock updated
+2025-07-21 11:51:17 [INFO]: Order created successfully
+2025-07-21 11:51:17 [INFO]: Cart cleared
+2025-07-21 11:51:17 [INFO]: Checkout completed successfully
+2025-07-21 11:51:17 [INFO]: Orders page requested
+2025-07-21 11:51:17 [INFO]: Fetching user orders
+2025-07-21 11:51:18 [INFO]: Orders retrieved successfully
+2025-07-21 11:51:18 [INFO]: Orders page loaded
+2025-07-21 11:51:27 [INFO]: User logged out: salemqundilw@gmail.com
+2025-07-21 11:51:27 [INFO]: Home page requested
+2025-07-21 11:51:27 [INFO]: Fetching trending products
+2025-07-21 11:51:27 [INFO]: Found 6 trending products
+2025-07-21 11:51:27 [INFO]: Fetching popular products
+2025-07-21 11:51:27 [INFO]: Found 6 popular products
+2025-07-21 11:51:27 [INFO]: Home page data loaded successfully
+2025-07-21 11:51:53 [INFO]: User logged in: tesla@gmail.com
+2025-07-21 11:51:53 [INFO]: Home page requested
+2025-07-21 11:51:53 [INFO]: Fetching trending products
+2025-07-21 11:51:53 [INFO]: Found 6 trending products
+2025-07-21 11:51:53 [INFO]: Fetching popular products
+2025-07-21 11:51:53 [INFO]: Found 6 popular products
+2025-07-21 11:51:53 [INFO]: Home page data loaded successfully
+2025-07-21 11:52:05 [INFO]: Orders page requested
+2025-07-21 11:52:05 [INFO]: Fetching user orders
+2025-07-21 11:52:05 [INFO]: Orders retrieved successfully
+2025-07-21 11:52:05 [INFO]: Orders page loaded
+2025-07-21 11:52:08 [INFO]: Products page requested
+2025-07-21 11:52:08 [INFO]: Fetching all products with filters:
+2025-07-21 11:52:08 [INFO]: Found 5 products (12 total)
+2025-07-21 11:52:08 [INFO]: Products page data loaded successfully
+2025-07-21 11:52:13 [INFO]: Cart add request
+2025-07-21 11:52:13 [INFO]: Adding item to cart
+2025-07-21 11:52:13 [INFO]: Item added to cart successfully
+2025-07-21 11:52:13 [INFO]: Cart page requested
+2025-07-21 11:52:13 [INFO]: Cart page loaded
+2025-07-21 11:52:14 [INFO]: Cart page requested
+2025-07-21 11:52:14 [INFO]: Cart page loaded
+2025-07-21 11:52:17 [INFO]: Checkout page requested
+2025-07-21 11:52:17 [INFO]: Checkout page loaded
+2025-07-21 11:52:30 [INFO]: Processing checkout
+2025-07-21 11:52:30 [INFO]: Creating new order
+2025-07-21 11:52:30 [INFO]: Validating cart for checkout
+2025-07-21 11:52:30 [INFO]: Cart validation successful
+2025-07-21 11:52:30 [INFO]: Updating product stock
+2025-07-21 11:52:30 [INFO]: Stock updated
+2025-07-21 11:52:30 [INFO]: Order created successfully
+2025-07-21 11:52:30 [INFO]: Cart cleared
+2025-07-21 11:52:30 [INFO]: Checkout completed successfully
+2025-07-21 11:52:30 [INFO]: Orders page requested
+2025-07-21 11:52:30 [INFO]: Fetching user orders
+2025-07-21 11:52:30 [INFO]: Orders retrieved successfully
+2025-07-21 11:52:30 [INFO]: Orders page loaded
+2025-07-21 11:52:36 [INFO]: User logged out: tesla@gmail.com
+2025-07-21 11:52:36 [INFO]: Home page requested
+2025-07-21 11:52:36 [INFO]: Fetching trending products
+2025-07-21 11:52:36 [INFO]: Found 6 trending products
+2025-07-21 11:52:36 [INFO]: Fetching popular products
+2025-07-21 11:52:37 [INFO]: Found 6 popular products
+2025-07-21 11:52:37 [INFO]: Home page data loaded successfully
+2025-07-21 11:52:38 [INFO]: Products page requested
+2025-07-21 11:52:38 [INFO]: Fetching all products with filters:
+2025-07-21 11:52:38 [INFO]: Found 5 products (12 total)
+2025-07-21 11:52:38 [INFO]: Products page data loaded successfully
+2025-07-21 11:52:40 [INFO]: Cart add request
+2025-07-21 11:52:40 [INFO]: Adding item to cart
+2025-07-21 11:52:40 [INFO]: Item added to cart successfully
+2025-07-21 11:52:40 [INFO]: Cart page requested
+2025-07-21 11:52:40 [INFO]: Cart page loaded
+2025-07-21 11:52:41 [INFO]: Cart page requested
+2025-07-21 11:52:41 [INFO]: Cart page loaded
+2025-07-21 11:52:43 [WARN]: Authentication required but no token provided
+2025-07-21 11:52:48 [INFO]: User logged in: tesla@gmail.com
+2025-07-21 11:52:48 [INFO]: Home page requested
+2025-07-21 11:52:48 [INFO]: Fetching trending products
+2025-07-21 11:52:48 [INFO]: Found 6 trending products
+2025-07-21 11:52:48 [INFO]: Fetching popular products
+2025-07-21 11:52:48 [INFO]: Found 6 popular products
+2025-07-21 11:52:48 [INFO]: Home page data loaded successfully
+2025-07-21 11:52:51 [INFO]: Cart page requested
+2025-07-21 11:52:51 [INFO]: Cart page loaded
+2025-07-21 11:52:53 [INFO]: Checkout page requested
+2025-07-21 11:52:53 [INFO]: Checkout page loaded
+2025-07-21 11:52:55 [INFO]: User logged out: tesla@gmail.com
+2025-07-21 11:52:55 [INFO]: Home page requested
+2025-07-21 11:52:55 [INFO]: Fetching trending products
+2025-07-21 11:52:56 [INFO]: Found 6 trending products
+2025-07-21 11:52:56 [INFO]: Fetching popular products
+2025-07-21 11:52:56 [INFO]: Found 6 popular products
+2025-07-21 11:52:56 [INFO]: Home page data loaded successfully
+2025-07-21 11:53:02 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:53:11 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:56:25 [ERROR]: Registration error: Username already taken
+2025-07-21 11:56:32 [INFO]: User registered successfully: test2@gmail.com
+2025-07-21 11:56:32 [INFO]: Home page requested
+2025-07-21 11:56:32 [INFO]: Fetching trending products
+2025-07-21 11:56:32 [INFO]: Found 6 trending products
+2025-07-21 11:56:32 [INFO]: Fetching popular products
+2025-07-21 11:56:32 [INFO]: Found 6 popular products
+2025-07-21 11:56:32 [INFO]: Home page data loaded successfully
+2025-07-21 11:56:34 [WARN]: Authentication required but no token provided
+2025-07-21 12:05:15 [ERROR]: Login error: Invalid email or password
+2025-07-21 12:05:19 [INFO]: User logged in: salemqundilw@gmail.com
+2025-07-21 12:05:19 [INFO]: Home page requested
+2025-07-21 12:05:19 [INFO]: Fetching trending products
+2025-07-21 12:05:19 [INFO]: Found 6 trending products
+2025-07-21 12:05:19 [INFO]: Fetching popular products
+2025-07-21 12:05:19 [INFO]: Found 6 popular products
+2025-07-21 12:05:19 [INFO]: Home page data loaded successfully
+2025-07-21 12:05:22 [INFO]: Home page requested
+2025-07-21 12:05:22 [INFO]: Fetching trending products
+2025-07-21 12:05:22 [INFO]: Found 6 trending products
+2025-07-21 12:05:22 [INFO]: Fetching popular products
+2025-07-21 12:05:22 [INFO]: Found 6 popular products
+2025-07-21 12:05:22 [INFO]: Home page data loaded successfully
+2025-07-21 12:05:25 [INFO]: Products page requested
+2025-07-21 12:05:25 [INFO]: Fetching all products with filters:
+2025-07-21 12:05:25 [INFO]: Found 5 products (12 total)
+2025-07-21 12:05:25 [INFO]: Products page data loaded successfully
+2025-07-21 12:05:26 [INFO]: Orders page requested
+2025-07-21 12:05:26 [INFO]: Fetching user orders
+2025-07-21 12:05:26 [INFO]: Orders retrieved successfully
+2025-07-21 12:05:26 [INFO]: Orders page loaded
+2025-07-21 12:05:33 [INFO]: User logged out: salemqundilw@gmail.com
+2025-07-21 12:05:33 [INFO]: Home page requested
+2025-07-21 12:05:33 [INFO]: Fetching trending products
+2025-07-21 12:05:33 [INFO]: Found 6 trending products
+2025-07-21 12:05:33 [INFO]: Fetching popular products
+2025-07-21 12:05:33 [INFO]: Found 6 popular products
+2025-07-21 12:05:33 [INFO]: Home page data loaded successfully
+2025-07-21 12:05:39 [INFO]: User logged in: tesla@gmail.com
+2025-07-21 12:05:39 [INFO]: Home page requested
+2025-07-21 12:05:39 [INFO]: Fetching trending products
+2025-07-21 12:05:40 [INFO]: Found 6 trending products
+2025-07-21 12:05:40 [INFO]: Fetching popular products
+2025-07-21 12:05:40 [INFO]: Found 6 popular products
+2025-07-21 12:05:40 [INFO]: Home page data loaded successfully
+2025-07-21 12:05:46 [INFO]: User logged out: tesla@gmail.com
+2025-07-21 12:05:46 [INFO]: Home page requested
+2025-07-21 12:05:46 [INFO]: Fetching trending products
+2025-07-21 12:05:47 [INFO]: Found 6 trending products
+2025-07-21 12:05:47 [INFO]: Fetching popular products
+2025-07-21 12:05:47 [INFO]: Found 6 popular products
+2025-07-21 12:05:47 [INFO]: Home page data loaded successfully
+2025-07-21 12:06:02 [INFO]: User registered successfully: salemqundil@gmail.com
+2025-07-21 12:06:02 [INFO]: Home page requested
+2025-07-21 12:06:02 [INFO]: Fetching trending products
+2025-07-21 12:06:02 [INFO]: Found 6 trending products
+2025-07-21 12:06:02 [INFO]: Fetching popular products
+2025-07-21 12:06:02 [INFO]: Found 6 popular products
+2025-07-21 12:06:02 [INFO]: Home page data loaded successfully
+2025-07-21 12:06:09 [INFO]: Cart page requested
+2025-07-21 12:06:09 [INFO]: Cart page loaded
+2025-07-21 12:06:10 [INFO]: Home page requested
+2025-07-21 12:06:10 [INFO]: Fetching trending products
+2025-07-21 12:06:10 [INFO]: Found 6 trending products
+2025-07-21 12:06:10 [INFO]: Fetching popular products
+2025-07-21 12:06:10 [INFO]: Found 6 popular products
+2025-07-21 12:06:10 [INFO]: Home page data loaded successfully
+2025-07-21 12:06:15 [INFO]: Products page requested
+2025-07-21 12:06:15 [INFO]: Fetching all products with filters:
+2025-07-21 12:06:15 [INFO]: Found 5 products (12 total)
+2025-07-21 12:06:15 [INFO]: Products page data loaded successfully
+2025-07-21 12:06:16 [INFO]: Cart add request
+2025-07-21 12:06:16 [INFO]: Adding item to cart
+2025-07-21 12:06:16 [INFO]: Item added to cart successfully
+2025-07-21 12:06:16 [INFO]: Cart page requested
+2025-07-21 12:06:16 [INFO]: Cart page loaded
+2025-07-21 12:06:24 [INFO]: Products page requested
+2025-07-21 12:06:24 [INFO]: Fetching all products with filters:
+2025-07-21 12:06:24 [INFO]: Found 5 products (12 total)
+2025-07-21 12:06:24 [INFO]: Products page data loaded successfully

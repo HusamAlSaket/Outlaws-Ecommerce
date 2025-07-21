@@ -33,11 +33,19 @@ class AuthService {
 
     await newUser.save();
 
-    // Return user data (without password)
+    // Generate tokens, just like in the login flow
+    const authToken = TokenService.generateAuthToken(newUser);
+    const refreshToken = TokenService.generateRefreshToken(newUser);
+
+    // Return user data (without password) and tokens
     const userToReturn = newUser.toObject();
     delete userToReturn.password;
 
-    return userToReturn;
+    return {
+      user: userToReturn,
+      authToken,
+      refreshToken
+    };
   }
 
   static async loginUser(email, password) {
