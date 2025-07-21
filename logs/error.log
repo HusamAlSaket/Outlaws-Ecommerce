@@ -134,3 +134,72 @@ AppError: Failed to fetch product
     at ProductService.getProductById (C:\Users\ADMIN\Documents\node-ecommerce\services\productService.js:65:13)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async C:\Users\ADMIN\Documents\node-ecommerce\controllers\productController.js:32:19
+2025-07-21 11:39:56 [ERROR]: Registration error: Email already registered
+2025-07-21 11:40:04 [ERROR]: Registration error: Email already registered
+2025-07-21 11:40:29 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:40:34 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:40:38 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:40:46 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:40:50 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:41:28 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:38
+    36|           <div class="profile-actions">
+    37|             <div class="quick-stat">
+ >> 38|               <div class="quick-stat-value"><%= orders ? orders.length : 0 %></div>
+    39|               <div class="quick-stat-label">Orders</div>
+    40|             </div>
+    41|             <div class="quick-stat">
+
+orders is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:38
+    36|           <div class="profile-actions">
+    37|             <div class="quick-stat">
+ >> 38|               <div class="quick-stat-value"><%= orders ? orders.length : 0 %></div>
+    39|               <div class="quick-stat-label">Orders</div>
+    40|             </div>
+    41|             <div class="quick-stat">
+
+orders is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\profile.ejs":18:26)
+    at profile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+    at exports.getProfile (C:\Users\ADMIN\Documents\node-ecommerce\controllers\authController.js:100:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-21 11:42:16 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:42:23 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:44:28 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:44:33 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:44:47 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:46:44 [ERROR]: Registration error: Email already registered
+2025-07-21 11:47:41 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:38
+    36|           <div class="profile-actions">
+    37|             <div class="quick-stat">
+ >> 38|               <div class="quick-stat-value"><%= orders ? orders.length : 0 %></div>
+    39|               <div class="quick-stat-label">Orders</div>
+    40|             </div>
+    41|             <div class="quick-stat">
+
+orders is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:38
+    36|           <div class="profile-actions">
+    37|             <div class="quick-stat">
+ >> 38|               <div class="quick-stat-value"><%= orders ? orders.length : 0 %></div>
+    39|               <div class="quick-stat-label">Orders</div>
+    40|             </div>
+    41|             <div class="quick-stat">
+
+orders is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\profile.ejs":18:26)
+    at profile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+    at exports.getProfile (C:\Users\ADMIN\Documents\node-ecommerce\controllers\authController.js:100:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

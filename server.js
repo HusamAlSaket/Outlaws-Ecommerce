@@ -123,6 +123,31 @@ app.post("/login", [
   body('password').notEmpty().withMessage('Password is required')
 ], postLogin);
 
+// DEBUG ONLY - Remove in production
+app.get("/debug/create-test-user", async (req, res) => {
+  try {
+    // Check if test user exists
+    const testEmail = "test@example.com";
+    let testUser = await require('./models/User').findOne({ email: testEmail });
+    
+    if (testUser) {
+      return res.send(`Test user already exists. Email: ${testEmail}, Password: Test123`);
+    }
+    
+    // Create test user with known credentials
+    const userData = {
+      username: "TestUser",
+      email: testEmail,
+      password: "Test123"
+    };
+    
+    const user = await require('./services/auth/AuthService').registerUser(userData);
+    res.send(`Test user created successfully. Email: ${testEmail}, Password: Test123`);
+  } catch (error) {
+    res.status(500).send(`Error creating test user: ${error.message}`);
+  }
+});
+
 app.get("/profile", requireAuth, getProfile);
 
 app.get("/logout", logout);

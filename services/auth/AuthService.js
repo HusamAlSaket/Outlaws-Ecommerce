@@ -24,14 +24,11 @@ class AuthService {
       throw new Error(passwordError);
     }
 
-    // Hash password
-    const hashedPassword = await PasswordService.hashPassword(password);
-
-    // Create and save user
+    // Create and save user (password hashing happens in User model pre-save hook)
     const newUser = new User({
       username,
       email,
-      password: hashedPassword,
+      password,
     });
 
     await newUser.save();
@@ -46,15 +43,42 @@ class AuthService {
   static async loginUser(email, password) {
     // Find user
     const user = await User.findOne({ email });
+    console.log('Login attempt:', { email, userFound: !!user });
+    
     if (!user) {
       throw new Error("Invalid email or password");
     }
 
-    // Check password
-    const isPasswordValid = await PasswordService.comparePasswords(
-      password,
-      user.password
-    );
+    // Debug log the password values
+    console.log('Password comparison:', {
+      providedPassword: password,
+      storedPasswordHash: user.password.substring(0, 10) + '...' // Only log the first 10 chars for security
+    });
+
+    // Try multiple methods to compare passwords to ensure compatibility
+    let isPasswordValid = false;
+    
+    try {
+      // Method 1: Using PasswordService
+      isPasswordValid = await PasswordService.comparePasswords(password, user.password);
+      console.log('Method 1 (PasswordService):', isPasswordValid);
+      
+      // Method 2: Using User model method
+      if (!isPasswordValid) {
+        isPasswordValid = await user.matchPassword(password);
+        console.log('Method 2 (User model):', isPasswordValid);
+      }
+      
+      // Method 3: Direct bcryptjs compare as last resort
+      if (!isPasswordValid) {
+        const bcryptjs = require('bcryptjs');
+        isPasswordValid = await bcryptjs.compare(password, user.password);
+        console.log('Method 3 (Direct bcryptjs):', isPasswordValid);
+      }
+    } catch (err) {
+      console.error('Password comparison error:', err);
+    }
+    
     if (!isPasswordValid) {
       throw new Error("Invalid email or password");
     }

@@ -685,3 +685,177 @@ AppError: Failed to fetch product
 2025-07-20 16:31:18 [INFO]: Cart page loaded
 2025-07-20 16:32:58 [INFO]: Cart page requested
 2025-07-20 16:32:58 [INFO]: Cart page loaded
+2025-07-21 11:38:33 [INFO]: Home page requested
+2025-07-21 11:38:33 [INFO]: Fetching trending products
+2025-07-21 11:38:33 [INFO]: Found 6 trending products
+2025-07-21 11:38:33 [INFO]: Fetching popular products
+2025-07-21 11:38:33 [INFO]: Found 6 popular products
+2025-07-21 11:38:33 [INFO]: Home page data loaded successfully
+2025-07-21 11:39:56 [ERROR]: Registration error: Email already registered
+2025-07-21 11:40:04 [ERROR]: Registration error: Email already registered
+2025-07-21 11:40:14 [INFO]: User registered successfully: aleks@gmail.com
+2025-07-21 11:40:14 [INFO]: Home page requested
+2025-07-21 11:40:14 [INFO]: Fetching trending products
+2025-07-21 11:40:14 [INFO]: Found 6 trending products
+2025-07-21 11:40:14 [INFO]: Fetching popular products
+2025-07-21 11:40:14 [INFO]: Found 6 popular products
+2025-07-21 11:40:14 [INFO]: Home page data loaded successfully
+2025-07-21 11:40:18 [WARN]: Authentication required but no token provided
+2025-07-21 11:40:29 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:40:34 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:40:38 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:40:46 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:40:50 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:40:57 [INFO]: Home page requested
+2025-07-21 11:40:57 [INFO]: Fetching trending products
+2025-07-21 11:40:57 [INFO]: Found 6 trending products
+2025-07-21 11:40:57 [INFO]: Fetching popular products
+2025-07-21 11:40:57 [INFO]: Found 6 popular products
+2025-07-21 11:40:57 [INFO]: Home page data loaded successfully
+2025-07-21 11:40:59 [INFO]: Home page requested
+2025-07-21 11:40:59 [INFO]: Fetching trending products
+2025-07-21 11:40:59 [INFO]: Found 6 trending products
+2025-07-21 11:40:59 [INFO]: Fetching popular products
+2025-07-21 11:40:59 [INFO]: Found 6 popular products
+2025-07-21 11:40:59 [INFO]: Home page data loaded successfully
+2025-07-21 11:41:06 [INFO]: Home page requested
+2025-07-21 11:41:06 [INFO]: Fetching trending products
+2025-07-21 11:41:06 [INFO]: Found 6 trending products
+2025-07-21 11:41:06 [INFO]: Fetching popular products
+2025-07-21 11:41:07 [INFO]: Found 6 popular products
+2025-07-21 11:41:07 [INFO]: Home page data loaded successfully
+2025-07-21 11:41:09 [INFO]: Cart add request
+2025-07-21 11:41:09 [INFO]: Adding item to cart
+2025-07-21 11:41:09 [INFO]: Item added to cart successfully
+2025-07-21 11:41:09 [INFO]: Cart page requested
+2025-07-21 11:41:09 [INFO]: Cart page loaded
+2025-07-21 11:41:11 [INFO]: Cart page requested
+2025-07-21 11:41:11 [INFO]: Cart page loaded
+2025-07-21 11:41:25 [INFO]: User logged in: tesla@gmail.com
+2025-07-21 11:41:25 [INFO]: Home page requested
+2025-07-21 11:41:25 [INFO]: Fetching trending products
+2025-07-21 11:41:25 [INFO]: Found 6 trending products
+2025-07-21 11:41:25 [INFO]: Fetching popular products
+2025-07-21 11:41:25 [INFO]: Found 6 popular products
+2025-07-21 11:41:25 [INFO]: Home page data loaded successfully
+2025-07-21 11:41:28 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:38
+    36|           <div class="profile-actions">
+    37|             <div class="quick-stat">
+ >> 38|               <div class="quick-stat-value"><%= orders ? orders.length : 0 %></div>
+    39|               <div class="quick-stat-label">Orders</div>
+    40|             </div>
+    41|             <div class="quick-stat">
+
+orders is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:38
+    36|           <div class="profile-actions">
+    37|             <div class="quick-stat">
+ >> 38|               <div class="quick-stat-value"><%= orders ? orders.length : 0 %></div>
+    39|               <div class="quick-stat-label">Orders</div>
+    40|             </div>
+    41|             <div class="quick-stat">
+
+orders is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\profile.ejs":18:26)
+    at profile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+    at exports.getProfile (C:\Users\ADMIN\Documents\node-ecommerce\controllers\authController.js:100:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-21 11:41:42 [WARN]: Authentication required but no token provided
+2025-07-21 11:41:58 [INFO]: User registered successfully: xsoraval@gmail.com
+2025-07-21 11:41:58 [INFO]: Home page requested
+2025-07-21 11:41:58 [INFO]: Fetching trending products
+2025-07-21 11:41:58 [INFO]: Found 6 trending products
+2025-07-21 11:41:58 [INFO]: Fetching popular products
+2025-07-21 11:41:58 [INFO]: Found 6 popular products
+2025-07-21 11:41:58 [INFO]: Home page data loaded successfully
+2025-07-21 11:42:00 [WARN]: Authentication required but no token provided
+2025-07-21 11:42:16 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:42:23 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:44:28 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:44:33 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:44:47 [ERROR]: Login error: Invalid email or password
+2025-07-21 11:46:14 [INFO]: Home page requested
+2025-07-21 11:46:14 [INFO]: Fetching trending products
+2025-07-21 11:46:14 [INFO]: Found 6 trending products
+2025-07-21 11:46:14 [INFO]: Fetching popular products
+2025-07-21 11:46:14 [INFO]: Found 6 popular products
+2025-07-21 11:46:14 [INFO]: Home page data loaded successfully
+2025-07-21 11:46:44 [ERROR]: Registration error: Email already registered
+2025-07-21 11:47:25 [INFO]: User registered successfully: salemqundilw@gmail.com
+2025-07-21 11:47:25 [INFO]: Home page requested
+2025-07-21 11:47:25 [INFO]: Fetching trending products
+2025-07-21 11:47:25 [INFO]: Found 6 trending products
+2025-07-21 11:47:25 [INFO]: Fetching popular products
+2025-07-21 11:47:25 [INFO]: Found 6 popular products
+2025-07-21 11:47:25 [INFO]: Home page data loaded successfully
+2025-07-21 11:47:28 [WARN]: Authentication required but no token provided
+2025-07-21 11:47:39 [INFO]: User logged in: salemqundilw@gmail.com
+2025-07-21 11:47:39 [INFO]: Home page requested
+2025-07-21 11:47:39 [INFO]: Fetching trending products
+2025-07-21 11:47:39 [INFO]: Found 6 trending products
+2025-07-21 11:47:39 [INFO]: Fetching popular products
+2025-07-21 11:47:39 [INFO]: Found 6 popular products
+2025-07-21 11:47:39 [INFO]: Home page data loaded successfully
+2025-07-21 11:47:41 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:38
+    36|           <div class="profile-actions">
+    37|             <div class="quick-stat">
+ >> 38|               <div class="quick-stat-value"><%= orders ? orders.length : 0 %></div>
+    39|               <div class="quick-stat-label">Orders</div>
+    40|             </div>
+    41|             <div class="quick-stat">
+
+orders is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:38
+    36|           <div class="profile-actions">
+    37|             <div class="quick-stat">
+ >> 38|               <div class="quick-stat-value"><%= orders ? orders.length : 0 %></div>
+    39|               <div class="quick-stat-label">Orders</div>
+    40|             </div>
+    41|             <div class="quick-stat">
+
+orders is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\profile.ejs":18:26)
+    at profile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+    at exports.getProfile (C:\Users\ADMIN\Documents\node-ecommerce\controllers\authController.js:100:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-21 11:48:43 [WARN]: Authentication required but no token provided
+2025-07-21 11:48:56 [INFO]: User logged in: salemqundilw@gmail.com
+2025-07-21 11:48:56 [INFO]: Home page requested
+2025-07-21 11:48:56 [INFO]: Fetching trending products
+2025-07-21 11:48:56 [INFO]: Found 6 trending products
+2025-07-21 11:48:56 [INFO]: Fetching popular products
+2025-07-21 11:48:56 [INFO]: Found 6 popular products
+2025-07-21 11:48:56 [INFO]: Home page data loaded successfully
+2025-07-21 11:49:03 [INFO]: Products page requested
+2025-07-21 11:49:03 [INFO]: Fetching all products with filters:
+2025-07-21 11:49:04 [INFO]: Found 5 products (12 total)
+2025-07-21 11:49:04 [INFO]: Products page data loaded successfully
+2025-07-21 11:49:04 [INFO]: Orders page requested
+2025-07-21 11:49:04 [INFO]: Fetching user orders
+2025-07-21 11:49:04 [INFO]: Orders retrieved successfully
+2025-07-21 11:49:04 [INFO]: Orders page loaded
+2025-07-21 11:49:06 [INFO]: Products page requested
+2025-07-21 11:49:06 [INFO]: Fetching all products with filters:
+2025-07-21 11:49:06 [INFO]: Found 5 products (12 total)
+2025-07-21 11:49:06 [INFO]: Products page data loaded successfully
+2025-07-21 11:49:09 [INFO]: Cart add request
+2025-07-21 11:49:09 [INFO]: Adding item to cart
+2025-07-21 11:49:09 [INFO]: Item added to cart successfully
+2025-07-21 11:49:09 [INFO]: Cart page requested
+2025-07-21 11:49:09 [INFO]: Cart page loaded
+2025-07-21 11:49:12 [INFO]: Cart page requested
+2025-07-21 11:49:12 [INFO]: Cart page loaded
+2025-07-21 11:49:14 [INFO]: Checkout page requested
+2025-07-21 11:49:14 [INFO]: Checkout page loaded

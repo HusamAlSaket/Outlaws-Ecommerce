@@ -36,8 +36,17 @@ exports.postRegister = async (req, res) => {
       error: error.stack
     });
     
+    // Create a properly formatted error object
+    const errorObj = { general: error.message };
+    
+    // If it's a password error, add it to the password field specifically
+    if (error.message.includes('Password must be')) {
+      errorObj.password = error.message;
+      delete errorObj.general;
+    }
+    
     res.render('auth/register', { 
-      errors: { general: error.message }, 
+      errors: errorObj, 
       oldInput: req.body 
     });
   }
@@ -87,8 +96,21 @@ exports.logout = (req, res) => {
 
 exports.getProfile = async (req, res) => {
   try {
+    // Fetch user data
     const user = await AuthService.getUserById(req.session.user._id);
-    res.render('profile', { user });
+    
+    // Fetch user's orders if the Order model exists
+    let orders = [];
+    try {
+      const Order = require('../models/Order');
+      orders = await Order.find({ user: req.session.user._id }).sort({ createdAt: -1 });
+    } catch (orderError) {
+      logger.warn(`Could not fetch orders for profile: ${orderError.message}`);
+      // Continue anyway, we'll just show zero orders
+    }
+    
+    // Render profile with both user and orders data
+    res.render('profile', { user, orders });
   } catch (error) {
     logger.error(`Profile error: ${error.message}`, {
       userId: req.session.user?._id,
