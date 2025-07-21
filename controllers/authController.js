@@ -1,148 +1,99 @@
-const User = require('../models/User');
-const bcrypt = require('bcrypt');
+const AuthService = require('../services/auth/AuthService');
+const { validationResult } = require('express-validator');
+const logger = require('../utils/logger');  // Import the logger you created
 
 // Show registration form
 exports.getRegister = (req, res) => {
   res.render('auth/register', { errors: null, oldInput: null });
 };
+
 exports.postRegister = async (req, res) => {
-  const { username, email, password } = req.body;
-  const errors = {};
-
-  if (!username || username.length < 3) {
-    errors.username = "Username must be at least 3 characters.";
-  }
-
-  if (!email || !email.includes("@")) {
-    errors.email = "Please enter a valid email address.";
-  }
-
-  if (!password || password.length < 6) {
-    errors.password = "Password must be at least 6 characters.";
-  }
-
-  if (Object.keys(errors).length > 0) {
-    return res.render('auth/register', { errors, oldInput: req.body });
-  }
-
   try {
-    const existingEmail = await User.findOne({ email });
-    if (existingEmail) {
-      errors.email = "Email already registered.";
-      return res.render('auth/register', { errors, oldInput: req.body });
+    // Validate request
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render('auth/register', { 
+        errors: errors.mapped(), 
+        oldInput: req.body 
+      });
     }
 
-    const existingUsername = await User.findOne({ username });
-    if (existingUsername) {
-      errors.username = "Username already taken.";
-      return res.render('auth/register', { errors, oldInput: req.body });
-    }
-
-    const newUser = new User({ username, email, password });
-    await newUser.save();
-
-    req.session.user = {
-      _id: newUser._id,
-      username: newUser.username,
-      email: newUser.email,
-      isAdmin: newUser.isAdmin
-    };
-
+    // Register user
+    const user = await AuthService.registerUser(req.body);
+    
+    // Set session
+    req.session.user = user;
+    req.session.isLoggedIn = true;
+    
+    // Log successful registration
+    logger.info(`User registered successfully: ${user.email}`);
+    
+    // Redirect to home
     res.redirect('/');
-  } catch (err) {
-    console.error(err);
-    res.status(500).render('auth/register', { errors: { general: "Server error. Please try again." }, oldInput: req.body });
+  } catch (error) {
+    logger.error(`Registration error: ${error.message}`, { 
+      email: req.body.email,
+      error: error.stack
+    });
+    
+    res.render('auth/register', { 
+      errors: { general: error.message }, 
+      oldInput: req.body 
+    });
   }
 };
 
-
-// Show login form
 exports.getLogin = (req, res) => {
   res.render('auth/login', { errors: null, oldInput: null });
 };
 
-// Handle user login
 exports.postLogin = async (req, res) => {
-  const { email, password } = req.body;
-  const errors = {};
-
-  if (!email || !email.includes('@')) {
-    errors.email = "Please enter a valid email address.";
-  }
-
-  if (!password) {
-    errors.password = "Password is required.";
-  }
-
-  if (Object.keys(errors).length > 0) {
-    return res.render('auth/login', { errors, oldInput: req.body });
-  }
-
   try {
-    const user = await User.findOne({ email });
-    if (!user) {
-      return res.render('auth/login', {
-        errors: { email: "Email not found." },
-        oldInput: req.body
-      });
-    }
-
-    const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) {
-      return res.render('auth/login', {
-        errors: { password: "Incorrect password." },
-        oldInput: req.body
-      });
-    }
-
-    req.session.user = {
-      _id: user._id,
-      username: user.username,
-      email: user.email,
-      isAdmin: user.isAdmin
-    };
-
+    const { email, password } = req.body;
+    
+    // Login user
+    const { user, authToken } = await AuthService.loginUser(email, password);
+    
+    // Set session
+    req.session.user = user;
+    req.session.isLoggedIn = true;
+    req.session.authToken = authToken; // Store token in session
+    
+    // Log successful login
+    logger.info(`User logged in: ${user.email}`);
+    
+    // Redirect to home
     res.redirect('/');
-  } catch (err) {
-    console.error(err);
-    res.status(500).render('auth/login', {
-      errors: { general: "Server error. Please try again." },
-      oldInput: req.body
+  } catch (error) {
+    logger.error(`Login error: ${error.message}`, {
+      email: req.body.email,
+      error: error.stack
+    });
+    
+    res.render('auth/login', { 
+      errors: { general: error.message }, 
+      oldInput: req.body 
     });
   }
 };
 
-// Logout
 exports.logout = (req, res) => {
-  req.session.destroy(() => {
-    res.redirect('/');
-  });
+  if (req.session.user) {
+    logger.info(`User logged out: ${req.session.user.email}`);
+  }
+  req.session.destroy();
+  res.redirect('/');
 };
 
-// Show profile page
 exports.getProfile = async (req, res) => {
   try {
-    // Check if user is logged in
-    if (!req.session.user) {
-      return res.redirect('/login');
-    }
-    
-    // Import Order model
-    const Order = require('../models/Order');
-    
-    // Fetch user's orders
-    const orders = await Order.find({ user: req.session.user._id })
-      .sort({ createdAt: -1 }); // Sort by newest first
-    
-    res.render('profile', { 
-      user: req.session.user,
-      orders: orders 
-    });
+    const user = await AuthService.getUserById(req.session.user._id);
+    res.render('profile', { user });
   } catch (error) {
-    console.error('Error fetching profile data:', error);
-    res.render('profile', { 
-      user: req.session.user,
-      orders: [] 
+    logger.error(`Profile error: ${error.message}`, {
+      userId: req.session.user?._id,
+      error: error.stack
     });
+    res.redirect('/');
   }
 };

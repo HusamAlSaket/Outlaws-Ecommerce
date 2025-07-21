@@ -59,6 +59,12 @@ const {
 } = require("./controllers/orderController");
 const contactController = require('./controllers/contactController');
 
+// Import middlewares
+const { requireAuth, requireAdmin } = require('./middleware/authMiddleware');
+
+// Import validation
+const { body } = require('express-validator');
+
 
 
 // Home Route
@@ -96,26 +102,38 @@ app.get("/api/cart/count", (req, res) => {
 });
 
 // Checkout Routes
-app.get("/checkout", getCheckout);
-app.post("/checkout", express.urlencoded({ extended: true }), postCheckout);
+app.get("/checkout", requireAuth, getCheckout);
+app.post("/checkout", requireAuth, express.urlencoded({ extended: true }), postCheckout);
 
 // Orders Route
-app.get("/orders", getOrders);
+app.get("/orders", requireAuth, getOrders);
 
 // Authentication Routes
 app.get("/register", getRegister);
-app.post("/register", postRegister);
+app.post("/register", [
+  body('username').trim().isLength({ min: 3 }).withMessage('Username must be at least 3 characters'),
+  body('email').isEmail().normalizeEmail().withMessage('Please enter a valid email'),
+  body('password').isLength({ min: 8 }).withMessage('Password must be at least 8 characters')
+    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*$/).withMessage('Password must contain at least one number, one lowercase and one uppercase letter')
+], postRegister);
 
 app.get("/login", getLogin);
-app.post("/login", postLogin);
+app.post("/login", [
+  body('email').isEmail().normalizeEmail().withMessage('Please enter a valid email'),
+  body('password').notEmpty().withMessage('Password is required')
+], postLogin);
 
-app.get("/profile", getProfile);
+app.get("/profile", requireAuth, getProfile);
 
 app.get("/logout", logout);
 
 // Contact Routes
 app.get('/contact', contactController.getContactPage);
-app.post('/contact', contactController.postContact);
+app.post('/contact', [
+  body('name').trim().isLength({ min: 2 }).withMessage('Name must be at least 2 characters'),
+  body('email').isEmail().normalizeEmail().withMessage('Please enter a valid email'),
+  body('message').trim().isLength({ min: 10 }).withMessage('Message must be at least 10 characters')
+], contactController.postContact);
 
 // Global Error Handler - MUST be last middleware
 const { globalErrorHandler } = require('./utils/errorHandler');
