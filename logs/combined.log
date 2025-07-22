@@ -2454,3 +2454,133 @@ messages is not defined
 2025-07-22 13:17:32 [INFO]: Fetching popular products
 2025-07-22 13:17:33 [INFO]: Found 6 popular products
 2025-07-22 13:17:33 [INFO]: Home page data loaded successfully
+2025-07-22 13:19:01 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 13:19:01 [INFO]: PasswordService compare: true
+2025-07-22 13:19:01 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 13:19:01 [INFO]: Home page requested
+2025-07-22 13:19:01 [INFO]: Fetching trending products
+2025-07-22 13:19:01 [INFO]: Found 6 trending products
+2025-07-22 13:19:01 [INFO]: Fetching popular products
+2025-07-22 13:19:01 [INFO]: Found 6 popular products
+2025-07-22 13:19:01 [INFO]: Home page data loaded successfully
+2025-07-22 13:19:28 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 13:19:28 [INFO]: Home page requested
+2025-07-22 13:19:28 [INFO]: Fetching trending products
+2025-07-22 13:19:28 [INFO]: Found 6 trending products
+2025-07-22 13:19:28 [INFO]: Fetching popular products
+2025-07-22 13:19:28 [INFO]: Found 6 popular products
+2025-07-22 13:19:28 [INFO]: Home page data loaded successfully
+2025-07-22 13:19:35 [INFO]: Home page requested
+2025-07-22 13:19:35 [INFO]: Fetching trending products
+2025-07-22 13:19:35 [INFO]: Found 6 trending products
+2025-07-22 13:19:35 [INFO]: Fetching popular products
+2025-07-22 13:19:35 [INFO]: Found 6 popular products
+2025-07-22 13:19:35 [INFO]: Home page data loaded successfully
+2025-07-22 13:19:37 [INFO]: Cart page requested
+2025-07-22 13:19:37 [INFO]: Cart page loaded
+2025-07-22 13:19:39 [INFO]: Products page requested
+2025-07-22 13:19:39 [INFO]: Fetching all products with filters:
+2025-07-22 13:19:39 [INFO]: Found 5 products (12 total)
+2025-07-22 13:19:39 [INFO]: Products page data loaded successfully
+2025-07-22 13:19:41 [INFO]: Cart add request
+2025-07-22 13:19:41 [INFO]: Adding item to cart
+2025-07-22 13:19:41 [INFO]: Item added to cart successfully
+2025-07-22 13:19:41 [INFO]: Cart page requested
+2025-07-22 13:19:41 [INFO]: Cart page loaded
+2025-07-22 13:19:43 [INFO]: Cart page requested
+2025-07-22 13:19:43 [INFO]: Cart page loaded
+2025-07-22 13:19:45 [WARN]: Authentication required but no token provided
+2025-07-22 13:19:59 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 13:19:59 [INFO]: PasswordService compare: true
+2025-07-22 13:19:59 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 13:19:59 [INFO]: Home page requested
+2025-07-22 13:19:59 [INFO]: Fetching trending products
+2025-07-22 13:19:59 [INFO]: Found 6 trending products
+2025-07-22 13:19:59 [INFO]: Fetching popular products
+2025-07-22 13:19:59 [INFO]: Found 6 popular products
+2025-07-22 13:19:59 [INFO]: Home page data loaded successfully
+2025-07-22 13:20:02 [INFO]: Cart page requested
+2025-07-22 13:20:02 [INFO]: Cart page loaded
+2025-07-22 13:20:46 [INFO]: Checkout page requested
+2025-07-22 13:20:46 [INFO]: Checkout page loaded
+2025-07-22 14:04:36 [WARN]: Authentication required but no token provided
+2025-07-22 14:04:41 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 14:04:41 [INFO]: PasswordService compare: true
+2025-07-22 14:04:41 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 14:04:41 [INFO]: Home page requested
+2025-07-22 14:04:41 [INFO]: Fetching trending products
+2025-07-22 14:04:41 [INFO]: Found 6 trending products
+2025-07-22 14:04:41 [INFO]: Fetching popular products
+2025-07-22 14:04:41 [INFO]: Found 6 popular products
+2025-07-22 14:04:41 [INFO]: Home page data loaded successfully
+2025-07-22 14:04:49 [INFO]: Cart page requested
+2025-07-22 14:04:49 [INFO]: Cart page loaded
+2025-07-22 14:04:52 [INFO]: Products page requested
+2025-07-22 14:04:52 [INFO]: Fetching all products with filters:
+2025-07-22 14:04:53 [INFO]: Found 5 products (12 total)
+2025-07-22 14:04:53 [INFO]: Products page data loaded successfully
+2025-07-22 14:05:00 [INFO]: Products page requested
+2025-07-22 14:05:00 [INFO]: Fetching all products with filters:
+2025-07-22 14:05:00 [INFO]: Found 5 products (12 total)
+2025-07-22 14:05:00 [INFO]: Products page data loaded successfully
+2025-07-22 14:05:03 [INFO]: Cart add request
+2025-07-22 14:05:03 [INFO]: Adding item to cart
+2025-07-22 14:05:03 [INFO]: Item added to cart successfully
+2025-07-22 14:05:03 [INFO]: Cart page requested
+2025-07-22 14:05:03 [INFO]: Cart page loaded
+2025-07-22 14:05:09 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 14:05:09 [INFO]: Home page requested
+2025-07-22 14:05:09 [INFO]: Fetching trending products
+2025-07-22 14:05:09 [INFO]: Found 6 trending products
+2025-07-22 14:05:09 [INFO]: Fetching popular products
+2025-07-22 14:05:09 [INFO]: Found 6 popular products
+2025-07-22 14:05:09 [INFO]: Home page data loaded successfully
+2025-07-22 14:05:15 [INFO]: Cart page requested
+2025-07-22 14:05:15 [INFO]: Cart page loaded
+2025-07-22 14:05:22 [WARN]: Authentication required but no token provided
+2025-07-22 14:05:24 [INFO]: Products page requested
+2025-07-22 14:05:24 [INFO]: Fetching all products with filters:
+2025-07-22 14:05:24 [INFO]: Found 5 products (12 total)
+2025-07-22 14:05:24 [INFO]: Products page data loaded successfully
+2025-07-22 14:05:27 [INFO]: Cart add request
+2025-07-22 14:05:27 [INFO]: Adding item to cart
+2025-07-22 14:05:27 [INFO]: Item added to cart successfully
+2025-07-22 14:05:27 [INFO]: Cart page requested
+2025-07-22 14:05:27 [INFO]: Cart page loaded
+2025-07-22 14:05:28 [INFO]: Cart page requested
+2025-07-22 14:05:28 [INFO]: Cart page loaded
+2025-07-22 14:05:30 [WARN]: Authentication required but no token provided
+2025-07-22 14:05:34 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 14:05:34 [INFO]: PasswordService compare: true
+2025-07-22 14:05:34 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 14:05:34 [INFO]: Home page requested
+2025-07-22 14:05:34 [INFO]: Fetching trending products
+2025-07-22 14:05:34 [INFO]: Found 6 trending products
+2025-07-22 14:05:34 [INFO]: Fetching popular products
+2025-07-22 14:05:34 [INFO]: Found 6 popular products
+2025-07-22 14:05:34 [INFO]: Home page data loaded successfully
+2025-07-22 14:05:40 [INFO]: Cart page requested
+2025-07-22 14:05:40 [INFO]: Cart page loaded
+2025-07-22 14:06:56 [INFO]: Home page requested
+2025-07-22 14:06:56 [INFO]: Fetching trending products
+2025-07-22 14:06:56 [INFO]: Found 6 trending products
+2025-07-22 14:06:56 [INFO]: Fetching popular products
+2025-07-22 14:06:56 [INFO]: Found 6 popular products
+2025-07-22 14:06:56 [INFO]: Home page data loaded successfully
+2025-07-22 14:06:58 [INFO]: Products page requested
+2025-07-22 14:06:58 [INFO]: Fetching all products with filters:
+2025-07-22 14:06:58 [INFO]: Found 5 products (12 total)
+2025-07-22 14:06:58 [INFO]: Products page data loaded successfully
+2025-07-22 14:07:01 [INFO]: Cart add request
+2025-07-22 14:07:01 [INFO]: Adding item to cart
+2025-07-22 14:07:01 [INFO]: Item added to cart successfully
+2025-07-22 14:07:01 [INFO]: Cart page requested
+2025-07-22 14:07:01 [INFO]: Cart page loaded
+2025-07-22 14:07:03 [INFO]: Cart page requested
+2025-07-22 14:07:03 [INFO]: Cart page loaded
+2025-07-22 14:07:06 [WARN]: Authentication required but no token provided
+2025-07-22 14:07:20 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 14:07:20 [INFO]: PasswordService compare: true
+2025-07-22 14:07:20 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 14:07:20 [INFO]: Checkout page requested
+2025-07-22 14:07:20 [INFO]: Checkout page loaded
