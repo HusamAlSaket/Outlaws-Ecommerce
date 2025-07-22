@@ -1576,3 +1576,881 @@ orders is not defined
 2025-07-21 13:45:59 [ERROR]: Validation errors on registration
 2025-07-21 13:46:04 [ERROR]: Registration error from service: Email already registered
 2025-07-21 13:46:08 [ERROR]: Validation errors on registration
+2025-07-21 14:19:28 [INFO]: Home page requested
+2025-07-21 14:19:28 [INFO]: Fetching trending products
+2025-07-21 14:19:28 [INFO]: Found 6 trending products
+2025-07-21 14:19:28 [INFO]: Fetching popular products
+2025-07-21 14:19:28 [INFO]: Found 6 popular products
+2025-07-21 14:19:28 [INFO]: Home page data loaded successfully
+2025-07-21 14:19:28 [INFO]: Home page requested
+2025-07-21 14:19:28 [INFO]: Fetching trending products
+2025-07-21 14:19:28 [INFO]: Found 6 trending products
+2025-07-21 14:19:28 [INFO]: Fetching popular products
+2025-07-21 14:19:28 [INFO]: Found 6 popular products
+2025-07-21 14:19:28 [INFO]: Home page data loaded successfully
+2025-07-21 14:19:35 [INFO]: Login attempt: alsakethusam@gmail.com, userFound: false
+2025-07-21 14:19:35 [ERROR]: Login failed: user not found for email alsakethusam@gmail.com
+2025-07-21 14:19:35 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 14:21:43 [ERROR]: Registration error from service: Email already registered
+2025-07-21 14:21:48 [ERROR]: Validation errors on registration
+2025-07-21 14:21:53 [ERROR]: Validation errors on registration
+2025-07-21 14:21:59 [INFO]: Home page requested
+2025-07-21 14:21:59 [INFO]: Fetching trending products
+2025-07-21 14:21:59 [INFO]: Found 6 trending products
+2025-07-21 14:21:59 [INFO]: Fetching popular products
+2025-07-21 14:21:59 [INFO]: Found 6 popular products
+2025-07-21 14:21:59 [INFO]: Home page data loaded successfully
+2025-07-22 12:01:55 [INFO]: Home page requested
+2025-07-22 12:01:55 [INFO]: Fetching trending products
+2025-07-22 12:01:55 [INFO]: Found 6 trending products
+2025-07-22 12:01:55 [INFO]: Fetching popular products
+2025-07-22 12:01:55 [INFO]: Found 6 popular products
+2025-07-22 12:01:55 [INFO]: Home page data loaded successfully
+2025-07-22 12:02:04 [INFO]: Product details requested
+2025-07-22 12:02:04 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-07-22 12:02:04 [INFO]: Product details loaded successfully
+2025-07-22 12:02:07 [INFO]: Products page requested
+2025-07-22 12:02:07 [INFO]: Fetching all products with filters:
+2025-07-22 12:02:07 [INFO]: Found 5 products (12 total)
+2025-07-22 12:02:07 [INFO]: Products page data loaded successfully
+2025-07-22 12:02:15 [INFO]: Products page requested
+2025-07-22 12:02:15 [INFO]: Fetching all products with filters:
+2025-07-22 12:02:15 [INFO]: Found 5 products (12 total)
+2025-07-22 12:02:15 [INFO]: Products page data loaded successfully
+2025-07-22 12:02:30 [WARN]: Authentication required but no token provided
+2025-07-22 12:02:41 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:02:41 [INFO]: PasswordService compare: true
+2025-07-22 12:02:41 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:02:41 [INFO]: Home page requested
+2025-07-22 12:02:41 [INFO]: Fetching trending products
+2025-07-22 12:02:41 [INFO]: Found 6 trending products
+2025-07-22 12:02:41 [INFO]: Fetching popular products
+2025-07-22 12:02:41 [INFO]: Found 6 popular products
+2025-07-22 12:02:41 [INFO]: Home page data loaded successfully
+2025-07-22 12:02:46 [INFO]: Orders page requested
+2025-07-22 12:02:46 [INFO]: Fetching user orders
+2025-07-22 12:02:46 [INFO]: Orders retrieved successfully
+2025-07-22 12:02:46 [INFO]: Orders page loaded
+2025-07-22 12:02:52 [INFO]: Orders page requested
+2025-07-22 12:02:52 [INFO]: Fetching user orders
+2025-07-22 12:02:52 [INFO]: Orders retrieved successfully
+2025-07-22 12:02:52 [INFO]: Orders page loaded
+2025-07-22 12:03:06 [INFO]: Cart page requested
+2025-07-22 12:03:06 [INFO]: Cart page loaded
+2025-07-22 12:03:21 [INFO]: Orders page requested
+2025-07-22 12:03:21 [INFO]: Fetching user orders
+2025-07-22 12:03:21 [INFO]: Orders retrieved successfully
+2025-07-22 12:03:21 [INFO]: Orders page loaded
+2025-07-22 12:03:45 [INFO]: Home page requested
+2025-07-22 12:03:45 [INFO]: Fetching trending products
+2025-07-22 12:03:45 [INFO]: Found 6 trending products
+2025-07-22 12:03:45 [INFO]: Fetching popular products
+2025-07-22 12:03:45 [INFO]: Found 6 popular products
+2025-07-22 12:03:45 [INFO]: Home page data loaded successfully
+2025-07-22 12:03:55 [INFO]: Home page requested
+2025-07-22 12:03:55 [INFO]: Fetching trending products
+2025-07-22 12:03:55 [INFO]: Found 6 trending products
+2025-07-22 12:03:55 [INFO]: Fetching popular products
+2025-07-22 12:03:55 [INFO]: Found 6 popular products
+2025-07-22 12:03:55 [INFO]: Home page data loaded successfully
+2025-07-22 12:06:37 [INFO]: Home page requested
+2025-07-22 12:06:37 [INFO]: Fetching trending products
+2025-07-22 12:06:37 [INFO]: Found 6 trending products
+2025-07-22 12:06:37 [INFO]: Fetching popular products
+2025-07-22 12:06:37 [INFO]: Found 6 popular products
+2025-07-22 12:06:37 [INFO]: Home page data loaded successfully
+2025-07-22 12:06:37 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\partials\\navbar.ejs":21:8)
+    at navbar (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at include (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:701:39)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\home.ejs":12:17)
+    at home (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+2025-07-22 12:06:38 [INFO]: Home page requested
+2025-07-22 12:06:38 [INFO]: Fetching trending products
+2025-07-22 12:06:38 [INFO]: Found 6 trending products
+2025-07-22 12:06:38 [INFO]: Fetching popular products
+2025-07-22 12:06:39 [INFO]: Found 6 popular products
+2025-07-22 12:06:39 [INFO]: Home page data loaded successfully
+2025-07-22 12:06:39 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\partials\\navbar.ejs":21:8)
+    at navbar (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at include (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:701:39)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\home.ejs":12:17)
+    at home (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+2025-07-22 12:06:44 [INFO]: Home page requested
+2025-07-22 12:06:44 [INFO]: Fetching trending products
+2025-07-22 12:06:45 [INFO]: Found 6 trending products
+2025-07-22 12:06:45 [INFO]: Fetching popular products
+2025-07-22 12:06:45 [INFO]: Found 6 popular products
+2025-07-22 12:06:45 [INFO]: Home page data loaded successfully
+2025-07-22 12:06:45 [INFO]: Home page requested
+2025-07-22 12:06:45 [INFO]: Fetching trending products
+2025-07-22 12:06:45 [INFO]: Found 6 trending products
+2025-07-22 12:06:45 [INFO]: Fetching popular products
+2025-07-22 12:06:45 [INFO]: Found 6 popular products
+2025-07-22 12:06:45 [INFO]: Home page data loaded successfully
+2025-07-22 12:06:47 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:06:47 [INFO]: Home page requested
+2025-07-22 12:06:47 [INFO]: Fetching trending products
+2025-07-22 12:06:47 [INFO]: Found 6 trending products
+2025-07-22 12:06:47 [INFO]: Fetching popular products
+2025-07-22 12:06:47 [INFO]: Found 6 popular products
+2025-07-22 12:06:47 [INFO]: Home page data loaded successfully
+2025-07-22 12:06:47 [INFO]: Home page requested
+2025-07-22 12:06:47 [INFO]: Fetching trending products
+2025-07-22 12:06:48 [INFO]: Found 6 trending products
+2025-07-22 12:06:48 [INFO]: Fetching popular products
+2025-07-22 12:06:48 [INFO]: Found 6 popular products
+2025-07-22 12:06:48 [INFO]: Home page data loaded successfully
+2025-07-22 12:06:56 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:06:56 [INFO]: PasswordService compare: true
+2025-07-22 12:06:56 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:06:56 [INFO]: Home page requested
+2025-07-22 12:06:56 [INFO]: Fetching trending products
+2025-07-22 12:06:56 [INFO]: Found 6 trending products
+2025-07-22 12:06:56 [INFO]: Fetching popular products
+2025-07-22 12:06:56 [INFO]: Found 6 popular products
+2025-07-22 12:06:56 [INFO]: Home page data loaded successfully
+2025-07-22 12:06:59 [INFO]: Home page requested
+2025-07-22 12:06:59 [INFO]: Fetching trending products
+2025-07-22 12:07:00 [INFO]: Found 6 trending products
+2025-07-22 12:07:00 [INFO]: Fetching popular products
+2025-07-22 12:07:00 [INFO]: Found 6 popular products
+2025-07-22 12:07:00 [INFO]: Home page data loaded successfully
+2025-07-22 12:07:03 [INFO]: Home page requested
+2025-07-22 12:07:03 [INFO]: Fetching trending products
+2025-07-22 12:07:03 [INFO]: Found 6 trending products
+2025-07-22 12:07:03 [INFO]: Fetching popular products
+2025-07-22 12:07:05 [INFO]: Found 6 popular products
+2025-07-22 12:07:05 [INFO]: Home page data loaded successfully
+2025-07-22 12:07:05 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\partials\\navbar.ejs":21:8)
+    at navbar (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at include (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:701:39)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\home.ejs":12:17)
+    at home (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+2025-07-22 12:08:29 [INFO]: Home page requested
+2025-07-22 12:08:29 [INFO]: Fetching trending products
+2025-07-22 12:08:29 [INFO]: Found 6 trending products
+2025-07-22 12:08:29 [INFO]: Fetching popular products
+2025-07-22 12:08:29 [INFO]: Found 6 popular products
+2025-07-22 12:08:29 [INFO]: Home page data loaded successfully
+2025-07-22 12:08:30 [INFO]: Home page requested
+2025-07-22 12:08:30 [INFO]: Fetching trending products
+2025-07-22 12:08:30 [INFO]: Found 6 trending products
+2025-07-22 12:08:30 [INFO]: Fetching popular products
+2025-07-22 12:08:30 [INFO]: Found 6 popular products
+2025-07-22 12:08:30 [INFO]: Home page data loaded successfully
+2025-07-22 12:08:30 [INFO]: Home page requested
+2025-07-22 12:08:30 [INFO]: Fetching trending products
+2025-07-22 12:08:30 [INFO]: Found 6 trending products
+2025-07-22 12:08:30 [INFO]: Fetching popular products
+2025-07-22 12:08:30 [INFO]: Found 6 popular products
+2025-07-22 12:08:30 [INFO]: Home page data loaded successfully
+2025-07-22 12:08:32 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:08:32 [INFO]: Home page requested
+2025-07-22 12:08:32 [INFO]: Fetching trending products
+2025-07-22 12:08:32 [INFO]: Found 6 trending products
+2025-07-22 12:08:32 [INFO]: Fetching popular products
+2025-07-22 12:08:32 [INFO]: Found 6 popular products
+2025-07-22 12:08:32 [INFO]: Home page data loaded successfully
+2025-07-22 12:08:32 [INFO]: Home page requested
+2025-07-22 12:08:32 [INFO]: Fetching trending products
+2025-07-22 12:08:32 [INFO]: Found 6 trending products
+2025-07-22 12:08:32 [INFO]: Fetching popular products
+2025-07-22 12:08:33 [INFO]: Found 6 popular products
+2025-07-22 12:08:33 [INFO]: Home page data loaded successfully
+2025-07-22 12:08:39 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:08:39 [INFO]: PasswordService compare: true
+2025-07-22 12:08:39 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:08:39 [INFO]: Home page requested
+2025-07-22 12:08:39 [INFO]: Fetching trending products
+2025-07-22 12:08:39 [INFO]: Found 6 trending products
+2025-07-22 12:08:39 [INFO]: Fetching popular products
+2025-07-22 12:08:39 [INFO]: Found 6 popular products
+2025-07-22 12:08:39 [INFO]: Home page data loaded successfully
+2025-07-22 12:09:35 [INFO]: Home page requested
+2025-07-22 12:09:35 [INFO]: Fetching trending products
+2025-07-22 12:09:35 [INFO]: Found 6 trending products
+2025-07-22 12:09:35 [INFO]: Fetching popular products
+2025-07-22 12:09:35 [INFO]: Found 6 popular products
+2025-07-22 12:09:35 [INFO]: Home page data loaded successfully
+2025-07-22 12:09:36 [INFO]: Home page requested
+2025-07-22 12:09:36 [INFO]: Fetching trending products
+2025-07-22 12:09:36 [INFO]: Found 6 trending products
+2025-07-22 12:09:36 [INFO]: Fetching popular products
+2025-07-22 12:09:36 [INFO]: Found 6 popular products
+2025-07-22 12:09:36 [INFO]: Home page data loaded successfully
+2025-07-22 12:09:37 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:09:37 [INFO]: Home page requested
+2025-07-22 12:09:37 [INFO]: Fetching trending products
+2025-07-22 12:09:37 [INFO]: Found 6 trending products
+2025-07-22 12:09:37 [INFO]: Fetching popular products
+2025-07-22 12:09:37 [INFO]: Found 6 popular products
+2025-07-22 12:09:37 [INFO]: Home page data loaded successfully
+2025-07-22 12:09:47 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:09:47 [INFO]: PasswordService compare: true
+2025-07-22 12:09:47 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:09:47 [INFO]: Home page requested
+2025-07-22 12:09:47 [INFO]: Fetching trending products
+2025-07-22 12:09:47 [INFO]: Found 6 trending products
+2025-07-22 12:09:47 [INFO]: Fetching popular products
+2025-07-22 12:09:47 [INFO]: Found 6 popular products
+2025-07-22 12:09:47 [INFO]: Home page data loaded successfully
+2025-07-22 12:09:50 [INFO]: Home page requested
+2025-07-22 12:09:50 [INFO]: Fetching trending products
+2025-07-22 12:09:50 [INFO]: Found 6 trending products
+2025-07-22 12:09:50 [INFO]: Fetching popular products
+2025-07-22 12:09:51 [INFO]: Home page requested
+2025-07-22 12:09:51 [INFO]: Fetching trending products
+2025-07-22 12:09:51 [INFO]: Found 6 popular products
+2025-07-22 12:09:51 [INFO]: Home page data loaded successfully
+2025-07-22 12:09:51 [INFO]: Home page requested
+2025-07-22 12:09:51 [INFO]: Fetching trending products
+2025-07-22 12:09:51 [INFO]: Found 6 trending products
+2025-07-22 12:09:51 [INFO]: Fetching popular products
+2025-07-22 12:09:51 [INFO]: Found 6 popular products
+2025-07-22 12:09:51 [INFO]: Home page data loaded successfully
+2025-07-22 12:09:51 [INFO]: Home page requested
+2025-07-22 12:09:51 [INFO]: Fetching trending products
+2025-07-22 12:09:51 [INFO]: Found 6 trending products
+2025-07-22 12:09:51 [INFO]: Fetching popular products
+2025-07-22 12:09:51 [INFO]: Found 6 popular products
+2025-07-22 12:09:51 [INFO]: Home page data loaded successfully
+2025-07-22 12:09:51 [INFO]: Home page requested
+2025-07-22 12:09:51 [INFO]: Fetching trending products
+2025-07-22 12:09:51 [INFO]: Found 6 trending products
+2025-07-22 12:09:51 [INFO]: Fetching popular products
+2025-07-22 12:09:51 [INFO]: Found 6 popular products
+2025-07-22 12:09:51 [INFO]: Home page data loaded successfully
+2025-07-22 12:09:51 [INFO]: Found 6 trending products
+2025-07-22 12:09:51 [INFO]: Fetching popular products
+2025-07-22 12:09:51 [INFO]: Found 6 popular products
+2025-07-22 12:09:51 [INFO]: Home page data loaded successfully
+2025-07-22 12:12:53 [INFO]: Home page requested
+2025-07-22 12:12:53 [INFO]: Fetching trending products
+2025-07-22 12:12:54 [INFO]: Found 6 trending products
+2025-07-22 12:12:54 [INFO]: Fetching popular products
+2025-07-22 12:12:54 [INFO]: Found 6 popular products
+2025-07-22 12:12:54 [INFO]: Home page data loaded successfully
+2025-07-22 12:12:55 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:12:55 [INFO]: Home page requested
+2025-07-22 12:12:55 [INFO]: Fetching trending products
+2025-07-22 12:12:55 [INFO]: Found 6 trending products
+2025-07-22 12:12:55 [INFO]: Fetching popular products
+2025-07-22 12:12:55 [INFO]: Found 6 popular products
+2025-07-22 12:12:55 [INFO]: Home page data loaded successfully
+2025-07-22 12:13:01 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:13:01 [INFO]: PasswordService compare: true
+2025-07-22 12:13:01 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:13:01 [INFO]: Home page requested
+2025-07-22 12:13:01 [INFO]: Fetching trending products
+2025-07-22 12:13:02 [INFO]: Found 6 trending products
+2025-07-22 12:13:02 [INFO]: Fetching popular products
+2025-07-22 12:13:02 [INFO]: Found 6 popular products
+2025-07-22 12:13:02 [INFO]: Home page data loaded successfully
+2025-07-22 12:14:48 [INFO]: Home page requested
+2025-07-22 12:14:48 [INFO]: Fetching trending products
+2025-07-22 12:14:48 [INFO]: Found 6 trending products
+2025-07-22 12:14:48 [INFO]: Fetching popular products
+2025-07-22 12:14:48 [INFO]: Found 6 popular products
+2025-07-22 12:14:48 [INFO]: Home page data loaded successfully
+2025-07-22 12:14:50 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:14:50 [INFO]: Home page requested
+2025-07-22 12:14:50 [INFO]: Fetching trending products
+2025-07-22 12:14:50 [INFO]: Found 6 trending products
+2025-07-22 12:14:50 [INFO]: Fetching popular products
+2025-07-22 12:14:50 [INFO]: Found 6 popular products
+2025-07-22 12:14:50 [INFO]: Home page data loaded successfully
+2025-07-22 12:14:58 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:14:58 [INFO]: PasswordService compare: true
+2025-07-22 12:14:58 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:14:58 [INFO]: Home page requested
+2025-07-22 12:14:58 [INFO]: Fetching trending products
+2025-07-22 12:14:58 [INFO]: Found 6 trending products
+2025-07-22 12:14:58 [INFO]: Fetching popular products
+2025-07-22 12:14:58 [INFO]: Found 6 popular products
+2025-07-22 12:14:58 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:02 [INFO]: Home page requested
+2025-07-22 12:15:02 [INFO]: Fetching trending products
+2025-07-22 12:15:02 [INFO]: Found 6 trending products
+2025-07-22 12:15:02 [INFO]: Fetching popular products
+2025-07-22 12:15:02 [INFO]: Home page requested
+2025-07-22 12:15:02 [INFO]: Fetching trending products
+2025-07-22 12:15:02 [INFO]: Found 6 popular products
+2025-07-22 12:15:02 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:03 [INFO]: Home page requested
+2025-07-22 12:15:03 [INFO]: Fetching trending products
+2025-07-22 12:15:03 [INFO]: Found 6 trending products
+2025-07-22 12:15:03 [INFO]: Fetching popular products
+2025-07-22 12:15:03 [INFO]: Found 6 popular products
+2025-07-22 12:15:03 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:03 [INFO]: Found 6 trending products
+2025-07-22 12:15:03 [INFO]: Fetching popular products
+2025-07-22 12:15:03 [INFO]: Found 6 popular products
+2025-07-22 12:15:03 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:12 [INFO]: Home page requested
+2025-07-22 12:15:12 [INFO]: Fetching trending products
+2025-07-22 12:15:13 [INFO]: Found 6 trending products
+2025-07-22 12:15:13 [INFO]: Fetching popular products
+2025-07-22 12:15:13 [INFO]: Found 6 popular products
+2025-07-22 12:15:13 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:14 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:15:14 [INFO]: Home page requested
+2025-07-22 12:15:14 [INFO]: Fetching trending products
+2025-07-22 12:15:14 [INFO]: Found 6 trending products
+2025-07-22 12:15:14 [INFO]: Fetching popular products
+2025-07-22 12:15:14 [INFO]: Found 6 popular products
+2025-07-22 12:15:14 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:21 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:15:21 [INFO]: PasswordService compare: true
+2025-07-22 12:15:21 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:15:21 [INFO]: Home page requested
+2025-07-22 12:15:21 [INFO]: Fetching trending products
+2025-07-22 12:15:21 [INFO]: Found 6 trending products
+2025-07-22 12:15:21 [INFO]: Fetching popular products
+2025-07-22 12:15:21 [INFO]: Found 6 popular products
+2025-07-22 12:15:21 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:54 [INFO]: Home page requested
+2025-07-22 12:15:54 [INFO]: Fetching trending products
+2025-07-22 12:15:54 [INFO]: Found 6 trending products
+2025-07-22 12:15:54 [INFO]: Fetching popular products
+2025-07-22 12:15:54 [INFO]: Found 6 popular products
+2025-07-22 12:15:54 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:54 [INFO]: Home page requested
+2025-07-22 12:15:54 [INFO]: Fetching trending products
+2025-07-22 12:15:54 [INFO]: Found 6 trending products
+2025-07-22 12:15:54 [INFO]: Fetching popular products
+2025-07-22 12:15:55 [INFO]: Home page requested
+2025-07-22 12:15:55 [INFO]: Fetching trending products
+2025-07-22 12:15:55 [INFO]: Found 6 popular products
+2025-07-22 12:15:55 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:55 [INFO]: Found 6 trending products
+2025-07-22 12:15:55 [INFO]: Fetching popular products
+2025-07-22 12:15:55 [INFO]: Found 6 popular products
+2025-07-22 12:15:55 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:55 [INFO]: Home page requested
+2025-07-22 12:15:55 [INFO]: Fetching trending products
+2025-07-22 12:15:55 [INFO]: Found 6 trending products
+2025-07-22 12:15:55 [INFO]: Fetching popular products
+2025-07-22 12:15:55 [INFO]: Home page requested
+2025-07-22 12:15:55 [INFO]: Fetching trending products
+2025-07-22 12:15:55 [INFO]: Found 6 popular products
+2025-07-22 12:15:55 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:55 [INFO]: Found 6 trending products
+2025-07-22 12:15:55 [INFO]: Fetching popular products
+2025-07-22 12:15:55 [INFO]: Home page requested
+2025-07-22 12:15:55 [INFO]: Fetching trending products
+2025-07-22 12:15:55 [INFO]: Found 6 popular products
+2025-07-22 12:15:55 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:55 [INFO]: Found 6 trending products
+2025-07-22 12:15:55 [INFO]: Fetching popular products
+2025-07-22 12:15:55 [INFO]: Home page requested
+2025-07-22 12:15:55 [INFO]: Fetching trending products
+2025-07-22 12:15:55 [INFO]: Found 6 popular products
+2025-07-22 12:15:55 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:55 [INFO]: Found 6 trending products
+2025-07-22 12:15:55 [INFO]: Fetching popular products
+2025-07-22 12:15:55 [INFO]: Home page requested
+2025-07-22 12:15:55 [INFO]: Fetching trending products
+2025-07-22 12:15:55 [INFO]: Found 6 popular products
+2025-07-22 12:15:55 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:55 [INFO]: Found 6 trending products
+2025-07-22 12:15:55 [INFO]: Fetching popular products
+2025-07-22 12:15:56 [INFO]: Found 6 popular products
+2025-07-22 12:15:56 [INFO]: Home page data loaded successfully
+2025-07-22 12:15:58 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:15:58 [INFO]: Home page requested
+2025-07-22 12:15:58 [INFO]: Fetching trending products
+2025-07-22 12:15:58 [INFO]: Found 6 trending products
+2025-07-22 12:15:58 [INFO]: Fetching popular products
+2025-07-22 12:15:58 [INFO]: Found 6 popular products
+2025-07-22 12:15:58 [INFO]: Home page data loaded successfully
+2025-07-22 12:16:04 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:16:04 [INFO]: PasswordService compare: false
+2025-07-22 12:16:04 [INFO]: User model matchPassword: false
+2025-07-22 12:16:04 [INFO]: Direct bcryptjs compare: false
+2025-07-22 12:16:04 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-07-22 12:16:04 [ERROR]: Login error from service: Invalid email or password
+2025-07-22 12:16:08 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:16:08 [INFO]: PasswordService compare: true
+2025-07-22 12:16:08 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:16:08 [INFO]: Home page requested
+2025-07-22 12:16:08 [INFO]: Fetching trending products
+2025-07-22 12:16:08 [INFO]: Found 6 trending products
+2025-07-22 12:16:08 [INFO]: Fetching popular products
+2025-07-22 12:16:08 [INFO]: Found 6 popular products
+2025-07-22 12:16:08 [INFO]: Home page data loaded successfully
+2025-07-22 12:16:52 [INFO]: Home page requested
+2025-07-22 12:16:52 [INFO]: Fetching trending products
+2025-07-22 12:16:52 [INFO]: Found 6 trending products
+2025-07-22 12:16:52 [INFO]: Fetching popular products
+2025-07-22 12:16:52 [INFO]: Found 6 popular products
+2025-07-22 12:16:52 [INFO]: Home page data loaded successfully
+2025-07-22 12:16:53 [INFO]: Home page requested
+2025-07-22 12:16:53 [INFO]: Fetching trending products
+2025-07-22 12:16:53 [INFO]: Found 6 trending products
+2025-07-22 12:16:53 [INFO]: Fetching popular products
+2025-07-22 12:16:53 [INFO]: Found 6 popular products
+2025-07-22 12:16:53 [INFO]: Home page data loaded successfully
+2025-07-22 12:16:54 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:16:54 [INFO]: Home page requested
+2025-07-22 12:16:54 [INFO]: Fetching trending products
+2025-07-22 12:16:54 [INFO]: Found 6 trending products
+2025-07-22 12:16:54 [INFO]: Fetching popular products
+2025-07-22 12:16:54 [INFO]: Found 6 popular products
+2025-07-22 12:16:54 [INFO]: Home page data loaded successfully
+2025-07-22 12:17:00 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:17:00 [INFO]: PasswordService compare: true
+2025-07-22 12:17:00 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:17:01 [INFO]: Home page requested
+2025-07-22 12:17:01 [INFO]: Fetching trending products
+2025-07-22 12:17:01 [INFO]: Found 6 trending products
+2025-07-22 12:17:01 [INFO]: Fetching popular products
+2025-07-22 12:17:01 [INFO]: Found 6 popular products
+2025-07-22 12:17:01 [INFO]: Home page data loaded successfully
+2025-07-22 12:17:40 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:17:40 [INFO]: Home page requested
+2025-07-22 12:17:40 [INFO]: Fetching trending products
+2025-07-22 12:17:40 [INFO]: Found 6 trending products
+2025-07-22 12:17:40 [INFO]: Fetching popular products
+2025-07-22 12:17:40 [INFO]: Found 6 popular products
+2025-07-22 12:17:40 [INFO]: Home page data loaded successfully
+2025-07-22 12:17:50 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:17:50 [INFO]: PasswordService compare: true
+2025-07-22 12:17:50 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:17:50 [INFO]: Home page requested
+2025-07-22 12:17:50 [INFO]: Fetching trending products
+2025-07-22 12:17:50 [INFO]: Found 6 trending products
+2025-07-22 12:17:50 [INFO]: Fetching popular products
+2025-07-22 12:17:50 [INFO]: Found 6 popular products
+2025-07-22 12:17:50 [INFO]: Home page data loaded successfully
+2025-07-22 12:19:19 [INFO]: Home page requested
+2025-07-22 12:19:19 [INFO]: Fetching trending products
+2025-07-22 12:19:20 [INFO]: Found 6 trending products
+2025-07-22 12:19:20 [INFO]: Fetching popular products
+2025-07-22 12:19:20 [INFO]: Found 6 popular products
+2025-07-22 12:19:20 [INFO]: Home page data loaded successfully
+2025-07-22 12:19:21 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:19:21 [INFO]: Home page requested
+2025-07-22 12:19:21 [INFO]: Fetching trending products
+2025-07-22 12:19:21 [INFO]: Found 6 trending products
+2025-07-22 12:19:21 [INFO]: Fetching popular products
+2025-07-22 12:19:21 [INFO]: Found 6 popular products
+2025-07-22 12:19:21 [INFO]: Home page data loaded successfully
+2025-07-22 12:19:28 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:19:29 [INFO]: PasswordService compare: true
+2025-07-22 12:19:29 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:19:29 [INFO]: Home page requested
+2025-07-22 12:19:29 [INFO]: Fetching trending products
+2025-07-22 12:19:29 [INFO]: Found 6 trending products
+2025-07-22 12:19:29 [INFO]: Fetching popular products
+2025-07-22 12:19:29 [INFO]: Found 6 popular products
+2025-07-22 12:19:29 [INFO]: Home page data loaded successfully
+2025-07-22 12:19:36 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:19:36 [INFO]: Home page requested
+2025-07-22 12:19:36 [INFO]: Fetching trending products
+2025-07-22 12:19:36 [INFO]: Found 6 trending products
+2025-07-22 12:19:36 [INFO]: Fetching popular products
+2025-07-22 12:19:36 [INFO]: Found 6 popular products
+2025-07-22 12:19:36 [INFO]: Home page data loaded successfully
+2025-07-22 12:19:46 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:19:46 [INFO]: PasswordService compare: true
+2025-07-22 12:19:46 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:19:46 [INFO]: Home page requested
+2025-07-22 12:19:46 [INFO]: Fetching trending products
+2025-07-22 12:19:46 [INFO]: Found 6 trending products
+2025-07-22 12:19:46 [INFO]: Fetching popular products
+2025-07-22 12:19:47 [INFO]: Found 6 popular products
+2025-07-22 12:19:47 [INFO]: Home page data loaded successfully
+2025-07-22 12:20:11 [INFO]: Products page requested
+2025-07-22 12:20:11 [INFO]: Fetching all products with filters:
+2025-07-22 12:20:11 [INFO]: Found 5 products (12 total)
+2025-07-22 12:20:11 [INFO]: Products page data loaded successfully
+2025-07-22 12:22:33 [INFO]: Products page requested
+2025-07-22 12:22:33 [INFO]: Fetching all products with filters:
+2025-07-22 12:22:34 [INFO]: Found 5 products (12 total)
+2025-07-22 12:22:34 [INFO]: Products page data loaded successfully
+2025-07-22 12:22:40 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:22:40 [INFO]: PasswordService compare: true
+2025-07-22 12:22:40 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:22:40 [INFO]: Home page requested
+2025-07-22 12:22:40 [INFO]: Fetching trending products
+2025-07-22 12:22:40 [INFO]: Found 6 trending products
+2025-07-22 12:22:40 [INFO]: Fetching popular products
+2025-07-22 12:22:40 [INFO]: Found 6 popular products
+2025-07-22 12:22:40 [INFO]: Home page data loaded successfully
+2025-07-22 12:25:20 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:25:20 [INFO]: PasswordService compare: true
+2025-07-22 12:25:20 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:25:20 [INFO]: Home page requested
+2025-07-22 12:25:20 [INFO]: Fetching trending products
+2025-07-22 12:25:20 [INFO]: Found 6 trending products
+2025-07-22 12:25:20 [INFO]: Fetching popular products
+2025-07-22 12:25:20 [INFO]: Found 6 popular products
+2025-07-22 12:25:20 [INFO]: Home page data loaded successfully
+2025-07-22 12:25:54 [INFO]: Orders page requested
+2025-07-22 12:25:54 [INFO]: Fetching user orders
+2025-07-22 12:25:54 [INFO]: Orders retrieved successfully
+2025-07-22 12:25:54 [INFO]: Orders page loaded
+2025-07-22 12:25:56 [INFO]: Products page requested
+2025-07-22 12:25:56 [INFO]: Fetching all products with filters:
+2025-07-22 12:25:56 [INFO]: Found 5 products (12 total)
+2025-07-22 12:25:56 [INFO]: Products page data loaded successfully
+2025-07-22 12:25:58 [INFO]: Cart add request
+2025-07-22 12:25:58 [INFO]: Adding item to cart
+2025-07-22 12:25:58 [INFO]: Item added to cart successfully
+2025-07-22 12:25:58 [INFO]: Cart page requested
+2025-07-22 12:25:58 [INFO]: Cart page loaded
+2025-07-22 12:25:59 [INFO]: Cart page requested
+2025-07-22 12:25:59 [INFO]: Cart page loaded
+2025-07-22 12:26:01 [INFO]: Checkout page requested
+2025-07-22 12:26:01 [INFO]: Checkout page loaded
+2025-07-22 12:33:00 [WARN]: Authentication required but no token provided
+2025-07-22 12:33:06 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:33:06 [INFO]: PasswordService compare: true
+2025-07-22 12:33:06 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:33:06 [INFO]: Home page requested
+2025-07-22 12:33:06 [INFO]: Fetching trending products
+2025-07-22 12:33:06 [INFO]: Found 6 trending products
+2025-07-22 12:33:06 [INFO]: Fetching popular products
+2025-07-22 12:33:06 [INFO]: Found 6 popular products
+2025-07-22 12:33:06 [INFO]: Home page data loaded successfully
+2025-07-22 12:34:02 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:34:02 [INFO]: Home page requested
+2025-07-22 12:34:02 [INFO]: Fetching trending products
+2025-07-22 12:34:02 [INFO]: Found 6 trending products
+2025-07-22 12:34:02 [INFO]: Fetching popular products
+2025-07-22 12:34:03 [INFO]: Found 6 popular products
+2025-07-22 12:34:03 [INFO]: Home page data loaded successfully
+2025-07-22 12:34:13 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:34:14 [INFO]: PasswordService compare: true
+2025-07-22 12:34:14 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:34:14 [INFO]: Home page requested
+2025-07-22 12:34:14 [INFO]: Fetching trending products
+2025-07-22 12:34:14 [INFO]: Found 6 trending products
+2025-07-22 12:34:14 [INFO]: Fetching popular products
+2025-07-22 12:34:14 [INFO]: Found 6 popular products
+2025-07-22 12:34:14 [INFO]: Home page data loaded successfully
+2025-07-22 12:35:00 [INFO]: Home page requested
+2025-07-22 12:35:00 [INFO]: Fetching trending products
+2025-07-22 12:35:00 [INFO]: Found 6 trending products
+2025-07-22 12:35:00 [INFO]: Fetching popular products
+2025-07-22 12:35:00 [INFO]: Found 6 popular products
+2025-07-22 12:35:00 [INFO]: Home page data loaded successfully
+2025-07-22 12:35:01 [INFO]: Home page requested
+2025-07-22 12:35:01 [INFO]: Fetching trending products
+2025-07-22 12:35:01 [INFO]: Found 6 trending products
+2025-07-22 12:35:01 [INFO]: Fetching popular products
+2025-07-22 12:35:01 [INFO]: Found 6 popular products
+2025-07-22 12:35:01 [INFO]: Home page data loaded successfully
+2025-07-22 12:35:38 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:35:38 [INFO]: Home page requested
+2025-07-22 12:35:38 [INFO]: Fetching trending products
+2025-07-22 12:35:38 [INFO]: Found 6 trending products
+2025-07-22 12:35:38 [INFO]: Fetching popular products
+2025-07-22 12:35:38 [INFO]: Found 6 popular products
+2025-07-22 12:35:38 [INFO]: Home page data loaded successfully
+2025-07-22 12:39:26 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:39:26 [INFO]: PasswordService compare: true
+2025-07-22 12:39:26 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:39:26 [INFO]: Home page requested
+2025-07-22 12:39:26 [INFO]: Fetching trending products
+2025-07-22 12:39:26 [INFO]: Found 6 trending products
+2025-07-22 12:39:26 [INFO]: Fetching popular products
+2025-07-22 12:39:26 [INFO]: Found 6 popular products
+2025-07-22 12:39:26 [INFO]: Home page data loaded successfully
+2025-07-22 12:39:37 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:39:37 [INFO]: Home page requested
+2025-07-22 12:39:37 [INFO]: Fetching trending products
+2025-07-22 12:39:37 [INFO]: Found 6 trending products
+2025-07-22 12:39:37 [INFO]: Fetching popular products
+2025-07-22 12:39:37 [INFO]: Found 6 popular products
+2025-07-22 12:39:37 [INFO]: Home page data loaded successfully
+2025-07-22 12:39:46 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:39:46 [INFO]: PasswordService compare: true
+2025-07-22 12:39:46 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:39:46 [INFO]: Home page requested
+2025-07-22 12:39:46 [INFO]: Fetching trending products
+2025-07-22 12:39:46 [INFO]: Found 6 trending products
+2025-07-22 12:39:46 [INFO]: Fetching popular products
+2025-07-22 12:39:46 [INFO]: Found 6 popular products
+2025-07-22 12:39:46 [INFO]: Home page data loaded successfully
+2025-07-22 12:46:34 [INFO]: Home page requested
+2025-07-22 12:46:34 [INFO]: Fetching trending products
+2025-07-22 12:46:37 [INFO]: Found 6 trending products
+2025-07-22 12:46:37 [INFO]: Fetching popular products
+2025-07-22 12:46:37 [INFO]: Found 6 popular products
+2025-07-22 12:46:37 [INFO]: Home page data loaded successfully
+2025-07-22 12:46:45 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:46:45 [INFO]: PasswordService compare: true
+2025-07-22 12:46:45 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:46:45 [INFO]: Home page requested
+2025-07-22 12:46:45 [INFO]: Fetching trending products
+2025-07-22 12:46:45 [INFO]: Found 6 trending products
+2025-07-22 12:46:45 [INFO]: Fetching popular products
+2025-07-22 12:46:45 [INFO]: Found 6 popular products
+2025-07-22 12:46:45 [INFO]: Home page data loaded successfully
+2025-07-22 12:46:55 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:46:55 [INFO]: Home page requested
+2025-07-22 12:46:55 [INFO]: Fetching trending products
+2025-07-22 12:46:55 [INFO]: Found 6 trending products
+2025-07-22 12:46:55 [INFO]: Fetching popular products
+2025-07-22 12:46:55 [INFO]: Found 6 popular products
+2025-07-22 12:46:55 [INFO]: Home page data loaded successfully
+2025-07-22 12:47:32 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:47:32 [INFO]: PasswordService compare: true
+2025-07-22 12:47:32 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:47:32 [INFO]: Home page requested
+2025-07-22 12:47:32 [INFO]: Fetching trending products
+2025-07-22 12:47:33 [INFO]: Found 6 trending products
+2025-07-22 12:47:33 [INFO]: Fetching popular products
+2025-07-22 12:47:33 [INFO]: Found 6 popular products
+2025-07-22 12:47:33 [INFO]: Home page data loaded successfully
+2025-07-22 12:47:43 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:47:43 [INFO]: Home page requested
+2025-07-22 12:47:43 [INFO]: Fetching trending products
+2025-07-22 12:47:43 [INFO]: Found 6 trending products
+2025-07-22 12:47:43 [INFO]: Fetching popular products
+2025-07-22 12:47:43 [INFO]: Found 6 popular products
+2025-07-22 12:47:43 [INFO]: Home page data loaded successfully
+2025-07-22 12:50:11 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:50:11 [INFO]: PasswordService compare: true
+2025-07-22 12:50:11 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:50:11 [INFO]: Home page requested
+2025-07-22 12:50:11 [INFO]: Fetching trending products
+2025-07-22 12:50:11 [INFO]: Found 6 trending products
+2025-07-22 12:50:11 [INFO]: Fetching popular products
+2025-07-22 12:50:12 [INFO]: Found 6 popular products
+2025-07-22 12:50:12 [INFO]: Home page data loaded successfully
+2025-07-22 12:50:12 [INFO]: Home page requested
+2025-07-22 12:50:12 [INFO]: Fetching trending products
+2025-07-22 12:50:12 [INFO]: Found 6 trending products
+2025-07-22 12:50:12 [INFO]: Fetching popular products
+2025-07-22 12:50:12 [INFO]: Found 6 popular products
+2025-07-22 12:50:12 [INFO]: Home page data loaded successfully
+2025-07-22 12:51:04 [INFO]: Home page requested
+2025-07-22 12:51:04 [INFO]: Fetching trending products
+2025-07-22 12:51:04 [INFO]: Found 6 trending products
+2025-07-22 12:51:04 [INFO]: Fetching popular products
+2025-07-22 12:51:05 [INFO]: Found 6 popular products
+2025-07-22 12:51:05 [INFO]: Home page data loaded successfully
+2025-07-22 12:53:28 [INFO]: Home page requested
+2025-07-22 12:53:28 [INFO]: Fetching trending products
+2025-07-22 12:53:28 [INFO]: Found 6 trending products
+2025-07-22 12:53:28 [INFO]: Fetching popular products
+2025-07-22 12:53:28 [INFO]: Found 6 popular products
+2025-07-22 12:53:28 [INFO]: Home page data loaded successfully
+2025-07-22 12:53:41 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:53:41 [INFO]: PasswordService compare: true
+2025-07-22 12:53:41 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:53:41 [INFO]: Home page requested
+2025-07-22 12:53:41 [INFO]: Fetching trending products
+2025-07-22 12:53:41 [INFO]: Found 6 trending products
+2025-07-22 12:53:41 [INFO]: Fetching popular products
+2025-07-22 12:53:41 [INFO]: Found 6 popular products
+2025-07-22 12:53:41 [INFO]: Home page data loaded successfully
+2025-07-22 12:53:58 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:53:58 [INFO]: Home page requested
+2025-07-22 12:53:58 [INFO]: Fetching trending products
+2025-07-22 12:53:59 [INFO]: Found 6 trending products
+2025-07-22 12:53:59 [INFO]: Fetching popular products
+2025-07-22 12:53:59 [INFO]: Found 6 popular products
+2025-07-22 12:53:59 [INFO]: Home page data loaded successfully
+2025-07-22 12:56:06 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:56:06 [INFO]: PasswordService compare: true
+2025-07-22 12:56:06 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:56:06 [INFO]: Home page requested
+2025-07-22 12:56:06 [INFO]: Fetching trending products
+2025-07-22 12:56:06 [INFO]: Found 6 trending products
+2025-07-22 12:56:06 [INFO]: Fetching popular products
+2025-07-22 12:56:06 [INFO]: Found 6 popular products
+2025-07-22 12:56:06 [INFO]: Home page data loaded successfully
+2025-07-22 12:58:22 [INFO]: Cart add request
+2025-07-22 12:58:22 [INFO]: Adding item to cart
+2025-07-22 12:58:22 [INFO]: Item added to cart successfully
+2025-07-22 12:58:22 [INFO]: Cart page requested
+2025-07-22 12:58:22 [INFO]: Cart page loaded
+2025-07-22 12:58:53 [WARN]: Authentication required but no token provided
+2025-07-22 12:58:58 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:58:58 [INFO]: PasswordService compare: true
+2025-07-22 12:58:58 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:58:58 [INFO]: Home page requested
+2025-07-22 12:58:58 [INFO]: Fetching trending products
+2025-07-22 12:58:58 [INFO]: Found 6 trending products
+2025-07-22 12:58:58 [INFO]: Fetching popular products
+2025-07-22 12:58:58 [INFO]: Found 6 popular products
+2025-07-22 12:58:58 [INFO]: Home page data loaded successfully
+2025-07-22 12:59:13 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 12:59:13 [INFO]: Home page requested
+2025-07-22 12:59:13 [INFO]: Fetching trending products
+2025-07-22 12:59:13 [INFO]: Found 6 trending products
+2025-07-22 12:59:13 [INFO]: Fetching popular products
+2025-07-22 12:59:13 [INFO]: Found 6 popular products
+2025-07-22 12:59:13 [INFO]: Home page data loaded successfully
+2025-07-22 12:59:56 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 12:59:56 [INFO]: PasswordService compare: true
+2025-07-22 12:59:56 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 12:59:56 [INFO]: Home page requested
+2025-07-22 12:59:56 [INFO]: Fetching trending products
+2025-07-22 12:59:56 [INFO]: Found 6 trending products
+2025-07-22 12:59:56 [INFO]: Fetching popular products
+2025-07-22 12:59:56 [INFO]: Found 6 popular products
+2025-07-22 12:59:56 [INFO]: Home page data loaded successfully
+2025-07-22 13:00:05 [INFO]: Home page requested
+2025-07-22 13:00:05 [INFO]: Fetching trending products
+2025-07-22 13:00:05 [INFO]: Found 6 trending products
+2025-07-22 13:00:05 [INFO]: Fetching popular products
+2025-07-22 13:00:05 [INFO]: Found 6 popular products
+2025-07-22 13:00:05 [INFO]: Home page data loaded successfully
+2025-07-22 13:15:32 [INFO]: Home page requested
+2025-07-22 13:15:33 [INFO]: Fetching trending products
+2025-07-22 13:15:34 [INFO]: Found 6 trending products
+2025-07-22 13:15:34 [INFO]: Fetching popular products
+2025-07-22 13:15:34 [INFO]: Found 6 popular products
+2025-07-22 13:15:34 [INFO]: Home page data loaded successfully
+2025-07-22 13:15:44 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 13:15:44 [INFO]: PasswordService compare: true
+2025-07-22 13:15:44 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 13:15:44 [INFO]: Home page requested
+2025-07-22 13:15:44 [INFO]: Fetching trending products
+2025-07-22 13:15:45 [INFO]: Found 6 trending products
+2025-07-22 13:15:45 [INFO]: Fetching popular products
+2025-07-22 13:15:45 [INFO]: Found 6 popular products
+2025-07-22 13:15:45 [INFO]: Home page data loaded successfully
+2025-07-22 13:17:13 [INFO]: Home page requested
+2025-07-22 13:17:13 [INFO]: Fetching trending products
+2025-07-22 13:17:13 [INFO]: Found 6 trending products
+2025-07-22 13:17:13 [INFO]: Fetching popular products
+2025-07-22 13:17:13 [INFO]: Found 6 popular products
+2025-07-22 13:17:13 [INFO]: Home page data loaded successfully
+2025-07-22 13:17:22 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-22 13:17:22 [INFO]: PasswordService compare: true
+2025-07-22 13:17:22 [INFO]: User logged in: tesla@gmail.com
+2025-07-22 13:17:22 [INFO]: Home page requested
+2025-07-22 13:17:22 [INFO]: Fetching trending products
+2025-07-22 13:17:22 [INFO]: Found 6 trending products
+2025-07-22 13:17:22 [INFO]: Fetching popular products
+2025-07-22 13:17:22 [INFO]: Found 6 popular products
+2025-07-22 13:17:22 [INFO]: Home page data loaded successfully
+2025-07-22 13:17:32 [INFO]: User logged out: tesla@gmail.com
+2025-07-22 13:17:32 [INFO]: Home page requested
+2025-07-22 13:17:32 [INFO]: Fetching trending products
+2025-07-22 13:17:32 [INFO]: Found 6 trending products
+2025-07-22 13:17:32 [INFO]: Fetching popular products
+2025-07-22 13:17:33 [INFO]: Found 6 popular products
+2025-07-22 13:17:33 [INFO]: Home page data loaded successfully

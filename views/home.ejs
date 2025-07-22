@@ -1,3 +1,15 @@
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        var flash = document.querySelector('.outlaws-flash');
+        if (flash) {
+          setTimeout(function() {
+            flash.style.transition = 'opacity 0.5s';
+            flash.style.opacity = 0;
+            setTimeout(function() { flash.remove(); }, 500);
+          }, 4000); // 4 seconds
+        }
+      });
+    </script>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,23 +29,24 @@
       rel="stylesheet"
     />
     <link href="/css/home.css" rel="stylesheet" />
+    <link href="/css/global.css" rel="stylesheet" />
   </head>
   <body>
     <%- include('partials/navbar') %>
 
     <% if (successMessage && successMessage.length > 0) { %>
-      <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+      <div class="outlaws-flash success">
         <i class="fas fa-check-circle me-2"></i>
         <%= successMessage %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close" style="position:absolute;top:12px;right:18px;background:none;border:none;color:#fff;font-size:1.3rem;opacity:0.7;" onclick="this.parentElement.style.display='none';" aria-label="Close">&times;</button>
       </div>
     <% } %>
 
     <% if (errorMessage && errorMessage.length > 0) { %>
-      <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+      <div class="outlaws-flash error">
         <i class="fas fa-exclamation-triangle me-2"></i>
         <%= errorMessage %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close" style="position:absolute;top:12px;right:18px;background:none;border:none;color:#fff;font-size:1.3rem;opacity:0.7;" onclick="this.parentElement.style.display='none';" aria-label="Close">&times;</button>
       </div>
     <% } %>
     

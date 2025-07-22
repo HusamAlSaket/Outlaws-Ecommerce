@@ -310,3 +310,142 @@ orders is not defined
 2025-07-21 13:45:59 [ERROR]: Validation errors on registration
 2025-07-21 13:46:04 [ERROR]: Registration error from service: Email already registered
 2025-07-21 13:46:08 [ERROR]: Validation errors on registration
+2025-07-21 14:19:35 [ERROR]: Login failed: user not found for email alsakethusam@gmail.com
+2025-07-21 14:19:35 [ERROR]: Login error from service: Invalid email or password
+2025-07-21 14:21:43 [ERROR]: Registration error from service: Email already registered
+2025-07-21 14:21:48 [ERROR]: Validation errors on registration
+2025-07-21 14:21:53 [ERROR]: Validation errors on registration
+2025-07-22 12:06:37 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\partials\\navbar.ejs":21:8)
+    at navbar (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at include (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:701:39)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\home.ejs":12:17)
+    at home (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+2025-07-22 12:06:39 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\partials\\navbar.ejs":21:8)
+    at navbar (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at include (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:701:39)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\home.ejs":12:17)
+    at home (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+2025-07-22 12:07:05 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\home.ejs:22
+    20|   </head>
+    21|   <body>
+ >> 22|     <%- include('partials/navbar') %>
+    23| 
+    24|     <% if (successMessage && successMessage.length > 0) { %>
+    25|       <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+
+C:\Users\ADMIN\Documents\node-ecommerce\views\partials\navbar.ejs:95
+    93| </nav>
+    94| 
+ >> 95| <% if (messages.success && messages.success.length > 0) { %>
+    96|   <div class="flash-message success">
+    97|     <%= messages.success[0] %>
+    98|   </div>
+
+messages is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\partials\\navbar.ejs":21:8)
+    at navbar (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at include (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:701:39)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\home.ejs":12:17)
+    at home (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+2025-07-22 12:16:04 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-07-22 12:16:04 [ERROR]: Login error from service: Invalid email or password
