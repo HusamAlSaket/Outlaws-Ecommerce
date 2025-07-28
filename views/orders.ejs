@@ -23,13 +23,28 @@
     <div class="page-container">
       <%- include('partials/navbar') %>
 
-      <!-- Page Header -->
-      <section class="page-header">
-        <div class="container">
-          <nav class="breadcrumb-nav">
-            <a href="/">Home</a> > <span>My Orders</span>
-          </nav>
-          <h1 class="page-title">My Orders</h1>
+      <!-- Orders Hero Section -->
+      <section class="orders-hero">
+        <div class="orders-hero-content">
+          <!-- <nav class="breadcrumb-nav mb-2">
+            <a href="/">Home</a> &gt; <span>Order History</span>
+          </nav> -->
+          <h1 class="orders-hero-title">Your Shopping Journey</h1>
+          <div class="orders-hero-desc">All your purchases in one place. Track orders, relive your best finds, and shop with confidence—every step of the way.</div>
+          <div class="orders-hero-stats">
+            <div class="orders-stat-item">
+              <span class="orders-stat-number">2020</span>
+              <span class="orders-stat-label">Joined</span>
+            </div>
+            <div class="orders-stat-item">
+              <span class="orders-stat-number"><%= orders ? orders.length : 0 %></span>
+              <span class="orders-stat-label">Orders</span>
+            </div>
+            <div class="orders-stat-item">
+              <span class="orders-stat-number">Fast</span>
+              <span class="orders-stat-label">Shipping</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -111,9 +126,9 @@
                   <%= order.shippingInfo.country %>
                 </div>
               </div>
-              <div class="order-actions">
+              <!-- <div class="order-actions">
                 <a href="/products" class="btn btn-reorder"><i class="fas fa-redo-alt me-1"></i>Reorder</a>
-              </div>
+              </div> -->
             </div>
           </div>
           <% }); %> <% } else { %>

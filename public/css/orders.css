@@ -1,3 +1,195 @@
+/* Orders Hero Section (Cart-Style) */
+/* Enhanced Orders Hero Section (Consistent with About Page) */
+.orders-hero {
+  position: relative;
+  min-height: 85vh;
+  height: 85vh;
+  background: linear-gradient(135deg, rgba(0, 31, 63, 0.7) 0%, rgba(0, 31, 63, 0.5) 100%), url("/images/hero11.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow', sans-serif;
+  overflow: hidden;
+  z-index: 1;
+  animation: heroGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+  0% { box-shadow: inset 0 0 100px rgba(0, 31, 63, 0.3), 0 0 50px rgba(0, 123, 255, 0.1); }
+  100% { box-shadow: inset 0 0 100px rgba(0, 31, 63, 0.1), 0 0 50px rgba(0, 123, 255, 0.2); }
+}
+
+.orders-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+  animation: twinkle 4s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}
+
+.orders-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 3rem 2rem 2.5rem 2rem;
+}
+
+.orders-hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: titleGlow 3s ease-in-out infinite alternate;
+  background: linear-gradient(45deg, #ffffff, #e3f2fd, #ffffff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes titleGlow {
+  0% { filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3)); }
+  100% { filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)); }
+}
+
+.orders-hero-desc {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.5s both;
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.13);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Enhanced Orders Stats Row */
+.orders-hero-stats {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  animation: fadeInUp 1s ease-out 1s both;
+}
+
+.orders-stat-item {
+  text-align: center;
+  padding: 1.2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0,31,63,0.10);
+  transition: all 0.3s ease;
+}
+.orders-stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255,255,255,0.8), 0 0 60px rgba(0,123,255,0.2);
+}
+
+.orders-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  text-shadow: 0 0 20px rgba(255,255,255,0.5);
+  transition: all 0.3s ease;
+  animation: pulse 3s ease-in-out infinite;
+}
+.orders-stat-item:hover .orders-stat-number {
+  transform: scale(1.15);
+  text-shadow: 0 0 30px rgba(255,255,255,0.8), 0 0 60px rgba(0,123,255,0.4);
+  animation-play-state: paused;
+}
+.orders-stat-label {
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+.orders-stat-item:hover .orders-stat-label {
+  transform: translateY(-2px);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+@media (max-width: 768px) {
+  .orders-hero {
+    min-height: 45vh;
+    height: 45vh;
+    padding: 2rem 0;
+  }
+  .orders-hero-title {
+    font-size: 2.2rem;
+  }
+  .orders-hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+  }
+  .orders-stat-item {
+    padding: 1rem 1.5rem;
+  }
+  .orders-stat-number {
+    font-size: 2rem;
+  }
+}
+.orders-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.08)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.25;
+  z-index: 2;
+}
+.orders-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 3rem 2rem 2.5rem 2rem;
+}
+.orders-hero-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.7rem;
+  background: linear-gradient(90deg, #fff 0%, #e3f2fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+.orders-hero-desc {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #e3eaf7;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.13);
+}
 :root {
   --primary: #1a365d;
   --secondary: #e74c3c;
