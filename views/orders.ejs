@@ -39,77 +39,80 @@
           <% if (orders && orders.length > 0) { %> <% orders.forEach(order => {
           %>
           <div class="order-card">
-            <div class="order-header">
-              <div class="order-info">
-                <div class="order-meta">
-                  <div class="order-id">Order #<%= order.orderNumber %></div>
-                  <div class="order-date">
-                    Placed on <%= new
-                    Date(order.createdAt).toLocaleDateString('en-US', { year:
-                    'numeric', month: 'long', day: 'numeric' }) %>
-                  </div>
+            <div class="order-header redesigned">
+              <div class="order-header-main">
+                <div class="order-id">Order #<%= order.orderNumber %></div>
+                <span class="order-status-badge <%= order.status ? order.status.toLowerCase() : 'processing' %>">
+                  <i class="fas fa-circle"></i> <%= order.status ? order.status.charAt(0).toUpperCase() + order.status.slice(1) : 'Processing' %>
+                </span>
+              </div>
+              <div class="order-header-meta">
+                <div class="order-date">
+                  <i class="far fa-calendar-alt me-1"></i>
+                  <%= new Date(order.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %>
+                </div>
+                <div class="order-total">
+                  $<%= order.totalAmount.toFixed(2) %>
                 </div>
               </div>
-              <div class="order-total">
-                $<%= order.totalAmount.toFixed(2) %>
-              </div>
             </div>
-
-            <div class="order-content">
-              <table class="order-items-table">
-                <thead class="table-header">
-                  <tr>
-                    <th>PRODUCT</th>
-                    <th>PRICE</th>
-                    <th style="text-align: center">QUANTITY</th>
-                    <th style="text-align: right">TOTAL</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <% order.items.forEach(item => { %>
-                  <tr class="order-item">
-                    <td>
-                      <div class="product-info">
-                        <div class="product-image">
-                          <% if (item.image) { %>
-                          <img
-                            src="<%= item.image %>"
-                            alt="<%= item.title %>"
-                          />
-                          <% } else { %>
-                          <div class="product-image-placeholder">
-                            <i class="fas fa-image"></i>
+            <div class="order-content redesigned">
+              <div class="order-items-table-wrapper">
+                <table class="order-items-table">
+                  <thead class="table-header">
+                    <tr>
+                      <th>PRODUCT</th>
+                      <th>PRICE</th>
+                      <th style="text-align: center">QUANTITY</th>
+                      <th style="text-align: right">TOTAL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% order.items.forEach(item => { %>
+                    <tr class="order-item">
+                      <td>
+                        <div class="product-info">
+                          <div class="product-image">
+                            <% if (item.image) { %>
+                            <img
+                              src="<%= item.image %>"
+                              alt="<%= item.title %>"
+                            />
+                            <% } else { %>
+                            <div class="product-image-placeholder">
+                              <i class="fas fa-image"></i>
+                            </div>
+                            <% } %>
                           </div>
-                          <% } %>
-                        </div>
-                        <div class="product-details">
-                          <h6><%= item.title %></h6>
-                          <div class="product-sku">
-                            SKU: <%= item._id.toString().slice(-6).toUpperCase()
-                            %>
+                          <div class="product-details">
+                            <h6><%= item.title %></h6>
+                            <div class="product-sku">
+                              SKU: <%= item._id.toString().slice(-6).toUpperCase() %>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td class="price-cell">$<%= item.price.toFixed(2) %></td>
-                    <td class="quantity-cell"><%= item.qty %></td>
-                    <td class="total-cell">
-                      $<%= (item.price * item.qty).toFixed(2) %>
-                    </td>
-                  </tr>
-                  <% }); %>
-                </tbody>
-              </table>
-
+                      </td>
+                      <td class="price-cell">$<%= item.price.toFixed(2) %></td>
+                      <td class="quantity-cell"><%= item.qty %></td>
+                      <td class="total-cell">
+                        $<%= (item.price * item.qty).toFixed(2) %>
+                      </td>
+                    </tr>
+                    <% }); %>
+                  </tbody>
+                </table>
+              </div>
               <div class="shipping-section">
                 <div class="shipping-title">SHIPPING ADDRESS</div>
                 <div class="shipping-address">
                   <strong><%= order.shippingInfo.fullName %></strong><br />
                   <%= order.shippingInfo.address %><br />
-                  <%= order.shippingInfo.city %>, <%=
-                  order.shippingInfo.postalCode %><br />
+                  <%= order.shippingInfo.city %>, <%= order.shippingInfo.postalCode %><br />
                   <%= order.shippingInfo.country %>
                 </div>
+              </div>
+              <div class="order-actions">
+                <a href="/products" class="btn btn-reorder"><i class="fas fa-redo-alt me-1"></i>Reorder</a>
               </div>
             </div>
           </div>
