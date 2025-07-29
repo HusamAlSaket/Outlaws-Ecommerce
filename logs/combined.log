@@ -3016,3 +3016,66 @@ messages is not defined
 2025-07-29 11:08:25 [INFO]: Cart page loaded
 2025-07-29 11:08:27 [INFO]: Cart page requested
 2025-07-29 11:08:27 [INFO]: Cart page loaded
+2025-07-29 11:12:50 [WARN]: Authentication required but no token provided
+2025-07-29 11:12:55 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-29 11:12:55 [INFO]: PasswordService compare: false
+2025-07-29 11:12:55 [INFO]: User model matchPassword: false
+2025-07-29 11:12:56 [INFO]: Direct bcryptjs compare: false
+2025-07-29 11:12:56 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-07-29 11:12:56 [ERROR]: Login error from service: Invalid email or password
+2025-07-29 11:13:04 [ERROR]: Validation errors on registration
+2025-07-29 11:13:09 [ERROR]: Registration error from service: Email already registered
+2025-07-29 11:13:15 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-29 11:13:15 [INFO]: PasswordService compare: true
+2025-07-29 11:13:15 [INFO]: User logged in: tesla@gmail.com
+2025-07-29 11:13:59 [INFO]: User logged out: tesla@gmail.com
+2025-07-29 11:13:59 [INFO]: Home page requested
+2025-07-29 11:13:59 [INFO]: Fetching trending products
+2025-07-29 11:13:59 [INFO]: Found 6 trending products
+2025-07-29 11:13:59 [INFO]: Fetching popular products
+2025-07-29 11:13:59 [INFO]: Found 6 popular products
+2025-07-29 11:13:59 [INFO]: Home page data loaded successfully
+2025-07-29 11:16:24 [INFO]: Home page requested
+2025-07-29 11:16:24 [INFO]: Fetching trending products
+2025-07-29 11:16:24 [INFO]: Found 6 trending products
+2025-07-29 11:16:24 [INFO]: Fetching popular products
+2025-07-29 11:16:24 [INFO]: Found 6 popular products
+2025-07-29 11:16:24 [INFO]: Home page data loaded successfully
+2025-07-29 11:16:29 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-29 11:16:29 [INFO]: PasswordService compare: false
+2025-07-29 11:16:29 [INFO]: User model matchPassword: false
+2025-07-29 11:16:29 [INFO]: Direct bcryptjs compare: false
+2025-07-29 11:16:29 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-07-29 11:16:29 [ERROR]: Login error from service: Invalid email or password
+2025-07-29 11:16:41 [ERROR]: Registration error from service: Email already registered
+2025-07-29 11:16:52 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-29 11:16:52 [INFO]: PasswordService compare: true
+2025-07-29 11:16:53 [INFO]: User logged in: tesla@gmail.com
+2025-07-29 11:16:53 [INFO]: Home page requested
+2025-07-29 11:16:53 [INFO]: Fetching trending products
+2025-07-29 11:16:53 [INFO]: Found 6 trending products
+2025-07-29 11:16:53 [INFO]: Fetching popular products
+2025-07-29 11:16:53 [INFO]: Found 6 popular products
+2025-07-29 11:16:53 [INFO]: Home page data loaded successfully
+2025-07-29 11:20:29 [INFO]: Home page requested
+2025-07-29 11:20:29 [INFO]: Fetching trending products
+2025-07-29 11:20:29 [INFO]: Found 6 trending products
+2025-07-29 11:20:29 [INFO]: Fetching popular products
+2025-07-29 11:20:29 [INFO]: Found 6 popular products
+2025-07-29 11:20:29 [INFO]: Home page data loaded successfully
+2025-07-29 11:20:32 [INFO]: Products page requested
+2025-07-29 11:20:32 [INFO]: Fetching all products with filters:
+2025-07-29 11:20:32 [INFO]: Found 5 products (12 total)
+2025-07-29 11:20:32 [INFO]: Products page data loaded successfully
+2025-07-29 11:20:37 [WARN]: Authentication required but no token provided
+2025-07-29 11:20:40 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-29 11:20:40 [INFO]: PasswordService compare: true
+2025-07-29 11:20:40 [INFO]: User logged in: tesla@gmail.com
+2025-07-29 11:20:40 [INFO]: Orders page requested
+2025-07-29 11:20:40 [INFO]: Fetching user orders
+2025-07-29 11:20:40 [INFO]: Orders retrieved successfully
+2025-07-29 11:20:40 [INFO]: Orders page loaded
+2025-07-29 11:24:20 [INFO]: Orders page requested
+2025-07-29 11:24:20 [INFO]: Fetching user orders
+2025-07-29 11:24:20 [INFO]: Orders retrieved successfully
+2025-07-29 11:24:20 [INFO]: Orders page loaded

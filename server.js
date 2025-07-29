@@ -42,54 +42,22 @@ app.use((req, res, next) => {
   next();
 });
 
-// Import Controller
-const {
-  getHomePage,
-  getProductDetails,
-  getProductsPage,
-} = require("./controllers/productController");
-const { addToCart, removeFromCart, getCartPage } = require("./controllers/cartController");
-const {
-  getRegister,
-  postRegister,
-  getLogin,
-  postLogin,
-  logout,
-  getProfile,
-} = require("./controllers/authController");
-
-const {
-  getCheckout,
-  postCheckout,
-  getOrders,
-} = require("./controllers/orderController");
-const contactController = require('./controllers/contactController');
-
-// Import middlewares
-const { requireAuth, requireAdmin } = require('./middleware/authMiddleware');
-
-// Import validation
-const { body } = require('express-validator');
-
-
-
-
 // Use modular routers
-app.use('/', require('./routes/productRoutes'));
-app.use('/', require('./routes/cartRoutes'));
-app.use('/', require('./routes/orderRoutes'));
-app.use('/', require('./routes/authRoutes'));
-app.use('/', require('./routes/contactRoutes'));
-app.use('/', require('./routes/aboutRoutes'));
+app.use("/", require("./routes/productRoutes"));
+app.use("/", require("./routes/cartRoutes"));
+app.use("/", require("./routes/orderRoutes"));
+app.use("/", require("./routes/authRoutes"));
+app.use("/", require("./routes/contactRoutes"));
+app.use("/", require("./routes/aboutRoutes"));
 
 // Global Error Handler - MUST be last middleware
-const { globalErrorHandler } = require('./utils/errorHandler');
+const { globalErrorHandler } = require("./utils/errorHandler");
 app.use(globalErrorHandler);
 
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI, {
-    serverSelectionTimeoutMS: 30000, // Timeout after 30s 
+    serverSelectionTimeoutMS: 30000, // Timeout after 30s
     socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
   })
   .then(() => console.log("✅ Connected to MongoDB"))

@@ -31,7 +31,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
       // Success SweetAlert with your brand colors
       Swal.fire({
         icon: 'success',
-        title: 'Message Sent! 🎉',
+        title: 'Message Sent!',
         text: result.message,
         confirmButtonText: 'Awesome!',
         confirmButtonColor: '#001f3f',
