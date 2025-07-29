@@ -73,108 +73,14 @@ const { body } = require('express-validator');
 
 
 
-// Home Route
-app.get("/", getHomePage);
 
-// About Route
-app.get("/about", (req, res) => {
-  res.render("about");
-});
-
-// Products Route
-app.get("/products", getProductsPage);
-
-// product details route
-app.get("/products/:id", getProductDetails);
-
-// Cart Routes
-
-// Add to cart
-app.get("/cart/add/:id", addToCart);
-
-// Remove from cart
-app.get("/cart/remove/:id", removeFromCart);
-
-// View cart - now uses clean service layer
-app.get("/cart", getCartPage);
-
-// Import cart service
-const cartService = require('./services/cartService');
-
-// API endpoint for cart count (for navbar badge)
-app.get("/api/cart/count", (req, res) => {
-  const cartSummary = cartService.calculateCartSummary(req.session.cart || {});
-  res.json({ count: cartSummary.totalItems });
-});
-
-// Checkout Routes
-app.get("/checkout", requireAuth, getCheckout);
-app.post("/checkout", requireAuth, express.urlencoded({ extended: true }), postCheckout);
-
-// Orders Route
-app.get("/orders", requireAuth, getOrders);
-
-// Authentication Routes
-app.get("/register", getRegister);
-app.post("/register", [
-  body('username')
-    .trim()
-    .notEmpty().withMessage('Username is required')
-    .isLength({ min: 3 }).withMessage('Username must be at least 3 characters'),
-  body('email')
-    .notEmpty().withMessage('Email is required')
-    .isEmail().withMessage('Please enter a valid email')
-    .normalizeEmail(),
-  body('password')
-    .notEmpty().withMessage('Password is required')
-    .isLength({ min: 8 }).withMessage('Password must be at least 8 characters')
-    .matches(/[A-Z]/).withMessage('Password must contain at least one uppercase letter')
-    .matches(/[a-z]/).withMessage('Password must contain at least one lowercase letter')
-    .matches(/[0-9]/).withMessage('Password must contain at least one number')
-], postRegister);
-
-app.get("/login", getLogin);
-app.post("/login", [
-  body('email').isEmail().normalizeEmail().withMessage('Please enter a valid email'),
-  body('password').notEmpty().withMessage('Password is required')
-], postLogin);
-
-// DEBUG ONLY - Remove in production
-app.get("/debug/create-test-user", async (req, res) => {
-  try {
-    // Check if test user exists
-    const testEmail = "test@example.com";
-    let testUser = await require('./models/User').findOne({ email: testEmail });
-    
-    if (testUser) {
-      return res.send(`Test user already exists. Email: ${testEmail}, Password: Test123`);
-    }
-    
-    // Create test user with known credentials
-    const userData = {
-      username: "TestUser",
-      email: testEmail,
-      password: "Test123"
-    };
-    
-    const user = await require('./services/auth/AuthService').registerUser(userData);
-    res.send(`Test user created successfully. Email: ${testEmail}, Password: Test123`);
-  } catch (error) {
-    res.status(500).send(`Error creating test user: ${error.message}`);
-  }
-});
-
-app.get("/profile", requireAuth, getProfile);
-
-app.get("/logout", logout);
-
-// Contact Routes
-app.get('/contact', contactController.getContactPage);
-app.post('/contact', [
-  body('name').trim().isLength({ min: 2 }).withMessage('Name must be at least 2 characters'),
-  body('email').isEmail().normalizeEmail().withMessage('Please enter a valid email'),
-  body('message').trim().isLength({ min: 10 }).withMessage('Message must be at least 10 characters')
-], contactController.postContact);
+// Use modular routers
+app.use('/', require('./routes/productRoutes'));
+app.use('/', require('./routes/cartRoutes'));
+app.use('/', require('./routes/orderRoutes'));
+app.use('/', require('./routes/authRoutes'));
+app.use('/', require('./routes/contactRoutes'));
+app.use('/', require('./routes/aboutRoutes'));
 
 // Global Error Handler - MUST be last middleware
 const { globalErrorHandler } = require('./utils/errorHandler');

@@ -1,3 +1,278 @@
+/* Enhanced Premium Carousel Indicators */
+#heroCarousel .carousel-indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  top: auto;
+  right: auto;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  z-index: 2;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  list-style: none;
+}
+
+/* Ensure the carousel container doesn't interfere */
+#heroCarousel {
+  position: relative;
+}
+
+#heroCarousel .carousel-indicators li {
+  list-style: none;
+}
+
+#heroCarousel .carousel-indicators [data-bs-target] {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fff 0%, #e9ecef 100%);
+  opacity: 0.95;
+  border: 2px solid #dbe4ed;
+  margin: 0 4px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 2px 8px rgba(20, 33, 61, 0.10),
+    0 1px 4px rgba(20, 33, 61, 0.08),
+    0 0 0 2px rgba(20, 33, 61, 0.04),
+    inset 0 2px 6px rgba(255,255,255,0.18);
+}
+#heroCarousel .carousel-indicators [data-bs-target]::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #f8fafc 60%, #e9ecef 100%);
+  opacity: 0.7;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hover effects for inactive indicators */
+#heroCarousel .carousel-indicators [data-bs-target]:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+  box-shadow: 
+    0 4px 16px rgba(20, 33, 61, 0.15),
+    0 0 0 4px rgba(20, 33, 61, 0.1);
+}
+
+/* Active indicator with stunning effects */
+#heroCarousel .carousel-indicators .active {
+  opacity: 1;
+  background: linear-gradient(135deg, #14213d 0%, #2d4a6b 50%, #14213d 100%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+  box-shadow: 
+    0 6px 24px rgba(20, 33, 61, 0.25),
+    0 2px 8px rgba(20, 33, 61, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add a subtle glow effect */
+#heroCarousel .carousel-indicators .active::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #14213d, #2d4a6b);
+  border-radius: 14px;
+  z-index: -1;
+  opacity: 0.3;
+  filter: blur(4px);
+  animation: pulse 2s infinite;
+}
+
+/* Pulse animation for active indicator */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+/* Add shimmer effect on active indicator */
+#heroCarousel .carousel-indicators .active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Alternative Style - Gradient Ring Indicators */
+.gradient-ring #heroCarousel .carousel-indicators [data-bs-target] {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #e9ecef;
+  opacity: 0.7;
+  margin: 0 6px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gradient-ring #heroCarousel .carousel-indicators [data-bs-target]:hover {
+  transform: scale(1.15);
+  border-color: rgba(20, 33, 61, 0.5);
+}
+
+.gradient-ring #heroCarousel .carousel-indicators .active {
+  opacity: 1;
+  background: conic-gradient(from 0deg, #14213d, #2d4a6b, #4a90e2, #14213d);
+  border: none;
+  width: 20px;
+  height: 20px;
+  transform: scale(1.1);
+  animation: rotate 4s linear infinite;
+  box-shadow: 
+    0 0 20px rgba(20, 33, 61, 0.3),
+    0 4px 16px rgba(20, 33, 61, 0.2);
+}
+
+.gradient-ring #heroCarousel .carousel-indicators .active::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.gradient-ring #heroCarousel .carousel-indicators .active::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: #14213d;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+@keyframes rotate {
+  from {
+    transform: scale(1.1) rotate(0deg);
+  }
+  to {
+    transform: scale(1.1) rotate(360deg);
+  }
+}
+
+/* Alternative Style - Neon Glow Indicators */
+.neon-glow #heroCarousel .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0.6;
+  margin: 0 8px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.neon-glow #heroCarousel .carousel-indicators [data-bs-target]:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.neon-glow #heroCarousel .carousel-indicators .active {
+  opacity: 1;
+  background: #14213d;
+  width: 40px;
+  height: 12px;
+  border-radius: 8px;
+  border: 1px solid #14213d;
+  box-shadow: 
+    0 0 20px rgba(20, 33, 61, 0.6),
+    0 0 40px rgba(20, 33, 61, 0.4),
+    0 0 60px rgba(20, 33, 61, 0.2);
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  from {
+    box-shadow: 
+      0 0 20px rgba(20, 33, 61, 0.6),
+      0 0 40px rgba(20, 33, 61, 0.4),
+      0 0 60px rgba(20, 33, 61, 0.2);
+  }
+  to {
+    box-shadow: 
+      0 0 30px rgba(20, 33, 61, 0.8),
+      0 0 60px rgba(20, 33, 61, 0.6),
+      0 0 90px rgba(20, 33, 61, 0.4);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  #heroCarousel .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+  }
+  
+  #heroCarousel .carousel-indicators .active {
+    width: 32px;
+    height: 10px;
+  }
+  
+  .gradient-ring #heroCarousel .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .gradient-ring #heroCarousel .carousel-indicators .active {
+    width: 16px;
+    height: 16px;
+  }
+}
 :root {
   --primary: #001f3f;
   --secondary: #00b894;

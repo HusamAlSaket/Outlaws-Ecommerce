@@ -449,3 +449,8 @@ messages is not defined
     at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
 2025-07-22 12:16:04 [ERROR]: Login failed: invalid password for email tesla@gmail.com
 2025-07-22 12:16:04 [ERROR]: Login error from service: Invalid email or password
+2025-07-28 11:42:24 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-07-28 11:42:24 [ERROR]: Login error from service: Invalid email or password
+2025-07-28 11:42:36 [ERROR]: Registration error from service: Email already registered
+2025-07-28 13:23:23 [ERROR]: JWT verification failed: jwt expired
+2025-07-28 14:37:28 [ERROR]: JWT verification failed: jwt expired

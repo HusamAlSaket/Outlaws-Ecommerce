@@ -2584,3 +2584,435 @@ messages is not defined
 2025-07-22 14:07:20 [INFO]: User logged in: tesla@gmail.com
 2025-07-22 14:07:20 [INFO]: Checkout page requested
 2025-07-22 14:07:20 [INFO]: Checkout page loaded
+2025-07-29 10:25:23 [INFO]: Home page requested
+2025-07-29 10:25:23 [INFO]: Fetching trending products
+2025-07-29 10:25:23 [INFO]: Found 6 trending products
+2025-07-29 10:25:23 [INFO]: Fetching popular products
+2025-07-29 10:25:23 [INFO]: Found 6 popular products
+2025-07-29 10:25:23 [INFO]: Home page data loaded successfully
+2025-07-29 10:25:31 [INFO]: Products page requested
+2025-07-29 10:25:31 [INFO]: Fetching all products with filters:
+2025-07-29 10:25:32 [INFO]: Found 5 products (12 total)
+2025-07-29 10:25:32 [INFO]: Products page data loaded successfully
+2025-07-29 10:25:35 [WARN]: Authentication required but no token provided
+2025-07-29 10:25:39 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-29 10:25:39 [INFO]: PasswordService compare: true
+2025-07-29 10:25:39 [INFO]: User logged in: tesla@gmail.com
+2025-07-29 10:25:39 [INFO]: Orders page requested
+2025-07-29 10:25:39 [INFO]: Fetching user orders
+2025-07-29 10:25:39 [INFO]: Orders retrieved successfully
+2025-07-29 10:25:39 [INFO]: Orders page loaded
+2025-07-29 10:25:55 [INFO]: Orders page requested
+2025-07-29 10:25:55 [INFO]: Fetching user orders
+2025-07-29 10:25:55 [INFO]: Orders retrieved successfully
+2025-07-29 10:25:55 [INFO]: Orders page loaded
+2025-07-29 10:25:58 [INFO]: Orders page requested
+2025-07-29 10:25:58 [INFO]: Fetching user orders
+2025-07-29 10:25:58 [INFO]: Orders retrieved successfully
+2025-07-29 10:25:58 [INFO]: Orders page loaded
+2025-07-29 10:26:02 [INFO]: Home page requested
+2025-07-29 10:26:02 [INFO]: Fetching trending products
+2025-07-29 10:26:02 [INFO]: Found 6 trending products
+2025-07-29 10:26:02 [INFO]: Fetching popular products
+2025-07-29 10:26:02 [INFO]: Found 6 popular products
+2025-07-29 10:26:02 [INFO]: Home page data loaded successfully
+2025-07-29 10:26:03 [INFO]: Orders page requested
+2025-07-29 10:26:03 [INFO]: Fetching user orders
+2025-07-29 10:26:03 [INFO]: Orders retrieved successfully
+2025-07-29 10:26:03 [INFO]: Orders page loaded
+2025-07-29 10:26:09 [INFO]: Orders page requested
+2025-07-29 10:26:09 [INFO]: Fetching user orders
+2025-07-29 10:26:09 [INFO]: Orders retrieved successfully
+2025-07-29 10:26:09 [INFO]: Orders page loaded
+2025-07-29 10:26:19 [INFO]: Orders page requested
+2025-07-29 10:26:19 [INFO]: Fetching user orders
+2025-07-29 10:26:19 [INFO]: Orders retrieved successfully
+2025-07-29 10:26:19 [INFO]: Orders page loaded
+2025-07-29 10:26:29 [INFO]: Products page requested
+2025-07-29 10:26:29 [INFO]: Fetching all products with filters:
+2025-07-29 10:26:29 [INFO]: Found 5 products (12 total)
+2025-07-29 10:26:29 [INFO]: Products page data loaded successfully
+2025-07-29 10:26:35 [INFO]: Orders page requested
+2025-07-29 10:26:35 [INFO]: Fetching user orders
+2025-07-29 10:26:35 [INFO]: Orders retrieved successfully
+2025-07-29 10:26:35 [INFO]: Orders page loaded
+2025-07-29 10:26:57 [INFO]: Home page requested
+2025-07-29 10:26:57 [INFO]: Fetching trending products
+2025-07-29 10:26:57 [INFO]: Found 6 trending products
+2025-07-29 10:26:57 [INFO]: Fetching popular products
+2025-07-29 10:26:57 [INFO]: Found 6 popular products
+2025-07-29 10:26:57 [INFO]: Home page data loaded successfully
+2025-07-29 10:27:13 [INFO]: Products page requested
+2025-07-29 10:27:13 [INFO]: Fetching all products with filters:
+2025-07-29 10:27:13 [INFO]: Found 5 products (12 total)
+2025-07-29 10:27:13 [INFO]: Products page data loaded successfully
+2025-07-29 10:27:17 [INFO]: Orders page requested
+2025-07-29 10:27:17 [INFO]: Fetching user orders
+2025-07-29 10:27:17 [INFO]: Orders retrieved successfully
+2025-07-29 10:27:17 [INFO]: Orders page loaded
+2025-07-29 10:27:27 [INFO]: Cart page requested
+2025-07-29 10:27:27 [INFO]: Cart page loaded
+2025-07-29 10:27:40 [INFO]: Home page requested
+2025-07-29 10:27:40 [INFO]: Fetching trending products
+2025-07-29 10:27:40 [INFO]: Found 6 trending products
+2025-07-29 10:27:40 [INFO]: Fetching popular products
+2025-07-29 10:27:40 [INFO]: Found 6 popular products
+2025-07-29 10:27:40 [INFO]: Home page data loaded successfully
+2025-07-29 10:36:28 [INFO]: Home page requested
+2025-07-29 10:36:28 [INFO]: Fetching trending products
+2025-07-29 10:36:28 [INFO]: Found 6 trending products
+2025-07-29 10:36:28 [INFO]: Fetching popular products
+2025-07-29 10:36:28 [INFO]: Found 6 popular products
+2025-07-29 10:36:28 [INFO]: Home page data loaded successfully
+2025-07-29 10:37:29 [INFO]: Home page requested
+2025-07-29 10:37:29 [INFO]: Fetching trending products
+2025-07-29 10:37:29 [INFO]: Found 6 trending products
+2025-07-29 10:37:29 [INFO]: Fetching popular products
+2025-07-29 10:37:29 [INFO]: Found 6 popular products
+2025-07-29 10:37:29 [INFO]: Home page data loaded successfully
+2025-07-29 10:38:21 [INFO]: Home page requested
+2025-07-29 10:38:21 [INFO]: Fetching trending products
+2025-07-29 10:38:21 [INFO]: Found 6 trending products
+2025-07-29 10:38:21 [INFO]: Fetching popular products
+2025-07-29 10:38:21 [INFO]: Found 6 popular products
+2025-07-29 10:38:21 [INFO]: Home page data loaded successfully
+2025-07-29 10:39:35 [INFO]: Home page requested
+2025-07-29 10:39:35 [INFO]: Fetching trending products
+2025-07-29 10:39:35 [INFO]: Found 6 trending products
+2025-07-29 10:39:35 [INFO]: Fetching popular products
+2025-07-29 10:39:35 [INFO]: Found 6 popular products
+2025-07-29 10:39:35 [INFO]: Home page data loaded successfully
+2025-07-29 10:41:30 [INFO]: Home page requested
+2025-07-29 10:41:30 [INFO]: Fetching trending products
+2025-07-29 10:41:30 [INFO]: Found 6 trending products
+2025-07-29 10:41:30 [INFO]: Fetching popular products
+2025-07-29 10:41:30 [INFO]: Found 6 popular products
+2025-07-29 10:41:30 [INFO]: Home page data loaded successfully
+2025-07-29 10:42:16 [INFO]: Home page requested
+2025-07-29 10:42:16 [INFO]: Fetching trending products
+2025-07-29 10:42:16 [INFO]: Found 6 trending products
+2025-07-29 10:42:16 [INFO]: Fetching popular products
+2025-07-29 10:42:17 [INFO]: Found 6 popular products
+2025-07-29 10:42:17 [INFO]: Home page data loaded successfully
+2025-07-29 10:43:34 [INFO]: Home page requested
+2025-07-29 10:43:34 [INFO]: Fetching trending products
+2025-07-29 10:43:34 [INFO]: Found 6 trending products
+2025-07-29 10:43:34 [INFO]: Fetching popular products
+2025-07-29 10:43:34 [INFO]: Found 6 popular products
+2025-07-29 10:43:34 [INFO]: Home page data loaded successfully
+2025-07-29 10:43:36 [INFO]: Home page requested
+2025-07-29 10:43:36 [INFO]: Fetching trending products
+2025-07-29 10:43:36 [INFO]: Found 6 trending products
+2025-07-29 10:43:36 [INFO]: Fetching popular products
+2025-07-29 10:43:36 [INFO]: Found 6 popular products
+2025-07-29 10:43:36 [INFO]: Home page data loaded successfully
+2025-07-29 10:43:37 [INFO]: Home page requested
+2025-07-29 10:43:37 [INFO]: Fetching trending products
+2025-07-29 10:43:37 [INFO]: Found 6 trending products
+2025-07-29 10:43:37 [INFO]: Fetching popular products
+2025-07-29 10:43:37 [INFO]: Found 6 popular products
+2025-07-29 10:43:37 [INFO]: Home page data loaded successfully
+2025-07-29 10:43:54 [INFO]: Home page requested
+2025-07-29 10:43:54 [INFO]: Fetching trending products
+2025-07-29 10:43:54 [INFO]: Found 6 trending products
+2025-07-29 10:43:54 [INFO]: Fetching popular products
+2025-07-29 10:43:54 [INFO]: Found 6 popular products
+2025-07-29 10:43:54 [INFO]: Home page data loaded successfully
+2025-07-29 10:44:03 [INFO]: Products page requested
+2025-07-29 10:44:03 [INFO]: Fetching all products with filters:
+2025-07-29 10:44:03 [INFO]: Found 5 products (12 total)
+2025-07-29 10:44:03 [INFO]: Products page data loaded successfully
+2025-07-29 10:44:05 [INFO]: Home page requested
+2025-07-29 10:44:05 [INFO]: Fetching trending products
+2025-07-29 10:44:05 [INFO]: Found 6 trending products
+2025-07-29 10:44:05 [INFO]: Fetching popular products
+2025-07-29 10:44:05 [INFO]: Found 6 popular products
+2025-07-29 10:44:05 [INFO]: Home page data loaded successfully
+2025-07-29 10:44:06 [INFO]: Products page requested
+2025-07-29 10:44:06 [INFO]: Fetching all products with filters:
+2025-07-29 10:44:06 [INFO]: Found 5 products (12 total)
+2025-07-29 10:44:06 [INFO]: Products page data loaded successfully
+2025-07-29 10:44:07 [INFO]: Home page requested
+2025-07-29 10:44:07 [INFO]: Fetching trending products
+2025-07-29 10:44:07 [INFO]: Found 6 trending products
+2025-07-29 10:44:07 [INFO]: Fetching popular products
+2025-07-29 10:44:07 [INFO]: Found 6 popular products
+2025-07-29 10:44:07 [INFO]: Home page data loaded successfully
+2025-07-29 10:44:10 [INFO]: Home page requested
+2025-07-29 10:44:10 [INFO]: Fetching trending products
+2025-07-29 10:44:10 [INFO]: Found 6 trending products
+2025-07-29 10:44:10 [INFO]: Fetching popular products
+2025-07-29 10:44:10 [INFO]: Found 6 popular products
+2025-07-29 10:44:10 [INFO]: Home page data loaded successfully
+2025-07-29 10:44:10 [INFO]: Home page requested
+2025-07-29 10:44:10 [INFO]: Fetching trending products
+2025-07-29 10:44:11 [INFO]: Found 6 trending products
+2025-07-29 10:44:11 [INFO]: Fetching popular products
+2025-07-29 10:44:11 [INFO]: Found 6 popular products
+2025-07-29 10:44:11 [INFO]: Home page data loaded successfully
+2025-07-29 10:44:11 [INFO]: Home page requested
+2025-07-29 10:44:11 [INFO]: Fetching trending products
+2025-07-29 10:44:11 [INFO]: Found 6 trending products
+2025-07-29 10:44:11 [INFO]: Fetching popular products
+2025-07-29 10:44:11 [INFO]: Found 6 popular products
+2025-07-29 10:44:11 [INFO]: Home page data loaded successfully
+2025-07-29 10:44:21 [INFO]: Home page requested
+2025-07-29 10:44:21 [INFO]: Fetching trending products
+2025-07-29 10:44:21 [INFO]: Found 6 trending products
+2025-07-29 10:44:21 [INFO]: Fetching popular products
+2025-07-29 10:44:21 [INFO]: Found 6 popular products
+2025-07-29 10:44:21 [INFO]: Home page data loaded successfully
+2025-07-29 10:44:49 [INFO]: Home page requested
+2025-07-29 10:44:49 [INFO]: Fetching trending products
+2025-07-29 10:44:49 [INFO]: Found 6 trending products
+2025-07-29 10:44:49 [INFO]: Fetching popular products
+2025-07-29 10:44:49 [INFO]: Found 6 popular products
+2025-07-29 10:44:49 [INFO]: Home page data loaded successfully
+2025-07-29 10:47:14 [INFO]: Home page requested
+2025-07-29 10:47:14 [INFO]: Fetching trending products
+2025-07-29 10:47:14 [INFO]: Found 6 trending products
+2025-07-29 10:47:14 [INFO]: Fetching popular products
+2025-07-29 10:47:14 [INFO]: Found 6 popular products
+2025-07-29 10:47:14 [INFO]: Home page data loaded successfully
+2025-07-29 10:48:27 [INFO]: Home page requested
+2025-07-29 10:48:27 [INFO]: Fetching trending products
+2025-07-29 10:48:27 [INFO]: Found 6 trending products
+2025-07-29 10:48:27 [INFO]: Fetching popular products
+2025-07-29 10:48:27 [INFO]: Found 6 popular products
+2025-07-29 10:48:27 [INFO]: Home page data loaded successfully
+2025-07-29 10:49:05 [INFO]: Home page requested
+2025-07-29 10:49:05 [INFO]: Fetching trending products
+2025-07-29 10:49:05 [INFO]: Found 6 trending products
+2025-07-29 10:49:05 [INFO]: Fetching popular products
+2025-07-29 10:49:05 [INFO]: Found 6 popular products
+2025-07-29 10:49:05 [INFO]: Home page data loaded successfully
+2025-07-29 10:49:06 [INFO]: Home page requested
+2025-07-29 10:49:06 [INFO]: Fetching trending products
+2025-07-29 10:49:06 [INFO]: Found 6 trending products
+2025-07-29 10:49:06 [INFO]: Fetching popular products
+2025-07-29 10:49:06 [INFO]: Found 6 popular products
+2025-07-29 10:49:06 [INFO]: Home page data loaded successfully
+2025-07-29 10:49:11 [INFO]: Home page requested
+2025-07-29 10:49:11 [INFO]: Fetching trending products
+2025-07-29 10:49:12 [INFO]: Found 6 trending products
+2025-07-29 10:49:12 [INFO]: Fetching popular products
+2025-07-29 10:49:12 [INFO]: Found 6 popular products
+2025-07-29 10:49:12 [INFO]: Home page data loaded successfully
+2025-07-29 10:49:39 [INFO]: Home page requested
+2025-07-29 10:49:39 [INFO]: Fetching trending products
+2025-07-29 10:49:39 [INFO]: Found 6 trending products
+2025-07-29 10:49:39 [INFO]: Fetching popular products
+2025-07-29 10:49:40 [INFO]: Found 6 popular products
+2025-07-29 10:49:40 [INFO]: Home page data loaded successfully
+2025-07-29 10:49:41 [INFO]: Home page requested
+2025-07-29 10:49:41 [INFO]: Fetching trending products
+2025-07-29 10:49:41 [INFO]: Found 6 trending products
+2025-07-29 10:49:41 [INFO]: Fetching popular products
+2025-07-29 10:49:41 [INFO]: Found 6 popular products
+2025-07-29 10:49:41 [INFO]: Home page data loaded successfully
+2025-07-29 10:50:05 [INFO]: Home page requested
+2025-07-29 10:50:05 [INFO]: Fetching trending products
+2025-07-29 10:50:05 [INFO]: Found 6 trending products
+2025-07-29 10:50:05 [INFO]: Fetching popular products
+2025-07-29 10:50:06 [INFO]: Found 6 popular products
+2025-07-29 10:50:06 [INFO]: Home page data loaded successfully
+2025-07-29 10:50:06 [INFO]: Home page requested
+2025-07-29 10:50:06 [INFO]: Fetching trending products
+2025-07-29 10:50:07 [INFO]: Found 6 trending products
+2025-07-29 10:50:07 [INFO]: Fetching popular products
+2025-07-29 10:50:07 [INFO]: Found 6 popular products
+2025-07-29 10:50:07 [INFO]: Home page data loaded successfully
+2025-07-29 10:50:13 [INFO]: Home page requested
+2025-07-29 10:50:13 [INFO]: Fetching trending products
+2025-07-29 10:50:13 [INFO]: Found 6 trending products
+2025-07-29 10:50:13 [INFO]: Fetching popular products
+2025-07-29 10:50:14 [INFO]: Found 6 popular products
+2025-07-29 10:50:14 [INFO]: Home page data loaded successfully
+2025-07-29 10:50:14 [INFO]: Home page requested
+2025-07-29 10:50:14 [INFO]: Fetching trending products
+2025-07-29 10:50:14 [INFO]: Found 6 trending products
+2025-07-29 10:50:14 [INFO]: Fetching popular products
+2025-07-29 10:50:14 [INFO]: Found 6 popular products
+2025-07-29 10:50:14 [INFO]: Home page data loaded successfully
+2025-07-29 10:50:18 [INFO]: Home page requested
+2025-07-29 10:50:18 [INFO]: Fetching trending products
+2025-07-29 10:50:18 [INFO]: Found 6 trending products
+2025-07-29 10:50:18 [INFO]: Fetching popular products
+2025-07-29 10:50:18 [INFO]: Found 6 popular products
+2025-07-29 10:50:18 [INFO]: Home page data loaded successfully
+2025-07-29 10:50:19 [INFO]: Home page requested
+2025-07-29 10:50:19 [INFO]: Fetching trending products
+2025-07-29 10:50:19 [INFO]: Found 6 trending products
+2025-07-29 10:50:19 [INFO]: Fetching popular products
+2025-07-29 10:50:19 [INFO]: Found 6 popular products
+2025-07-29 10:50:19 [INFO]: Home page data loaded successfully
+2025-07-29 10:50:33 [INFO]: Home page requested
+2025-07-29 10:50:33 [INFO]: Fetching trending products
+2025-07-29 10:50:33 [INFO]: Found 6 trending products
+2025-07-29 10:50:33 [INFO]: Fetching popular products
+2025-07-29 10:50:33 [INFO]: Found 6 popular products
+2025-07-29 10:50:33 [INFO]: Home page data loaded successfully
+2025-07-29 10:51:45 [INFO]: Home page requested
+2025-07-29 10:51:45 [INFO]: Fetching trending products
+2025-07-29 10:51:45 [INFO]: Found 6 trending products
+2025-07-29 10:51:45 [INFO]: Fetching popular products
+2025-07-29 10:51:45 [INFO]: Found 6 popular products
+2025-07-29 10:51:45 [INFO]: Home page data loaded successfully
+2025-07-29 10:54:22 [INFO]: Home page requested
+2025-07-29 10:54:22 [INFO]: Fetching trending products
+2025-07-29 10:54:22 [INFO]: Found 6 trending products
+2025-07-29 10:54:22 [INFO]: Fetching popular products
+2025-07-29 10:54:22 [INFO]: Found 6 popular products
+2025-07-29 10:54:22 [INFO]: Home page data loaded successfully
+2025-07-29 10:54:27 [INFO]: Home page requested
+2025-07-29 10:54:27 [INFO]: Fetching trending products
+2025-07-29 10:54:27 [INFO]: Found 6 trending products
+2025-07-29 10:54:27 [INFO]: Fetching popular products
+2025-07-29 10:54:27 [INFO]: Found 6 popular products
+2025-07-29 10:54:27 [INFO]: Home page data loaded successfully
+2025-07-29 10:55:42 [INFO]: Home page requested
+2025-07-29 10:55:42 [INFO]: Fetching trending products
+2025-07-29 10:55:42 [INFO]: Found 6 trending products
+2025-07-29 10:55:42 [INFO]: Fetching popular products
+2025-07-29 10:55:42 [INFO]: Found 6 popular products
+2025-07-29 10:55:42 [INFO]: Home page data loaded successfully
+2025-07-29 10:55:44 [INFO]: Home page requested
+2025-07-29 10:55:44 [INFO]: Fetching trending products
+2025-07-29 10:55:44 [INFO]: Found 6 trending products
+2025-07-29 10:55:44 [INFO]: Fetching popular products
+2025-07-29 10:55:45 [INFO]: Found 6 popular products
+2025-07-29 10:55:45 [INFO]: Home page data loaded successfully
+2025-07-29 10:55:45 [INFO]: Home page requested
+2025-07-29 10:55:45 [INFO]: Fetching trending products
+2025-07-29 10:55:45 [INFO]: Found 6 trending products
+2025-07-29 10:55:45 [INFO]: Fetching popular products
+2025-07-29 10:55:45 [INFO]: Found 6 popular products
+2025-07-29 10:55:45 [INFO]: Home page data loaded successfully
+2025-07-29 10:55:57 [INFO]: Home page requested
+2025-07-29 10:55:57 [INFO]: Fetching trending products
+2025-07-29 10:55:57 [INFO]: Found 6 trending products
+2025-07-29 10:55:57 [INFO]: Fetching popular products
+2025-07-29 10:55:57 [INFO]: Found 6 popular products
+2025-07-29 10:55:57 [INFO]: Home page data loaded successfully
+2025-07-29 10:56:02 [INFO]: Home page requested
+2025-07-29 10:56:02 [INFO]: Fetching trending products
+2025-07-29 10:56:02 [INFO]: Found 6 trending products
+2025-07-29 10:56:02 [INFO]: Fetching popular products
+2025-07-29 10:56:02 [INFO]: Found 6 popular products
+2025-07-29 10:56:02 [INFO]: Home page data loaded successfully
+2025-07-29 10:56:07 [INFO]: Home page requested
+2025-07-29 10:56:07 [INFO]: Fetching trending products
+2025-07-29 10:56:07 [INFO]: Found 6 trending products
+2025-07-29 10:56:07 [INFO]: Fetching popular products
+2025-07-29 10:56:07 [INFO]: Found 6 popular products
+2025-07-29 10:56:07 [INFO]: Home page data loaded successfully
+2025-07-29 10:56:08 [INFO]: Home page requested
+2025-07-29 10:56:08 [INFO]: Fetching trending products
+2025-07-29 10:56:08 [INFO]: Found 6 trending products
+2025-07-29 10:56:08 [INFO]: Fetching popular products
+2025-07-29 10:56:08 [INFO]: Found 6 popular products
+2025-07-29 10:56:08 [INFO]: Home page data loaded successfully
+2025-07-29 10:56:10 [INFO]: Home page requested
+2025-07-29 10:56:10 [INFO]: Fetching trending products
+2025-07-29 10:56:10 [INFO]: Found 6 trending products
+2025-07-29 10:56:10 [INFO]: Fetching popular products
+2025-07-29 10:56:10 [INFO]: Found 6 popular products
+2025-07-29 10:56:10 [INFO]: Home page data loaded successfully
+2025-07-29 10:56:10 [INFO]: Home page requested
+2025-07-29 10:56:10 [INFO]: Fetching trending products
+2025-07-29 10:56:10 [INFO]: Found 6 trending products
+2025-07-29 10:56:10 [INFO]: Fetching popular products
+2025-07-29 10:56:10 [INFO]: Found 6 popular products
+2025-07-29 10:56:10 [INFO]: Home page data loaded successfully
+2025-07-29 10:56:11 [INFO]: Home page requested
+2025-07-29 10:56:11 [INFO]: Fetching trending products
+2025-07-29 10:56:11 [INFO]: Found 6 trending products
+2025-07-29 10:56:11 [INFO]: Fetching popular products
+2025-07-29 10:56:11 [INFO]: Found 6 popular products
+2025-07-29 10:56:11 [INFO]: Home page data loaded successfully
+2025-07-29 10:56:13 [INFO]: Home page requested
+2025-07-29 10:56:13 [INFO]: Fetching trending products
+2025-07-29 10:56:13 [INFO]: Found 6 trending products
+2025-07-29 10:56:13 [INFO]: Fetching popular products
+2025-07-29 10:56:13 [INFO]: Found 6 popular products
+2025-07-29 10:56:13 [INFO]: Home page data loaded successfully
+2025-07-29 10:56:14 [INFO]: Home page requested
+2025-07-29 10:56:14 [INFO]: Fetching trending products
+2025-07-29 10:56:14 [INFO]: Found 6 trending products
+2025-07-29 10:56:14 [INFO]: Fetching popular products
+2025-07-29 10:56:15 [INFO]: Found 6 popular products
+2025-07-29 10:56:15 [INFO]: Home page data loaded successfully
+2025-07-29 10:57:13 [INFO]: Home page requested
+2025-07-29 10:57:13 [INFO]: Fetching trending products
+2025-07-29 10:57:13 [INFO]: Found 6 trending products
+2025-07-29 10:57:13 [INFO]: Fetching popular products
+2025-07-29 10:57:13 [INFO]: Found 6 popular products
+2025-07-29 10:57:13 [INFO]: Home page data loaded successfully
+2025-07-29 10:57:14 [INFO]: Home page requested
+2025-07-29 10:57:14 [INFO]: Fetching trending products
+2025-07-29 10:57:14 [INFO]: Found 6 trending products
+2025-07-29 10:57:14 [INFO]: Fetching popular products
+2025-07-29 10:57:14 [INFO]: Found 6 popular products
+2025-07-29 10:57:14 [INFO]: Home page data loaded successfully
+2025-07-29 10:58:50 [INFO]: Home page requested
+2025-07-29 10:58:50 [INFO]: Fetching trending products
+2025-07-29 10:58:50 [INFO]: Found 6 trending products
+2025-07-29 10:58:50 [INFO]: Fetching popular products
+2025-07-29 10:58:50 [INFO]: Found 6 popular products
+2025-07-29 10:58:50 [INFO]: Home page data loaded successfully
+2025-07-29 11:07:41 [INFO]: Home page requested
+2025-07-29 11:07:41 [INFO]: Fetching trending products
+2025-07-29 11:07:41 [INFO]: Found 6 trending products
+2025-07-29 11:07:41 [INFO]: Fetching popular products
+2025-07-29 11:07:41 [INFO]: Found 6 popular products
+2025-07-29 11:07:41 [INFO]: Home page data loaded successfully
+2025-07-29 11:07:44 [INFO]: Product details requested
+2025-07-29 11:07:44 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc7
+2025-07-29 11:07:44 [INFO]: Product details loaded successfully
+2025-07-29 11:07:46 [INFO]: Cart add request
+2025-07-29 11:07:46 [INFO]: Adding item to cart
+2025-07-29 11:07:47 [INFO]: Item added to cart successfully
+2025-07-29 11:07:47 [INFO]: Cart page requested
+2025-07-29 11:07:47 [INFO]: Cart page loaded
+2025-07-29 11:07:48 [INFO]: Cart page requested
+2025-07-29 11:07:48 [INFO]: Cart page loaded
+2025-07-29 11:07:50 [WARN]: Authentication required but no token provided
+2025-07-29 11:07:54 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-29 11:07:54 [INFO]: PasswordService compare: true
+2025-07-29 11:07:54 [INFO]: User logged in: tesla@gmail.com
+2025-07-29 11:07:54 [INFO]: Checkout page requested
+2025-07-29 11:07:54 [INFO]: Checkout page loaded
+2025-07-29 11:08:04 [INFO]: Processing checkout
+2025-07-29 11:08:04 [INFO]: Creating new order
+2025-07-29 11:08:04 [INFO]: Validating cart for checkout
+2025-07-29 11:08:04 [INFO]: Cart validation successful
+2025-07-29 11:08:04 [INFO]: Updating product stock
+2025-07-29 11:08:05 [INFO]: Stock updated
+2025-07-29 11:08:05 [INFO]: Order created successfully
+2025-07-29 11:08:05 [INFO]: Cart cleared
+2025-07-29 11:08:05 [INFO]: Checkout completed successfully
+2025-07-29 11:08:05 [INFO]: Orders page requested
+2025-07-29 11:08:05 [INFO]: Fetching user orders
+2025-07-29 11:08:05 [INFO]: Orders retrieved successfully
+2025-07-29 11:08:05 [INFO]: Orders page loaded
+2025-07-29 11:08:12 [INFO]: Products page requested
+2025-07-29 11:08:12 [INFO]: Fetching all products with filters:
+2025-07-29 11:08:12 [INFO]: Found 5 products (12 total)
+2025-07-29 11:08:12 [INFO]: Products page data loaded successfully
+2025-07-29 11:08:17 [INFO]: Products page requested
+2025-07-29 11:08:17 [INFO]: Fetching all products with filters:
+2025-07-29 11:08:17 [INFO]: Found 5 products (12 total)
+2025-07-29 11:08:17 [INFO]: Products page data loaded successfully
+2025-07-29 11:08:20 [INFO]: Home page requested
+2025-07-29 11:08:20 [INFO]: Fetching trending products
+2025-07-29 11:08:20 [INFO]: Found 6 trending products
+2025-07-29 11:08:20 [INFO]: Fetching popular products
+2025-07-29 11:08:21 [INFO]: Found 6 popular products
+2025-07-29 11:08:21 [INFO]: Home page data loaded successfully
+2025-07-29 11:08:25 [INFO]: Cart add request
+2025-07-29 11:08:25 [INFO]: Adding item to cart
+2025-07-29 11:08:25 [INFO]: Item added to cart successfully
+2025-07-29 11:08:25 [INFO]: Cart page requested
+2025-07-29 11:08:25 [INFO]: Cart page loaded
+2025-07-29 11:08:27 [INFO]: Cart page requested
+2025-07-29 11:08:27 [INFO]: Cart page loaded
