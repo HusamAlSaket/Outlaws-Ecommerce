@@ -27,22 +27,38 @@
       <section class="page-header">
         <div class="profile-header-content">
           <div class="profile-avatar">
-            <i class="fas fa-user"></i>
+            <img
+              src="<%= (!user.image || user.image === 'undefined' || user.image.trim() === '' ) ? '/images/default-user.png' : user.image %>"
+              alt="Profile Image"
+              class="profile-img"
+              style="
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 3px solid #001f3f;
+              "
+              onerror="this.onerror=null;this.src='/images/default-user.png';"
+            />
           </div>
           <div class="profile-info">
             <h1 class="page-title">Welcome back, <%= user.username %></h1>
-            <p class="page-subtitle">Manage your profile and view your orders</p>
+            <p class="page-subtitle">
+              Manage your profile and view your orders
+            </p>
           </div>
           <div class="profile-actions">
             <div class="quick-stat">
-              <div class="quick-stat-value"><%= orders ? orders.length : 0 %></div>
+              <div class="quick-stat-value">
+                <%= orders ? orders.length : 0 %>
+              </div>
               <div class="quick-stat-label">Orders</div>
             </div>
             <div class="quick-stat">
               <div class="quick-stat-value">
-                $<%= orders && orders.length > 0 ? 
-                  orders.reduce((total, order) => total + order.totalAmount, 0).toFixed(0) : 
-                  '0' %>
+                $<%= orders && orders.length > 0 ? orders.reduce(function(total,
+                order) { return total + order.totalAmount; }, 0).toFixed(0) :
+                '0' %>
               </div>
               <div class="quick-stat-label">Spent</div>
             </div>
@@ -88,11 +104,9 @@
                   <div class="info-content">
                     <div class="info-label">Member Since</div>
                     <div class="info-value">
-                      <%= new Date(user.createdAt || Date.now()).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      }) %>
+                      <%= new Date(user.createdAt ||
+                      Date.now()).toLocaleDateString('en-US', { year: 'numeric',
+                      month: 'long', day: 'numeric' }) %>
                     </div>
                   </div>
                 </div>
@@ -106,7 +120,6 @@
                   </div>
                 </div>
               </div>
- 
             </div>
           </div>
 
@@ -124,7 +137,9 @@
                   <div class="stat-icon">
                     <i class="fas fa-shopping-bag"></i>
                   </div>
-                  <div class="stat-value"><%= orders ? orders.length : 0 %></div>
+                  <div class="stat-value">
+                    <%= orders ? orders.length : 0 %>
+                  </div>
                   <div class="stat-label">Total Orders</div>
                 </div>
                 <div class="stat-card">
@@ -132,9 +147,9 @@
                     <i class="fas fa-dollar-sign"></i>
                   </div>
                   <div class="stat-value">
-                    $<%= orders && orders.length > 0 ? 
-                      orders.reduce((total, order) => total + order.totalAmount, 0).toFixed(2) : 
-                      '0.00' %>
+                    $<%= orders && orders.length > 0 ?
+                    orders.reduce(function(total, order) { return total +
+                    order.totalAmount; }, 0).toFixed(2) : '0.00' %>
                   </div>
                   <div class="stat-label">Total Spent</div>
                 </div>
@@ -143,9 +158,10 @@
                     <i class="fas fa-box"></i>
                   </div>
                   <div class="stat-value">
-                    <%= orders && orders.length > 0 ? 
-                      orders.reduce((total, order) => total + order.items.reduce((itemTotal, item) => itemTotal + item.qty, 0), 0) : 
-                      0 %>
+                    <%= orders && orders.length > 0 ?
+                    orders.reduce(function(total, order) { return total +
+                    order.items.reduce(function(itemTotal, item) { return
+                    itemTotal + item.qty; }, 0); }, 0) : 0 %>
                   </div>
                   <div class="stat-label">Items Purchased</div>
                 </div>
@@ -163,42 +179,100 @@
             </div>
             <div class="card-content">
               <% if (orders && orders.length > 0) { %>
-                <div class="recent-orders">
-                  <% orders.slice(0, 5).forEach(order => { %>
-                    <div class="order-item">
-                      <div class="order-info">
-                        <div class="order-id">Order #<%= order._id.toString().slice(-8).toUpperCase() %></div>
-                        <div class="order-date">
-                          Placed on <%= new Date(order.createdAt).toLocaleDateString('en-US', { 
-                            year: 'numeric', 
-                            month: 'long', 
-                            day: 'numeric' 
-                          }) %>
-                        </div>
-                      </div>
-                      <div class="order-total">$<%= order.totalAmount.toFixed(2) %></div>
+              <div class="recent-orders">
+                <% orders.slice(0, 5).forEach(order => { %>
+                <div class="order-item">
+                  <div class="order-info">
+                    <div class="order-id">
+                      Order #<%= order._id.toString().slice(-8).toUpperCase() %>
                     </div>
-                  <% }); %>
-                </div>
-                <div class="text-center mt-3">
-                  <a href="/orders" class="btn btn-primary">
-                    <i class="fas fa-list me-2"></i>
-                    View All Orders
-                  </a>
-                </div>
-              <% } else { %>
-                <div class="empty-state">
-                  <div class="empty-icon">
-                    <i class="fas fa-shopping-bag"></i>
+                    <div class="order-date">
+                      Placed on <%= new
+                      Date(order.createdAt).toLocaleDateString('en-US', { year:
+                      'numeric', month: 'long', day: 'numeric' }) %>
+                    </div>
                   </div>
-                  <h3>No Orders Yet</h3>
-                  <p>You haven't placed any orders yet. Start shopping to see your orders here!</p>
-                  <a href="/products" class="btn btn-primary mt-3">
-                    <i class="fas fa-shopping-cart me-2"></i>
-                    Start Shopping
-                  </a>
+                  <div class="order-total">
+                    $<%= order.totalAmount.toFixed(2) %>
+                  </div>
                 </div>
+                <% }); %>
+              </div>
+              <div class="text-center mt-3">
+                <a href="/orders" class="btn btn-primary">
+                  <i class="fas fa-list me-2"></i>
+                  View All Orders
+                </a>
+              </div>
+              <% } else { %>
+              <div class="empty-state">
+                <div class="empty-icon">
+                  <i class="fas fa-shopping-bag"></i>
+                </div>
+                <h3>No Orders Yet</h3>
+                <p>
+                  You haven't placed any orders yet. Start shopping to see your
+                  orders here!
+                </p>
+                <a href="/products" class="btn btn-primary mt-3">
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  Start Shopping
+                </a>
+              </div>
               <% } %>
+            </div>
+          </div>
+
+          <!-- Profile Update Form -->
+          <div class="profile-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-user-edit"></i>
+              </div>
+              <h2 class="card-title">Update Profile</h2>
+            </div>
+            <div class="card-content">
+              <form
+                action="/profile"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <div class="mb-3">
+                  <label for="image" class="form-label">Profile Image</label>
+                  <input
+                    type="file"
+                    name="image"
+                    id="image"
+                    class="form-control"
+                    accept="image/*"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    class="form-control"
+                    value="<%= user.username %>"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    value="<%= user.email %>"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Update Profile
+                </button>
+              </form>
             </div>
           </div>
         </div>

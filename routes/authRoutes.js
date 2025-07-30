@@ -15,6 +15,26 @@ const {
   loginValidation,
 } = require("../middleware/validators/authValidator");
 
+const upload = require("../middleware/upload");
+const User = require("../models/User");
+
+// Routes for user update
+router.post(
+  "/profile",
+  requireAuth,
+  upload.single("image"),
+  async (req, res) => {
+    const { username, email } = req.body;
+    const updateData = { username, email };
+    if (req.file) {
+      updateData.image = "/uploads/" + req.file.filename;
+    }
+    // Use session user id for update
+    await User.findByIdAndUpdate(req.session.user._id, updateData);
+    res.redirect("/profile");
+  }
+);
+
 router.get("/register", getRegister);
 router.post("/register", registerValidation, postRegister);
 

@@ -9,6 +9,10 @@ const userSchema = new mongoose.Schema({
     trim: true,
     minlength: 3,
   },
+  image:{
+    type: String,
+    default: "images/hero1.jpg",
+  },
   email: {
     type: String,
     required: true,

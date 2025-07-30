@@ -461,3 +461,82 @@ messages is not defined
 2025-07-29 11:16:29 [ERROR]: Login failed: invalid password for email tesla@gmail.com
 2025-07-29 11:16:29 [ERROR]: Login error from service: Invalid email or password
 2025-07-29 11:16:41 [ERROR]: Registration error from service: Email already registered
+2025-07-30 10:48:22 [ERROR]: Application Error missing ) after argument list in C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+SyntaxError: missing ) after argument list in C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:673:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-07-30 10:52:21 [ERROR]: Application Error missing ) after argument list in C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+SyntaxError: missing ) after argument list in C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:673:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-07-30 10:53:37 [ERROR]: Application Error ENOENT: no such file or directory, open 'C:\Users\ADMIN\Documents\node-ecommerce\public\uploads\1753862017480.png'
+Error: ENOENT: no such file or directory, open 'C:\Users\ADMIN\Documents\node-ecommerce\public\uploads\1753862017480.png'
+2025-07-30 10:54:11 [ERROR]: Application Error User is not defined
+ReferenceError: User is not defined
+    at C:\Users\ADMIN\Documents\node-ecommerce\routes\authRoutes.js:32:5
+    at Layer.handleRequest (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\route.js:157:13)
+    at done (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:59:7)
+    at indicateDone (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:63:68)
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:176:11
+    at WriteStream.<anonymous> (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:536:35)
+    at finish (node:internal/streams/writable:955:10)
+    at node:internal/streams/writable:936:13
+2025-07-30 10:54:28 [ERROR]: Application Error User is not defined
+ReferenceError: User is not defined
+    at C:\Users\ADMIN\Documents\node-ecommerce\routes\authRoutes.js:32:5
+    at Layer.handleRequest (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\route.js:157:13)
+    at done (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:59:7)
+    at indicateDone (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:63:68)
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:176:11
+    at WriteStream.<anonymous> (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:536:35)
+    at finish (node:internal/streams/writable:955:10)
+    at node:internal/streams/writable:936:13
+2025-07-30 11:35:10 [ERROR]: Registration error from service: Email already registered
+2025-07-30 11:50:11 [ERROR]: Application Error Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecommerce.users index: email_1 dup key: { email: "tesla@gmail.com" }
+MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecommerce.users index: email_1 dup key: { email: "tesla@gmail.com" }
+    at Connection.sendCommand (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\cmap\connection.js:305:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.command (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\cmap\connection.js:333:26)
+    at async Server.command (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\sdam\server.js:171:29)
+    at async FindOneAndUpdateOperation.executeCommand (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\operations\command.js:76:16)
+    at async FindOneAndUpdateOperation.execute (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\operations\find_and_modify.js:85:24)
+    at async tryOperation (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async Collection.findOneAndUpdate (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\collection.js:500:16)
+    at async model.Query._findOneAndUpdate (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:3513:13)

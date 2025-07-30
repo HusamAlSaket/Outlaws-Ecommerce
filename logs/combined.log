@@ -3125,3 +3125,215 @@ messages is not defined
 2025-07-29 12:21:27 [INFO]: Fetching all products with filters:
 2025-07-29 12:21:27 [INFO]: Found 5 products (12 total)
 2025-07-29 12:21:27 [INFO]: Products page data loaded successfully
+2025-07-29 17:32:51 [INFO]: Home page requested
+2025-07-29 17:32:51 [INFO]: Fetching trending products
+2025-07-29 17:32:52 [INFO]: Found 6 trending products
+2025-07-29 17:32:52 [INFO]: Fetching popular products
+2025-07-29 17:32:52 [INFO]: Found 6 popular products
+2025-07-29 17:32:52 [INFO]: Home page data loaded successfully
+2025-07-30 10:25:04 [INFO]: Home page requested
+2025-07-30 10:25:04 [INFO]: Fetching trending products
+2025-07-30 10:25:04 [INFO]: Found 6 trending products
+2025-07-30 10:25:04 [INFO]: Fetching popular products
+2025-07-30 10:25:05 [INFO]: Found 6 popular products
+2025-07-30 10:25:05 [INFO]: Home page data loaded successfully
+2025-07-30 10:36:02 [INFO]: Home page requested
+2025-07-30 10:36:02 [INFO]: Fetching trending products
+2025-07-30 10:36:02 [INFO]: Found 6 trending products
+2025-07-30 10:36:02 [INFO]: Fetching popular products
+2025-07-30 10:36:02 [INFO]: Found 6 popular products
+2025-07-30 10:36:02 [INFO]: Home page data loaded successfully
+2025-07-30 10:47:57 [INFO]: Home page requested
+2025-07-30 10:47:57 [INFO]: Fetching trending products
+2025-07-30 10:47:57 [INFO]: Found 6 trending products
+2025-07-30 10:47:57 [INFO]: Fetching popular products
+2025-07-30 10:47:57 [INFO]: Found 6 popular products
+2025-07-30 10:47:57 [INFO]: Home page data loaded successfully
+2025-07-30 10:48:18 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-30 10:48:18 [INFO]: PasswordService compare: true
+2025-07-30 10:48:18 [INFO]: User logged in: tesla@gmail.com
+2025-07-30 10:48:18 [INFO]: Home page requested
+2025-07-30 10:48:18 [INFO]: Fetching trending products
+2025-07-30 10:48:18 [INFO]: Found 6 trending products
+2025-07-30 10:48:18 [INFO]: Fetching popular products
+2025-07-30 10:48:18 [INFO]: Found 6 popular products
+2025-07-30 10:48:18 [INFO]: Home page data loaded successfully
+2025-07-30 10:48:22 [ERROR]: Application Error missing ) after argument list in C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+SyntaxError: missing ) after argument list in C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:673:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-07-30 10:52:17 [WARN]: Authentication required but no token provided
+2025-07-30 10:52:21 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-30 10:52:21 [INFO]: PasswordService compare: true
+2025-07-30 10:52:21 [INFO]: User logged in: tesla@gmail.com
+2025-07-30 10:52:21 [ERROR]: Application Error missing ) after argument list in C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+SyntaxError: missing ) after argument list in C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:673:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-07-30 10:53:37 [ERROR]: Application Error ENOENT: no such file or directory, open 'C:\Users\ADMIN\Documents\node-ecommerce\public\uploads\1753862017480.png'
+Error: ENOENT: no such file or directory, open 'C:\Users\ADMIN\Documents\node-ecommerce\public\uploads\1753862017480.png'
+2025-07-30 10:54:11 [ERROR]: Application Error User is not defined
+ReferenceError: User is not defined
+    at C:\Users\ADMIN\Documents\node-ecommerce\routes\authRoutes.js:32:5
+    at Layer.handleRequest (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\route.js:157:13)
+    at done (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:59:7)
+    at indicateDone (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:63:68)
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:176:11
+    at WriteStream.<anonymous> (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:536:35)
+    at finish (node:internal/streams/writable:955:10)
+    at node:internal/streams/writable:936:13
+2025-07-30 10:54:17 [INFO]: Home page requested
+2025-07-30 10:54:17 [INFO]: Fetching trending products
+2025-07-30 10:54:17 [INFO]: Found 6 trending products
+2025-07-30 10:54:17 [INFO]: Fetching popular products
+2025-07-30 10:54:17 [INFO]: Found 6 popular products
+2025-07-30 10:54:17 [INFO]: Home page data loaded successfully
+2025-07-30 10:54:28 [ERROR]: Application Error User is not defined
+ReferenceError: User is not defined
+    at C:\Users\ADMIN\Documents\node-ecommerce\routes\authRoutes.js:32:5
+    at Layer.handleRequest (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\route.js:157:13)
+    at done (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:59:7)
+    at indicateDone (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:63:68)
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\lib\make-middleware.js:176:11
+    at WriteStream.<anonymous> (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:536:35)
+    at finish (node:internal/streams/writable:955:10)
+    at node:internal/streams/writable:936:13
+2025-07-30 10:55:54 [WARN]: Authentication required but no token provided
+2025-07-30 10:55:58 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-30 10:55:58 [INFO]: PasswordService compare: true
+2025-07-30 10:55:58 [INFO]: User logged in: tesla@gmail.com
+2025-07-30 11:34:55 [INFO]: User logged out: tesla@gmail.com
+2025-07-30 11:34:55 [INFO]: Home page requested
+2025-07-30 11:34:55 [INFO]: Fetching trending products
+2025-07-30 11:34:55 [INFO]: Found 6 trending products
+2025-07-30 11:34:55 [INFO]: Fetching popular products
+2025-07-30 11:34:56 [INFO]: Found 6 popular products
+2025-07-30 11:34:56 [INFO]: Home page data loaded successfully
+2025-07-30 11:35:10 [ERROR]: Registration error from service: Email already registered
+2025-07-30 11:35:17 [INFO]: User registered successfully: aleks2@gmail.com
+2025-07-30 11:35:17 [INFO]: Home page requested
+2025-07-30 11:35:17 [INFO]: Fetching trending products
+2025-07-30 11:35:17 [INFO]: Found 6 trending products
+2025-07-30 11:35:17 [INFO]: Fetching popular products
+2025-07-30 11:35:17 [INFO]: Found 6 popular products
+2025-07-30 11:35:17 [INFO]: Home page data loaded successfully
+2025-07-30 11:37:50 [WARN]: Authentication required but no token provided
+2025-07-30 11:38:17 [INFO]: User registered successfully: hitler@gmail.com
+2025-07-30 11:47:48 [WARN]: Authentication required but no token provided
+2025-07-30 11:47:58 [INFO]: Login attempt: hitler@gmail.com, userFound: true
+2025-07-30 11:47:58 [INFO]: PasswordService compare: true
+2025-07-30 11:47:58 [INFO]: User logged in: hitler@gmail.com
+2025-07-30 11:50:11 [ERROR]: Application Error Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecommerce.users index: email_1 dup key: { email: "tesla@gmail.com" }
+MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: ecommerce.users index: email_1 dup key: { email: "tesla@gmail.com" }
+    at Connection.sendCommand (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\cmap\connection.js:305:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.command (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\cmap\connection.js:333:26)
+    at async Server.command (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\sdam\server.js:171:29)
+    at async FindOneAndUpdateOperation.executeCommand (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\operations\command.js:76:16)
+    at async FindOneAndUpdateOperation.execute (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\operations\find_and_modify.js:85:24)
+    at async tryOperation (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async Collection.findOneAndUpdate (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\collection.js:500:16)
+    at async model.Query._findOneAndUpdate (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:3513:13)
+2025-07-30 11:52:05 [INFO]: Home page requested
+2025-07-30 11:52:05 [INFO]: Fetching trending products
+2025-07-30 11:52:05 [INFO]: Found 6 trending products
+2025-07-30 11:52:05 [INFO]: Fetching popular products
+2025-07-30 11:52:05 [INFO]: Found 6 popular products
+2025-07-30 11:52:05 [INFO]: Home page data loaded successfully
+2025-07-30 11:52:06 [INFO]: Products page requested
+2025-07-30 11:52:06 [INFO]: Fetching all products with filters:
+2025-07-30 11:52:06 [INFO]: Found 5 products (12 total)
+2025-07-30 11:52:06 [INFO]: Products page data loaded successfully
+2025-07-30 11:52:09 [INFO]: Orders page requested
+2025-07-30 11:52:09 [INFO]: Fetching user orders
+2025-07-30 11:52:09 [INFO]: Orders retrieved successfully
+2025-07-30 11:52:09 [INFO]: Orders page loaded
+2025-07-30 11:52:20 [INFO]: Cart page requested
+2025-07-30 11:52:20 [INFO]: Cart page loaded
+2025-07-30 11:52:24 [INFO]: Products page requested
+2025-07-30 11:52:24 [INFO]: Fetching all products with filters:
+2025-07-30 11:52:24 [INFO]: Found 5 products (12 total)
+2025-07-30 11:52:24 [INFO]: Products page data loaded successfully
+2025-07-30 11:52:27 [INFO]: Cart add request
+2025-07-30 11:52:27 [INFO]: Adding item to cart
+2025-07-30 11:52:27 [INFO]: Item added to cart successfully
+2025-07-30 11:52:27 [INFO]: Cart page requested
+2025-07-30 11:52:27 [INFO]: Cart page loaded
+2025-07-30 11:52:29 [INFO]: Cart page requested
+2025-07-30 11:52:29 [INFO]: Cart page loaded
+2025-07-30 11:52:31 [INFO]: Checkout page requested
+2025-07-30 11:52:31 [INFO]: Checkout page loaded
+2025-07-30 11:52:56 [INFO]: Processing checkout
+2025-07-30 11:52:56 [INFO]: Creating new order
+2025-07-30 11:52:56 [INFO]: Validating cart for checkout
+2025-07-30 11:52:56 [INFO]: Cart validation successful
+2025-07-30 11:52:56 [INFO]: Updating product stock
+2025-07-30 11:52:56 [INFO]: Stock updated
+2025-07-30 11:52:56 [INFO]: Order created successfully
+2025-07-30 11:52:56 [INFO]: Cart cleared
+2025-07-30 11:52:56 [INFO]: Checkout completed successfully
+2025-07-30 11:52:56 [INFO]: Orders page requested
+2025-07-30 11:52:56 [INFO]: Fetching user orders
+2025-07-30 11:52:56 [INFO]: Orders retrieved successfully
+2025-07-30 11:52:56 [INFO]: Orders page loaded
+2025-07-30 11:53:10 [INFO]: Orders page requested
+2025-07-30 11:53:10 [INFO]: Fetching user orders
+2025-07-30 11:53:10 [INFO]: Orders retrieved successfully
+2025-07-30 11:53:10 [INFO]: Orders page loaded
+2025-07-30 11:53:23 [INFO]: Home page requested
+2025-07-30 11:53:23 [INFO]: Fetching trending products
+2025-07-30 11:53:23 [INFO]: Found 6 trending products
+2025-07-30 11:53:23 [INFO]: Fetching popular products
+2025-07-30 11:53:23 [INFO]: Found 6 popular products
+2025-07-30 11:53:23 [INFO]: Home page data loaded successfully
+2025-07-30 11:53:30 [INFO]: Products page requested
+2025-07-30 11:53:30 [INFO]: Fetching all products with filters:
+2025-07-30 11:53:30 [INFO]: Found 5 products (12 total)
+2025-07-30 11:53:30 [INFO]: Products page data loaded successfully
+2025-07-30 11:53:44 [INFO]: Orders page requested
+2025-07-30 11:53:44 [INFO]: Fetching user orders
+2025-07-30 11:53:44 [INFO]: Orders retrieved successfully
+2025-07-30 11:53:44 [INFO]: Orders page loaded
+2025-07-30 11:53:59 [INFO]: Home page requested
+2025-07-30 11:53:59 [INFO]: Fetching trending products
+2025-07-30 11:53:59 [INFO]: Found 6 trending products
+2025-07-30 11:53:59 [INFO]: Fetching popular products
+2025-07-30 11:53:59 [INFO]: Found 6 popular products
+2025-07-30 11:53:59 [INFO]: Home page data loaded successfully
