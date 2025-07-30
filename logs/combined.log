@@ -3337,3 +3337,95 @@ MongoServerError: Plan executor error during findAndModify :: caused by :: E1100
 2025-07-30 11:53:59 [INFO]: Fetching popular products
 2025-07-30 11:53:59 [INFO]: Found 6 popular products
 2025-07-30 11:53:59 [INFO]: Home page data loaded successfully
+2025-07-30 12:08:01 [WARN]: Authentication required but no token provided
+2025-07-30 12:08:22 [INFO]: User registered successfully: korea@gmail.com
+2025-07-30 12:33:16 [WARN]: Authentication required but no token provided
+2025-07-30 12:33:28 [ERROR]: Validation errors on registration
+2025-07-30 12:33:36 [INFO]: User registered successfully: ya@gmail.com
+2025-07-30 12:34:47 [INFO]: User logged out: ya@gmail.com
+2025-07-30 12:34:47 [INFO]: Home page requested
+2025-07-30 12:34:47 [INFO]: Fetching trending products
+2025-07-30 12:34:47 [INFO]: Found 6 trending products
+2025-07-30 12:34:47 [INFO]: Fetching popular products
+2025-07-30 12:34:47 [INFO]: Found 6 popular products
+2025-07-30 12:34:47 [INFO]: Home page data loaded successfully
+2025-07-30 12:35:24 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-30 12:35:24 [INFO]: PasswordService compare: false
+2025-07-30 12:35:24 [INFO]: User model matchPassword: false
+2025-07-30 12:35:24 [INFO]: Direct bcryptjs compare: false
+2025-07-30 12:35:24 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-07-30 12:35:24 [ERROR]: Login error from service: Invalid email or password
+2025-07-30 12:35:27 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-30 12:35:27 [INFO]: PasswordService compare: true
+2025-07-30 12:35:27 [INFO]: User logged in: tesla@gmail.com
+2025-07-30 12:35:27 [INFO]: Home page requested
+2025-07-30 12:35:27 [INFO]: Fetching trending products
+2025-07-30 12:35:27 [INFO]: Found 6 trending products
+2025-07-30 12:35:27 [INFO]: Fetching popular products
+2025-07-30 12:35:27 [INFO]: Found 6 popular products
+2025-07-30 12:35:27 [INFO]: Home page data loaded successfully
+2025-07-30 12:38:56 [INFO]: Home page requested
+2025-07-30 12:38:56 [INFO]: Fetching trending products
+2025-07-30 12:38:57 [INFO]: Found 6 trending products
+2025-07-30 12:38:57 [INFO]: Fetching popular products
+2025-07-30 12:38:57 [INFO]: Found 6 popular products
+2025-07-30 12:38:57 [INFO]: Home page data loaded successfully
+2025-07-30 12:39:03 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-30 12:39:03 [INFO]: PasswordService compare: true
+2025-07-30 12:39:03 [INFO]: User logged in: tesla@gmail.com
+2025-07-30 12:39:03 [INFO]: Home page requested
+2025-07-30 12:39:03 [INFO]: Fetching trending products
+2025-07-30 12:39:03 [INFO]: Found 6 trending products
+2025-07-30 12:39:03 [INFO]: Fetching popular products
+2025-07-30 12:39:03 [INFO]: Found 6 popular products
+2025-07-30 12:39:03 [INFO]: Home page data loaded successfully
+2025-07-30 12:39:05 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:267
+    265|                     name="email"
+    266|                     id="email"
+ >> 267|                     class="form-control <%= errors && errors.email ? 'is-invalid' : '' %>"
+    268|                     value="<%= (oldInput && oldInput.email) ? oldInput.email : user.email %>"
+    269|                     required
+    270|                   />
+
+errors is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:267
+    265|                     name="email"
+    266|                     id="email"
+ >> 267|                     class="form-control <%= errors && errors.email ? 'is-invalid' : '' %>"
+    268|                     value="<%= (oldInput && oldInput.email) ? oldInput.email : user.email %>"
+    269|                     required
+    270|                   />
+
+errors is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\profile.ejs":88:26)
+    at profile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+    at exports.getProfile (C:\Users\ADMIN\Documents\node-ecommerce\controllers\authController.js:196:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-07-30 12:41:21 [INFO]: User logged out: tesla@gmail.com
+2025-07-30 12:41:21 [INFO]: Home page requested
+2025-07-30 12:41:21 [INFO]: Fetching trending products
+2025-07-30 12:41:21 [INFO]: Found 6 trending products
+2025-07-30 12:41:21 [INFO]: Fetching popular products
+2025-07-30 12:41:21 [INFO]: Found 6 popular products
+2025-07-30 12:41:21 [INFO]: Home page data loaded successfully
+2025-07-30 12:41:21 [INFO]: Home page requested
+2025-07-30 12:41:21 [INFO]: Fetching trending products
+2025-07-30 12:41:21 [INFO]: Found 6 trending products
+2025-07-30 12:41:21 [INFO]: Fetching popular products
+2025-07-30 12:41:21 [INFO]: Found 6 popular products
+2025-07-30 12:41:21 [INFO]: Home page data loaded successfully
+2025-07-30 12:41:25 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-30 12:41:25 [INFO]: PasswordService compare: true
+2025-07-30 12:41:25 [INFO]: User logged in: tesla@gmail.com
+2025-07-30 12:41:25 [INFO]: Home page requested
+2025-07-30 12:41:25 [INFO]: Fetching trending products
+2025-07-30 12:41:25 [INFO]: Found 6 trending products
+2025-07-30 12:41:25 [INFO]: Fetching popular products
+2025-07-30 12:41:25 [INFO]: Found 6 popular products
+2025-07-30 12:41:25 [INFO]: Home page data loaded successfully

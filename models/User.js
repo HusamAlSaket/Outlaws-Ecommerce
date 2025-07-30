@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
   },
   image:{
     type: String,
-    default: "images/hero1.jpg",
+    default: "images/default-user.png",
   },
   email: {
     type: String,

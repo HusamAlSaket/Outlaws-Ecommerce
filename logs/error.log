@@ -540,3 +540,34 @@ MongoServerError: Plan executor error during findAndModify :: caused by :: E1100
     at async executeOperation (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
     at async Collection.findOneAndUpdate (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongodb\lib\collection.js:500:16)
     at async model.Query._findOneAndUpdate (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\mongoose\lib\query.js:3513:13)
+2025-07-30 12:33:28 [ERROR]: Validation errors on registration
+2025-07-30 12:35:24 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-07-30 12:35:24 [ERROR]: Login error from service: Invalid email or password
+2025-07-30 12:39:05 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:267
+    265|                     name="email"
+    266|                     id="email"
+ >> 267|                     class="form-control <%= errors && errors.email ? 'is-invalid' : '' %>"
+    268|                     value="<%= (oldInput && oldInput.email) ? oldInput.email : user.email %>"
+    269|                     required
+    270|                   />
+
+errors is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\profile.ejs:267
+    265|                     name="email"
+    266|                     id="email"
+ >> 267|                     class="form-control <%= errors && errors.email ? 'is-invalid' : '' %>"
+    268|                     value="<%= (oldInput && oldInput.email) ? oldInput.email : user.email %>"
+    269|                     required
+    270|                   />
+
+errors is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\profile.ejs":88:26)
+    at profile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+    at exports.getProfile (C:\Users\ADMIN\Documents\node-ecommerce\controllers\authController.js:196:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

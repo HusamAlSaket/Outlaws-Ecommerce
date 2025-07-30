@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="/css/profile.css" />
   </head>
   <body>
+    <% const errorsSafe = typeof errors !== 'undefined' ? errors : {}; %>
+    <% const oldInputSafe = typeof oldInput !== 'undefined' ? oldInput : {}; %>
     <div class="page-container">
       <%- include('partials/navbar') %>
 
@@ -264,10 +266,13 @@
                     type="email"
                     name="email"
                     id="email"
-                    class="form-control"
-                    value="<%= user.email %>"
+                    class="form-control <%= errorsSafe.email ? 'is-invalid' : '' %>"
+                    value="<%= oldInputSafe.email ? oldInputSafe.email : user.email %>"
                     required
                   />
+                  <% if (errorsSafe.email) { %>
+                    <div class="invalid-feedback"><%= errorsSafe.email %></div>
+                  <% } %>
                 </div>
                 <button type="submit" class="btn btn-primary">
                   Update Profile

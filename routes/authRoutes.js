@@ -26,10 +26,21 @@ router.post(
   async (req, res) => {
     const { username, email } = req.body;
     const updateData = { username, email };
+    let errors = {};
+    // Check if email is already taken by another user
+    const existingUser = await User.findOne({ email, _id: { $ne: req.session.user._id } });
+    if (existingUser) {
+      errors.email = "Email is already taken.";
+      // Re-render profile with error and old input
+      // Fetch user and orders for rendering
+      const user = await User.findById(req.session.user._id);
+      const Order = require("../models/Order");
+      const orders = await Order.find({ user: req.session.user._id }).sort({ createdAt: -1 });
+      return res.render("profile", { user, orders, errors, oldInput: req.body });
+    }
     if (req.file) {
       updateData.image = "/uploads/" + req.file.filename;
     }
-    // Use session user id for update
     await User.findByIdAndUpdate(req.session.user._id, updateData);
     res.redirect("/profile");
   }
