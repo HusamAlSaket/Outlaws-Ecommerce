@@ -46,6 +46,36 @@
       </div>
     </section>
 
+    <!-- Search Form -->
+    <div class="container mb-4">
+      <form method="GET" action="/products" class="row g-2 align-items-center bg-light p-3 rounded shadow-sm">
+        <div class="col-md-5 mb-2 mb-md-0">
+          <div class="input-group">
+            <span class="input-group-text bg-white"><i class="fas fa-search"></i></span>
+            <input type="text" name="search" placeholder="Search products..." class="form-control" value="<%= query.search || '' %>">
+          </div>
+        </div>
+        <div class="col-md-4 mb-2 mb-md-0">
+          <div class="input-group">
+            <span class="input-group-text bg-white"><i class="fas fa-list"></i></span>
+            <select name="category" class="form-select">
+              <option value="">All Categories</option>
+              <option value="men-jeans" <%= query.category === "men-jeans" ? 'selected' : '' %>>men jeans</option>
+              <option value="women-shirts" <%= query.category === "women-shirts" ? 'selected' : '' %>>women shirts</option>
+              <option value="men-sneakers" <%= query.category === "men-sneakers" ? 'selected' : '' %>>men sneakers</option>
+              <option value="outerwear" <%= query.category === "outerwear" ? 'selected' : '' %>>outerwear</option>
+              <option value="women-hoodies" <%= query.category === "women-hoodies" ? 'selected' : '' %>>women hoodies</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3 d-grid">
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fas fa-filter me-1"></i> Filter
+          </button>
+        </div>
+      </form>
+    </div>
+
     <!-- ✅ ENHANCED PRODUCT GRID -->
     <section class="product-grid">
       <div class="container">
@@ -143,20 +173,11 @@
           </ul>
           
           <!-- Pagination Info -->
-          <div class="text-center mt-3">
-            <small class="text-muted">
-              Showing <%= ((pagination.current - 1) * pagination.limit) + 1 %> to 
-              <%= Math.min(pagination.current * pagination.limit, pagination.total) %> 
-              of <%= pagination.total %> products
-            </small>
-          </div>
         </nav>
         <% } %>
       </div>
     </section>
-
     <%- include('partials/footer') %>
-
     <script src="/js/products.js"></script>
   </body>
 </html>

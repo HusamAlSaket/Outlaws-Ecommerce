@@ -3429,3 +3429,270 @@ errors is not defined
 2025-07-30 12:41:25 [INFO]: Fetching popular products
 2025-07-30 12:41:25 [INFO]: Found 6 popular products
 2025-07-30 12:41:25 [INFO]: Home page data loaded successfully
+2025-07-31 09:44:41 [INFO]: Home page requested
+2025-07-31 09:44:41 [INFO]: Fetching trending products
+2025-07-31 09:44:42 [INFO]: Found 6 trending products
+2025-07-31 09:44:42 [INFO]: Fetching popular products
+2025-07-31 09:44:43 [INFO]: Found 6 popular products
+2025-07-31 09:44:43 [INFO]: Home page data loaded successfully
+2025-07-31 09:45:28 [INFO]: Products page requested
+2025-07-31 09:45:28 [INFO]: Fetching all products with filters:
+2025-07-31 09:45:28 [INFO]: Found 5 products (12 total)
+2025-07-31 09:45:28 [INFO]: Products page data loaded successfully
+2025-07-31 09:45:33 [INFO]: Products page requested
+2025-07-31 09:45:33 [INFO]: Fetching all products with filters:
+2025-07-31 09:45:34 [INFO]: Found 5 products (12 total)
+2025-07-31 09:45:34 [INFO]: Products page data loaded successfully
+2025-07-31 09:45:38 [INFO]: Products page requested
+2025-07-31 09:45:38 [INFO]: Fetching all products with filters:
+2025-07-31 09:45:38 [INFO]: Found 2 products (12 total)
+2025-07-31 09:45:38 [INFO]: Products page data loaded successfully
+2025-07-31 09:46:09 [WARN]: Authentication required but no token provided
+2025-07-31 09:46:16 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-07-31 09:46:16 [INFO]: PasswordService compare: true
+2025-07-31 09:46:16 [INFO]: User logged in: tesla@gmail.com
+2025-07-31 09:46:16 [INFO]: Orders page requested
+2025-07-31 09:46:16 [INFO]: Fetching user orders
+2025-07-31 09:46:16 [INFO]: Orders retrieved successfully
+2025-07-31 09:46:16 [INFO]: Orders page loaded
+2025-07-31 09:47:01 [INFO]: Orders page requested
+2025-07-31 09:47:01 [INFO]: Fetching user orders
+2025-07-31 09:47:01 [INFO]: Orders retrieved successfully
+2025-07-31 09:47:01 [INFO]: Orders page loaded
+2025-07-31 09:54:28 [INFO]: Home page requested
+2025-07-31 09:54:28 [INFO]: Fetching trending products
+2025-07-31 09:54:28 [INFO]: Found 6 trending products
+2025-07-31 09:54:28 [INFO]: Fetching popular products
+2025-07-31 09:54:28 [INFO]: Found 6 popular products
+2025-07-31 09:54:28 [INFO]: Home page data loaded successfully
+2025-07-31 09:54:37 [INFO]: Product details requested
+2025-07-31 09:54:37 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-07-31 09:54:37 [INFO]: Product details loaded successfully
+2025-07-31 09:54:45 [INFO]: Home page requested
+2025-07-31 09:54:45 [INFO]: Fetching trending products
+2025-07-31 09:54:45 [INFO]: Found 6 trending products
+2025-07-31 09:54:45 [INFO]: Fetching popular products
+2025-07-31 09:54:45 [INFO]: Found 6 popular products
+2025-07-31 09:54:45 [INFO]: Home page data loaded successfully
+2025-07-31 09:54:50 [INFO]: Products page requested
+2025-07-31 09:54:50 [INFO]: Fetching all products with filters:
+2025-07-31 09:54:50 [INFO]: Found 5 products (12 total)
+2025-07-31 09:54:50 [INFO]: Products page data loaded successfully
+2025-07-31 09:58:45 [INFO]: Home page requested
+2025-07-31 09:58:45 [INFO]: Fetching trending products
+2025-07-31 09:58:45 [INFO]: Found 6 trending products
+2025-07-31 09:58:45 [INFO]: Fetching popular products
+2025-07-31 09:58:45 [INFO]: Found 6 popular products
+2025-07-31 09:58:45 [INFO]: Home page data loaded successfully
+2025-07-31 14:46:00 [INFO]: Products page requested
+2025-07-31 14:46:00 [INFO]: Fetching all products with filters:
+2025-07-31 14:46:00 [INFO]: Found 5 products (12 total)
+2025-07-31 14:46:00 [INFO]: Products page data loaded successfully
+2025-07-31 14:46:04 [INFO]: Products page requested
+2025-07-31 14:46:04 [INFO]: Fetching all products with filters:
+2025-07-31 14:46:04 [INFO]: Found 1 products (1 total)
+2025-07-31 14:46:04 [INFO]: Products page data loaded successfully
+2025-07-31 14:46:08 [INFO]: Products page requested
+2025-07-31 14:46:08 [INFO]: Fetching all products with filters:
+2025-07-31 14:46:08 [INFO]: Found 2 products (2 total)
+2025-07-31 14:46:08 [INFO]: Products page data loaded successfully
+2025-07-31 14:46:13 [INFO]: Products page requested
+2025-07-31 14:46:13 [INFO]: Fetching all products with filters:
+2025-07-31 14:46:13 [INFO]: Found 1 products (1 total)
+2025-07-31 14:46:13 [INFO]: Products page data loaded successfully
+2025-07-31 14:57:34 [INFO]: Products page requested
+2025-07-31 14:57:34 [INFO]: Fetching all products with filters:
+2025-07-31 14:57:34 [INFO]: Found 1 products (1 total)
+2025-07-31 14:57:34 [INFO]: Products page data loaded successfully
+2025-07-31 14:57:36 [INFO]: Products page requested
+2025-07-31 14:57:36 [INFO]: Fetching all products with filters:
+2025-07-31 14:57:36 [INFO]: Found 5 products (12 total)
+2025-07-31 14:57:36 [INFO]: Products page data loaded successfully
+2025-07-31 14:57:40 [INFO]: Products page requested
+2025-07-31 14:57:40 [INFO]: Fetching all products with filters:
+2025-07-31 14:57:40 [INFO]: Found 5 products (12 total)
+2025-07-31 14:57:40 [INFO]: Products page data loaded successfully
+2025-07-31 14:57:47 [INFO]: Products page requested
+2025-07-31 14:57:47 [INFO]: Fetching all products with filters:
+2025-07-31 14:57:47 [INFO]: Found 0 products (0 total)
+2025-07-31 14:57:47 [INFO]: Products page data loaded successfully
+2025-07-31 14:57:55 [INFO]: Products page requested
+2025-07-31 14:57:55 [INFO]: Fetching all products with filters:
+2025-07-31 14:57:55 [INFO]: Found 5 products (9 total)
+2025-07-31 14:57:55 [INFO]: Products page data loaded successfully
+2025-07-31 14:58:08 [INFO]: Products page requested
+2025-07-31 14:58:08 [INFO]: Fetching all products with filters:
+2025-07-31 14:58:08 [INFO]: Found 1 products (1 total)
+2025-07-31 14:58:08 [INFO]: Products page data loaded successfully
+2025-07-31 14:58:17 [INFO]: Products page requested
+2025-07-31 14:58:17 [INFO]: Fetching all products with filters:
+2025-07-31 14:58:18 [INFO]: Found 5 products (12 total)
+2025-07-31 14:58:18 [INFO]: Products page data loaded successfully
+2025-07-31 15:11:56 [INFO]: Products page requested
+2025-07-31 15:11:56 [INFO]: Fetching all products with filters:
+2025-07-31 15:11:56 [INFO]: Found 5 products (12 total)
+2025-07-31 15:11:56 [INFO]: Products page data loaded successfully
+2025-07-31 15:12:09 [INFO]: Products page requested
+2025-07-31 15:12:09 [INFO]: Fetching all products with filters:
+2025-07-31 15:12:09 [INFO]: Found 0 products (0 total)
+2025-07-31 15:12:09 [INFO]: Products page data loaded successfully
+2025-07-31 15:12:16 [INFO]: Products page requested
+2025-07-31 15:12:16 [INFO]: Fetching all products with filters:
+2025-07-31 15:12:16 [INFO]: Found 0 products (0 total)
+2025-07-31 15:12:16 [INFO]: Products page data loaded successfully
+2025-07-31 15:12:20 [INFO]: Products page requested
+2025-07-31 15:12:20 [INFO]: Fetching all products with filters:
+2025-07-31 15:12:20 [INFO]: Found 5 products (12 total)
+2025-07-31 15:12:20 [INFO]: Products page data loaded successfully
+2025-07-31 15:13:44 [INFO]: Products page requested
+2025-07-31 15:13:44 [INFO]: Fetching all products with filters:
+2025-07-31 15:13:44 [INFO]: Found 2 products (2 total)
+2025-07-31 15:13:44 [INFO]: Products page data loaded successfully
+2025-07-31 15:13:53 [INFO]: Products page requested
+2025-07-31 15:13:53 [INFO]: Fetching all products with filters:
+2025-07-31 15:13:53 [INFO]: Found 0 products (0 total)
+2025-07-31 15:13:53 [INFO]: Products page data loaded successfully
+2025-07-31 15:14:07 [INFO]: Products page requested
+2025-07-31 15:14:07 [INFO]: Fetching all products with filters:
+2025-07-31 15:14:07 [INFO]: Found 1 products (1 total)
+2025-07-31 15:14:07 [INFO]: Products page data loaded successfully
+2025-07-31 15:15:24 [INFO]: Products page requested
+2025-07-31 15:15:24 [INFO]: Fetching all products with filters:
+2025-07-31 15:15:24 [INFO]: Found 5 products (12 total)
+2025-07-31 15:15:24 [INFO]: Products page data loaded successfully
+2025-07-31 15:17:11 [INFO]: Products page requested
+2025-07-31 15:17:11 [INFO]: Fetching all products with filters:
+2025-07-31 15:17:11 [INFO]: Found 5 products (12 total)
+2025-07-31 15:17:11 [INFO]: Products page data loaded successfully
+2025-07-31 15:17:11 [ERROR]: Application Error Unexpected token 'catch' in C:\Users\ADMIN\Documents\node-ecommerce\views\products.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+SyntaxError: Unexpected token 'catch' in C:\Users\ADMIN\Documents\node-ecommerce\views\products.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:673:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-07-31 15:17:30 [INFO]: Products page requested
+2025-07-31 15:17:30 [INFO]: Fetching all products with filters:
+2025-07-31 15:17:30 [INFO]: Found 5 products (12 total)
+2025-07-31 15:17:30 [INFO]: Products page data loaded successfully
+2025-07-31 15:17:30 [ERROR]: Application Error Unexpected token 'catch' in C:\Users\ADMIN\Documents\node-ecommerce\views\products.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+SyntaxError: Unexpected token 'catch' in C:\Users\ADMIN\Documents\node-ecommerce\views\products.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:673:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-07-31 15:18:07 [INFO]: Products page requested
+2025-07-31 15:18:07 [INFO]: Fetching all products with filters:
+2025-07-31 15:18:07 [INFO]: Found 5 products (12 total)
+2025-07-31 15:18:07 [INFO]: Products page data loaded successfully
+2025-07-31 15:18:07 [ERROR]: Application Error Unexpected token 'catch' in C:\Users\ADMIN\Documents\node-ecommerce\views\products.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+SyntaxError: Unexpected token 'catch' in C:\Users\ADMIN\Documents\node-ecommerce\views\products.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:673:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-07-31 15:33:59 [INFO]: Products page requested
+2025-07-31 15:33:59 [INFO]: Fetching all products with filters:
+2025-07-31 15:33:59 [INFO]: Found 5 products (12 total)
+2025-07-31 15:33:59 [INFO]: Products page data loaded successfully
+2025-07-31 15:33:59 [ERROR]: Application Error Unexpected token 'catch' in C:\Users\ADMIN\Documents\node-ecommerce\views\products.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+SyntaxError: Unexpected token 'catch' in C:\Users\ADMIN\Documents\node-ecommerce\views\products.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option.
+    at new Function (<anonymous>)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:673:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-07-31 15:34:40 [INFO]: Products page requested
+2025-07-31 15:34:40 [INFO]: Fetching all products with filters:
+2025-07-31 15:34:41 [INFO]: Found 5 products (12 total)
+2025-07-31 15:34:41 [INFO]: Products page data loaded successfully
+2025-07-31 15:34:52 [INFO]: Products page requested
+2025-07-31 15:34:52 [INFO]: Fetching all products with filters:
+2025-07-31 15:34:52 [INFO]: Found 1 products (1 total)
+2025-07-31 15:34:52 [INFO]: Products page data loaded successfully
+2025-07-31 15:34:57 [INFO]: Products page requested
+2025-07-31 15:34:57 [INFO]: Fetching all products with filters:
+2025-07-31 15:34:57 [INFO]: Found 5 products (12 total)
+2025-07-31 15:34:57 [INFO]: Products page data loaded successfully
+2025-07-31 15:35:58 [INFO]: Products page requested
+2025-07-31 15:35:58 [INFO]: Fetching all products with filters:
+2025-07-31 15:35:58 [INFO]: Found 5 products (12 total)
+2025-07-31 15:35:58 [INFO]: Products page data loaded successfully
+2025-07-31 15:39:08 [INFO]: Products page requested
+2025-07-31 15:39:08 [INFO]: Fetching all products with filters:
+2025-07-31 15:39:08 [INFO]: Found 5 products (12 total)
+2025-07-31 15:39:08 [INFO]: Products page data loaded successfully
+2025-07-31 15:39:16 [INFO]: Products page requested
+2025-07-31 15:39:16 [INFO]: Fetching all products with filters:
+2025-07-31 15:39:17 [INFO]: Found 5 products (12 total)
+2025-07-31 15:39:17 [INFO]: Products page data loaded successfully
+2025-07-31 15:43:38 [INFO]: Products page requested
+2025-07-31 15:43:38 [INFO]: Fetching all products with filters:
+2025-07-31 15:43:38 [INFO]: Found 5 products (12 total)
+2025-07-31 15:43:38 [INFO]: Products page data loaded successfully
+2025-07-31 15:43:44 [INFO]: Products page requested
+2025-07-31 15:43:44 [INFO]: Fetching all products with filters:
+2025-07-31 15:43:44 [INFO]: Found 1 products (1 total)
+2025-07-31 15:43:44 [INFO]: Products page data loaded successfully
+2025-07-31 15:43:47 [INFO]: Products page requested
+2025-07-31 15:43:47 [INFO]: Fetching all products with filters:
+2025-07-31 15:43:47 [INFO]: Found 5 products (12 total)
+2025-07-31 15:43:47 [INFO]: Products page data loaded successfully
+2025-07-31 15:43:51 [INFO]: Products page requested
+2025-07-31 15:43:51 [INFO]: Fetching all products with filters:
+2025-07-31 15:43:51 [INFO]: Found 1 products (1 total)
+2025-07-31 15:43:51 [INFO]: Products page data loaded successfully
