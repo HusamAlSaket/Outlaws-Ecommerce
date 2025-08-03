@@ -144,4 +144,15 @@ class OrderService {
   }
 }
 
-module.exports = new OrderService();
+async function hasPurchasedProduct(userId, productId) {
+  const order = await Order.findOne({
+    user: userId,
+    'items.productId': productId
+  });
+  return !!order;
+}
+
+module.exports = {
+  orderService: new OrderService(),
+  hasPurchasedProduct
+};

@@ -1,4 +1,4 @@
-const orderService = require('../services/orderService');
+const { orderService, hasPurchasedProduct } = require('../services/orderService');
 const cartService = require('../services/cartService');
 const { asyncHandler } = require('../utils/errorHandler');
 const { HTTP_STATUS } = require('../config/constants');

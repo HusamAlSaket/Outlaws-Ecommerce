@@ -90,66 +90,7 @@
             </form>
           </div>
         </div>
-        <style>
-          .bg-navy { background: #001f3f !important; }
-          .btn-navy { background: #001f3f; color: #fff; border: none; }
-          .btn-navy:hover, .btn-navy:focus { background: #003366; color: #fff; }
-          .fancy-search-form {
-            background: #fff;
-            border-radius: 2rem;
-            box-shadow: 0 4px 24px rgba(0,31,63,0.10);
-            border: 2px solid #001f3f;
-            transition: box-shadow 0.3s, border-color 0.3s;
-          }
-          .fancy-search-form:focus-within {
-            box-shadow: 0 6px 32px rgba(0,31,63,0.18);
-            border-color: #003366;
-          }
-          .fancy-search-input:focus {
-            box-shadow: none;
-            outline: none;
-          }
-          .fancy-search-input, .fancy-search-form select.form-select {
-            border-radius: 0 1.2rem 1.2rem 0 !important;
-            border: none !important;
-            box-shadow: none !important;
-            font-size: 1rem !important;
-            height: 2.5rem !important;
-            padding-top: 0.25rem !important;
-            padding-bottom: 0.25rem !important;
-          }
-          .fancy-search-form .input-group-text {
-            border-radius: 1.2rem 0 0 1.2rem !important;
-            border: none !important;
-            font-size: 1.1rem;
-            height: 2.5rem !important;
-            padding-top: 0.25rem !important;
-            padding-bottom: 0.25rem !important;
-          }
-          .fancy-search-form select.form-select:focus, .fancy-search-form select.form-select:hover {
-            background-color: #001f3f !important;
-            color: #fff !important;
-          }
-          .fancy-search-form select.form-select option:hover, .fancy-search-form select.form-select option:focus {
-            background: #001f3f !important;
-            color: #fff !important;
-          }
-          .fancy-search-form .input-group.input-group-lg {
-            font-size: 1rem;
-          }
-          .fancy-search-form {
-            padding: 1.2rem 1.2rem !important;
-          }
-          @media (max-width: 768px) {
-            .fancy-search-form {
-              padding: 0.7rem 0.5rem !important;
-            }
-            .fancy-search-input, .fancy-search-form select.form-select, .fancy-search-form .input-group-text {
-              height: 2.1rem !important;
-              font-size: 0.95rem !important;
-            }
-          }
-        </style>
+        <!-- Custom CSS moved to /public/css/products.css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <div class="row g-4">
           <% products.forEach((product, index) => { %>

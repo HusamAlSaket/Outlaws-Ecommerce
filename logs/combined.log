@@ -3770,3 +3770,60 @@ Or, if you meant to create an async function, pass `async: true` as an option.
 2025-08-03 09:53:47 [INFO]: Fetching all products with filters:
 2025-08-03 09:53:47 [INFO]: Found 5 products (12 total)
 2025-08-03 09:53:47 [INFO]: Products page data loaded successfully
+2025-08-03 12:20:14 [INFO]: Home page requested
+2025-08-03 12:20:14 [INFO]: Fetching trending products
+2025-08-03 12:20:14 [INFO]: Found 6 trending products
+2025-08-03 12:20:14 [INFO]: Fetching popular products
+2025-08-03 12:20:14 [INFO]: Found 6 popular products
+2025-08-03 12:20:14 [INFO]: Home page data loaded successfully
+2025-08-03 12:20:16 [INFO]: Products page requested
+2025-08-03 12:20:16 [INFO]: Fetching all products with filters:
+2025-08-03 12:20:16 [INFO]: Found 5 products (12 total)
+2025-08-03 12:20:16 [INFO]: Products page data loaded successfully
+2025-08-03 12:20:19 [INFO]: Product details requested
+2025-08-03 12:20:19 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-03 12:20:19 [INFO]: Product details loaded successfully
+2025-08-03 12:22:53 [INFO]: Product details requested
+2025-08-03 12:22:53 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-03 12:22:53 [INFO]: Product details loaded successfully
+2025-08-03 12:23:13 [INFO]: Cart add request
+2025-08-03 12:23:13 [INFO]: Adding item to cart
+2025-08-03 12:23:13 [INFO]: Item added to cart successfully
+2025-08-03 12:23:13 [INFO]: Cart page requested
+2025-08-03 12:23:13 [INFO]: Cart page loaded
+2025-08-03 12:23:14 [INFO]: Cart page requested
+2025-08-03 12:23:14 [INFO]: Cart page loaded
+2025-08-03 12:23:18 [WARN]: Authentication required but no token provided
+2025-08-03 12:23:24 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-03 12:23:24 [INFO]: PasswordService compare: true
+2025-08-03 12:23:24 [INFO]: User logged in: tesla@gmail.com
+2025-08-03 12:23:24 [INFO]: Checkout page requested
+2025-08-03 12:23:24 [INFO]: Checkout page loaded
+2025-08-03 12:23:48 [INFO]: Processing checkout
+2025-08-03 12:23:48 [INFO]: Creating new order
+2025-08-03 12:23:48 [INFO]: Validating cart for checkout
+2025-08-03 12:23:48 [INFO]: Cart validation successful
+2025-08-03 12:23:48 [INFO]: Updating product stock
+2025-08-03 12:23:48 [INFO]: Stock updated
+2025-08-03 12:23:48 [INFO]: Order created successfully
+2025-08-03 12:23:48 [INFO]: Cart cleared
+2025-08-03 12:23:48 [INFO]: Checkout completed successfully
+2025-08-03 12:23:48 [INFO]: Orders page requested
+2025-08-03 12:23:48 [INFO]: Fetching user orders
+2025-08-03 12:23:48 [INFO]: Orders retrieved successfully
+2025-08-03 12:23:48 [INFO]: Orders page loaded
+2025-08-03 12:23:57 [INFO]: Products page requested
+2025-08-03 12:23:57 [INFO]: Fetching all products with filters:
+2025-08-03 12:23:57 [INFO]: Found 5 products (12 total)
+2025-08-03 12:23:57 [INFO]: Products page data loaded successfully
+2025-08-03 12:24:00 [INFO]: Orders page requested
+2025-08-03 12:24:00 [INFO]: Fetching user orders
+2025-08-03 12:24:00 [INFO]: Orders retrieved successfully
+2025-08-03 12:24:00 [INFO]: Orders page loaded
+2025-08-03 12:24:03 [INFO]: Products page requested
+2025-08-03 12:24:03 [INFO]: Fetching all products with filters:
+2025-08-03 12:24:03 [INFO]: Found 5 products (12 total)
+2025-08-03 12:24:03 [INFO]: Products page data loaded successfully
+2025-08-03 12:24:05 [INFO]: Product details requested
+2025-08-03 12:24:05 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-03 12:24:05 [INFO]: Product details loaded successfully

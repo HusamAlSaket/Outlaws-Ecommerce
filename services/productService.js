@@ -2,6 +2,8 @@ const Product = require('../models/Product');
 const { PRODUCTS, MESSAGES, PAGINATION } = require('../config/constants');
 const { AppError } = require('../utils/errorHandler');
 const logger = require('../utils/logger');
+const Review = require('../models/Review');
+const { hasPurchasedProduct } = require('./orderService');
 
 class ProductService {
   // Get trending products for home page
@@ -41,30 +43,30 @@ class ProductService {
   }
 
   // Get single product by ID
-  async getProductById(id) {
-    try {
-      if (!id) {
-        throw new AppError('Product ID is required', 400);
-      }
+ async getProductById(id, userId = null) {
+  try {
+    if (!id) throw new AppError('Product ID is required', 400);
 
-      logger.info(`Fetching product with ID: ${id}`);
-      
-      const product = await Product.findById(id);
-      
-      if (!product) {
-        throw new AppError(MESSAGES.PRODUCT_NOT_FOUND, 404);
-      }
+    logger.info(`Fetching product with ID: ${id}`);
+    const product = await Product.findById(id);
+    if (!product) throw new AppError(MESSAGES.PRODUCT_NOT_FOUND, 404);
 
-      return product;
-    } catch (error) {
-      if (error.isOperational) {
-        throw error; // Re-throw our custom errors
-      }
-      
-      logger.error('Error fetching product by ID:', error);
-      throw new AppError('Failed to fetch product', 500);
+    // Always fetch reviews
+    const reviews = await Review.find({ product: id }).populate('user');
+
+    // Optionally check if user can review
+    let canReview = false;
+    if (userId) {
+      canReview = await hasPurchasedProduct(userId, id);
     }
+
+    return { product, reviews, canReview };
+  } catch (error) {
+    if (error.isOperational) throw error;
+    logger.error('Error fetching product by ID:', error);
+    throw new AppError('Failed to fetch product', 500);
   }
+}
 
   // Get all products with optional filtering
   async getAllProducts(queryParams = {}) {

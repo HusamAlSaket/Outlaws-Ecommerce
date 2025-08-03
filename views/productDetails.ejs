@@ -69,7 +69,99 @@
     </div>
   </section>
 
+
+  <!-- Reviews Section (moved above footer) -->
+  <section class="product-reviews-section py-5">
+    <div class="container">
+      <div class="outlaw-reviews-box p-4 p-md-5 mb-4">
+        <h2 class="mb-4 text-navy fw-bold outlaw-reviews-title">Customer Reviews</h2>
+        <% if (reviews && reviews.length > 0) { %>
+          <div class="list-group mb-4">
+            <% reviews.forEach(function(review) { %>
+              <div class="list-group-item flex-column align-items-start mb-3 review-item">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                  <h5 class="mb-1 text-navy"><i class="fas fa-user-circle me-2"></i><%= review.user && review.user.username ? review.user.username : 'Anonymous' %></h5>
+                  <span class="badge bg-navy text-white fs-6">★ <%= review.rating %> / 5</span>
+                </div>
+                <p class="mb-1 fs-5"><%= review.comment %></p>
+                <small class="text-muted"><%= review.createdAt ? review.createdAt.toLocaleDateString() : '' %></small>
+              </div>
+            <% }) %>
+          </div>
+        <% } else { %>
+          <p class="text-muted">No reviews yet. Be the first to review this product!</p>
+        <% } %>
+
+        <!-- Review Form -->
+        <% if (canReview) { %>
+          <div class="card p-4 shadow-sm border-0 outlaw-review-form">
+            <h4 class="mb-3 text-navy">Leave a Review</h4>
+            <form action="/reviews" method="POST">
+              <input type="hidden" name="product" value="<%= product._id %>">
+              <div class="mb-3">
+                <label for="rating" class="form-label">Rating</label>
+                <select class="form-select w-auto d-inline-block border-navy" id="rating" name="rating" required>
+                  <option value="5">5</option>
+                  <option value="4">4</option>
+                  <option value="3">3</option>
+                  <option value="2">2</option>
+                  <option value="1">1</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="comment" class="form-label">Comment</label>
+                <textarea class="form-control border-navy" id="comment" name="comment" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-navy px-4">Submit Review</button>
+            </form>
+          </div>
+        <% } else if (typeof canReview !== 'undefined' && !canReview) { %>
+          <div class="alert alert-info mt-4">You must purchase this product to leave a review.</div>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
   <%- include('partials/footer') %>
+  <style>
+    .product-reviews-section {
+      background: #f8fafc;
+    }
+    .outlaw-reviews-box {
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 4px 24px rgba(0,31,63,0.10);
+      border: 2px solid #001f3f;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .outlaw-reviews-title {
+      color: #001f3f;
+      letter-spacing: 1px;
+    }
+    .text-navy { color: #001f3f !important; }
+    .bg-navy { background: #001f3f !important; }
+    .btn-navy {
+      background: #001f3f;
+      color: #fff;
+      border: none;
+      font-weight: 600;
+    }
+    .btn-navy:hover, .btn-navy:focus {
+      background: #003366;
+      color: #fff;
+    }
+    .border-navy { border-color: #001f3f !important; }
+    .review-item {
+      border-radius: 1rem;
+      border: 1px solid #e3e6ee;
+      background: #fafdff;
+    }
+    .outlaw-review-form textarea:focus, .outlaw-review-form select:focus {
+      border-color: #001f3f;
+      box-shadow: 0 0 0 0.2rem rgba(0,31,63,0.08);
+    }
+  </style>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
