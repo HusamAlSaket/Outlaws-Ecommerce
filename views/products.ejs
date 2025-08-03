@@ -46,40 +46,111 @@
       </div>
     </section>
 
-    <!-- Search Form -->
-    <div class="container mb-4">
-      <form method="GET" action="/products" class="row g-2 align-items-center bg-light p-3 rounded shadow-sm">
-        <div class="col-md-5 mb-2 mb-md-0">
-          <div class="input-group">
-            <span class="input-group-text bg-white"><i class="fas fa-search"></i></span>
-            <input type="text" name="search" placeholder="Search products..." class="form-control" value="<%= query.search || '' %>">
-          </div>
-        </div>
-        <div class="col-md-4 mb-2 mb-md-0">
-          <div class="input-group">
-            <span class="input-group-text bg-white"><i class="fas fa-list"></i></span>
-            <select name="category" class="form-select">
-              <option value="">All Categories</option>
-              <option value="men-jeans" <%= query.category === "men-jeans" ? 'selected' : '' %>>men jeans</option>
-              <option value="women-shirts" <%= query.category === "women-shirts" ? 'selected' : '' %>>women shirts</option>
-              <option value="men-sneakers" <%= query.category === "men-sneakers" ? 'selected' : '' %>>men sneakers</option>
-              <option value="outerwear" <%= query.category === "outerwear" ? 'selected' : '' %>>outerwear</option>
-              <option value="women-hoodies" <%= query.category === "women-hoodies" ? 'selected' : '' %>>women hoodies</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-3 d-grid">
-          <button type="submit" class="btn btn-primary btn-block">
-            <i class="fas fa-filter me-1"></i> Filter
-          </button>
-        </div>
-      </form>
-    </div>
+    <!-- Search Form removed as requested -->
 
     <!-- ✅ ENHANCED PRODUCT GRID -->
     <section class="product-grid">
       <div class="container">
         <h2 class="section-title">Featured Outlaws</h2>
+        <!-- Fancy Search Filter -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <form method="GET" action="/products" class="fancy-search-form p-3 p-md-4 mb-2 animate__animated animate__fadeInDown">
+              <div class="row g-2 align-items-center">
+                <div class="col-lg-7 col-md-7 mb-2 mb-md-0">
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-navy text-white border-0 rounded-start-4"><i class="fas fa-search"></i></span>
+                    <input type="text" name="search" placeholder="Search products..." class="form-control border-0 fancy-search-input" value="<%= query.search || '' %>" style="background:#f8fafc; font-size:1.2rem;">
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 mb-2 mb-md-0">
+                  <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-navy text-white border-0"><i class="fas fa-list"></i></span>
+                    <select name="category" class="form-select border-0 fancy-search-input" style="background:#f8fafc; font-size:1.1rem;">
+                      <option value="">All Categories</option>
+                      <option value="men-jeans" <%= query.category === "men-jeans" ? 'selected' : '' %>>men jeans</option>
+                      <option value="women-shirts" <%= query.category === "women-shirts" ? 'selected' : '' %>>women shirts</option>
+                      <option value="men-sneakers" <%= query.category === "men-sneakers" ? 'selected' : '' %>>men sneakers</option>
+                      <option value="outerwear" <%= query.category === "outerwear" ? 'selected' : '' %>>outerwear</option>
+                      <option value="women-hoodies" <%= query.category === "women-hoodies" ? 'selected' : '' %>>women hoodies</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-2 d-grid">
+                  <button type="submit" class="btn btn-navy px-4 rounded-4 shadow-sm animate__animated animate__pulse animate__delay-1s" style="font-weight:600; font-size:1.1rem;">
+                    <i class="fas fa-filter me-1"></i> Filter
+                  </button>
+                  <% if (query.search || query.category) { %>
+                    <a href="/products" class="btn btn-outline-secondary mt-2 rounded-4 w-100" title="Reset filters" style="font-size:1.3rem;display:flex;align-items:center;justify-content:center;">
+                      <i class="fas fa-times"></i>
+                    </a>
+                  <% } %>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <style>
+          .bg-navy { background: #001f3f !important; }
+          .btn-navy { background: #001f3f; color: #fff; border: none; }
+          .btn-navy:hover, .btn-navy:focus { background: #003366; color: #fff; }
+          .fancy-search-form {
+            background: #fff;
+            border-radius: 2rem;
+            box-shadow: 0 4px 24px rgba(0,31,63,0.10);
+            border: 2px solid #001f3f;
+            transition: box-shadow 0.3s, border-color 0.3s;
+          }
+          .fancy-search-form:focus-within {
+            box-shadow: 0 6px 32px rgba(0,31,63,0.18);
+            border-color: #003366;
+          }
+          .fancy-search-input:focus {
+            box-shadow: none;
+            outline: none;
+          }
+          .fancy-search-input, .fancy-search-form select.form-select {
+            border-radius: 0 1.2rem 1.2rem 0 !important;
+            border: none !important;
+            box-shadow: none !important;
+            font-size: 1rem !important;
+            height: 2.5rem !important;
+            padding-top: 0.25rem !important;
+            padding-bottom: 0.25rem !important;
+          }
+          .fancy-search-form .input-group-text {
+            border-radius: 1.2rem 0 0 1.2rem !important;
+            border: none !important;
+            font-size: 1.1rem;
+            height: 2.5rem !important;
+            padding-top: 0.25rem !important;
+            padding-bottom: 0.25rem !important;
+          }
+          .fancy-search-form select.form-select:focus, .fancy-search-form select.form-select:hover {
+            background-color: #001f3f !important;
+            color: #fff !important;
+          }
+          .fancy-search-form select.form-select option:hover, .fancy-search-form select.form-select option:focus {
+            background: #001f3f !important;
+            color: #fff !important;
+          }
+          .fancy-search-form .input-group.input-group-lg {
+            font-size: 1rem;
+          }
+          .fancy-search-form {
+            padding: 1.2rem 1.2rem !important;
+          }
+          @media (max-width: 768px) {
+            .fancy-search-form {
+              padding: 0.7rem 0.5rem !important;
+            }
+            .fancy-search-input, .fancy-search-form select.form-select, .fancy-search-form .input-group-text {
+              height: 2.1rem !important;
+              font-size: 0.95rem !important;
+            }
+          }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <div class="row g-4">
           <% products.forEach((product, index) => { %>
           <div class="col-lg-4 col-md-6 fade-in" data-index="<%= index %>">
