@@ -74,97 +74,195 @@
   <section class="product-reviews-section py-5">
     <div class="container">
       <div class="outlaw-reviews-box p-4 p-md-5 mb-4">
-        <h2 class="mb-4 text-navy fw-bold outlaw-reviews-title">Customer Reviews</h2>
-        <% if (reviews && reviews.length > 0) { %>
-          <div class="list-group mb-4">
-            <% reviews.forEach(function(review) { %>
-              <div class="list-group-item flex-column align-items-start mb-3 review-item">
-                <div class="d-flex w-100 justify-content-between align-items-center">
-                  <h5 class="mb-1 text-navy"><i class="fas fa-user-circle me-2"></i><%= review.user && review.user.username ? review.user.username : 'Anonymous' %></h5>
-                  <span class="badge bg-navy text-white fs-6">★ <%= review.rating %> / 5</span>
+        <!-- Reviews Header with Statistics -->
+        <div class="reviews-header mb-5">
+          <h2 class="mb-3 text-navy fw-bold outlaw-reviews-title">Customer Reviews</h2>
+          
+          <% if (reviews && reviews.length > 0) { %>
+            <% 
+              // Calculate review statistics
+              const totalReviews = reviews.length;
+              const avgRating = reviews.reduce((sum, review) => sum + review.rating, 0) / totalReviews;
+              const ratingDistribution = [0, 0, 0, 0, 0];
+              reviews.forEach(review => ratingDistribution[review.rating - 1]++);
+            %>
+            
+            <div class="row align-items-center mb-4">
+              <!-- Overall Rating -->
+              <div class="col-md-4 text-center">
+                <div class="overall-rating">
+                  <div class="rating-number"><%= avgRating.toFixed(1) %></div>
+                  <div class="rating-stars mb-2">
+                    <% for (let i = 1; i <= 5; i++) { %>
+                      <span class="<%= i <= Math.round(avgRating) ? 'text-navy' : 'text-muted' %>">★</span>
+                    <% } %>
+                  </div>
+                  <div class="rating-text">Based on <%= totalReviews %> review<%= totalReviews > 1 ? 's' : '' %></div>
                 </div>
-                <p class="mb-1 fs-5"><%= review.comment %></p>
-                <small class="text-muted"><%= review.createdAt ? review.createdAt.toLocaleDateString() : '' %></small>
+              </div>
+              
+              <!-- Rating Distribution -->
+              <div class="col-md-8">
+                <div class="rating-distribution">
+                  <% for (let i = 5; i >= 1; i--) { %>
+                    <% 
+                      const ratingCount = ratingDistribution[i-1] || 0;
+                      const percentage = totalReviews > 0 && ratingCount > 0 ? (ratingCount / totalReviews * 100) : 0;
+                    %>
+                    <div class="rating-bar-row">
+                      <span class="rating-label"><%= i %> ★</span>
+                      <div class="rating-bar">
+                        <div class="rating-fill" style="width: <%= percentage.toFixed(1) %>%"></div>
+                      </div>
+                      <span class="rating-count">(<%= ratingCount %>)</span>
+                    </div>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+
+        <!-- Review Form -->
+        <% if (canReview && !hasReviewed) { %>
+          <div class="review-form-section mb-5">
+            <div class="card outlaw-review-form">
+              <div class="card-header">
+                <h4 class="mb-0"><i class="fas fa-edit me-2"></i>Write a Review</h4>
+                <small class="text-muted">Share your experience with this product</small>
+              </div>
+              <div class="card-body">
+                <form action="/reviews" method="POST">
+                  <input type="hidden" name="product" value="<%= product._id %>">
+                  
+                  <div class="mb-4">
+                    <label class="form-label fw-bold">Your Rating</label>
+                    <div class="star-rating">
+                      <input type="radio" id="star5" name="rating" value="5" required>
+                      <label for="star5" class="star">★</label>
+                      <input type="radio" id="star4" name="rating" value="4">
+                      <label for="star4" class="star">★</label>
+                      <input type="radio" id="star3" name="rating" value="3">
+                      <label for="star3" class="star">★</label>
+                      <input type="radio" id="star2" name="rating" value="2">
+                      <label for="star2" class="star">★</label>
+                      <input type="radio" id="star1" name="rating" value="1">
+                      <label for="star1" class="star">★</label>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-4">
+                    <label for="comment" class="form-label fw-bold">Your Review</label>
+                    <textarea class="form-control" id="comment" name="comment" rows="4" 
+                              placeholder="Tell others what you think about this product..." required></textarea>
+                    <div class="form-text">Minimum 10 characters</div>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-navy btn-lg">
+                    <i class="fas fa-paper-plane me-2"></i>Submit Review
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        <% } else if (typeof canReview !== 'undefined' && !canReview && !hasReviewed) { %>
+          <div class="alert alert-info d-flex align-items-center mb-4">
+            <i class="fas fa-info-circle me-2"></i>
+            <span>You must purchase this product to leave a review.</span>
+          </div>
+        <% } %>
+
+        <!-- Individual Reviews -->
+        <% if (reviews && reviews.length > 0) { %>
+          <div class="reviews-list">
+            <h4 class="mb-4 text-navy">All Reviews (<%= reviews.length %>)</h4>
+            
+            <% reviews.forEach(function(review, index) { %>
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="reviewer-info">
+                    <div class="reviewer-avatar">
+                      <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="reviewer-details">
+                      <h6 class="reviewer-name"><%= review.user && review.user.username ? review.user.username : 'Anonymous' %></h6>
+                      <div class="review-meta">
+                        <div class="review-stars">
+                          <% for (let i = 1; i <= 5; i++) { %>
+                            <span class="<%= i <= review.rating ? 'text-navy' : 'text-muted' %>">★</span>
+                          <% } %>
+                        </div>
+                        <span class="review-date">
+                          <i class="fas fa-calendar-alt me-1"></i>
+                          <%= review.createdAt ? review.createdAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '' %>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-rating-badge">
+                    <%= review.rating %>.0
+                  </div>
+                </div>
+                
+                <div class="review-content">
+                  <p><%= review.comment %></p>
+                </div>
+                
+                <div class="review-footer">
+                  <div class="review-actions">
+                    <span class="review-helpful">
+                      <i class="fas fa-thumbs-up me-1"></i>
+                      Helpful
+                    </span>
+                    <span class="review-report">
+                      <i class="fas fa-flag me-1"></i>
+                      Report
+                    </span>
+                  </div>
+                </div>
               </div>
             <% }) %>
           </div>
         <% } else { %>
-          <p class="text-muted">No reviews yet. Be the first to review this product!</p>
-        <% } %>
-
-        <!-- Review Form -->
-        <% if (canReview) { %>
-          <div class="card p-4 shadow-sm border-0 outlaw-review-form">
-            <h4 class="mb-3 text-navy">Leave a Review</h4>
-            <form action="/reviews" method="POST">
-              <input type="hidden" name="product" value="<%= product._id %>">
-              <div class="mb-3">
-                <label for="rating" class="form-label">Rating</label>
-                <select class="form-select w-auto d-inline-block border-navy" id="rating" name="rating" required>
-                  <option value="5">5</option>
-                  <option value="4">4</option>
-                  <option value="3">3</option>
-                  <option value="2">2</option>
-                  <option value="1">1</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label for="comment" class="form-label">Comment</label>
-                <textarea class="form-control border-navy" id="comment" name="comment" rows="3" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-navy px-4">Submit Review</button>
-            </form>
+          <div class="no-reviews">
+            <div class="no-reviews-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>No reviews yet</h4>
+            <p>Be the first to review this product and help other customers make informed decisions!</p>
           </div>
-        <% } else if (typeof canReview !== 'undefined' && !canReview) { %>
-          <div class="alert alert-info mt-4">You must purchase this product to leave a review.</div>
         <% } %>
       </div>
     </div>
   </section>
 
   <%- include('partials/footer') %>
-  <style>
-    .product-reviews-section {
-      background: #f8fafc;
-    }
-    .outlaw-reviews-box {
-      background: #fff;
-      border-radius: 2rem;
-      box-shadow: 0 4px 24px rgba(0,31,63,0.10);
-      border: 2px solid #001f3f;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .outlaw-reviews-title {
-      color: #001f3f;
-      letter-spacing: 1px;
-    }
-    .text-navy { color: #001f3f !important; }
-    .bg-navy { background: #001f3f !important; }
-    .btn-navy {
-      background: #001f3f;
-      color: #fff;
-      border: none;
-      font-weight: 600;
-    }
-    .btn-navy:hover, .btn-navy:focus {
-      background: #003366;
-      color: #fff;
-    }
-    .border-navy { border-color: #001f3f !important; }
-    .review-item {
-      border-radius: 1rem;
-      border: 1px solid #e3e6ee;
-      background: #fafdff;
-    }
-    .outlaw-review-form textarea:focus, .outlaw-review-form select:focus {
-      border-color: #001f3f;
-      box-shadow: 0 0 0 0.2rem rgba(0,31,63,0.08);
-    }
-  </style>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Auto-hide flash messages
+    document.addEventListener('DOMContentLoaded', function() {
+      var flash = document.querySelector('.outlaws-flash');
+      if (flash) {
+        setTimeout(function() {
+          flash.style.transition = 'opacity 0.5s';
+          flash.style.opacity = 0;
+          setTimeout(function() { flash.remove(); }, 500);
+        }, 3000);
+      }
+
+      // Animate rating bars
+      const ratingFills = document.querySelectorAll('.rating-fill[data-width]');
+      ratingFills.forEach(fill => {
+        const width = fill.getAttribute('data-width');
+        setTimeout(() => {
+          fill.style.width = width + '%';
+        }, 300);
+      });
+    });
+  </script>
   
   <script src="/js/productDetails.js"></script>
 </body>

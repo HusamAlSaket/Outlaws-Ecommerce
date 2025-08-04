@@ -27,9 +27,9 @@ exports.getProductDetails = asyncHandler(async (req, res) => {
   const { id } = req.params;
   logger.info('Product details requested', { productId: id, ip: req.ip });
   // Use service layer - it handles validation and errors
-  const { product, reviews, canReview } = await productService.getProductById(id, req.session.user?._id);
+  const { product, reviews, canReview, hasReviewed } = await productService.getProductById(id, req.session.user?._id);
   logger.info('Product details loaded successfully', { productId: id, title: product.title });
-  res.render('productDetails', { product, reviews, canReview });
+  res.render('productDetails', { product, reviews, canReview, hasReviewed });
 });
 
 // Controller to fetch products for the products page

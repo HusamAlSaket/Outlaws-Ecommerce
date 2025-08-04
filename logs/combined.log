@@ -3827,3 +3827,529 @@ Or, if you meant to create an async function, pass `async: true` as an option.
 2025-08-03 12:24:05 [INFO]: Product details requested
 2025-08-03 12:24:05 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
 2025-08-03 12:24:05 [INFO]: Product details loaded successfully
+2025-08-04 10:56:58 [INFO]: Home page requested
+2025-08-04 10:56:58 [INFO]: Fetching trending products
+2025-08-04 10:56:58 [INFO]: Found 6 trending products
+2025-08-04 10:56:58 [INFO]: Fetching popular products
+2025-08-04 10:56:58 [INFO]: Found 6 popular products
+2025-08-04 10:56:58 [INFO]: Home page data loaded successfully
+2025-08-04 10:57:07 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-04 10:57:07 [INFO]: PasswordService compare: false
+2025-08-04 10:57:07 [INFO]: User model matchPassword: false
+2025-08-04 10:57:07 [INFO]: Direct bcryptjs compare: false
+2025-08-04 10:57:07 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-08-04 10:57:07 [ERROR]: Login error from service: Invalid email or password
+2025-08-04 10:57:09 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-04 10:57:09 [INFO]: PasswordService compare: true
+2025-08-04 10:57:09 [INFO]: User logged in: tesla@gmail.com
+2025-08-04 10:57:09 [INFO]: Home page requested
+2025-08-04 10:57:09 [INFO]: Fetching trending products
+2025-08-04 10:57:09 [INFO]: Found 6 trending products
+2025-08-04 10:57:09 [INFO]: Fetching popular products
+2025-08-04 10:57:09 [INFO]: Found 6 popular products
+2025-08-04 10:57:09 [INFO]: Home page data loaded successfully
+2025-08-04 10:57:24 [INFO]: Products page requested
+2025-08-04 10:57:24 [INFO]: Fetching all products with filters:
+2025-08-04 10:57:24 [INFO]: Found 5 products (12 total)
+2025-08-04 10:57:24 [INFO]: Products page data loaded successfully
+2025-08-04 10:57:28 [INFO]: Products page requested
+2025-08-04 10:57:28 [INFO]: Fetching all products with filters:
+2025-08-04 10:57:28 [INFO]: Found 1 products (1 total)
+2025-08-04 10:57:28 [INFO]: Products page data loaded successfully
+2025-08-04 10:57:31 [INFO]: Products page requested
+2025-08-04 10:57:31 [INFO]: Fetching all products with filters:
+2025-08-04 10:57:31 [INFO]: Found 5 products (12 total)
+2025-08-04 10:57:31 [INFO]: Products page data loaded successfully
+2025-08-04 10:57:34 [INFO]: Product details requested
+2025-08-04 10:57:34 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc6
+2025-08-04 10:57:36 [INFO]: Product details loaded successfully
+2025-08-04 10:59:29 [INFO]: Product details requested
+2025-08-04 10:59:29 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc6
+2025-08-04 10:59:29 [INFO]: Product details loaded successfully
+2025-08-04 10:59:30 [INFO]: Product details requested
+2025-08-04 10:59:30 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc6
+2025-08-04 10:59:30 [INFO]: Product details loaded successfully
+2025-08-04 10:59:30 [INFO]: Product details requested
+2025-08-04 10:59:30 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc6
+2025-08-04 10:59:30 [INFO]: Product details loaded successfully
+2025-08-04 10:59:31 [INFO]: Product details requested
+2025-08-04 10:59:31 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc6
+2025-08-04 10:59:31 [INFO]: Product details loaded successfully
+2025-08-04 10:59:31 [INFO]: Product details requested
+2025-08-04 10:59:31 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc6
+2025-08-04 10:59:31 [INFO]: Product details loaded successfully
+2025-08-04 10:59:32 [INFO]: Product details requested
+2025-08-04 10:59:32 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc6
+2025-08-04 10:59:32 [INFO]: Product details loaded successfully
+2025-08-04 10:59:32 [INFO]: Product details requested
+2025-08-04 10:59:32 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc6
+2025-08-04 10:59:32 [INFO]: Product details loaded successfully
+2025-08-04 10:59:34 [INFO]: Cart add request
+2025-08-04 10:59:34 [INFO]: Adding item to cart
+2025-08-04 10:59:34 [INFO]: Item added to cart successfully
+2025-08-04 10:59:34 [INFO]: Cart page requested
+2025-08-04 10:59:34 [INFO]: Cart page loaded
+2025-08-04 10:59:39 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-04 10:59:39 [INFO]: PasswordService compare: true
+2025-08-04 10:59:39 [INFO]: User logged in: tesla@gmail.com
+2025-08-04 10:59:39 [INFO]: Home page requested
+2025-08-04 10:59:39 [INFO]: Fetching trending products
+2025-08-04 10:59:39 [INFO]: Found 6 trending products
+2025-08-04 10:59:39 [INFO]: Fetching popular products
+2025-08-04 10:59:40 [INFO]: Found 6 popular products
+2025-08-04 10:59:40 [INFO]: Home page data loaded successfully
+2025-08-04 10:59:44 [INFO]: Product details requested
+2025-08-04 10:59:44 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 10:59:44 [INFO]: Product details loaded successfully
+2025-08-04 11:00:25 [INFO]: Product details requested
+2025-08-04 11:00:25 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:00:25 [INFO]: Product details loaded successfully
+2025-08-04 11:00:31 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-04 11:00:31 [INFO]: PasswordService compare: true
+2025-08-04 11:00:31 [INFO]: User logged in: tesla@gmail.com
+2025-08-04 11:00:31 [INFO]: Home page requested
+2025-08-04 11:00:31 [INFO]: Fetching trending products
+2025-08-04 11:00:31 [INFO]: Found 6 trending products
+2025-08-04 11:00:31 [INFO]: Fetching popular products
+2025-08-04 11:00:31 [INFO]: Found 6 popular products
+2025-08-04 11:00:31 [INFO]: Home page data loaded successfully
+2025-08-04 11:00:35 [INFO]: Product details requested
+2025-08-04 11:00:35 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:00:35 [INFO]: Product details loaded successfully
+2025-08-04 11:02:51 [INFO]: Product details requested
+2025-08-04 11:02:51 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:02:51 [INFO]: Product details loaded successfully
+2025-08-04 11:02:57 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-04 11:02:57 [INFO]: PasswordService compare: true
+2025-08-04 11:02:57 [INFO]: User logged in: tesla@gmail.com
+2025-08-04 11:02:57 [INFO]: Home page requested
+2025-08-04 11:02:57 [INFO]: Fetching trending products
+2025-08-04 11:02:57 [INFO]: Found 6 trending products
+2025-08-04 11:02:57 [INFO]: Fetching popular products
+2025-08-04 11:02:57 [INFO]: Found 6 popular products
+2025-08-04 11:02:57 [INFO]: Home page data loaded successfully
+2025-08-04 11:03:01 [INFO]: Product details requested
+2025-08-04 11:03:01 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dcc
+2025-08-04 11:03:01 [INFO]: Product details loaded successfully
+2025-08-04 11:03:13 [INFO]: Product details requested
+2025-08-04 11:03:13 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:03:13 [INFO]: Product details loaded successfully
+2025-08-04 11:03:37 [INFO]: Product details requested
+2025-08-04 11:03:37 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:03:37 [INFO]: Product details loaded successfully
+2025-08-04 11:03:40 [INFO]: Product details requested
+2025-08-04 11:03:40 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:03:40 [INFO]: Product details loaded successfully
+2025-08-04 11:04:00 [INFO]: Product details requested
+2025-08-04 11:04:00 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:04:01 [INFO]: Product details loaded successfully
+2025-08-04 11:04:06 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-04 11:04:06 [INFO]: PasswordService compare: true
+2025-08-04 11:04:06 [INFO]: User logged in: tesla@gmail.com
+2025-08-04 11:04:06 [INFO]: Home page requested
+2025-08-04 11:04:06 [INFO]: Fetching trending products
+2025-08-04 11:04:07 [INFO]: Found 6 trending products
+2025-08-04 11:04:07 [INFO]: Fetching popular products
+2025-08-04 11:04:07 [INFO]: Found 6 popular products
+2025-08-04 11:04:07 [INFO]: Home page data loaded successfully
+2025-08-04 11:04:15 [INFO]: Products page requested
+2025-08-04 11:04:15 [INFO]: Fetching all products with filters:
+2025-08-04 11:04:15 [INFO]: Found 5 products (12 total)
+2025-08-04 11:04:15 [INFO]: Products page data loaded successfully
+2025-08-04 11:04:17 [INFO]: Orders page requested
+2025-08-04 11:04:17 [INFO]: Fetching user orders
+2025-08-04 11:04:17 [INFO]: Orders retrieved successfully
+2025-08-04 11:04:17 [INFO]: Orders page loaded
+2025-08-04 11:04:21 [INFO]: Products page requested
+2025-08-04 11:04:21 [INFO]: Fetching all products with filters:
+2025-08-04 11:04:21 [INFO]: Found 5 products (12 total)
+2025-08-04 11:04:21 [INFO]: Products page data loaded successfully
+2025-08-04 11:04:24 [INFO]: Products page requested
+2025-08-04 11:04:24 [INFO]: Fetching all products with filters:
+2025-08-04 11:04:24 [INFO]: Found 5 products (12 total)
+2025-08-04 11:04:24 [INFO]: Products page data loaded successfully
+2025-08-04 11:04:33 [INFO]: Products page requested
+2025-08-04 11:04:33 [INFO]: Fetching all products with filters:
+2025-08-04 11:04:33 [INFO]: Found 5 products (12 total)
+2025-08-04 11:04:33 [INFO]: Products page data loaded successfully
+2025-08-04 11:04:34 [INFO]: Home page requested
+2025-08-04 11:04:34 [INFO]: Fetching trending products
+2025-08-04 11:04:34 [INFO]: Found 6 trending products
+2025-08-04 11:04:34 [INFO]: Fetching popular products
+2025-08-04 11:04:34 [INFO]: Found 6 popular products
+2025-08-04 11:04:34 [INFO]: Home page data loaded successfully
+2025-08-04 11:04:39 [INFO]: Orders page requested
+2025-08-04 11:04:39 [INFO]: Fetching user orders
+2025-08-04 11:04:39 [INFO]: Orders retrieved successfully
+2025-08-04 11:04:39 [INFO]: Orders page loaded
+2025-08-04 11:04:47 [INFO]: Products page requested
+2025-08-04 11:04:47 [INFO]: Fetching all products with filters:
+2025-08-04 11:04:47 [INFO]: Found 5 products (12 total)
+2025-08-04 11:04:47 [INFO]: Products page data loaded successfully
+2025-08-04 11:04:51 [INFO]: Orders page requested
+2025-08-04 11:04:51 [INFO]: Fetching user orders
+2025-08-04 11:04:51 [INFO]: Orders retrieved successfully
+2025-08-04 11:04:51 [INFO]: Orders page loaded
+2025-08-04 11:04:54 [INFO]: Home page requested
+2025-08-04 11:04:54 [INFO]: Fetching trending products
+2025-08-04 11:04:54 [INFO]: Found 6 trending products
+2025-08-04 11:04:54 [INFO]: Fetching popular products
+2025-08-04 11:04:54 [INFO]: Found 6 popular products
+2025-08-04 11:04:54 [INFO]: Home page data loaded successfully
+2025-08-04 11:04:56 [INFO]: Products page requested
+2025-08-04 11:04:56 [INFO]: Fetching all products with filters:
+2025-08-04 11:04:56 [INFO]: Found 5 products (12 total)
+2025-08-04 11:04:56 [INFO]: Products page data loaded successfully
+2025-08-04 11:05:00 [INFO]: Product details requested
+2025-08-04 11:05:00 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:05:00 [INFO]: Product details loaded successfully
+2025-08-04 11:05:04 [INFO]: Product details requested
+2025-08-04 11:05:04 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:05:04 [INFO]: Product details loaded successfully
+2025-08-04 11:05:37 [INFO]: Product details requested
+2025-08-04 11:05:37 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:05:37 [INFO]: Product details loaded successfully
+2025-08-04 11:09:01 [INFO]: Product details requested
+2025-08-04 11:09:01 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:09:01 [INFO]: Product details loaded successfully
+2025-08-04 11:09:10 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-04 11:09:10 [INFO]: PasswordService compare: true
+2025-08-04 11:09:10 [INFO]: User logged in: tesla@gmail.com
+2025-08-04 11:09:10 [INFO]: Home page requested
+2025-08-04 11:09:10 [INFO]: Fetching trending products
+2025-08-04 11:09:10 [INFO]: Found 6 trending products
+2025-08-04 11:09:10 [INFO]: Fetching popular products
+2025-08-04 11:09:10 [INFO]: Found 6 popular products
+2025-08-04 11:09:10 [INFO]: Home page data loaded successfully
+2025-08-04 11:09:16 [INFO]: Product details requested
+2025-08-04 11:09:16 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:09:16 [INFO]: Product details loaded successfully
+2025-08-04 11:09:21 [INFO]: Product details requested
+2025-08-04 11:09:21 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:09:21 [INFO]: Product details loaded successfully
+2025-08-04 11:09:30 [INFO]: Product details requested
+2025-08-04 11:09:30 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:09:30 [INFO]: Product details loaded successfully
+2025-08-04 11:10:59 [INFO]: Product details requested
+2025-08-04 11:10:59 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:10:59 [INFO]: Product details loaded successfully
+2025-08-04 11:11:04 [INFO]: Home page requested
+2025-08-04 11:11:04 [INFO]: Fetching trending products
+2025-08-04 11:11:04 [INFO]: Found 6 trending products
+2025-08-04 11:11:04 [INFO]: Fetching popular products
+2025-08-04 11:11:04 [INFO]: Found 6 popular products
+2025-08-04 11:11:04 [INFO]: Home page data loaded successfully
+2025-08-04 11:11:06 [INFO]: Product details requested
+2025-08-04 11:11:06 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:11:06 [INFO]: Product details loaded successfully
+2025-08-04 11:11:10 [INFO]: Product details requested
+2025-08-04 11:11:10 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:11:11 [INFO]: Product details loaded successfully
+2025-08-04 11:11:18 [INFO]: Product details requested
+2025-08-04 11:11:18 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:11:18 [INFO]: Product details loaded successfully
+2025-08-04 11:12:36 [INFO]: Product details requested
+2025-08-04 11:12:36 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:12:36 [INFO]: Product details loaded successfully
+2025-08-04 11:13:45 [INFO]: Product details requested
+2025-08-04 11:13:45 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:13:45 [INFO]: Product details loaded successfully
+2025-08-04 11:13:46 [INFO]: Product details requested
+2025-08-04 11:13:46 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:13:46 [INFO]: Product details loaded successfully
+2025-08-04 11:13:46 [INFO]: Product details requested
+2025-08-04 11:13:46 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:13:47 [INFO]: Product details loaded successfully
+2025-08-04 11:13:49 [INFO]: Product details requested
+2025-08-04 11:13:49 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:13:50 [INFO]: Product details loaded successfully
+2025-08-04 11:13:56 [INFO]: Product details requested
+2025-08-04 11:13:56 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:13:56 [INFO]: Product details loaded successfully
+2025-08-04 11:15:06 [INFO]: Product details requested
+2025-08-04 11:15:06 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:15:06 [INFO]: Product details loaded successfully
+2025-08-04 11:15:06 [INFO]: Product details requested
+2025-08-04 11:15:06 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:15:07 [INFO]: Product details loaded successfully
+2025-08-04 11:15:14 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-04 11:15:14 [INFO]: PasswordService compare: true
+2025-08-04 11:15:14 [INFO]: User logged in: tesla@gmail.com
+2025-08-04 11:15:14 [INFO]: Home page requested
+2025-08-04 11:15:14 [INFO]: Fetching trending products
+2025-08-04 11:15:14 [INFO]: Found 6 trending products
+2025-08-04 11:15:14 [INFO]: Fetching popular products
+2025-08-04 11:15:14 [INFO]: Found 6 popular products
+2025-08-04 11:15:14 [INFO]: Home page data loaded successfully
+2025-08-04 11:15:18 [INFO]: Product details requested
+2025-08-04 11:15:18 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:15:19 [INFO]: Product details loaded successfully
+2025-08-04 11:15:23 [INFO]: Product details requested
+2025-08-04 11:15:23 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:15:23 [INFO]: Product details loaded successfully
+2025-08-04 11:15:31 [INFO]: Home page requested
+2025-08-04 11:15:31 [INFO]: Fetching trending products
+2025-08-04 11:15:31 [INFO]: Found 6 trending products
+2025-08-04 11:15:31 [INFO]: Fetching popular products
+2025-08-04 11:15:31 [INFO]: Found 6 popular products
+2025-08-04 11:15:31 [INFO]: Home page data loaded successfully
+2025-08-04 11:15:35 [INFO]: Product details requested
+2025-08-04 11:15:35 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dce
+2025-08-04 11:15:35 [INFO]: Product details loaded successfully
+2025-08-04 11:21:56 [INFO]: Home page requested
+2025-08-04 11:21:56 [INFO]: Fetching trending products
+2025-08-04 11:21:56 [INFO]: Found 6 trending products
+2025-08-04 11:21:56 [INFO]: Fetching popular products
+2025-08-04 11:21:56 [INFO]: Found 6 popular products
+2025-08-04 11:21:56 [INFO]: Home page data loaded successfully
+2025-08-04 11:23:34 [INFO]: Home page requested
+2025-08-04 11:23:34 [INFO]: Fetching trending products
+2025-08-04 11:23:35 [INFO]: Found 6 trending products
+2025-08-04 11:23:35 [INFO]: Fetching popular products
+2025-08-04 11:23:35 [INFO]: Found 6 popular products
+2025-08-04 11:23:35 [INFO]: Home page data loaded successfully
+2025-08-04 11:23:40 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-04 11:23:40 [INFO]: PasswordService compare: true
+2025-08-04 11:23:40 [INFO]: User logged in: tesla@gmail.com
+2025-08-04 11:23:40 [INFO]: Home page requested
+2025-08-04 11:23:40 [INFO]: Fetching trending products
+2025-08-04 11:23:40 [INFO]: Found 6 trending products
+2025-08-04 11:23:40 [INFO]: Fetching popular products
+2025-08-04 11:23:40 [INFO]: Found 6 popular products
+2025-08-04 11:23:40 [INFO]: Home page data loaded successfully
+2025-08-04 11:23:45 [INFO]: Product details requested
+2025-08-04 11:23:45 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:23:45 [INFO]: Product details loaded successfully
+2025-08-04 11:23:49 [INFO]: Product details requested
+2025-08-04 11:23:49 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:23:49 [INFO]: Product details loaded successfully
+2025-08-04 11:25:43 [INFO]: Product details requested
+2025-08-04 11:25:43 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:25:43 [INFO]: Product details loaded successfully
+2025-08-04 11:25:57 [INFO]: Products page requested
+2025-08-04 11:25:57 [INFO]: Fetching all products with filters:
+2025-08-04 11:25:57 [INFO]: Found 5 products (12 total)
+2025-08-04 11:25:57 [INFO]: Products page data loaded successfully
+2025-08-04 11:26:00 [INFO]: Products page requested
+2025-08-04 11:26:00 [INFO]: Fetching all products with filters:
+2025-08-04 11:26:00 [INFO]: Found 5 products (12 total)
+2025-08-04 11:26:00 [INFO]: Products page data loaded successfully
+2025-08-04 11:26:03 [INFO]: Product details requested
+2025-08-04 11:26:03 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc8
+2025-08-04 11:26:03 [INFO]: Product details loaded successfully
+2025-08-04 11:26:18 [INFO]: Product details requested
+2025-08-04 11:26:18 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc8
+2025-08-04 11:26:18 [INFO]: Product details loaded successfully
+2025-08-04 11:26:49 [INFO]: Product details requested
+2025-08-04 11:26:49 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc8
+2025-08-04 11:26:49 [INFO]: Product details loaded successfully
+2025-08-04 11:27:46 [INFO]: Product details requested
+2025-08-04 11:27:46 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc8
+2025-08-04 11:27:46 [INFO]: Product details loaded successfully
+2025-08-04 11:27:47 [INFO]: Product details requested
+2025-08-04 11:27:47 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc8
+2025-08-04 11:27:47 [INFO]: Product details loaded successfully
+2025-08-04 11:31:39 [INFO]: Product details requested
+2025-08-04 11:31:39 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc8
+2025-08-04 11:31:39 [INFO]: Product details loaded successfully
+2025-08-04 11:32:19 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-04 11:32:19 [INFO]: PasswordService compare: true
+2025-08-04 11:32:19 [INFO]: User logged in: tesla@gmail.com
+2025-08-04 11:32:19 [INFO]: Home page requested
+2025-08-04 11:32:19 [INFO]: Fetching trending products
+2025-08-04 11:32:19 [INFO]: Found 6 trending products
+2025-08-04 11:32:19 [INFO]: Fetching popular products
+2025-08-04 11:32:19 [INFO]: Found 6 popular products
+2025-08-04 11:32:19 [INFO]: Home page data loaded successfully
+2025-08-04 11:32:22 [INFO]: Product details requested
+2025-08-04 11:32:22 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:32:22 [INFO]: Product details loaded successfully
+2025-08-04 11:35:04 [INFO]: Product details requested
+2025-08-04 11:35:04 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:35:04 [INFO]: Product details loaded successfully
+2025-08-04 11:35:04 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:35:15 [INFO]: Product details requested
+2025-08-04 11:35:15 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:35:15 [INFO]: Product details loaded successfully
+2025-08-04 11:35:15 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:35:18 [INFO]: Home page requested
+2025-08-04 11:35:18 [INFO]: Fetching trending products
+2025-08-04 11:35:18 [INFO]: Found 6 trending products
+2025-08-04 11:35:18 [INFO]: Fetching popular products
+2025-08-04 11:35:18 [INFO]: Found 6 popular products
+2025-08-04 11:35:18 [INFO]: Home page data loaded successfully
+2025-08-04 11:35:19 [INFO]: Product details requested
+2025-08-04 11:35:19 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:35:19 [INFO]: Product details loaded successfully
+2025-08-04 11:35:19 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:36:06 [INFO]: Product details requested
+2025-08-04 11:36:06 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:36:06 [INFO]: Product details loaded successfully
+2025-08-04 11:36:06 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:36:07 [INFO]: Product details requested
+2025-08-04 11:36:07 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:36:08 [INFO]: Product details loaded successfully
+2025-08-04 11:36:08 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:36:10 [INFO]: Home page requested
+2025-08-04 11:36:10 [INFO]: Fetching trending products
+2025-08-04 11:36:10 [INFO]: Found 6 trending products
+2025-08-04 11:36:10 [INFO]: Fetching popular products
+2025-08-04 11:36:10 [INFO]: Found 6 popular products
+2025-08-04 11:36:10 [INFO]: Home page data loaded successfully
+2025-08-04 11:36:17 [INFO]: Home page requested
+2025-08-04 11:36:17 [INFO]: Fetching trending products
+2025-08-04 11:36:18 [INFO]: Found 6 trending products
+2025-08-04 11:36:18 [INFO]: Fetching popular products
+2025-08-04 11:36:18 [INFO]: Found 6 popular products
+2025-08-04 11:36:18 [INFO]: Home page data loaded successfully
+2025-08-04 11:36:19 [INFO]: Product details requested
+2025-08-04 11:36:19 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:36:20 [INFO]: Product details loaded successfully
+2025-08-04 11:36:20 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:36:54 [INFO]: Product details requested
+2025-08-04 11:36:54 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:36:54 [INFO]: Product details loaded successfully
+2025-08-04 11:37:11 [INFO]: Products page requested
+2025-08-04 11:37:11 [INFO]: Fetching all products with filters:
+2025-08-04 11:37:11 [INFO]: Found 5 products (12 total)
+2025-08-04 11:37:11 [INFO]: Products page data loaded successfully
+2025-08-04 11:37:13 [INFO]: Product details requested
+2025-08-04 11:37:13 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc8
+2025-08-04 11:37:13 [INFO]: Product details loaded successfully
+2025-08-04 11:37:16 [INFO]: Products page requested
+2025-08-04 11:37:16 [INFO]: Fetching all products with filters:
+2025-08-04 11:37:16 [INFO]: Found 5 products (12 total)
+2025-08-04 11:37:16 [INFO]: Products page data loaded successfully
+2025-08-04 11:37:18 [INFO]: Product details requested
+2025-08-04 11:37:18 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dcc
+2025-08-04 11:37:18 [INFO]: Product details loaded successfully
+2025-08-04 11:37:20 [INFO]: Cart add request
+2025-08-04 11:37:20 [INFO]: Adding item to cart
+2025-08-04 11:37:21 [INFO]: Item added to cart successfully
+2025-08-04 11:37:21 [INFO]: Cart page requested
+2025-08-04 11:37:21 [INFO]: Cart page loaded
+2025-08-04 11:37:23 [INFO]: Cart page requested
+2025-08-04 11:37:23 [INFO]: Cart page loaded
+2025-08-04 11:37:26 [INFO]: Checkout page requested
+2025-08-04 11:37:26 [INFO]: Checkout page loaded
+2025-08-04 11:37:34 [INFO]: Processing checkout
+2025-08-04 11:37:34 [INFO]: Creating new order
+2025-08-04 11:37:34 [INFO]: Validating cart for checkout
+2025-08-04 11:37:34 [INFO]: Cart validation successful
+2025-08-04 11:37:34 [INFO]: Updating product stock
+2025-08-04 11:37:34 [INFO]: Stock updated
+2025-08-04 11:37:34 [INFO]: Order created successfully
+2025-08-04 11:37:34 [INFO]: Cart cleared
+2025-08-04 11:37:34 [INFO]: Checkout completed successfully
+2025-08-04 11:37:34 [INFO]: Orders page requested
+2025-08-04 11:37:34 [INFO]: Fetching user orders
+2025-08-04 11:37:34 [INFO]: Orders retrieved successfully
+2025-08-04 11:37:34 [INFO]: Orders page loaded
+2025-08-04 11:37:39 [INFO]: Products page requested
+2025-08-04 11:37:39 [INFO]: Fetching all products with filters:
+2025-08-04 11:37:39 [INFO]: Found 5 products (12 total)
+2025-08-04 11:37:39 [INFO]: Products page data loaded successfully
+2025-08-04 11:37:42 [INFO]: Product details requested
+2025-08-04 11:37:42 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dcc
+2025-08-04 11:37:42 [INFO]: Product details loaded successfully
+2025-08-04 11:37:44 [INFO]: Product details requested
+2025-08-04 11:37:44 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dcc
+2025-08-04 11:37:44 [INFO]: Product details loaded successfully
+2025-08-04 11:39:14 [INFO]: Product details requested
+2025-08-04 11:39:14 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dcc
+2025-08-04 11:39:14 [INFO]: Product details loaded successfully
+2025-08-04 11:39:44 [INFO]: Product details requested
+2025-08-04 11:39:44 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dcc
+2025-08-04 11:39:44 [INFO]: Product details loaded successfully
+2025-08-04 11:39:46 [INFO]: Products page requested
+2025-08-04 11:39:46 [INFO]: Fetching all products with filters:
+2025-08-04 11:39:46 [INFO]: Found 5 products (12 total)
+2025-08-04 11:39:46 [INFO]: Products page data loaded successfully
+2025-08-04 11:39:48 [INFO]: Product details requested
+2025-08-04 11:39:48 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc6
+2025-08-04 11:39:48 [INFO]: Product details loaded successfully
+2025-08-04 11:39:58 [INFO]: Product details requested
+2025-08-04 11:39:58 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc6
+2025-08-04 11:39:58 [INFO]: Product details loaded successfully
+2025-08-04 11:40:07 [INFO]: Home page requested
+2025-08-04 11:40:07 [INFO]: Fetching trending products
+2025-08-04 11:40:07 [INFO]: Found 6 trending products
+2025-08-04 11:40:07 [INFO]: Fetching popular products
+2025-08-04 11:40:07 [INFO]: Found 6 popular products
+2025-08-04 11:40:07 [INFO]: Home page data loaded successfully
+2025-08-04 11:40:17 [INFO]: Product details requested
+2025-08-04 11:40:17 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:40:17 [INFO]: Product details loaded successfully
+2025-08-04 11:40:28 [INFO]: Products page requested
+2025-08-04 11:40:28 [INFO]: Fetching all products with filters:
+2025-08-04 11:40:29 [INFO]: Found 5 products (12 total)
+2025-08-04 11:40:29 [INFO]: Products page data loaded successfully
+2025-08-04 11:40:49 [INFO]: Product details requested
+2025-08-04 11:40:49 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
+2025-08-04 11:40:49 [INFO]: Product details loaded successfully

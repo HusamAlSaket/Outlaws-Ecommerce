@@ -49,6 +49,7 @@ app.use("/", require("./routes/orderRoutes"));
 app.use("/", require("./routes/authRoutes"));
 app.use("/", require("./routes/contactRoutes"));
 app.use("/", require("./routes/aboutRoutes"));
+app.use("/", require("./routes/reviewRoutes"));
 // Global Error Handler - MUST be last middleware
 const { globalErrorHandler } = require("./utils/errorHandler");
 app.use(globalErrorHandler);

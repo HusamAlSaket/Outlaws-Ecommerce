@@ -1,28 +1,27 @@
 const Review = require('../models/Review');
-const { hasPurchasedProduct } = require('../utils/purchaseChecker');
+const { hasPurchasedProduct } = require('../services/orderService');
 
 exports.createReview = async (req, res) => {
-  const { productId } = req.params;
-  const { rating, comment } = req.body;
+  const { product, rating, comment } = req.body;
   const userId = req.session.user._id;
 
   // Check if user purchased the product
-  const purchased = await hasPurchasedProduct(userId, productId);
+  const purchased = await hasPurchasedProduct(userId, product);
   if (!purchased) {
-    return res.status(403).json({ message: 'You can only review products you have purchased.' });
+    return res.redirect(`/products/${product}`);
   }
 
   try {
     const review = new Review({
-      product: productId,
+      product: product,
       user: userId,
       rating,
       comment
     });
     await review.save();
-    res.redirect(`/products/${productId}`);
+    res.redirect(`/products/${product}`);
   } catch (err) {
-    res.status(400).json({ message: 'You have already reviewed this product or invalid data.' });
+    res.redirect(`/products/${product}`);
   }
 };
 

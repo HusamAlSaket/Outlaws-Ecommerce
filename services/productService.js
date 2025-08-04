@@ -56,11 +56,16 @@ class ProductService {
 
     // Optionally check if user can review
     let canReview = false;
+    let hasReviewed = false;
     if (userId) {
       canReview = await hasPurchasedProduct(userId, id);
+      // Check if user has already reviewed this product
+      hasReviewed = reviews.some(review => review.user && review.user._id.toString() === userId);
+      // User can only review if they purchased it AND haven't reviewed it yet
+      canReview = canReview && !hasReviewed;
     }
 
-    return { product, reviews, canReview };
+    return { product, reviews, canReview, hasReviewed };
   } catch (error) {
     if (error.isOperational) throw error;
     logger.error('Error fetching product by ID:', error);

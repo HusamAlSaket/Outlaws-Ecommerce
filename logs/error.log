@@ -571,3 +571,77 @@ errors is not defined
     at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
     at exports.getProfile (C:\Users\ADMIN\Documents\node-ecommerce\controllers\authController.js:196:9)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-04 10:57:07 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-08-04 10:57:07 [ERROR]: Login error from service: Invalid email or password
+2025-08-04 11:35:04 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:35:15 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:35:19 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:36:06 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:36:08 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-04 11:36:20 [ERROR]: Application Error Could not find matching close tag for "<%=".
+Error: Could not find matching close tag for "<%=".
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:752:19
+    at Array.forEach (<anonymous>)
+    at Template.generateSource (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:742:15)
+    at Template.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:587:12)
+    at Object.compile (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:398:16)
+    at handleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:235:18)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:16)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
