@@ -45,10 +45,16 @@ exports.postRegister = async (req, res) => {
       // Set a welcome flash message
       req.flash("success", `Welcome to Outlaws, ${user.username}! Your account has been created successfully.`);
       
-      // Redirect to intended page if present
-      const redirectTo = req.session.returnTo || '/';
-      delete req.session.returnTo;
-      res.redirect(redirectTo);
+      // Check if user is admin and redirect accordingly
+      if (user.isAdmin) {
+        // Admin users go to dashboard
+        res.redirect('/admin/dashboard');
+      } else {
+        // Regular users go to intended page or home
+        const redirectTo = req.session.returnTo || '/';
+        delete req.session.returnTo;
+        res.redirect(redirectTo);
+      }
     } catch (serviceError) {
       logger.error(`Registration error from service: ${serviceError.message}`, { 
         email: req.body.email,
@@ -137,10 +143,16 @@ exports.postLogin = async (req, res) => {
       // Set a welcome back flash message
       req.flash("success", `Welcome back, ${user.username}!`);
       
-      // Redirect to intended page if present
-      const redirectTo = req.session.returnTo || '/';
-      delete req.session.returnTo;
-      res.redirect(redirectTo);
+      // Check if user is admin and redirect accordingly
+      if (user.isAdmin) {
+        // Admin users go to dashboard
+        res.redirect('/admin/dashboard');
+      } else {
+        // Regular users go to intended page or home
+        const redirectTo = req.session.returnTo || '/';
+        delete req.session.returnTo;
+        res.redirect(redirectTo);
+      }
     } catch (serviceError) {
       logger.error(`Login error from service: ${serviceError.message}`, {
         email: req.body.email,

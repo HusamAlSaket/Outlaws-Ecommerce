@@ -4353,3 +4353,254 @@ Error: Could not find matching close tag for "<%=".
 2025-08-04 11:40:49 [INFO]: Product details requested
 2025-08-04 11:40:49 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dca
 2025-08-04 11:40:49 [INFO]: Product details loaded successfully
+2025-08-07 10:28:12 [INFO]: Home page requested
+2025-08-07 10:28:12 [INFO]: Fetching trending products
+2025-08-07 10:28:13 [INFO]: Found 6 trending products
+2025-08-07 10:28:13 [INFO]: Fetching popular products
+2025-08-07 10:28:13 [INFO]: Found 6 popular products
+2025-08-07 10:28:13 [INFO]: Home page data loaded successfully
+2025-08-07 10:28:28 [INFO]: Product details requested
+2025-08-07 10:28:28 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc7
+2025-08-07 10:28:29 [INFO]: Product details loaded successfully
+2025-08-07 10:29:27 [INFO]: Products page requested
+2025-08-07 10:29:27 [INFO]: Fetching all products with filters:
+2025-08-07 10:29:28 [INFO]: Found 5 products (12 total)
+2025-08-07 10:29:28 [INFO]: Products page data loaded successfully
+2025-08-07 10:29:33 [INFO]: Cart add request
+2025-08-07 10:29:33 [INFO]: Adding item to cart
+2025-08-07 10:29:33 [INFO]: Item added to cart successfully
+2025-08-07 10:29:33 [INFO]: Cart page requested
+2025-08-07 10:29:33 [INFO]: Cart page loaded
+2025-08-07 10:29:36 [INFO]: Cart page requested
+2025-08-07 10:29:36 [INFO]: Cart page loaded
+2025-08-07 10:29:39 [WARN]: Authentication required but no token provided
+2025-08-07 10:29:44 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 10:29:44 [INFO]: PasswordService compare: true
+2025-08-07 10:29:44 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 10:29:44 [INFO]: Checkout page requested
+2025-08-07 10:29:44 [INFO]: Checkout page loaded
+2025-08-07 10:29:53 [INFO]: Processing checkout
+2025-08-07 10:29:53 [INFO]: Creating new order
+2025-08-07 10:29:53 [INFO]: Validating cart for checkout
+2025-08-07 10:29:53 [INFO]: Cart validation successful
+2025-08-07 10:29:53 [INFO]: Updating product stock
+2025-08-07 10:29:53 [INFO]: Stock updated
+2025-08-07 10:29:53 [INFO]: Order created successfully
+2025-08-07 10:29:53 [INFO]: Cart cleared
+2025-08-07 10:29:53 [INFO]: Checkout completed successfully
+2025-08-07 10:29:53 [INFO]: Orders page requested
+2025-08-07 10:29:53 [INFO]: Fetching user orders
+2025-08-07 10:29:53 [INFO]: Orders retrieved successfully
+2025-08-07 10:29:53 [INFO]: Orders page loaded
+2025-08-07 10:29:59 [INFO]: Products page requested
+2025-08-07 10:29:59 [INFO]: Fetching all products with filters:
+2025-08-07 10:29:59 [INFO]: Found 5 products (12 total)
+2025-08-07 10:29:59 [INFO]: Products page data loaded successfully
+2025-08-07 10:30:04 [INFO]: Orders page requested
+2025-08-07 10:30:04 [INFO]: Fetching user orders
+2025-08-07 10:30:04 [INFO]: Orders retrieved successfully
+2025-08-07 10:30:04 [INFO]: Orders page loaded
+2025-08-07 10:30:07 [INFO]: Products page requested
+2025-08-07 10:30:07 [INFO]: Fetching all products with filters:
+2025-08-07 10:30:07 [INFO]: Found 5 products (12 total)
+2025-08-07 10:30:07 [INFO]: Products page data loaded successfully
+2025-08-07 10:30:10 [INFO]: Product details requested
+2025-08-07 10:30:10 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc7
+2025-08-07 10:30:10 [INFO]: Product details loaded successfully
+2025-08-07 10:30:29 [INFO]: Product details requested
+2025-08-07 10:30:29 [INFO]: Fetching product with ID: 686f8e6a2000c13fde444dc7
+2025-08-07 10:30:29 [INFO]: Product details loaded successfully
+2025-08-07 10:30:53 [INFO]: Products page requested
+2025-08-07 10:30:53 [INFO]: Fetching all products with filters:
+2025-08-07 10:30:53 [INFO]: Found 5 products (12 total)
+2025-08-07 10:30:53 [INFO]: Products page data loaded successfully
+2025-08-07 10:30:59 [INFO]: Products page requested
+2025-08-07 10:30:59 [INFO]: Fetching all products with filters:
+2025-08-07 10:30:59 [INFO]: Found 1 products (1 total)
+2025-08-07 10:30:59 [INFO]: Products page data loaded successfully
+2025-08-07 10:31:02 [INFO]: Products page requested
+2025-08-07 10:31:02 [INFO]: Fetching all products with filters:
+2025-08-07 10:31:03 [INFO]: Found 5 products (12 total)
+2025-08-07 10:31:03 [INFO]: Products page data loaded successfully
+2025-08-07 10:31:10 [INFO]: Home page requested
+2025-08-07 10:31:10 [INFO]: Fetching trending products
+2025-08-07 10:31:11 [INFO]: Found 6 trending products
+2025-08-07 10:31:11 [INFO]: Fetching popular products
+2025-08-07 10:31:11 [INFO]: Found 6 popular products
+2025-08-07 10:31:11 [INFO]: Home page data loaded successfully
+2025-08-07 10:32:03 [INFO]: Cart page requested
+2025-08-07 10:32:03 [INFO]: Cart page loaded
+2025-08-07 11:47:55 [INFO]: Home page requested
+2025-08-07 11:47:55 [INFO]: Fetching trending products
+2025-08-07 11:47:55 [INFO]: Found 6 trending products
+2025-08-07 11:47:55 [INFO]: Fetching popular products
+2025-08-07 11:47:55 [INFO]: Found 6 popular products
+2025-08-07 11:47:55 [INFO]: Home page data loaded successfully
+2025-08-07 11:48:03 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 11:48:04 [INFO]: PasswordService compare: true
+2025-08-07 11:48:04 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 11:48:04 [INFO]: Home page requested
+2025-08-07 11:48:04 [INFO]: Fetching trending products
+2025-08-07 11:48:04 [INFO]: Found 6 trending products
+2025-08-07 11:48:04 [INFO]: Fetching popular products
+2025-08-07 11:48:04 [INFO]: Found 6 popular products
+2025-08-07 11:48:04 [INFO]: Home page data loaded successfully
+2025-08-07 11:48:55 [ERROR]: Application Error Failed to lookup view "error" in views directory "C:\Users\ADMIN\Documents\node-ecommerce\views"
+Error: Failed to lookup view "error" in views directory "C:\Users\ADMIN\Documents\node-ecommerce\views"
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+    at exports.getDashboard (C:\Users\ADMIN\Documents\node-ecommerce\controllers\adminController.js:35:21)
+    at Layer.handleRequest (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\index.js:295:15
+    at processParams (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\index.js:582:12)
+2025-08-07 11:50:51 [WARN]: Authentication required but no token provided
+2025-08-07 11:50:56 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 11:50:57 [INFO]: PasswordService compare: true
+2025-08-07 11:50:57 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 11:53:39 [WARN]: Authentication required but no token provided
+2025-08-07 11:53:43 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 11:53:44 [INFO]: PasswordService compare: true
+2025-08-07 11:53:44 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 12:00:45 [INFO]: User logged out: tesla@gmail.com
+2025-08-07 12:00:45 [INFO]: Home page requested
+2025-08-07 12:00:45 [INFO]: Fetching trending products
+2025-08-07 12:00:45 [INFO]: Found 6 trending products
+2025-08-07 12:00:45 [INFO]: Fetching popular products
+2025-08-07 12:00:45 [INFO]: Found 6 popular products
+2025-08-07 12:00:45 [INFO]: Home page data loaded successfully
+2025-08-07 12:00:53 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 12:00:53 [INFO]: PasswordService compare: true
+2025-08-07 12:00:53 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 12:00:53 [INFO]: Home page requested
+2025-08-07 12:00:53 [INFO]: Fetching trending products
+2025-08-07 12:00:53 [INFO]: Found 6 trending products
+2025-08-07 12:00:53 [INFO]: Fetching popular products
+2025-08-07 12:00:53 [INFO]: Found 6 popular products
+2025-08-07 12:00:53 [INFO]: Home page data loaded successfully
+2025-08-07 12:02:53 [INFO]: Home page requested
+2025-08-07 12:02:53 [INFO]: Fetching trending products
+2025-08-07 12:02:55 [INFO]: Found 6 trending products
+2025-08-07 12:02:55 [INFO]: Fetching popular products
+2025-08-07 12:02:55 [INFO]: Found 6 popular products
+2025-08-07 12:02:55 [INFO]: Home page data loaded successfully
+2025-08-07 12:03:01 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 12:03:01 [INFO]: PasswordService compare: true
+2025-08-07 12:03:01 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 12:09:37 [WARN]: Authentication required but no token provided
+2025-08-07 12:09:40 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 12:09:40 [INFO]: PasswordService compare: true
+2025-08-07 12:09:40 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 12:09:41 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\admin\dashboard.ejs:74
+    72|             <div class="user-info">
+    73|                 <div class="user-avatar">
+ >> 74|                     <%= user.username.charAt(0).toUpperCase() %>
+    75|                 </div>
+    76|                 <span>Welcome, <%= user.username %>!</span>
+    77|             </div>
+
+Cannot read properties of undefined (reading 'charAt')
+TypeError: C:\Users\ADMIN\Documents\node-ecommerce\views\admin\dashboard.ejs:74
+    72|             <div class="user-info">
+    73|                 <div class="user-avatar">
+ >> 74|                     <%= user.username.charAt(0).toUpperCase() %>
+    75|                 </div>
+    76|                 <span>Welcome, <%= user.username %>!</span>
+    77|             </div>
+
+Cannot read properties of undefined (reading 'charAt')
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\dashboard.ejs":18:40)
+    at dashboard (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+    at exports.getDashboard (C:\Users\ADMIN\Documents\node-ecommerce\controllers\adminController.js:27:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-07 12:10:55 [WARN]: Authentication required but no token provided
+2025-08-07 12:10:59 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 12:10:59 [INFO]: PasswordService compare: true
+2025-08-07 12:10:59 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 12:15:14 [WARN]: Authentication required but no token provided
+2025-08-07 12:15:19 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 12:15:19 [INFO]: PasswordService compare: true
+2025-08-07 12:15:19 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 12:17:55 [WARN]: Authentication required but no token provided
+2025-08-07 12:17:59 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 12:17:59 [INFO]: PasswordService compare: true
+2025-08-07 12:17:59 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 12:27:24 [WARN]: Authentication required but no token provided
+2025-08-07 12:27:29 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 12:27:29 [INFO]: PasswordService compare: true
+2025-08-07 12:27:29 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 12:28:08 [INFO]: Home page requested
+2025-08-07 12:28:08 [INFO]: Fetching trending products
+2025-08-07 12:28:08 [INFO]: Found 6 trending products
+2025-08-07 12:28:08 [INFO]: Fetching popular products
+2025-08-07 12:28:08 [INFO]: Found 6 popular products
+2025-08-07 12:28:08 [INFO]: Home page data loaded successfully
+2025-08-07 12:28:11 [INFO]: Products page requested
+2025-08-07 12:28:11 [INFO]: Fetching all products with filters:
+2025-08-07 12:28:11 [INFO]: Found 5 products (12 total)
+2025-08-07 12:28:11 [INFO]: Products page data loaded successfully
+2025-08-07 12:28:13 [INFO]: Cart add request
+2025-08-07 12:28:13 [INFO]: Adding item to cart
+2025-08-07 12:28:13 [INFO]: Item added to cart successfully
+2025-08-07 12:28:13 [INFO]: Cart page requested
+2025-08-07 12:28:13 [INFO]: Cart page loaded
+2025-08-07 12:28:17 [INFO]: Cart page requested
+2025-08-07 12:28:17 [INFO]: Cart page loaded
+2025-08-07 12:28:18 [INFO]: Checkout page requested
+2025-08-07 12:28:18 [INFO]: Checkout page loaded
+2025-08-07 12:28:23 [INFO]: Processing checkout
+2025-08-07 12:28:23 [INFO]: Creating new order
+2025-08-07 12:28:23 [INFO]: Validating cart for checkout
+2025-08-07 12:28:23 [INFO]: Cart validation successful
+2025-08-07 12:28:24 [INFO]: Updating product stock
+2025-08-07 12:28:24 [INFO]: Stock updated
+2025-08-07 12:28:24 [INFO]: Order created successfully
+2025-08-07 12:28:24 [INFO]: Cart cleared
+2025-08-07 12:28:24 [INFO]: Checkout completed successfully
+2025-08-07 12:28:24 [INFO]: Orders page requested
+2025-08-07 12:28:24 [INFO]: Fetching user orders
+2025-08-07 12:28:24 [INFO]: Orders retrieved successfully
+2025-08-07 12:28:24 [INFO]: Orders page loaded
+2025-08-07 12:29:09 [INFO]: Home page requested
+2025-08-07 12:29:09 [INFO]: Fetching trending products
+2025-08-07 12:29:09 [INFO]: Found 6 trending products
+2025-08-07 12:29:09 [INFO]: Fetching popular products
+2025-08-07 12:29:09 [INFO]: Found 6 popular products
+2025-08-07 12:29:09 [INFO]: Home page data loaded successfully
+2025-08-07 12:29:10 [INFO]: Orders page requested
+2025-08-07 12:29:10 [INFO]: Fetching user orders
+2025-08-07 12:29:10 [INFO]: Orders retrieved successfully
+2025-08-07 12:29:10 [INFO]: Orders page loaded
+2025-08-07 12:39:34 [WARN]: Authentication required but no token provided
+2025-08-07 12:39:38 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 12:39:38 [INFO]: PasswordService compare: true
+2025-08-07 12:39:38 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 12:40:51 [WARN]: Authentication required but no token provided
+2025-08-07 12:41:00 [INFO]: Login attempt: ghostsora101@gmail.com, userFound: true
+2025-08-07 12:41:00 [INFO]: PasswordService compare: false
+2025-08-07 12:41:00 [INFO]: User model matchPassword: false
+2025-08-07 12:41:00 [INFO]: Direct bcryptjs compare: false
+2025-08-07 12:41:00 [ERROR]: Login failed: invalid password for email ghostsora101@gmail.com
+2025-08-07 12:41:00 [ERROR]: Login error from service: Invalid email or password
+2025-08-07 12:41:13 [INFO]: Login attempt: sss@gmail.com, userFound: true
+2025-08-07 12:41:13 [INFO]: PasswordService compare: false
+2025-08-07 12:41:13 [INFO]: User model matchPassword: false
+2025-08-07 12:41:13 [INFO]: Direct bcryptjs compare: false
+2025-08-07 12:41:13 [ERROR]: Login failed: invalid password for email sss@gmail.com
+2025-08-07 12:41:13 [ERROR]: Login error from service: Invalid email or password
+2025-08-07 12:41:21 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 12:41:21 [INFO]: PasswordService compare: true
+2025-08-07 12:41:21 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 12:44:13 [WARN]: Authentication required but no token provided
+2025-08-07 12:44:18 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 12:44:18 [INFO]: PasswordService compare: true
+2025-08-07 12:44:18 [INFO]: User logged in: tesla@gmail.com

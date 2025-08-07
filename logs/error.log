@@ -645,3 +645,47 @@ Error: Could not find matching close tag for "<%=".
     at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
     at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
     at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+2025-08-07 11:48:55 [ERROR]: Application Error Failed to lookup view "error" in views directory "C:\Users\ADMIN\Documents\node-ecommerce\views"
+Error: Failed to lookup view "error" in views directory "C:\Users\ADMIN\Documents\node-ecommerce\views"
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:562:17)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+    at exports.getDashboard (C:\Users\ADMIN\Documents\node-ecommerce\controllers\adminController.js:35:21)
+    at Layer.handleRequest (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\index.js:295:15
+    at processParams (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\router\index.js:582:12)
+2025-08-07 12:09:41 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\admin\dashboard.ejs:74
+    72|             <div class="user-info">
+    73|                 <div class="user-avatar">
+ >> 74|                     <%= user.username.charAt(0).toUpperCase() %>
+    75|                 </div>
+    76|                 <span>Welcome, <%= user.username %>!</span>
+    77|             </div>
+
+Cannot read properties of undefined (reading 'charAt')
+TypeError: C:\Users\ADMIN\Documents\node-ecommerce\views\admin\dashboard.ejs:74
+    72|             <div class="user-info">
+    73|                 <div class="user-avatar">
+ >> 74|                     <%= user.username.charAt(0).toUpperCase() %>
+    75|                 </div>
+    76|                 <span>Welcome, <%= user.username %>!</span>
+    77|             </div>
+
+Cannot read properties of undefined (reading 'charAt')
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\dashboard.ejs":18:40)
+    at dashboard (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+    at exports.getDashboard (C:\Users\ADMIN\Documents\node-ecommerce\controllers\adminController.js:27:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-07 12:41:00 [ERROR]: Login failed: invalid password for email ghostsora101@gmail.com
+2025-08-07 12:41:00 [ERROR]: Login error from service: Invalid email or password
+2025-08-07 12:41:13 [ERROR]: Login failed: invalid password for email sss@gmail.com
+2025-08-07 12:41:13 [ERROR]: Login error from service: Invalid email or password
