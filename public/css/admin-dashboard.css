@@ -730,3 +730,88 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--medium-gray);
 }
+
+/* Custom SweetAlert2 Styles */
+.admin-swal-popup {
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-xl) !important;
+    border: 1px solid var(--border-color) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.admin-swal-title {
+    color: var(--dark-color) !important;
+    font-weight: 600 !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.admin-swal-text {
+    color: var(--medium-gray) !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.admin-swal-icon {
+    border: 3px solid var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+.admin-swal-icon.swal2-question {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+.admin-swal-icon.swal2-info {
+    border-color: var(--accent-color) !important;
+    color: var(--accent-color) !important;
+}
+
+.admin-swal-confirm {
+    background: var(--primary-gradient) !important;
+    color: var(--white) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: var(--transition) !important;
+    margin: 0 0.5rem !important;
+    min-width: 100px !important;
+}
+
+.admin-swal-confirm:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.admin-swal-cancel {
+    background: transparent !important;
+    color: var(--medium-gray) !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: var(--transition) !important;
+    margin: 0 0.5rem !important;
+    min-width: 100px !important;
+}
+
+.admin-swal-cancel:hover {
+    background: var(--light-gray) !important;
+    border-color: var(--medium-gray) !important;
+    color: var(--dark-color) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* SweetAlert2 Loading Spinner Customization */
+.swal2-loader {
+    border-color: var(--primary-color) transparent var(--primary-color) transparent !important;
+}
+
+/* SweetAlert2 Backdrop */
+.swal2-backdrop-show {
+    backdrop-filter: blur(2px) !important;
+}

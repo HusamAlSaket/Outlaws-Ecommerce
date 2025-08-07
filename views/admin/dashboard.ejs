@@ -7,6 +7,7 @@
     <!-- External Libraries -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <!-- Custom Admin Dashboard Styles -->
     <link href="/css/admin-dashboard.css" rel="stylesheet">
@@ -52,7 +53,7 @@
                 <i class="fas fa-cog"></i>
                 <span>Settings</span>
             </a></li>
-            <li><a href="/logout">
+            <li><a href="#" onclick="dashboard.confirmLogout(event)">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Logout</span>
             </a></li>

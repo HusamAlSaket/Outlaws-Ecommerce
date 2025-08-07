@@ -499,6 +499,61 @@ class AdminDashboard {
             setTimeout(() => notification.remove(), 300);
         }, 3000);
     }
+
+    // Logout confirmation with SweetAlert
+    confirmLogout(event) {
+        event.preventDefault();
+        
+        Swal.fire({
+            title: 'Logout Confirmation',
+            text: 'Are you sure you want to logout?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, Logout',
+            cancelButtonText: 'Cancel',
+            reverseButtons: true,
+            customClass: {
+                popup: 'admin-swal-popup',
+                title: 'admin-swal-title',
+                htmlContainer: 'admin-swal-text',
+                confirmButton: 'admin-swal-confirm',
+                cancelButton: 'admin-swal-cancel',
+                icon: 'admin-swal-icon'
+            },
+            buttonsStyling: false,
+            backdrop: `
+                rgba(30, 58, 138, 0.4)
+                left top
+                no-repeat
+            `
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Show loading state
+                Swal.fire({
+                    title: 'Logging out...',
+                    text: 'Please wait while we log you out',
+                    icon: 'info',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    showConfirmButton: false,
+                    customClass: {
+                        popup: 'admin-swal-popup',
+                        title: 'admin-swal-title',
+                        htmlContainer: 'admin-swal-text',
+                        icon: 'admin-swal-icon'
+                    },
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
+                
+                // Redirect to logout after short delay
+                setTimeout(() => {
+                    window.location.href = '/logout';
+                }, 1000);
+            }
+        });
+    }
 }
 
 // Initialize dashboard when DOM is loaded
