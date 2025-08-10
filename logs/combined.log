@@ -4604,3 +4604,51 @@ Cannot read properties of undefined (reading 'charAt')
 2025-08-07 12:44:18 [INFO]: Login attempt: tesla@gmail.com, userFound: true
 2025-08-07 12:44:18 [INFO]: PasswordService compare: true
 2025-08-07 12:44:18 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 13:11:45 [WARN]: Authentication required but no token provided
+2025-08-07 13:11:54 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 13:11:54 [INFO]: PasswordService compare: true
+2025-08-07 13:11:54 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 13:11:54 [WARN]: Authentication required but no token provided
+2025-08-07 13:12:02 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 13:12:02 [INFO]: PasswordService compare: true
+2025-08-07 13:12:02 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 13:12:02 [WARN]: Authentication required but no token provided
+2025-08-07 13:12:13 [WARN]: Authentication required but no token provided
+2025-08-07 13:12:17 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 13:12:17 [INFO]: PasswordService compare: true
+2025-08-07 13:12:17 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 13:14:28 [WARN]: Authentication required but no token provided
+2025-08-07 13:14:32 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 13:14:32 [INFO]: PasswordService compare: true
+2025-08-07 13:14:32 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 13:18:40 [WARN]: Authentication required but no token provided
+2025-08-07 13:19:55 [WARN]: Authentication required but no token provided
+2025-08-07 13:21:16 [WARN]: Authentication required but no token provided
+2025-08-07 13:21:21 [WARN]: Authentication required but no token provided
+2025-08-07 13:21:28 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 13:21:28 [INFO]: PasswordService compare: true
+2025-08-07 13:21:28 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 13:24:23 [WARN]: Authentication required but no token provided
+2025-08-07 13:24:33 [WARN]: Authentication required but no token provided
+2025-08-07 13:24:40 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 13:24:40 [INFO]: PasswordService compare: true
+2025-08-07 13:24:40 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 13:26:53 [WARN]: Authentication required but no token provided
+2025-08-07 13:27:11 [WARN]: Authentication required but no token provided
+2025-08-07 13:27:19 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 13:27:19 [INFO]: PasswordService compare: true
+2025-08-07 13:27:19 [INFO]: User logged in: tesla@gmail.com
+2025-08-07 13:54:18 [WARN]: Authentication required but no token provided
+2025-08-07 13:54:22 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 13:54:22 [INFO]: PasswordService compare: false
+2025-08-07 13:54:22 [INFO]: User model matchPassword: false
+2025-08-07 13:54:22 [INFO]: Direct bcryptjs compare: false
+2025-08-07 13:54:22 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-08-07 13:54:22 [ERROR]: Login error from service: Invalid email or password
+2025-08-07 13:54:25 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-07 13:54:25 [INFO]: PasswordService compare: true
+2025-08-07 13:54:25 [INFO]: User logged in: tesla@gmail.com
+2025-08-10 10:00:35 [WARN]: Authentication required but no token provided
+2025-08-10 10:00:39 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-10 10:00:40 [INFO]: PasswordService compare: true
+2025-08-10 10:00:40 [INFO]: User logged in: tesla@gmail.com

@@ -1,105 +1,63 @@
 // controllers/adminController.js
-const User = require("../models/User");
-const Product = require("../models/Product");
-const Order = require("../models/Order");
+const adminService = require("../services/adminService");
+const { AppError } = require("../utils/errorHandler");
+const { HTTP_STATUS } = require("../config/constants");
 
-exports.getDashboard = async (req, res) => {
-  try {
-    // Get dashboard statistics
-    const totalUsers = await User.countDocuments();
-    const totalProducts = await Product.countDocuments();
-    const totalOrders = await Order.countDocuments();
-    
-    // Get recent orders
-    const recentOrders = await Order.find()
-      .populate('user', 'username email')
-      .populate('items.productId', 'name price')
-      .sort({ createdAt: -1 })
-      .limit(5);
+class AdminController {
+  /**
+   * Render admin dashboard with stats and recent orders
+   */
+  async getDashboard(req, res) {
+    try {
+      const { stats, recentOrders } = await adminService.getDashboardData();
 
-    // Calculate total revenue
-    const revenueResult = await Order.aggregate([
-      { $match: { isPaid: true } },
-      { $group: { _id: null, total: { $sum: '$totalAmount' } } }
-    ]);
-    const totalRevenue = revenueResult.length > 0 ? revenueResult[0].total : 0;
-
-    res.render("admin/dashboard", {
-      title: "Admin Dashboard",
-      user: req.user,
-      stats: {
-        totalUsers,
-        totalProducts, 
-        totalOrders,
-        totalRevenue
-      },
-      recentOrders
-    });
-  } catch (error) {
-    console.error("Dashboard error:", error);
-    res.status(500).send("Dashboard Error: " + error.message);
-  }
-};
-
-// API endpoint for chart data
-exports.getOrdersChartData = async (req, res) => {
-  try {
-    // Get orders data for the last 12 months
-    const months = [];
-    const orderCounts = [];
-    
-    for (let i = 11; i >= 0; i--) {
-      const date = new Date();
-      date.setMonth(date.getMonth() - i);
-      const monthStart = new Date(date.getFullYear(), date.getMonth(), 1);
-      const monthEnd = new Date(date.getFullYear(), date.getMonth() + 1, 0);
-      
-      const count = await Order.countDocuments({
-        createdAt: {
-          $gte: monthStart,
-          $lte: monthEnd
-        }
+      res.render("admin/dashboard", {
+        title: "Admin Dashboard",
+        user: req.user,
+        stats,
+        recentOrders
       });
-      
-      months.push(date.toLocaleString('default', { month: 'short' }));
-      orderCounts.push(count);
+    } catch (error) {
+      console.error("Dashboard error:", error);
+      res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).render("error", {
+        title: "Dashboard Error",
+        message: "Unable to load dashboard",
+        error: process.env.NODE_ENV === 'development' ? error : {}
+      });
     }
-    
-    res.json({
-      labels: months,
-      values: orderCounts
-    });
-  } catch (error) {
-    console.error('Error fetching orders chart data:', error);
-    res.status(500).json({ error: 'Failed to fetch chart data' });
   }
-};
 
-exports.getRevenueChartData = async (req, res) => {
-  try {
-    // Get revenue data by payment status and categories
-    const paidOrders = await Order.find({ isPaid: true });
-    const unpaidOrders = await Order.find({ isPaid: false });
-    
-    const paidRevenue = paidOrders.reduce((sum, order) => sum + order.totalAmount, 0);
-    const unpaidRevenue = unpaidOrders.reduce((sum, order) => sum + order.totalAmount, 0);
-    
-    // You can categorize by product categories later
-    const labels = ['Paid Orders', 'Unpaid Orders'];
-    const values = [paidRevenue, unpaidRevenue];
-    
-    // Add other categories if you have them
-    if (paidRevenue === 0 && unpaidRevenue === 0) {
-      labels.push('No Revenue');
-      values.push(1); // Just to show something in the chart
+  /**
+   * API endpoint for orders chart data
+   */
+  async getOrdersChartData(req, res) {
+    try {
+      const chartData = await adminService.getOrdersChartData();
+      res.json(chartData);
+    } catch (error) {
+      console.error('Error fetching orders chart data:', error);
+      res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({ 
+        error: 'Failed to fetch chart data',
+        message: error.message 
+      });
     }
-    
-    res.json({
-      labels,
-      values
-    });
-  } catch (error) {
-    console.error('Error fetching revenue chart data:', error);
-    res.status(500).json({ error: 'Failed to fetch chart data' });
   }
-};
+
+  /**
+   * API endpoint for revenue chart data
+   */
+  async getRevenueChartData(req, res) {
+    try {
+      const chartData = await adminService.getRevenueChartData();
+      res.json(chartData);
+    } catch (error) {
+      console.error('Error fetching revenue chart data:', error);
+      res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({ 
+        error: 'Failed to fetch chart data',
+        message: error.message 
+      });
+    }
+  }
+}
+
+module.exports = new AdminController();
