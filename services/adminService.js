@@ -159,36 +159,20 @@ class AdminService {
     }
   }
 
-  // Get User Statistics for dashboard cards
-  async getUserStats() {
-    try {
-      const totalUsers = await User.countDocuments();
-      const activeUsers = await User.countDocuments({ isActive: true });
-      const newThisMonth = await User.countDocuments({
-        createdAt: {
-          $gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
-        },
-      });
-
-      return {
-        totalUsers,
-        activeUsers,
-        newThisMonth,
-        inactiveUsers: totalUsers - activeUsers,
-      };
-    } catch (error) {
-      console.error("Error fetching user stats:", error);
-      throw error;
-    }
-  }
-
   /**
    * Get user statistics for dashboard cards
    */
   async getUserStats() {
     try {
       const totalUsers = await User.countDocuments();
-      const activeUsers = await User.countDocuments({ isActive: true });
+      
+      // Count inactive users (explicitly set to false)
+      const inactiveUsers = await User.countDocuments({ isActive: false });
+      
+      // Calculate active users (total - inactive)
+      // This treats legacy users (without isActive field) as active by default
+      const activeUsers = totalUsers - inactiveUsers;
+      
       const newThisMonth = await User.countDocuments({
         createdAt: {
           $gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
@@ -198,8 +182,8 @@ class AdminService {
       return {
         totalUsers,
         activeUsers,
+        inactiveUsers,
         newThisMonth,
-        inactiveUsers: totalUsers - activeUsers,
       };
     } catch (error) {
       console.error("Error fetching user stats:", error);

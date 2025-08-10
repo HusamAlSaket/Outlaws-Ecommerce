@@ -20,38 +20,8 @@
     <!-- Sidebar Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
     
-    <!-- Sidebar -->
-    <div class="sidebar active" id="sidebar">
-        <div class="sidebar-header">
-            <div class="logo">
-                <i class="fas fa-store"></i>
-                <span>Admin Panel</span>
-            </div>
-        </div>
-        
-        <nav class="sidebar-menu">
-            <a href="/admin/dashboard" class="menu-item">
-                <i class="fas fa-tachometer-alt"></i>
-                <span>Dashboard</span>
-            </a>
-            <a href="/admin/users" class="menu-item active">
-                <i class="fas fa-users"></i>
-                <span>Users</span>
-            </a>
-            <a href="/products" class="menu-item">
-                <i class="fas fa-box"></i>
-                <span>Products</span>
-            </a>
-            <a href="/admin/orders" class="menu-item">
-                <i class="fas fa-shopping-cart"></i>
-                <span>Orders</span>
-            </a>
-            <a href="#" class="menu-item" onclick="dashboard.confirmLogout(event)">
-                <i class="fas fa-sign-out-alt"></i>
-                <span>Logout</span>
-            </a>
-        </nav>
-    </div>
+    <!-- Include Admin Sidebar -->
+    <%- include('../partials/admin-sidebar', { currentPage: 'users' }) %>
 
     <!-- Main Content -->
     <div class="main-content shifted" id="mainContent">

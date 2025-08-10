@@ -1,0 +1,43 @@
+<!-- Admin Sidebar -->
+<div class="sidebar active" id="sidebar">
+    <div class="sidebar-header">
+        <div class="logo-icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <h3>Admin Panel</h3>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="/admin/dashboard" class="<%= currentPage === 'dashboard' ? 'active' : '' %>">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </a></li>
+        <li><a href="/admin/users" class="<%= currentPage === 'users' ? 'active' : '' %>">
+            <i class="fas fa-users"></i>
+            <span>Users</span>
+        </a></li>
+        <li><a href="/admin/products" class="<%= currentPage === 'products' ? 'active' : '' %>">
+            <i class="fas fa-box"></i>
+            <span>Products</span>
+        </a></li>
+        <li><a href="/admin/orders" class="<%= currentPage === 'orders' ? 'active' : '' %>">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Orders</span>
+        </a></li>
+        <li><a href="/admin/reviews" class="<%= currentPage === 'reviews' ? 'active' : '' %>">
+            <i class="fas fa-star"></i>
+            <span>Reviews</span>
+        </a></li>
+        <li><a href="/admin/analytics" class="<%= currentPage === 'analytics' ? 'active' : '' %>">
+            <i class="fas fa-chart-bar"></i>
+            <span>Analytics</span>
+        </a></li>
+        <li><a href="/admin/settings" class="<%= currentPage === 'settings' ? 'active' : '' %>">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </a></li>
+        <li><a href="#" onclick="dashboard.confirmLogout(event)">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a></li>
+    </ul>
+</div>
