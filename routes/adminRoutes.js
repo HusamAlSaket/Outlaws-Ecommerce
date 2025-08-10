@@ -14,5 +14,11 @@ router.get('/dashboard', adminController.getDashboard);
 router.get('/api/orders-chart', adminController.getOrdersChartData);
 router.get('/api/revenue-chart', adminController.getRevenueChartData);
 
+// Users management
+router.get('/users', adminController.getUsers);
+
+// API endpoints for user management
+router.post('/api/users/:userId/toggle-status', adminController.toggleUserStatus);
+router.get('/api/users/:userId/details', adminController.getUserDetails);
 
 module.exports = router;
