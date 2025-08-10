@@ -172,7 +172,18 @@
                                             <td>
                                                 <div class="user-avatar-sm">
                                                     <% if (user.image) { %>
-                                                        <img src="/<%= user.image %>" alt="<%= user.username %>">
+                                                        <% 
+                                                        // Handle different image path formats
+                                                        let imagePath = user.image;
+                                                        if (imagePath.startsWith('../public/')) {
+                                                            imagePath = imagePath.replace('../public/', '/');
+                                                        } else if (!imagePath.startsWith('/')) {
+                                                            imagePath = '/' + imagePath;
+                                                        }
+                                                        %>
+                                                        <img src="<%= imagePath %>" alt="<%= user.username %>" 
+                                                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                        <i class="fas fa-user" style="display: none;"></i>
                                                     <% } else { %>
                                                         <i class="fas fa-user"></i>
                                                     <% } %>

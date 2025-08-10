@@ -145,6 +145,16 @@ window.viewUserDetails = async function(userId) {
         if (data.success) {
             const user = data.user;
             
+            // Handle image path formatting
+            let imagePath = user.image;
+            if (imagePath) {
+                if (imagePath.startsWith('../public/')) {
+                    imagePath = imagePath.replace('../public/', '/');
+                } else if (!imagePath.startsWith('/')) {
+                    imagePath = '/' + imagePath;
+                }
+            }
+            
             Swal.fire({
                 title: `User Details: ${user.username}`,
                 html: `
@@ -153,7 +163,9 @@ window.viewUserDetails = async function(userId) {
                             <div class="col-md-4 text-center">
                                 <div class="user-avatar-lg mb-3">
                                     ${user.image ? 
-                                        `<img src="/${user.image}" alt="${user.username}" class="img-fluid rounded-circle">` :
+                                        `<img src="${imagePath}" alt="${user.username}" class="img-fluid rounded-circle" 
+                                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                         <i class="fas fa-user fa-4x" style="display: none;"></i>` :
                                         `<i class="fas fa-user fa-4x"></i>`
                                     }
                                 </div>
