@@ -200,7 +200,7 @@ class ChartsManager {
      */
     async fetchOrdersData() {
         try {
-            const response = await fetch('/admin/api/orders-chart');
+            const response = await fetch('/admin/dashboard/api/orders-chart');
             if (!response.ok) throw new Error('Failed to fetch orders data');
             return await response.json();
         } catch (error) {
@@ -214,7 +214,7 @@ class ChartsManager {
      */
     async fetchRevenueData() {
         try {
-            const response = await fetch('/admin/api/revenue-chart');
+            const response = await fetch('/admin/dashboard/api/revenue-chart');
             if (!response.ok) throw new Error('Failed to fetch revenue data');
             return await response.json();
         } catch (error) {

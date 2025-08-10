@@ -85,7 +85,7 @@ window.toggleUserStatus = async function(userId, username, isActive) {
                 }
             });
 
-            const response = await fetch(`/admin/api/users/${userId}/toggle-status`, {
+            const response = await fetch(`/admin/users/api/${userId}/toggle-status`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ window.viewUserDetails = async function(userId) {
             }
         });
 
-        const response = await fetch(`/admin/api/users/${userId}/details`);
+        const response = await fetch(`/admin/users/api/${userId}/details`);
         const data = await response.json();
 
         if (data.success) {
