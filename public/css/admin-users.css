@@ -557,3 +557,50 @@
 .admin-swal-popup .user-details-modal .col-md-8 {
     padding: 0 0.75rem;
 }
+
+/* Table Action Buttons - Medium Width, Perfect Height */
+.table-action-btn {
+    width: 36px !important;       /* Equal width and height */
+    height: 36px !important;
+    padding: 0 !important;
+    font-size: 18px !important;   /* Adjust icon size if needed */
+    border-radius: 5px !important;
+    border-width: 1px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #00bcd4 !important; /* Background like your image */
+    color: white !important;
+}
+
+
+.table-action-btn i {
+    color: white !important; /* Ensure icon is white */
+}
+
+/* Toggle Switch - Navy Theme (copied from products page) */
+.toggle-switch {
+    background-color: #e5e7eb !important; /* Light gray when OFF */
+    border-color: #d1d5db !important;
+    width: 3rem !important;
+    height: 1.5rem !important;
+    border-radius: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.toggle-switch:checked {
+    background-color: #1e40af !important; /* Navy when ON */
+    border-color: #1e40af !important;
+    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25) !important;
+}
+
+.toggle-switch:focus {
+    border-color: #1e40af !important;
+    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25) !important;
+    background-color: #e5e7eb !important; /* Keep light gray on focus when OFF */
+}
+
+.toggle-switch:checked:focus {
+    background-color: #1d4ed8 !important; /* Darker navy on focus when ON */
+    border-color: #1d4ed8 !important;
+}

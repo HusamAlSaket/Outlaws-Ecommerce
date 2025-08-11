@@ -212,15 +212,20 @@
                                             </td>
                                             <td>
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-sm btn-outline-info" 
-                                                            onclick="viewUserDetails('<%= user._id %>')">
+                                                    <button type="button" class="btn btn-info table-action-btn" 
+                                                            onclick="viewUserDetails('<%= user._id %>')"
+                                                            title="View Details">
                                                         <i class="fas fa-eye"></i>
                                                     </button>
                                                     <% if (!user.isAdmin) { %>
-                                                        <button type="button" class="btn btn-sm btn-outline-<%= user.isActive ? 'warning' : 'success' %>" 
-                                                                onclick="toggleUserStatus('<%= user._id %>', '<%= user.username %>', <%= user.isActive ? 'true' : 'false' %>)">
-                                                            <i class="fas fa-<%= user.isActive ? 'user-slash' : 'user-check' %>"></i>
-                                                        </button>
+                                                        <div class="form-check form-switch d-inline-block ms-2 me-2">
+                                                            <input class="form-check-input toggle-switch" type="checkbox" 
+                                                                   id="toggle<%= user._id %>" 
+                                                                   <%= user.isActive ? 'checked' : '' %>
+                                                                   onchange="toggleUserStatus('<%= user._id %>', '<%= user.username %>', this.checked)"
+                                                                   title="<%= user.isActive ? 'Active' : 'Inactive' %>">
+                                                            <label class="form-check-label visually-hidden" for="toggle<%= user._id %>">Toggle Status</label>
+                                                        </div>
                                                     <% } %>
                                                 </div>
                                             </td>
