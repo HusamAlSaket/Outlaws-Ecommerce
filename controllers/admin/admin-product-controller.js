@@ -78,6 +78,58 @@ class AdminProductController {
       });
     }
   }
+
+  /**
+   * API endpoint to create a new product
+   */
+  async createProduct(req, res) {
+    try {
+      const productData = req.body;
+      const result = await adminService.createProduct(productData);
+      res.json(result);
+    } catch (error) {
+      console.error("Error creating product:", error);
+      res.status(HTTP_STATUS.BAD_REQUEST).json({
+        success: false,
+        error: error.message,
+      });
+    }
+  }
+
+  /**
+   * API endpoint to update a product
+   */
+  async updateProduct(req, res) {
+    try {
+      const { productId } = req.params;
+      const updateData = req.body;
+      const result = await adminService.updateProduct(productId, updateData);
+      res.json(result);
+    } catch (error) {
+      console.error("Error updating product:", error);
+      res.status(HTTP_STATUS.BAD_REQUEST).json({
+        success: false,
+        error: error.message,
+      });
+    }
+  }
+
+  /**
+   * API endpoint to delete a product
+   */
+  async deleteProduct(req, res) {
+    try {
+      const { productId } = req.params;
+      const result = await adminService.deleteProduct(productId);
+      res.json(result);
+    } catch (error) {
+      console.error("Error deleting product:", error);
+      res.status(HTTP_STATUS.BAD_REQUEST).json({
+        success: false,
+        error: error.message,
+      });
+    }
+  }
 }
 
 module.exports = new AdminProductController();

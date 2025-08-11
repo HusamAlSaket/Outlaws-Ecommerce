@@ -25,6 +25,8 @@ const productSchema = new mongoose.Schema({
     type:Boolean,
     default:true
   }
+}, {
+  timestamps: true // This will add createdAt and updatedAt fields
 });
 
 // Export model

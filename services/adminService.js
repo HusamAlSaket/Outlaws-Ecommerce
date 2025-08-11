@@ -435,5 +435,77 @@ class AdminService {
       throw error;
     }
   }
+
+  /**
+   * Create a new product
+   * @param {Object} productData - Product data
+   * @returns {Object} Created product result
+   */
+  async createProduct(productData) {
+    try {
+      const product = new Product(productData);
+      await product.save();
+      return {
+        success: true,
+        message: "Product created successfully",
+        product: product,
+      };
+    } catch (error) {
+      console.error("Error creating product:", error);
+      throw new Error(`Failed to create product: ${error.message}`);
+    }
+  }
+
+  /**
+   * Update an existing product
+   * @param {string} productId - Product ID
+   * @param {Object} updateData - Update data
+   * @returns {Object} Update result
+   */
+  async updateProduct(productId, updateData) {
+    try {
+      const product = await Product.findByIdAndUpdate(
+        productId,
+        updateData,
+        { new: true, runValidators: true }
+      );
+
+      if (!product) {
+        throw new Error("Product not found");
+      }
+
+      return {
+        success: true,
+        message: "Product updated successfully",
+        product: product,
+      };
+    } catch (error) {
+      console.error("Error updating product:", error);
+      throw new Error(`Failed to update product: ${error.message}`);
+    }
+  }
+
+  /**
+   * Delete a product
+   * @param {string} productId - Product ID
+   * @returns {Object} Delete result
+   */
+  async deleteProduct(productId) {
+    try {
+      const product = await Product.findByIdAndDelete(productId);
+
+      if (!product) {
+        throw new Error("Product not found");
+      }
+
+      return {
+        success: true,
+        message: "Product deleted successfully",
+      };
+    } catch (error) {
+      console.error("Error deleting product:", error);
+      throw new Error(`Failed to delete product: ${error.message}`);
+    }
+  }
 }
 module.exports = new AdminService();

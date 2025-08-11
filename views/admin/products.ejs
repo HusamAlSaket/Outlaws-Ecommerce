@@ -107,13 +107,13 @@
             <div class="content-card mb-4">
                 <div class="card-header">
                     <h5 class="card-title">
-                        <i class="fas fa-filter"></i>
+                        <i class="fas fa-filter text-primary"></i>
                         Filters & Search
                     </h5>
                 </div>
                 <div class="card-body">
-                    <form method="GET" action="/admin/products" class="row g-3">
-                        <div class="col-md-3">
+                    <form method="GET" action="/admin/products" class="row g-3 align-items-end">
+                        <div class="col-md-4">
                             <label for="search" class="form-label">Search Products</label>
                             <input type="text" class="form-control" id="search" name="search" 
                                    placeholder="Search by name, description..." value="<%= currentSearch %>">
@@ -136,14 +136,12 @@
                             </select>
                         </div>
                         <div class="col-md-2">
-                            <label class="form-label">&nbsp;</label>
-                            <button type="submit" class="btn btn-primary d-block w-100">
+                            <button type="submit" class="btn btn-primary w-100">
                                 <i class="fas fa-search"></i> Search
                             </button>
                         </div>
                         <div class="col-md-2">
-                            <label class="form-label">&nbsp;</label>
-                            <a href="/admin/products" class="btn btn-outline-secondary d-block w-100">
+                            <a href="/admin/products" class="btn btn-outline-secondary w-100">
                                 <i class="fas fa-undo"></i> Reset
                             </a>
                         </div>
@@ -158,7 +156,12 @@
                         <i class="fas fa-table"></i>
                         Products List
                     </h5>
-                    <span class="badge bg-primary"><%= pagination.totalProducts %> Total Products</span>
+                    <div class="d-flex align-items-center">
+                        <button type="button" class="btn btn-primary me-2" onclick="addNewProduct()">
+                            <i class="fas fa-plus"></i> Add New Product
+                        </button>
+                        <span class="badge bg-primary"><%= pagination.totalProducts %> Total Products</span>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -233,17 +236,36 @@
                                                 <% } %>
                                             </td>
                                             <td>
-                                                <%= new Date(product.createdAt).toLocaleDateString() %>
+                                                <% if (product.createdAt) { %>
+                                                    <%= new Date(product.createdAt).toLocaleDateString() %>
+                                                <% } else { %>
+                                                    <span class="text-muted">N/A</span>
+                                                <% } %>
                                             </td>
                                             <td>
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-sm btn-outline-info" 
-                                                            onclick="viewProductDetails('<%= product._id %>')">
+                                                    <button type="button" class="btn btn-sm btn-info" 
+                                                            onclick="viewProductDetails('<%= product._id %>')" 
+                                                            title="View Details">
                                                         <i class="fas fa-eye"></i>
                                                     </button>
-                                                    <button type="button" class="btn btn-sm btn-outline-<%= product.isActive ? 'warning' : 'success' %>" 
-                                                            onclick="toggleProductStatus('<%= product._id %>', '<%= product.title %>', <%= product.isActive ? 'true' : 'false' %>)">
-                                                        <i class="fas fa-<%= product.isActive ? 'eye-slash' : 'eye' %>"></i>
+                                                    <button type="button" class="btn btn-sm btn-primary" 
+                                                            onclick="editProduct('<%= product._id %>')" 
+                                                            title="Edit Product">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <div class="form-check form-switch d-inline-block ms-2 me-2">
+                                                        <input class="form-check-input toggle-switch" type="checkbox" 
+                                                               id="toggle<%= product._id %>" 
+                                                               <%= product.isActive ? 'checked' : '' %>
+                                                               onchange="toggleProductStatus('<%= product._id %>', '<%= product.title %>', this.checked)"
+                                                               title="<%= product.isActive ? 'Active' : 'Inactive' %>">
+                                                        <label class="form-check-label visually-hidden" for="toggle<%= product._id %>">Toggle Status</label>
+                                                    </div>
+                                                    <button type="button" class="btn btn-sm btn-danger" 
+                                                            onclick="deleteProduct('<%= product._id %>', '<%= product.title %>')" 
+                                                            title="Delete Product">
+                                                        <i class="fas fa-trash"></i>
                                                     </button>
                                                 </div>
                                             </td>

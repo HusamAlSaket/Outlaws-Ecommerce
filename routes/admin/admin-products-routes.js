@@ -9,5 +9,8 @@ router.get('/', adminProductController.getProducts);
 // API endpoints for product management
 router.post('/api/:productId/toggle-status', adminProductController.toggleProductStatus);
 router.get('/api/:productId/details', adminProductController.getProductDetails);
+router.post('/api/create', adminProductController.createProduct);
+router.put('/api/:productId/update', adminProductController.updateProduct);
+router.delete('/api/:productId/delete', adminProductController.deleteProduct);
 
 module.exports = router;

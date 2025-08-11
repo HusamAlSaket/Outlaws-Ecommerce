@@ -301,19 +301,54 @@
     border-radius: 0.5rem;
     padding: 0.75rem;
     transition: var(--transition);
-    background-color: var(--white);
+    background-color: var(--white) !important;
+    color: #1f2937 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
 }
 
 .form-control:focus, .form-select:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
     outline: none;
+    color: #1f2937 !important;
+}
+
+.form-select option {
+    color: #1f2937 !important;
+    background-color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+/* Force text visibility in all states */
+select.form-select {
+    color: #1f2937 !important;
+    font-weight: 600 !important;
+}
+
+select.form-select:not([multiple]):not([size]) {
+    color: #1f2937 !important;
 }
 
 .form-label {
     font-weight: 500;
     color: var(--dark-color);
     margin-bottom: 0.5rem;
+}
+
+/* Ensure all text is visible with proper contrast */
+.form-control::placeholder {
+    color: var(--medium-gray) !important;
+    opacity: 1;
+}
+
+.form-select:invalid {
+    color: var(--medium-gray);
+}
+
+.text-muted {
+    color: var(--medium-gray) !important;
 }
 
 /* Search and Filter Section */
@@ -469,4 +504,219 @@
 
 .text-muted {
     color: var(--medium-gray) !important;
+}
+
+/* SweetAlert2 Custom Styling for White/Navy Theme */
+.admin-swal-popup-compact {
+    border-radius: 12px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.admin-swal-title-compact {
+    color: #1e293b !important;
+    font-weight: 600 !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 1rem !important;
+    border-bottom: 2px solid #f1f5f9 !important;
+    padding-bottom: 0.75rem !important;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+    background-color: #1e40af !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1.5rem !important;
+}
+
+.swal2-popup .swal2-styled.swal2-cancel {
+    background-color: #64748b !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1.5rem !important;
+    color: white !important;
+}
+
+.swal2-popup .swal2-styled.swal2-cancel:hover {
+    background-color: #475569 !important;
+    color: white !important;
+}
+
+.swal2-popup .swal2-styled:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Compact form styling */
+.compact-form {
+    text-align: left !important;
+}
+
+/* Action Buttons - More Visible */
+.btn-group .btn {
+    border-width: 2px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-info {
+    background-color: #06b6d4 !important;
+    border-color: #06b6d4 !important;
+    color: white !important;
+}
+
+.btn-primary {
+    background-color: #1e40af !important;
+    border-color: #1e40af !important;
+    color: white !important;
+}
+
+.btn-danger {
+    background-color: #ef4444 !important;
+    border-color: #ef4444 !important;
+    color: white !important;
+}
+
+.btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Custom Toggle Switch */
+.toggle-switch {
+    width: 48px !important;
+    height: 24px !important;
+    cursor: pointer !important;
+    border-radius: 12px !important;
+    background-color: #e5e7eb !important;
+    border: 2px solid #d1d5db !important;
+    transition: all 0.3s ease !important;
+}
+
+.toggle-switch:checked {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 0.1rem rgba(16, 185, 129, 0.25) !important;
+}
+
+.toggle-switch:focus {
+    box-shadow: 0 0 0 0.1rem rgba(16, 185, 129, 0.25) !important;
+}
+
+/* Button Group Spacing */
+.btn-group {
+    gap: 0.5rem !important;
+    align-items: center !important;
+}
+
+/* Filter Section Button Consistency */
+.content-card .btn-primary,
+.content-card .btn-secondary,
+.content-card .btn-outline-secondary {
+    font-weight: 600 !important;
+    border-width: 2px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.content-card .btn-primary {
+    background-color: #1e40af !important;
+    border-color: #1e40af !important;
+    color: white !important;
+}
+
+.content-card .btn-outline-secondary {
+    background-color: transparent !important;
+    border-color: #64748b !important;
+    color: #64748b !important;
+}
+
+.content-card .btn-outline-secondary:hover {
+    background-color: #64748b !important;
+    border-color: #64748b !important;
+    color: white !important;
+}
+
+.content-card .btn-secondary {
+    background-color: #64748b !important;
+    border-color: #64748b !important;
+    color: white !important;
+}
+
+.content-card .btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Form Controls Consistency */
+.content-card .form-control,
+.content-card .form-select {
+    border-color: #cbd5e1 !important;
+    border-width: 2px !important;
+    border-radius: 6px !important;
+    height: 38px !important;
+}
+
+.content-card .form-control:focus,
+.content-card .form-select:focus {
+    border-color: #1e40af !important;
+    box-shadow: 0 0 0 0.1rem rgba(30, 64, 175, 0.25) !important;
+}
+
+.content-card .form-label {
+    font-weight: 600 !important;
+    color: #374151 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Alignment Fix for Filter Form */
+.content-card .row.align-items-end {
+    align-items: flex-end !important;
+}
+
+/* Icon Styling */
+.card-title .text-primary {
+    color: #1e40af !important;
+}
+
+/* CRITICAL: Force dropdown text visibility - Override everything */
+.form-select,
+select.form-select,
+.form-control {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    background-color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.form-select option,
+select.form-select option {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+}
+
+/* Ensure text is visible in all dropdown states */
+.form-select:focus,
+.form-select:active,
+.form-select:hover {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+/* Additional safety overrides */
+* .form-select {
+    color: #000000 !important;
+}
+
+* .form-select option {
+    color: #000000 !important;
 }

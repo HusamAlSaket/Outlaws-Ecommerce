@@ -4721,3 +4721,57 @@ Cannot read properties of undefined (reading 'charAt')
 2025-08-11 12:08:38 [INFO]: Product details requested
 2025-08-11 12:08:38 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b373
 2025-08-11 12:08:39 [INFO]: Product details loaded successfully
+2025-08-11 12:30:19 [INFO]: Products page requested
+2025-08-11 12:30:19 [INFO]: Fetching all products with filters:
+2025-08-11 12:30:19 [INFO]: Found 5 products (12 total)
+2025-08-11 12:30:19 [INFO]: Products page data loaded successfully
+2025-08-11 12:30:21 [WARN]: Authentication required but no token provided
+2025-08-11 12:30:25 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 12:30:25 [INFO]: PasswordService compare: true
+2025-08-11 12:30:25 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 12:40:35 [WARN]: Authentication required but no token provided
+2025-08-11 12:40:43 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 12:40:43 [INFO]: PasswordService compare: true
+2025-08-11 12:40:43 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 12:41:42 [WARN]: Authentication required but no token provided
+2025-08-11 12:44:00 [WARN]: Authentication required but no token provided
+2025-08-11 12:45:08 [WARN]: Authentication required but no token provided
+2025-08-11 12:45:15 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 12:45:15 [INFO]: PasswordService compare: true
+2025-08-11 12:45:15 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 12:48:04 [WARN]: Authentication required but no token provided
+2025-08-11 12:48:08 [WARN]: Authentication required but no token provided
+2025-08-11 12:52:30 [WARN]: Authentication required but no token provided
+2025-08-11 12:52:35 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 12:52:35 [INFO]: PasswordService compare: true
+2025-08-11 12:52:35 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 12:58:42 [WARN]: Authentication required but no token provided
+2025-08-11 12:58:50 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 12:58:50 [INFO]: PasswordService compare: true
+2025-08-11 12:58:50 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 13:00:23 [INFO]: Products page requested
+2025-08-11 13:00:23 [INFO]: Fetching all products with filters:
+2025-08-11 13:00:23 [INFO]: Found 5 products (12 total)
+2025-08-11 13:00:23 [INFO]: Products page data loaded successfully
+2025-08-11 13:00:28 [INFO]: Products page requested
+2025-08-11 13:00:28 [INFO]: Fetching all products with filters:
+2025-08-11 13:00:28 [INFO]: Found 1 products (1 total)
+2025-08-11 13:00:28 [INFO]: Products page data loaded successfully
+2025-08-11 13:02:49 [WARN]: Authentication required but no token provided
+2025-08-11 13:02:53 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 13:02:54 [INFO]: PasswordService compare: true
+2025-08-11 13:02:54 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 13:07:20 [WARN]: Authentication required but no token provided
+2025-08-11 13:07:25 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 13:07:25 [INFO]: PasswordService compare: true
+2025-08-11 13:07:25 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 13:09:57 [WARN]: Authentication required but no token provided
+2025-08-11 13:10:06 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 13:10:06 [INFO]: PasswordService compare: false
+2025-08-11 13:10:06 [INFO]: User model matchPassword: false
+2025-08-11 13:10:06 [INFO]: Direct bcryptjs compare: false
+2025-08-11 13:10:06 [ERROR]: Login failed: invalid password for email tesla@gmail.com
+2025-08-11 13:10:06 [ERROR]: Login error from service: Invalid email or password
+2025-08-11 13:10:12 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 13:10:12 [INFO]: PasswordService compare: true
+2025-08-11 13:10:12 [INFO]: User logged in: tesla@gmail.com
