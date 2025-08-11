@@ -4676,3 +4676,48 @@ Cannot read properties of undefined (reading 'charAt')
 2025-08-10 12:15:48 [INFO]: Login attempt: tesla@gmail.com, userFound: true
 2025-08-10 12:15:48 [INFO]: PasswordService compare: true
 2025-08-10 12:15:48 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 11:11:19 [WARN]: Authentication required but no token provided
+2025-08-11 11:11:23 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 11:11:23 [INFO]: PasswordService compare: true
+2025-08-11 11:11:23 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 11:31:24 [WARN]: Authentication required but no token provided
+2025-08-11 11:31:30 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 11:31:30 [INFO]: PasswordService compare: true
+2025-08-11 11:31:30 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 11:39:47 [WARN]: Authentication required but no token provided
+2025-08-11 11:39:54 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 11:39:54 [INFO]: PasswordService compare: true
+2025-08-11 11:39:54 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 11:43:12 [INFO]: Home page requested
+2025-08-11 11:43:12 [INFO]: Fetching trending products
+2025-08-11 11:43:12 [INFO]: Found 6 trending products
+2025-08-11 11:43:12 [INFO]: Fetching popular products
+2025-08-11 11:43:12 [INFO]: Found 6 popular products
+2025-08-11 11:43:12 [INFO]: Home page data loaded successfully
+2025-08-11 11:43:16 [INFO]: Products page requested
+2025-08-11 11:43:16 [INFO]: Fetching all products with filters:
+2025-08-11 11:43:16 [INFO]: Found 5 products (12 total)
+2025-08-11 11:43:16 [INFO]: Products page data loaded successfully
+2025-08-11 11:57:51 [WARN]: Authentication required but no token provided
+2025-08-11 11:57:57 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 11:57:57 [INFO]: PasswordService compare: true
+2025-08-11 11:57:57 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 11:59:53 [WARN]: Authentication required but no token provided
+2025-08-11 11:59:58 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-11 11:59:59 [INFO]: PasswordService compare: true
+2025-08-11 11:59:59 [INFO]: User logged in: tesla@gmail.com
+2025-08-11 12:08:02 [INFO]: Products page requested
+2025-08-11 12:08:02 [INFO]: Fetching all products with filters:
+2025-08-11 12:08:02 [INFO]: Found 5 products (12 total)
+2025-08-11 12:08:02 [INFO]: Products page data loaded successfully
+2025-08-11 12:08:04 [INFO]: Products page requested
+2025-08-11 12:08:04 [INFO]: Fetching all products with filters:
+2025-08-11 12:08:04 [INFO]: Found 5 products (12 total)
+2025-08-11 12:08:04 [INFO]: Products page data loaded successfully
+2025-08-11 12:08:08 [INFO]: Products page requested
+2025-08-11 12:08:08 [INFO]: Fetching all products with filters:
+2025-08-11 12:08:08 [INFO]: Found 5 products (12 total)
+2025-08-11 12:08:08 [INFO]: Products page data loaded successfully
+2025-08-11 12:08:38 [INFO]: Product details requested
+2025-08-11 12:08:38 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b373
+2025-08-11 12:08:39 [INFO]: Product details loaded successfully

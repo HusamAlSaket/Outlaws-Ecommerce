@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+<!-- Additional head content for admin -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - E-commerce Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Custom Admin Dashboard Styles -->
+    <link href="/css/admin-dashboard.css" rel="stylesheet">
+    <!-- Admin Products Page Styles -->
+    <link href="/css/admin-products.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <!-- Include Admin Sidebar -->
+    <%- include('../partials/admin-sidebar', { currentPage: 'products' }) %>
+
+    <!-- Main Content -->
+    <div class="main-content shifted" id="mainContent">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="breadcrumb">Admin / Products</div>
+            
+            <div class="user-info">
+                <span>Welcome, <%= user.username %></span>
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">
+                    <i class="fas fa-box"></i>
+                    Products Management
+                </h1>
+                <p class="page-subtitle">Manage products, inventory, and status</p>
+            </div>
+
+            <!-- Product Stats Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number"><%= productStats.totalProducts %></div>
+                            <div class="stat-label">Total Products</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number"><%= productStats.activeProducts %></div>
+                            <div class="stat-label">Active Products</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-info">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number"><%= productStats.totalSold %></div>
+                            <div class="stat-label">Total Sold</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-warning">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number"><%= productStats.inactiveProducts %></div>
+                            <div class="stat-label">Inactive Products</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters and Search -->
+            <div class="content-card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title">
+                        <i class="fas fa-filter"></i>
+                        Filters & Search
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form method="GET" action="/admin/products" class="row g-3">
+                        <div class="col-md-3">
+                            <label for="search" class="form-label">Search Products</label>
+                            <input type="text" class="form-control" id="search" name="search" 
+                                   placeholder="Search by name, description..." value="<%= currentSearch %>">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="status" class="form-label">Status</label>
+                            <select class="form-select" id="status" name="status">
+                                <option value="all" <%= currentStatus === 'all' ? 'selected' : '' %>>All Products</option>
+                                <option value="active" <%= currentStatus === 'active' ? 'selected' : '' %>>Active Only</option>
+                                <option value="inactive" <%= currentStatus === 'inactive' ? 'selected' : '' %>>Inactive Only</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="category" class="form-label">Category</label>
+                            <select class="form-select" id="category" name="category">
+                                <option value="all" <%= currentCategory === 'all' ? 'selected' : '' %>>All Categories</option>
+                                <% categories.forEach(cat => { %>
+                                    <option value="<%= cat %>" <%= currentCategory === cat ? 'selected' : '' %>><%= cat %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="submit" class="btn btn-primary d-block w-100">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">&nbsp;</label>
+                            <a href="/admin/products" class="btn btn-outline-secondary d-block w-100">
+                                <i class="fas fa-undo"></i> Reset
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Products Table -->
+            <div class="content-card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title">
+                        <i class="fas fa-table"></i>
+                        Products List
+                    </h5>
+                    <span class="badge bg-primary"><%= pagination.totalProducts %> Total Products</span>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th>Status</th>
+                                    <th>Created</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% if (products && products.length > 0) { %>
+                                    <% products.forEach(product => { %>
+                                        <tr>
+                                            <td>
+                                                <div class="product-image-sm">
+                                                    <% if (product.image) { %>
+                                                        <% 
+                                                        // Handle different image path formats
+                                                        let imagePath = product.image;
+                                                        // If it's not an external URL, handle local paths
+                                                        if (!imagePath.startsWith('http://') && !imagePath.startsWith('https://')) {
+                                                            if (imagePath.startsWith('../public/')) {
+                                                                imagePath = imagePath.replace('../public/', '/');
+                                                            } else if (!imagePath.startsWith('/')) {
+                                                                imagePath = '/' + imagePath;
+                                                            }
+                                                        }
+                                                        %>
+                                                        <img src="<%= imagePath %>" alt="<%= product.title %>" 
+                                                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                        <i class="fas fa-box" style="display: none;"></i>
+                                                    <% } else { %>
+                                                        <i class="fas fa-box"></i>
+                                                    <% } %>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <strong><%= product.title %></strong>
+                                                <% if (product.description && product.description.length > 50) { %>
+                                                    <small class="text-muted d-block">
+                                                        <%= product.description.substring(0, 50) %>...
+                                                    </small>
+                                                <% } %>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-secondary"><%= product.category || 'Uncategorized' %></span>
+                                            </td>
+                                            <td>
+                                                <span class="price-tag">$<%= product.price %></span>
+                                            </td>
+                                            <td>
+                                                <% if (product.quantity <= 5) { %>
+                                                    <span class="badge bg-danger"><%= product.quantity %></span>
+                                                <% } else if (product.quantity <= 20) { %>
+                                                    <span class="badge bg-warning"><%= product.quantity %></span>
+                                                <% } else { %>
+                                                    <span class="badge bg-success"><%= product.quantity %></span>
+                                                <% } %>
+                                            </td>
+                                            <td>
+                                                <% if (product.isActive) { %>
+                                                    <span class="badge bg-success">Active</span>
+                                                <% } else { %>
+                                                    <span class="badge bg-warning">Inactive</span>
+                                                <% } %>
+                                            </td>
+                                            <td>
+                                                <%= new Date(product.createdAt).toLocaleDateString() %>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group" role="group">
+                                                    <button type="button" class="btn btn-sm btn-outline-info" 
+                                                            onclick="viewProductDetails('<%= product._id %>')">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-sm btn-outline-<%= product.isActive ? 'warning' : 'success' %>" 
+                                                            onclick="toggleProductStatus('<%= product._id %>', '<%= product.title %>', <%= product.isActive ? 'true' : 'false' %>)">
+                                                        <i class="fas fa-<%= product.isActive ? 'eye-slash' : 'eye' %>"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <% }) %>
+                                <% } else { %>
+                                    <tr>
+                                        <td colspan="8" class="text-center py-4">
+                                            <i class="fas fa-box fa-3x text-muted mb-3"></i>
+                                            <p class="text-muted">No products found</p>
+                                        </td>
+                                    </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <% if (pagination.totalPages > 1) { %>
+                        <nav aria-label="Products pagination" class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                <% if (pagination.hasPrev) { %>
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page=<%= pagination.currentPage - 1 %>&search=<%= currentSearch %>&status=<%= currentStatus %>&category=<%= currentCategory %>">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                <% } %>
+                                
+                                <% for (let i = 1; i <= pagination.totalPages; i++) { %>
+                                    <li class="page-item <%= i === pagination.currentPage ? 'active' : '' %>">
+                                        <a class="page-link" href="?page=<%= i %>&search=<%= currentSearch %>&status=<%= currentStatus %>&category=<%= currentCategory %>">
+                                            <%= i %>
+                                        </a>
+                                    </li>
+                                <% } %>
+                                
+                                <% if (pagination.hasNext) { %>
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page=<%= pagination.currentPage + 1 %>&search=<%= currentSearch %>&status=<%= currentStatus %>&category=<%= currentCategory %>">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                <% } %>
+                            </ul>
+                        </nav>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Products Management JavaScript -->
+    <script type="module" src="/js/admin-products-modular.js"></script>
+</body>
+</html>

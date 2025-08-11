@@ -165,14 +165,14 @@ class AdminService {
   async getUserStats() {
     try {
       const totalUsers = await User.countDocuments();
-      
+
       // Count inactive users (explicitly set to false)
       const inactiveUsers = await User.countDocuments({ isActive: false });
-      
+
       // Calculate active users (total - inactive)
       // This treats legacy users (without isActive field) as active by default
       const activeUsers = totalUsers - inactiveUsers;
-      
+
       const newThisMonth = await User.countDocuments({
         createdAt: {
           $gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
@@ -282,6 +282,158 @@ class AdminService {
       throw error;
     }
   }
-}
+  // ============ PRODUCT MANAGEMENT METHODS ============
 
+  /**
+   * Get product statistics for dashboard cards
+   */
+  async getProductStats() {
+    try {
+      const totalProducts = await Product.countDocuments();
+      const activeProducts = await Product.countDocuments({ isActive: true });
+      const inactiveProducts = totalProducts - activeProducts;
+
+      // Calculate total sold from orders
+      const soldResult = await Order.aggregate([
+        { $match: { isPaid: true } },
+        { $unwind: "$items" },
+        { $group: { _id: null, totalSold: { $sum: "$items.quantity" } } },
+      ]);
+      const totalSold = soldResult.length > 0 ? soldResult[0].totalSold : 0;
+
+      const newThisMonth = await Product.countDocuments({
+        createdAt: {
+          $gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
+        },
+      });
+
+      return {
+        totalProducts,
+        activeProducts,
+        inactiveProducts,
+        totalSold,
+        newThisMonth,
+      };
+    } catch (error) {
+      console.error("Error fetching product stats:", error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get all products with pagination and filtering
+   */
+  async getProducts(
+    page = 1,
+    limit = 10,
+    search = "",
+    status = "all",
+    category = "all"
+  ) {
+    try {
+      const skip = (page - 1) * limit;
+
+      // Build query
+      let query = {};
+
+      // Search filter
+      if (search) {
+        query.$or = [
+          { name: { $regex: search, $options: "i" } },
+          { description: { $regex: search, $options: "i" } },
+          { category: { $regex: search, $options: "i" } },
+        ];
+      }
+
+      // Status filter
+      if (status === "active") {
+        query.isActive = true;
+      } else if (status === "inactive") {
+        query.isActive = false;
+      }
+
+      // Category filter
+      if (category && category !== "all") {
+        query.category = category;
+      }
+
+      const products = await Product.find(query)
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(parseInt(limit));
+
+      const total = await Product.countDocuments(query);
+
+      return {
+        products,
+        pagination: {
+          currentPage: page,
+          totalPages: Math.ceil(total / limit),
+          totalProducts: total,
+          hasNext: page < Math.ceil(total / limit),
+          hasPrev: page > 1,
+        },
+      };
+    } catch (error) {
+      console.error("Error fetching products:", error);
+      throw error;
+    }
+  }
+
+  /**
+   * Toggle product active status
+   */
+  async toggleProductStatus(productId) {
+    try {
+      const product = await Product.findById(productId);
+      if (!product) {
+        throw new Error("Product not found");
+      }
+
+      product.isActive = !product.isActive;
+      await product.save();
+
+      return {
+        success: true,
+        product: {
+          id: product._id,
+          name: product.name,
+          isActive: product.isActive,
+        },
+      };
+    } catch (error) {
+      console.error("Error toggling product status:", error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get product details by ID
+   */
+  async getProductById(productId) {
+    try {
+      const product = await Product.findById(productId);
+      if (!product) {
+        throw new Error("Product not found");
+      }
+      return product;
+    } catch (error) {
+      console.error("Error fetching product:", error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get all unique categories for filter dropdown
+   */
+  async getProductCategories() {
+    try {
+      const categories = await Product.distinct("category");
+      return categories.filter((cat) => cat && cat.trim() !== "");
+    } catch (error) {
+      console.error("Error fetching categories:", error);
+      throw error;
+    }
+  }
+}
 module.exports = new AdminService();

@@ -20,6 +20,10 @@ const productSchema = new mongoose.Schema({
   quantity: {
     type: Number,
     default: 10
+  },
+  isActive:{
+    type:Boolean,
+    default:true
   }
 });
 
