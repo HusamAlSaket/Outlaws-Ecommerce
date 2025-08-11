@@ -297,14 +297,16 @@
 
 /* Form Styles - CLEAN */
 .form-control, .form-select {
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 16px;
     transition: var(--transition);
     background-color: var(--white) !important;
     color: #1f2937 !important;
     font-weight: 600 !important;
-    font-size: 0.9rem !important;
+    font-size: 16px !important;
+    line-height: 1.5;
+    min-height: 48px;
 }
 
 .form-control:focus, .form-select:focus {
@@ -318,17 +320,20 @@
     color: #1f2937 !important;
     background-color: #ffffff !important;
     font-weight: 600 !important;
-    font-size: 0.9rem !important;
+    font-size: 16px !important;
+    padding: 8px 12px;
 }
 
 /* Force text visibility in all states */
 select.form-select {
     color: #1f2937 !important;
     font-weight: 600 !important;
+    font-size: 16px !important;
 }
 
 select.form-select:not([multiple]):not([size]) {
     color: #1f2937 !important;
+    font-size: 16px !important;
 }
 
 .form-label {
@@ -685,23 +690,220 @@ select.form-select:not([multiple]):not([size]) {
     color: #1e40af !important;
 }
 
+/* Category Badge Styling - Blue Rounded Style */
+.category-badge {
+    background: #1e40af !important;
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.5px !important;
+    padding: 6px 12px !important;
+    border-radius: 12px !important;
+    border: none !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 2px 4px rgba(30, 64, 175, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.category-badge:hover {
+    background: #1d4ed8 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3) !important;
+}
+
+/* Product Stats Cards - Matching User Cards Color Scheme */
+.products-total {
+    background: #3b82f6 !important; /* Blue - matching Total Users */
+}
+
+.products-active {
+    background: #10b981 !important; /* Green - matching Active Users */
+}
+
+.products-sold {
+    background: #06b6d4 !important; /* Teal/Cyan - matching New This Month */
+}
+
+.products-inactive {
+    background: #f59e0b !important; /* Orange - matching Inactive Users */
+}
+
+/* Ensure consistent styling for all product stat icons */
+.products-total,
+.products-active, 
+.products-sold,
+.products-inactive {
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Filter Form Button Consistency - Perfect Alignment */
+.content-card .card-body .btn {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    min-height: 48px !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    line-height: 1.2 !important;
+    border-width: 2px !important;
+}
+
+/* Medium-sized table buttons - Perfect balance and consistency */
+.table-action-btn {
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    width: 36px !important;
+    border-radius: 5px !important;
+    border-width: 1px !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+}
+
+/* Legacy table button styling (fallback) */
+.content-card .table .btn {
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    width: 36px !important;
+    border-radius: 5px !important;
+    border-width: 1px !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+}
+
+.content-card .card-body .btn-primary {
+    background: #1e40af !important;
+    border-color: #1e40af !important;
+    color: white !important;
+}
+
+.content-card .card-body .btn-outline-secondary {
+    background: transparent !important;
+    border-color: #6b7280 !important;
+    color: #6b7280 !important;
+}
+
+.content-card .card-body .btn-outline-secondary:hover {
+    background: #6b7280 !important;
+    border-color: #6b7280 !important;
+    color: white !important;
+}
+
+.content-card .card-body .btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Toggle Switch - Navy Theme with proper backgrounds */
+.toggle-switch {
+    background-color: #e5e7eb !important; /* Light gray when OFF */
+    border-color: #d1d5db !important;
+    width: 3rem !important;
+    height: 1.5rem !important;
+    border-radius: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.toggle-switch:checked {
+    background-color: #1e40af !important; /* Navy when ON */
+    border-color: #1e40af !important;
+    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25) !important;
+}
+
+.toggle-switch:focus {
+    border-color: #1e40af !important;
+    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25) !important;
+    background-color: #e5e7eb !important; /* Keep light gray on focus when OFF */
+}
+
+.toggle-switch:checked:focus {
+    background-color: #1d4ed8 !important; /* Darker navy on focus when ON */
+    border-color: #1d4ed8 !important;
+}
+
+/* Perfect alignment for Add Product button and Total Products badge */
+.card-header .d-flex.align-items-center .btn,
+.card-header .d-flex.align-items-center .badge {
+    height: 40px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+}
+
+.card-header .d-flex.align-items-center .btn {
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+}
+
+.card-header .d-flex.align-items-center .badge {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+}
+
+/* Add hover effects for product stat cards */
+.stat-card:hover .products-total {
+    background: #2563eb !important;
+    transform: scale(1.05) !important;
+}
+
+.stat-card:hover .products-active {
+    background: #059669 !important;
+    transform: scale(1.05) !important;
+}
+
+.stat-card:hover .products-sold {
+    background: #0891b2 !important;
+    transform: scale(1.05) !important;
+}
+
+.stat-card:hover .products-inactive {
+    background: #d97706 !important;
+    transform: scale(1.05) !important;
+}
+
 /* CRITICAL: Force dropdown text visibility - Override everything */
 .form-select,
 select.form-select,
 .form-control {
     color: #000000 !important;
-    font-weight: 700 !important;
-    font-size: 14px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
     background-color: #ffffff !important;
     opacity: 1 !important;
+    line-height: 1.5 !important;
+    padding: 12px 16px !important;
+    min-height: 48px !important;
 }
 
 .form-select option,
 select.form-select option {
     color: #000000 !important;
     background-color: #ffffff !important;
-    font-weight: 700 !important;
-    font-size: 14px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 8px 12px !important;
+    line-height: 1.5 !important;
 }
 
 /* Ensure text is visible in all dropdown states */
@@ -709,14 +911,17 @@ select.form-select option {
 .form-select:active,
 .form-select:hover {
     color: #000000 !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
 }
 
 /* Additional safety overrides */
 * .form-select {
     color: #000000 !important;
+    font-size: 16px !important;
 }
 
 * .form-select option {
     color: #000000 !important;
+    font-size: 16px !important;
 }

@@ -56,8 +56,8 @@
             <div class="row g-4 mb-4">
                 <div class="col-lg-3 col-md-6">
                     <div class="stat-card">
-                        <div class="stat-icon bg-primary">
-                            <i class="fas fa-box"></i>
+                        <div class="stat-icon products-total">
+                            <i class="fas fa-boxes"></i>
                         </div>
                         <div class="stat-content">
                             <div class="stat-number"><%= productStats.totalProducts %></div>
@@ -68,7 +68,7 @@
                 
                 <div class="col-lg-3 col-md-6">
                     <div class="stat-card">
-                        <div class="stat-icon bg-success">
+                        <div class="stat-icon products-active">
                             <i class="fas fa-check-circle"></i>
                         </div>
                         <div class="stat-content">
@@ -80,7 +80,7 @@
                 
                 <div class="col-lg-3 col-md-6">
                     <div class="stat-card">
-                        <div class="stat-icon bg-info">
+                        <div class="stat-icon products-sold">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
                         <div class="stat-content">
@@ -92,7 +92,7 @@
                 
                 <div class="col-lg-3 col-md-6">
                     <div class="stat-card">
-                        <div class="stat-icon bg-warning">
+                        <div class="stat-icon products-inactive">
                             <i class="fas fa-times-circle"></i>
                         </div>
                         <div class="stat-content">
@@ -214,7 +214,9 @@
                                                 <% } %>
                                             </td>
                                             <td>
-                                                <span class="badge bg-secondary"><%= product.category || 'Uncategorized' %></span>
+                                                <span class="badge bg-primary category-badge">
+                                                    <%= (product.category || 'Uncategorized').toUpperCase().replace(/\s+/g, '-') %>
+                                                </span>
                                             </td>
                                             <td>
                                                 <span class="price-tag">$<%= product.price %></span>
@@ -244,12 +246,12 @@
                                             </td>
                                             <td>
                                                 <div class="btn-group" role="group">
-                                                    <button type="button" class="btn btn-sm btn-info" 
+                                                    <button type="button" class="btn btn-info table-action-btn" 
                                                             onclick="viewProductDetails('<%= product._id %>')" 
                                                             title="View Details">
                                                         <i class="fas fa-eye"></i>
                                                     </button>
-                                                    <button type="button" class="btn btn-sm btn-primary" 
+                                                    <button type="button" class="btn btn-primary table-action-btn" 
                                                             onclick="editProduct('<%= product._id %>')" 
                                                             title="Edit Product">
                                                         <i class="fas fa-edit"></i>
@@ -262,7 +264,7 @@
                                                                title="<%= product.isActive ? 'Active' : 'Inactive' %>">
                                                         <label class="form-check-label visually-hidden" for="toggle<%= product._id %>">Toggle Status</label>
                                                     </div>
-                                                    <button type="button" class="btn btn-sm btn-danger" 
+                                                    <button type="button" class="btn btn-danger table-action-btn" 
                                                             onclick="deleteProduct('<%= product._id %>', '<%= product.title %>')" 
                                                             title="Delete Product">
                                                         <i class="fas fa-trash"></i>
