@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+<!-- Additional head content for admin -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - E-commerce Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Custom Admin Dashboard Styles -->
+    <link href="/css/admin-dashboard.css" rel="stylesheet">
+    <!-- Admin Orders Page Styles -->
+    <link href="/css/admin-orders.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <!-- Include Admin Sidebar -->
+    <%- include('../partials/admin-sidebar', { currentPage: 'orders' }) %>
+
+    <!-- Main Content -->
+    <div class="main-content shifted" id="mainContent">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="breadcrumb">Admin / Orders</div>
+            
+            <div class="user-info">
+                <span>Welcome, <%= user.username %></span>
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">
+                    <i class="fas fa-shopping-cart"></i>
+                    Orders Management
+                </h1>
+                <p class="page-subtitle">Manage orders, payments, and shipping information</p>
+            </div>
+
+            <!-- Order Stats Cards -->
+            <div class="row g-4 mb-4 order-stats-cards">
+                <div class="col-lg-3 col-md-6">
+                    <div class="order-stat-card total-orders position-relative">
+                        <div class="order-stat-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="order-stat-number"><%= orderStats.totalOrders %></div>
+                        <div class="order-stat-label">Total Orders</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="order-stat-card paid-orders position-relative">
+                        <div class="order-stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="order-stat-number"><%= orderStats.paidOrders %></div>
+                        <div class="order-stat-label">Paid Orders</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="order-stat-card unpaid-orders position-relative">
+                        <div class="order-stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="order-stat-number"><%= orderStats.unpaidOrders %></div>
+                        <div class="order-stat-label">Unpaid Orders</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="order-stat-card total-revenue position-relative">
+                        <div class="order-stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="order-stat-number">$<%= orderStats.totalRevenue.toFixed(2) %></div>
+                        <div class="order-stat-label">Total Revenue</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters and Search -->
+            <div class="order-filters-card">
+                <div class="order-filters-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-filter text-primary"></i>
+                        Filters & Search
+                    </h5>
+                </div>
+                <div class="order-filters-body">
+                    <form method="GET" action="/admin/orders" class="row g-3 align-items-end">
+                        <div class="col-md-3">
+                            <label for="search" class="form-label">Search Orders</label>
+                            <input type="text" class="form-control" id="search" name="search" 
+                                   placeholder="Order number, customer name..." value="<%= currentSearch %>">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="status" class="form-label">Payment Status</label>
+                            <select class="form-select" id="status" name="status">
+                                <option value="all" <%= currentStatus === 'all' ? 'selected' : '' %>>All Orders</option>
+                                <option value="paid" <%= currentStatus === 'paid' ? 'selected' : '' %>>Paid Only</option>
+                                <option value="unpaid" <%= currentStatus === 'unpaid' ? 'selected' : '' %>>Unpaid Only</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="dateRange" class="form-label">Date Range</label>
+                            <select class="form-select" id="dateRange" name="dateRange">
+                                <option value="all" <%= currentDateRange === 'all' ? 'selected' : '' %>>All Time</option>
+                                <option value="today" <%= currentDateRange === 'today' ? 'selected' : '' %>>Today</option>
+                                <option value="week" <%= currentDateRange === 'week' ? 'selected' : '' %>>This Week</option>
+                                <option value="month" <%= currentDateRange === 'month' ? 'selected' : '' %>>This Month</option>
+                                <option value="year" <%= currentDateRange === 'year' ? 'selected' : '' %>>This Year</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/admin/orders" class="btn btn-outline-secondary w-100">
+                                <i class="fas fa-undo"></i> Reset Filters
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Orders Table -->
+            <div class="order-table-container">
+                <div class="card-header d-flex justify-content-between align-items-center p-3">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-table"></i>
+                        Orders List
+                    </h5>
+                    <div class="d-flex align-items-center">
+                        <span class="badge bg-primary"><%= pagination.totalOrders %> Total Orders</span>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table order-table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th>Order #</th>
+                                <th>Customer</th>
+                                <th>Items</th>
+                                <th>Total Amount</th>
+                                <th>Payment</th>
+                                <th>Shipping Info</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if (orders && orders.length > 0) { %>
+                                <% orders.forEach(order => { %>
+                                    <tr>
+                                        <td>
+                                            <div class="order-number">#<%= order.orderNumber %></div>
+                                        </td>
+                                        <td>
+                                            <div class="order-customer">
+                                                <% if (order.user) { %>
+                                                    <%= order.user.username %>
+                                                    <div class="order-customer-email"><%= order.user.email %></div>
+                                                <% } else { %>
+                                                    <span class="text-muted">Guest User</span>
+                                                <% } %>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="order-items-count">
+                                                <%= order.items.length %> item<%= order.items.length !== 1 ? 's' : '' %>
+                                            </span>
+                                            <div class="order-items-preview">
+                                                <% if (order.items.length > 0) { %>
+                                                    <%= order.items[0].title %><% if (order.items.length > 1) { %>, +<%= order.items.length - 1 %> more<% } %>
+                                                <% } %>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="order-amount">$<%= order.totalAmount.toFixed(2) %></div>
+                                        </td>
+                                        <td>
+                                            <span class="payment-status <%= order.isPaid ? 'paid' : 'unpaid' %>">
+                                                <%= order.isPaid ? 'Paid' : 'Unpaid' %>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <% if (order.shippingInfo) { %>
+                                                <div class="order-shipping-info">
+                                                    <div class="order-shipping-city"><%= order.shippingInfo.city %></div>
+                                                    <div><%= order.shippingInfo.country %></div>
+                                                </div>
+                                            <% } else { %>
+                                                <span class="text-muted">N/A</span>
+                                            <% } %>
+                                        </td>
+                                        <td>
+                                            <div class="order-date">
+                                                <%= new Date(order.createdAt).toLocaleDateString() %>
+                                                <div style="font-size: 0.8rem; color: #9ca3af;">
+                                                    <%= new Date(order.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) %>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="order-actions">
+                                                <button type="button" class="order-action-btn view" 
+                                                        onclick="viewOrderDetails('<%= order._id %>')" 
+                                                        title="View Details">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button type="button" class="order-action-btn edit" 
+                                                        onclick="editOrder('<%= order._id %>')" 
+                                                        title="Edit Order">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <div class="form-check form-switch d-inline-block mx-2">
+                                                    <input class="form-check-input order-toggle-switch" type="checkbox" 
+                                                           id="togglePayment<%= order._id %>" 
+                                                           <%= order.isPaid ? 'checked' : '' %>
+                                                           onchange="toggleOrderPaymentStatus('<%= order._id %>', '<%= order.orderNumber %>', this.checked)"
+                                                           title="<%= order.isPaid ? 'Mark as Unpaid' : 'Mark as Paid' %>">
+                                                    <label class="form-check-label visually-hidden" for="togglePayment<%= order._id %>">Toggle Payment</label>
+                                                </div>
+                                                <button type="button" class="order-action-btn delete" 
+                                                        onclick="deleteOrder('<%= order._id %>', '<%= order.orderNumber %>')" 
+                                                        title="Delete Order">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <% }) %>
+                            <% } else { %>
+                                <tr>
+                                    <td colspan="8" class="text-center py-5">
+                                        <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+                                        <p class="text-muted">No orders found</p>
+                                    </td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <% if (pagination.totalPages > 1) { %>
+                    <nav aria-label="Orders pagination" class="p-3">
+                        <ul class="pagination justify-content-center mb-0">
+                            <% if (pagination.hasPrev) { %>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=<%= pagination.currentPage - 1 %>&search=<%= currentSearch %>&status=<%= currentStatus %>&dateRange=<%= currentDateRange %>">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                </li>
+                            <% } %>
+                            
+                            <% for (let i = 1; i <= pagination.totalPages; i++) { %>
+                                <li class="page-item <%= i === pagination.currentPage ? 'active' : '' %>">
+                                    <a class="page-link" href="?page=<%= i %>&search=<%= currentSearch %>&status=<%= currentStatus %>&dateRange=<%= currentDateRange %>">
+                                        <%= i %>
+                                    </a>
+                                </li>
+                            <% } %>
+                            
+                            <% if (pagination.hasNext) { %>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=<%= pagination.currentPage + 1 %>&search=<%= currentSearch %>&status=<%= currentStatus %>&dateRange=<%= currentDateRange %>">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </li>
+                            <% } %>
+                        </ul>
+                    </nav>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Orders Management JavaScript -->
+    <script type="module" src="/js/admin-orders-modular.js"></script>
+</body>
+</html>

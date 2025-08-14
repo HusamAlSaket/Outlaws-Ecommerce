@@ -297,7 +297,7 @@ class AdminService {
       const soldResult = await Order.aggregate([
         { $match: { isPaid: true } },
         { $unwind: "$items" },
-        { $group: { _id: null, totalSold: { $sum: "$items.quantity" } } },
+        { $group: { _id: null, totalSold: { $sum: "$items.qty" } } },
       ]);
       const totalSold = soldResult.length > 0 ? soldResult[0].totalSold : 0;
 
@@ -339,7 +339,7 @@ class AdminService {
       // Search filter
       if (search) {
         query.$or = [
-          { name: { $regex: search, $options: "i" } },
+          { title: { $regex: search, $options: "i" } },
           { description: { $regex: search, $options: "i" } },
           { category: { $regex: search, $options: "i" } },
         ];
@@ -397,7 +397,7 @@ class AdminService {
         success: true,
         product: {
           id: product._id,
-          name: product.name,
+          title: product.title,
           isActive: product.isActive,
         },
       };
@@ -505,6 +505,216 @@ class AdminService {
     } catch (error) {
       console.error("Error deleting product:", error);
       throw new Error(`Failed to delete product: ${error.message}`);
+    }
+  }
+
+  // ============ ORDER MANAGEMENT METHODS ============
+
+  /**
+   * Get order statistics for dashboard cards
+   */
+  async getOrderStats() {
+    try {
+      const totalOrders = await Order.countDocuments();
+      const paidOrders = await Order.countDocuments({ isPaid: true });
+      const unpaidOrders = totalOrders - paidOrders;
+      
+      const totalRevenue = await this.calculateTotalRevenue();
+      
+      const newThisMonth = await Order.countDocuments({
+        createdAt: {
+          $gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
+        },
+      });
+
+      return {
+        totalOrders,
+        paidOrders,
+        unpaidOrders,
+        totalRevenue,
+        newThisMonth,
+      };
+    } catch (error) {
+      console.error("Error fetching order stats:", error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get all orders with pagination and filtering
+   */
+  async getOrders(
+    page = 1,
+    limit = 10,
+    search = "",
+    status = "all",
+    dateRange = "all"
+  ) {
+    try {
+      const skip = (page - 1) * limit;
+
+      // Build query
+      let query = {};
+
+      // Search filter (this is basic - for more advanced search we'd need aggregation)
+      if (search) {
+        query.$or = [
+          { orderNumber: { $regex: search, $options: "i" } },
+          { "shippingInfo.fullName": { $regex: search, $options: "i" } },
+        ];
+      }
+
+      // Status filter
+      if (status === "paid") {
+        query.isPaid = true;
+      } else if (status === "unpaid") {
+        query.isPaid = false;
+      }
+
+      // Date range filter
+      if (dateRange !== "all") {
+        const now = new Date();
+        let startDate;
+        
+        switch (dateRange) {
+          case "today":
+            startDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            break;
+          case "week":
+            startDate = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+            break;
+          case "month":
+            startDate = new Date(now.getFullYear(), now.getMonth(), 1);
+            break;
+          case "year":
+            startDate = new Date(now.getFullYear(), 0, 1);
+            break;
+        }
+        
+        if (startDate) {
+          query.createdAt = { $gte: startDate };
+        }
+      }
+
+      const orders = await Order.find(query)
+        .populate("user", "username email")
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(parseInt(limit));
+
+      const total = await Order.countDocuments(query);
+
+      return {
+        orders,
+        pagination: {
+          currentPage: page,
+          totalPages: Math.ceil(total / limit),
+          totalOrders: total,
+          hasNext: page < Math.ceil(total / limit),
+          hasPrev: page > 1,
+        },
+      };
+    } catch (error) {
+      console.error("Error fetching orders:", error);
+      throw error;
+    }
+  }
+
+  /**
+   * Toggle order payment status
+   */
+  async toggleOrderPaymentStatus(orderId) {
+    try {
+      const order = await Order.findById(orderId);
+      if (!order) {
+        throw new Error("Order not found");
+      }
+
+      order.isPaid = !order.isPaid;
+      await order.save();
+
+      return {
+        success: true,
+        order: {
+          id: order._id,
+          orderNumber: order.orderNumber,
+          isPaid: order.isPaid,
+        },
+      };
+    } catch (error) {
+      console.error("Error toggling order payment status:", error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get order details by ID
+   */
+  async getOrderById(orderId) {
+    try {
+      const order = await Order.findById(orderId)
+        .populate("user", "username email image")
+        .populate("items.productId", "title price image");
+      
+      if (!order) {
+        throw new Error("Order not found");
+      }
+      return order;
+    } catch (error) {
+      console.error("Error fetching order:", error);
+      throw error;
+    }
+  }
+
+  /**
+   * Update order details
+   * @param {string} orderId - Order ID
+   * @param {Object} updateData - Update data
+   * @returns {Object} Update result
+   */
+  async updateOrder(orderId, updateData) {
+    try {
+      const order = await Order.findByIdAndUpdate(
+        orderId,
+        updateData,
+        { new: true, runValidators: true }
+      );
+
+      if (!order) {
+        throw new Error("Order not found");
+      }
+
+      return {
+        success: true,
+        message: "Order updated successfully",
+        order: order,
+      };
+    } catch (error) {
+      console.error("Error updating order:", error);
+      throw new Error(`Failed to update order: ${error.message}`);
+    }
+  }
+
+  /**
+   * Delete an order
+   * @param {string} orderId - Order ID
+   * @returns {Object} Delete result
+   */
+  async deleteOrder(orderId) {
+    try {
+      const order = await Order.findByIdAndDelete(orderId);
+
+      if (!order) {
+        throw new Error("Order not found");
+      }
+
+      return {
+        success: true,
+        message: "Order deleted successfully",
+      };
+    } catch (error) {
+      console.error("Error deleting order:", error);
+      throw new Error(`Failed to delete order: ${error.message}`);
     }
   }
 }

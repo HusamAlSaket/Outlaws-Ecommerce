@@ -10,6 +10,7 @@ const {
 const dashboardRoutes = require("./admin-dashboard-routes");
 const userRoutes = require("./admin-user-routes");
 const productRoutes = require("./admin-products-routes");
+const orderRoutes = require("./admin-order-routes");
 
 // Admin middleware - must be authenticated and admin
 router.use(requireAuth);
@@ -19,6 +20,8 @@ router.use(requireAdmin);
 router.use("/dashboard", dashboardRoutes);
 router.use("/users", userRoutes);
 router.use("/products", productRoutes);
+router.use("/orders", orderRoutes);
+
 // Redirect root /admin to dashboard
 router.get("/", (req, res) => {
   res.redirect("/admin/dashboard");
