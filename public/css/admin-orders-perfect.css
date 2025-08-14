@@ -198,6 +198,7 @@
     border-radius: var(--border-radius);
     overflow: hidden;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .table-responsive::after {
@@ -376,9 +377,20 @@ select.form-select:not([multiple]):not([size]) {
     box-shadow: var(--shadow-md);
 }
 
+/* Pagination Container */
+.pagination-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--white);
+}
+
 /* Pagination - CLEAN */
 .pagination {
-    margin-bottom: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
     justify-content: center;
 }
 
@@ -910,4 +922,50 @@ select.form-select option {
 * .form-select option {
     color: #000000 !important;
     font-size: 16px !important;
+}
+
+/* Order Details Page Styles */
+.info-item {
+    margin-bottom: 1rem;
+}
+
+.info-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--medium-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.info-value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-color);
+    line-height: 1.5;
+}
+
+.product-image {
+    transition: transform 0.2s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Responsive adjustments for order details */
+@media (max-width: 768px) {
+    .info-item {
+        margin-bottom: 0.75rem;
+    }
+    
+    .info-label {
+        font-size: 0.8125rem;
+    }
+    
+    .info-value {
+        font-size: 0.9375rem;
+    }
 }

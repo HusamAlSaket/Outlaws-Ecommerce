@@ -152,7 +152,7 @@
 
             <!-- Orders Table -->
             <div class="content-card">
-                <div class="card-header">
+                <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="card-title">
                         <i class="fas fa-table"></i>
                         Orders List
@@ -161,21 +161,20 @@
                         <span class="badge bg-primary"><%= pagination.totalOrders %> Total Orders</span>
                     </div>
                 </div>
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>Order #</th>
-                                <th>Customer</th>
-                                <th>Items</th>
-                                <th>Total Amount</th>
-                                <th>Payment</th>
-                                <th>Status</th>
-                                <th>Shipping Info</th>
-                                <th>Date</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Order</th>
+                                    <th>Customer</th>
+                                    <th>Total Amount</th>
+                                    <th>Payment</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
                         <tbody>
                             <% if (orders && orders.length > 0) { %>
                                 <% orders.forEach(order => { %>
@@ -187,19 +186,8 @@
                                             <div class="order-customer">
                                                 <% if (order.user) { %>
                                                     <%= order.user.username %>
-                                                    <div class="order-customer-email"><%= order.user.email %></div>
                                                 <% } else { %>
                                                     <span class="text-muted">Guest User</span>
-                                                <% } %>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span class="order-items-count">
-                                                <%= order.items.length %> item<%= order.items.length !== 1 ? 's' : '' %>
-                                            </span>
-                                            <div class="order-items-preview">
-                                                <% if (order.items.length > 0) { %>
-                                                    <%= order.items[0].title %><% if (order.items.length > 1) { %>, +<%= order.items.length - 1 %> more<% } %>
                                                 <% } %>
                                             </div>
                                         </td>
@@ -223,16 +211,6 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <% if (order.shippingInfo) { %>
-                                                <div class="order-shipping-info">
-                                                    <div class="order-shipping-city"><%= order.shippingInfo.city %></div>
-                                                    <div><%= order.shippingInfo.country %></div>
-                                                </div>
-                                            <% } else { %>
-                                                <span class="text-muted">N/A</span>
-                                            <% } %>
-                                        </td>
-                                        <td>
                                             <div class="order-date">
                                                 <%= new Date(order.createdAt).toLocaleDateString() %>
                                                 <div style="font-size: 0.75rem; color: #9ca3af;">
@@ -242,11 +220,10 @@
                                         </td>
                                         <td>
                                             <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-info btn-sm table-action-btn" 
-                                                        onclick="viewOrderDetails('<%= order._id %>')" 
-                                                        title="View Details">
+                                                <a href="/admin/orders/<%= order._id %>" class="btn btn-info btn-sm table-action-btn" 
+                                                   title="View Details">
                                                     <i class="fas fa-eye"></i>
-                                                </button>
+                                                </a>
                                                 <div class="form-check form-switch d-inline-block ms-2 me-2">
                                                     <input class="form-check-input toggle-switch" type="checkbox" 
                                                            id="togglePayment<%= order._id %>" 
@@ -275,10 +252,10 @@
                         </tbody>
                     </table>
                 </div>
-
+                
                 <!-- Pagination -->
                 <% if (pagination.totalPages > 1) { %>
-                    <nav aria-label="Orders pagination" class="mt-4">
+                    <nav aria-label="Orders pagination" class="pagination-container">
                         <ul class="pagination justify-content-center">
                             <% if (pagination.hasPrev) { %>
                                 <li class="page-item">
@@ -306,30 +283,6 @@
                         </ul>
                     </nav>
                 <% } %>
-            </div>
-        </div>
-    </div>
-
-    <!-- Order Details Modal -->
-    <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="orderDetailsModalLabel">
-                        <i class="fas fa-eye text-primary me-2"></i>Order Details
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="orderDetailsContent">
-                    <!-- Order details will be loaded here -->
-                    <div class="text-center">
-                        <div class="spinner-border text-primary" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

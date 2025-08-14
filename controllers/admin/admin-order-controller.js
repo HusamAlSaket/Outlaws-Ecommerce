@@ -78,6 +78,29 @@ class AdminOrderController {
   }
 
   /**
+   * Render order details page
+   */
+  async getOrderDetailsPage(req, res) {
+    try {
+      const { orderId } = req.params;
+      const order = await adminService.getOrderById(orderId);
+      
+      res.render("admin/order-details", {
+        title: "Order Details",
+        user: req.user,
+        order,
+      });
+    } catch (error) {
+      console.error("Order details page error:", error);
+      res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).render("error", {
+        title: "Order Details Error",
+        message: "Unable to load order details page",
+        error: process.env.NODE_ENV === "development" ? error : {},
+      });
+    }
+  }
+
+  /**
    * API endpoint to update an order
    */
   async updateOrder(req, res) {

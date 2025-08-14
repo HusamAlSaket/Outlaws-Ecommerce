@@ -5,6 +5,7 @@ const adminOrderController = require('../../controllers/admin/admin-order-contro
 
 // Orders management routes
 router.get('/', adminOrderController.getOrders);
+router.get('/:orderId', adminOrderController.getOrderDetailsPage);
 
 // API endpoints for order management
 router.post('/api/:orderId/toggle-payment', adminOrderController.toggleOrderPaymentStatus);
