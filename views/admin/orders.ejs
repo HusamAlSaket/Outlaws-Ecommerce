@@ -14,7 +14,7 @@
     <!-- Custom Admin Dashboard Styles -->
     <link href="/css/admin-dashboard.css" rel="stylesheet">
     <!-- Admin Orders Page Styles -->
-    <link href="/css/admin-orders.css" rel="stylesheet">
+    <link href="/css/admin-orders-perfect.css" rel="stylesheet">
 </head>
 <body>
     <!-- Sidebar Overlay -->
@@ -53,59 +53,67 @@
             </div>
 
             <!-- Order Stats Cards -->
-            <div class="row g-4 mb-4 order-stats-cards">
+            <div class="row g-4 mb-4">
                 <div class="col-lg-3 col-md-6">
-                    <div class="order-stat-card total-orders position-relative">
-                        <div class="order-stat-icon">
+                    <div class="stat-card orders-total">
+                        <div class="stat-icon orders-total">
                             <i class="fas fa-shopping-bag"></i>
                         </div>
-                        <div class="order-stat-number"><%= orderStats.totalOrders %></div>
-                        <div class="order-stat-label">Total Orders</div>
+                        <div class="stat-content">
+                            <div class="stat-number"><%= orderStats.totalOrders %></div>
+                            <div class="stat-label">Total Orders</div>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="order-stat-card paid-orders position-relative">
-                        <div class="order-stat-icon">
+                    <div class="stat-card orders-active">
+                        <div class="stat-icon orders-active">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <div class="order-stat-number"><%= orderStats.paidOrders %></div>
-                        <div class="order-stat-label">Paid Orders</div>
+                        <div class="stat-content">
+                            <div class="stat-number"><%= orderStats.paidOrders %></div>
+                            <div class="stat-label">Paid Orders</div>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="order-stat-card unpaid-orders position-relative">
-                        <div class="order-stat-icon">
+                    <div class="stat-card orders-sold">
+                        <div class="stat-icon orders-sold">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <div class="order-stat-number"><%= orderStats.unpaidOrders %></div>
-                        <div class="order-stat-label">Unpaid Orders</div>
+                        <div class="stat-content">
+                            <div class="stat-number"><%= orderStats.unpaidOrders %></div>
+                            <div class="stat-label">Unpaid Orders</div>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <div class="order-stat-card total-revenue position-relative">
-                        <div class="order-stat-icon">
+                    <div class="stat-card orders-inactive">
+                        <div class="stat-icon orders-inactive">
                             <i class="fas fa-dollar-sign"></i>
                         </div>
-                        <div class="order-stat-number">$<%= orderStats.totalRevenue.toFixed(2) %></div>
-                        <div class="order-stat-label">Total Revenue</div>
+                        <div class="stat-content">
+                            <div class="stat-number">$<%= parseFloat(orderStats.totalRevenue).toFixed(2) %></div>
+                            <div class="stat-label">Total Revenue</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Filters and Search -->
-            <div class="order-filters-card">
-                <div class="order-filters-header">
-                    <h5 class="card-title mb-0">
+            <div class="content-card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title">
                         <i class="fas fa-filter text-primary"></i>
                         Filters & Search
                     </h5>
                 </div>
-                <div class="order-filters-body">
+                <div class="card-body">
                     <form method="GET" action="/admin/orders" class="row g-3 align-items-end">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <label for="search" class="form-label">Search Orders</label>
                             <input type="text" class="form-control" id="search" name="search" 
                                    placeholder="Order number, customer name..." value="<%= currentSearch %>">
@@ -133,9 +141,9 @@
                                 <i class="fas fa-search"></i> Search
                             </button>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <a href="/admin/orders" class="btn btn-outline-secondary w-100">
-                                <i class="fas fa-undo"></i> Reset Filters
+                                <i class="fas fa-undo"></i> Reset
                             </a>
                         </div>
                     </form>
@@ -143,9 +151,9 @@
             </div>
 
             <!-- Orders Table -->
-            <div class="order-table-container">
-                <div class="card-header d-flex justify-content-between align-items-center p-3">
-                    <h5 class="card-title mb-0">
+            <div class="content-card">
+                <div class="card-header">
+                    <h5 class="card-title">
                         <i class="fas fa-table"></i>
                         Orders List
                     </h5>
@@ -154,7 +162,7 @@
                     </div>
                 </div>
                 <div class="table-responsive">
-                    <table class="table order-table table-hover mb-0">
+                    <table class="table table-hover">
                         <thead>
                             <tr>
                                 <th>Order #</th>
@@ -215,32 +223,32 @@
                                         <td>
                                             <div class="order-date">
                                                 <%= new Date(order.createdAt).toLocaleDateString() %>
-                                                <div style="font-size: 0.8rem; color: #9ca3af;">
+                                                <div style="font-size: 0.75rem; color: #9ca3af;">
                                                     <%= new Date(order.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) %>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="order-actions">
-                                                <button type="button" class="order-action-btn view" 
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-info table-action-btn" 
                                                         onclick="viewOrderDetails('<%= order._id %>')" 
                                                         title="View Details">
                                                     <i class="fas fa-eye"></i>
                                                 </button>
-                                                <button type="button" class="order-action-btn edit" 
+                                                <button type="button" class="btn btn-primary table-action-btn" 
                                                         onclick="editOrder('<%= order._id %>')" 
                                                         title="Edit Order">
                                                     <i class="fas fa-edit"></i>
                                                 </button>
-                                                <div class="form-check form-switch d-inline-block mx-2">
-                                                    <input class="form-check-input order-toggle-switch" type="checkbox" 
+                                                <div class="form-check form-switch d-inline-block ms-2 me-2">
+                                                    <input class="form-check-input toggle-switch" type="checkbox" 
                                                            id="togglePayment<%= order._id %>" 
                                                            <%= order.isPaid ? 'checked' : '' %>
                                                            onchange="toggleOrderPaymentStatus('<%= order._id %>', '<%= order.orderNumber %>', this.checked)"
                                                            title="<%= order.isPaid ? 'Mark as Unpaid' : 'Mark as Paid' %>">
                                                     <label class="form-check-label visually-hidden" for="togglePayment<%= order._id %>">Toggle Payment</label>
                                                 </div>
-                                                <button type="button" class="order-action-btn delete" 
+                                                <button type="button" class="btn btn-danger table-action-btn" 
                                                         onclick="deleteOrder('<%= order._id %>', '<%= order.orderNumber %>')" 
                                                         title="Delete Order">
                                                     <i class="fas fa-trash"></i>
@@ -263,8 +271,8 @@
 
                 <!-- Pagination -->
                 <% if (pagination.totalPages > 1) { %>
-                    <nav aria-label="Orders pagination" class="p-3">
-                        <ul class="pagination justify-content-center mb-0">
+                    <nav aria-label="Orders pagination" class="mt-4">
+                        <ul class="pagination justify-content-center">
                             <% if (pagination.hasPrev) { %>
                                 <li class="page-item">
                                     <a class="page-link" href="?page=<%= pagination.currentPage - 1 %>&search=<%= currentSearch %>&status=<%= currentStatus %>&dateRange=<%= currentDateRange %>">

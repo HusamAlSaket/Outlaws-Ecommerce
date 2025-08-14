@@ -1,4 +1,4 @@
-/* Admin Orders Page Styles - Clean Professional Design */
+/* Admin Orders Page Styles - Clean Professional Design - EXACT COPY FROM PRODUCTS */
 
 /* CSS Variables for Consistency */
 :root {
@@ -108,34 +108,6 @@
     letter-spacing: 0.025em;
 }
 
-/* Order Stats Cards - Matching Color Scheme */
-.orders-total {
-    background: #3b82f6 !important; /* Blue - matching Total Orders */
-}
-
-.orders-active {
-    background: #10b981 !important; /* Green - matching Paid Orders */
-}
-
-.orders-sold {
-    background: #f59e0b !important; /* Orange - matching Unpaid Orders */
-}
-
-.orders-inactive {
-    background: #06b6d4 !important; /* Teal/Cyan - matching Revenue */
-}
-
-/* Ensure consistent styling for all order stat icons */
-.orders-total,
-.orders-active, 
-.orders-sold,
-.orders-inactive {
-    color: white !important;
-    border: none !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-    transition: all 0.3s ease !important;
-}
-
 /* Content Cards - EXACT MATCH */
 .content-card {
     background: var(--white);
@@ -239,7 +211,7 @@
     z-index: 2;
 }
 
-/* Order-specific table styles */
+/* Order-specific styles (replacing product-specific) */
 .order-info {
     display: flex;
     flex-direction: column;
@@ -277,54 +249,7 @@
 .order-amount {
     font-weight: 600;
     color: var(--success-color);
-    font-size: 1rem;
-}
-
-/* Status Badges - EXACT MATCH */
-.status-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.375rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.025em;
-    gap: 0.375rem;
-}
-
-.status-badge.pending {
-    background: rgba(251, 191, 36, 0.1);
-    color: #d97706;
-    border: 1px solid rgba(251, 191, 36, 0.2);
-}
-
-.status-badge.processing {
-    background: rgba(59, 130, 246, 0.1);
-    color: #2563eb;
-    border: 1px solid rgba(59, 130, 246, 0.2);
-}
-
-.status-badge.shipped {
-    background: rgba(16, 185, 129, 0.1);
-    color: #059669;
-    border: 1px solid rgba(16, 185, 129, 0.2);
-}
-
-.status-badge.delivered {
-    background: rgba(34, 197, 94, 0.1);
-    color: #16a34a;
-    border: 1px solid rgba(34, 197, 94, 0.2);
-}
-
-.status-badge.cancelled {
-    background: rgba(239, 68, 68, 0.1);
-    color: #dc2626;
-    border: 1px solid rgba(239, 68, 68, 0.2);
-}
-
-.status-badge i {
-    font-size: 0.625rem;
+    font-size: 1.1em;
 }
 
 /* Badge Styles - CLEAN */
@@ -378,90 +303,6 @@
 .btn-sm {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
-}
-
-/* Payment Status Toggle - Navy Theme */
-.toggle-switch {
-    background-color: #e5e7eb !important; /* Light gray when OFF */
-    border-color: #d1d5db !important;
-    width: 3rem !important;
-    height: 1.5rem !important;
-    border-radius: 1rem !important;
-    transition: all 0.3s ease !important;
-}
-
-.toggle-switch:checked {
-    background-color: #1e40af !important; /* Navy when ON */
-    border-color: #1e40af !important;
-    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25) !important;
-}
-
-.toggle-switch:focus {
-    border-color: #1e40af !important;
-    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25) !important;
-    background-color: #e5e7eb !important; /* Keep light gray on focus when OFF */
-}
-
-.toggle-switch:checked:focus {
-    background-color: #1d4ed8 !important; /* Darker navy on focus when ON */
-    border-color: #1d4ed8 !important;
-}
-
-/* Action Buttons - Medium-sized */
-.table-action-btn {
-    padding: 8px 12px !important;
-    font-size: 13px !important;
-    min-height: 36px !important;
-    max-height: 36px !important;
-    width: 36px !important;
-    border-radius: 5px !important;
-    border-width: 1px !important;
-    font-weight: 500 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    line-height: 1 !important;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.btn-view {
-    background: rgba(79, 70, 229, 0.1);
-    color: var(--primary-color);
-    border: 1px solid rgba(79, 70, 229, 0.2);
-}
-
-.btn-view:hover {
-    background: var(--primary-color);
-    color: var(--white);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-edit {
-    background: rgba(16, 185, 129, 0.1);
-    color: var(--success-color);
-    border: 1px solid rgba(16, 185, 129, 0.2);
-}
-
-.btn-edit:hover {
-    background: var(--success-color);
-    color: var(--white);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-delete {
-    background: rgba(239, 68, 68, 0.1);
-    color: var(--danger-color);
-    border: 1px solid rgba(239, 68, 68, 0.2);
-}
-
-.btn-delete:hover {
-    background: var(--danger-color);
-    color: var(--white);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
 }
 
 /* Form Styles - CLEAN */
@@ -535,49 +376,6 @@ select.form-select:not([multiple]):not([size]) {
     box-shadow: var(--shadow-md);
 }
 
-/* Filter Form Button Consistency */
-.content-card .btn-primary,
-.content-card .btn-secondary,
-.content-card .btn-outline-secondary {
-    font-weight: 600 !important;
-    border-width: 2px !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
-    transition: all 0.3s ease !important;
-    height: 48px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 12px 16px !important;
-    font-size: 14px !important;
-    min-height: 48px !important;
-    border-radius: 6px !important;
-    gap: 6px !important;
-    line-height: 1.2 !important;
-}
-
-.content-card .btn-primary {
-    background-color: #1e40af !important;
-    border-color: #1e40af !important;
-    color: white !important;
-}
-
-.content-card .btn-outline-secondary {
-    background-color: transparent !important;
-    border-color: #64748b !important;
-    color: #64748b !important;
-}
-
-.content-card .btn-outline-secondary:hover {
-    background-color: #64748b !important;
-    border-color: #64748b !important;
-    color: white !important;
-}
-
-.content-card .btn:hover {
-    transform: translateY(-1px) !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
-}
-
 /* Pagination - CLEAN */
 .pagination {
     margin-bottom: 0;
@@ -604,29 +402,6 @@ select.form-select:not([multiple]):not([size]) {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     color: var(--white);
-}
-
-/* Empty State */
-.empty-state {
-    text-align: center;
-    padding: 4rem 2rem;
-    color: var(--medium-gray);
-}
-
-.empty-state i {
-    font-size: 4rem;
-    color: var(--border-color);
-    margin-bottom: 1rem;
-}
-
-.empty-state h3 {
-    color: var(--dark-color);
-    margin-bottom: 0.5rem;
-}
-
-.empty-state p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
 }
 
 /* Loading States */
@@ -737,9 +512,291 @@ select.form-select:not([multiple]):not([size]) {
     margin-right: 0.5rem !important;
 }
 
+.text-muted {
+    color: var(--medium-gray) !important;
+}
+
+/* Action Buttons - More Visible */
+.btn-group .btn {
+    border-width: 2px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-info {
+    background-color: #06b6d4 !important;
+    border-color: #06b6d4 !important;
+    color: white !important;
+}
+
+.btn-primary {
+    background-color: #1e40af !important;
+    border-color: #1e40af !important;
+    color: white !important;
+}
+
+.btn-danger {
+    background-color: #ef4444 !important;
+    border-color: #ef4444 !important;
+    color: white !important;
+}
+
+.btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Custom Toggle Switch */
+.toggle-switch {
+    width: 48px !important;
+    height: 24px !important;
+    cursor: pointer !important;
+    border-radius: 12px !important;
+    background-color: #e5e7eb !important;
+    border: 2px solid #d1d5db !important;
+    transition: all 0.3s ease !important;
+}
+
+.toggle-switch:checked {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 0.1rem rgba(16, 185, 129, 0.25) !important;
+}
+
+.toggle-switch:focus {
+    box-shadow: 0 0 0 0.1rem rgba(16, 185, 129, 0.25) !important;
+}
+
+/* Button Group Spacing */
+.btn-group {
+    gap: 0.5rem !important;
+    align-items: center !important;
+}
+
+/* Filter Section Button Consistency */
+.content-card .btn-primary,
+.content-card .btn-secondary,
+.content-card .btn-outline-secondary {
+    font-weight: 600 !important;
+    border-width: 2px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.content-card .btn-primary {
+    background-color: #1e40af !important;
+    border-color: #1e40af !important;
+    color: white !important;
+}
+
+.content-card .btn-outline-secondary {
+    background-color: transparent !important;
+    border-color: #64748b !important;
+    color: #64748b !important;
+}
+
+.content-card .btn-outline-secondary:hover {
+    background-color: #64748b !important;
+    border-color: #64748b !important;
+    color: white !important;
+}
+
+.content-card .btn-secondary {
+    background-color: #64748b !important;
+    border-color: #64748b !important;
+    color: white !important;
+}
+
+.content-card .btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Form Controls Consistency */
+.content-card .form-control,
+.content-card .form-select {
+    border-color: #cbd5e1 !important;
+    border-width: 2px !important;
+    border-radius: 6px !important;
+    height: 48px !important;
+}
+
+.content-card .form-control:focus,
+.content-card .form-select:focus {
+    border-color: #1e40af !important;
+    box-shadow: 0 0 0 0.1rem rgba(30, 64, 175, 0.25) !important;
+}
+
+.content-card .form-label {
+    font-weight: 600 !important;
+    color: #374151 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Alignment Fix for Filter Form */
+.content-card .row.align-items-end {
+    align-items: flex-end !important;
+}
+
 /* Icon Styling */
 .card-title .text-primary {
     color: #1e40af !important;
+}
+
+/* Order Stats Cards - White Cards with Colorful Icons */
+
+/* Make sure ALL stat cards are white */
+.stat-card {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+    border-radius: var(--border-radius) !important;
+    padding: 1.5rem !important;
+    transition: var(--transition) !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ONLY the ICONS get colors - not the cards */
+.stat-icon.orders-total {
+    background: #3b82f6 !important; /* Blue icon */
+    color: white !important;
+}
+
+.stat-icon.orders-active {
+    background: #10b981 !important; /* Green icon */
+    color: white !important;
+}
+
+.stat-icon.orders-sold {
+    background: #f59e0b !important; /* Orange icon */
+    color: white !important;
+}
+
+.stat-icon.orders-inactive {
+    background: #06b6d4 !important; /* Teal icon */
+    color: white !important;
+}
+
+/* Style all stat icons consistently */
+.stat-icon {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: var(--border-radius) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.5rem !important;
+    flex-shrink: 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Filter Form Button Consistency - Perfect Alignment */
+.content-card .card-body .btn {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    min-height: 48px !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    line-height: 1.2 !important;
+    border-width: 2px !important;
+}
+
+/* Medium-sized table buttons - Perfect balance and consistency */
+.table-action-btn {
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    width: 36px !important;
+    border-radius: 5px !important;
+    border-width: 1px !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+}
+
+/* Legacy table button styling (fallback) */
+.content-card .table .btn {
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    width: 36px !important;
+    border-radius: 5px !important;
+    border-width: 1px !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+}
+
+.content-card .card-body .btn-primary {
+    background: #1e40af !important;
+    border-color: #1e40af !important;
+    color: white !important;
+}
+
+.content-card .card-body .btn-outline-secondary {
+    background: transparent !important;
+    border-color: #6b7280 !important;
+    color: #6b7280 !important;
+}
+
+.content-card .card-body .btn-outline-secondary:hover {
+    background: #6b7280 !important;
+    border-color: #6b7280 !important;
+    color: white !important;
+}
+
+.content-card .card-body .btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Toggle Switch - Navy Theme with proper backgrounds */
+.toggle-switch {
+    background-color: #e5e7eb !important; /* Light gray when OFF */
+    border-color: #d1d5db !important;
+    width: 3rem !important;
+    height: 1.5rem !important;
+    border-radius: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.toggle-switch:checked {
+    background-color: #1e40af !important; /* Navy when ON */
+    border-color: #1e40af !important;
+    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25) !important;
+}
+
+.toggle-switch:focus {
+    border-color: #1e40af !important;
+    box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25) !important;
+    background-color: #e5e7eb !important; /* Keep light gray on focus when OFF */
+}
+
+.toggle-switch:checked:focus {
+    background-color: #1d4ed8 !important; /* Darker navy on focus when ON */
+    border-color: #1d4ed8 !important;
 }
 
 /* Perfect alignment for Add Order button and Total Orders badge */
@@ -767,23 +824,23 @@ select.form-select:not([multiple]):not([size]) {
     border-radius: 6px !important;
 }
 
-/* Add hover effects for order stat cards */
-.stat-card:hover .orders-total {
+/* Add hover effects for order stat ICONS only */
+.stat-card:hover .stat-icon.orders-total {
     background: #2563eb !important;
     transform: scale(1.05) !important;
 }
 
-.stat-card:hover .orders-active {
+.stat-card:hover .stat-icon.orders-active {
     background: #059669 !important;
     transform: scale(1.05) !important;
 }
 
-.stat-card:hover .orders-sold {
+.stat-card:hover .stat-icon.orders-sold {
     background: #d97706 !important;
     transform: scale(1.05) !important;
 }
 
-.stat-card:hover .orders-inactive {
+.stat-card:hover .stat-icon.orders-inactive {
     background: #0891b2 !important;
     transform: scale(1.05) !important;
 }

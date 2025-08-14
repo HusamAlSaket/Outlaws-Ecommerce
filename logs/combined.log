@@ -4796,3 +4796,33 @@ Cannot read properties of undefined (reading 'charAt')
 2025-08-14 10:14:16 [INFO]: Login attempt: tesla@gmail.com, userFound: true
 2025-08-14 10:14:17 [INFO]: PasswordService compare: true
 2025-08-14 10:14:17 [INFO]: User logged in: tesla@gmail.com
+2025-08-14 10:32:49 [INFO]: Home page requested
+2025-08-14 10:32:49 [INFO]: Fetching trending products
+2025-08-14 10:32:49 [INFO]: Found 6 trending products
+2025-08-14 10:32:49 [INFO]: Fetching popular products
+2025-08-14 10:32:49 [INFO]: Found 6 popular products
+2025-08-14 10:32:49 [INFO]: Home page data loaded successfully
+2025-08-14 10:34:25 [WARN]: Authentication required but no token provided
+2025-08-14 10:34:29 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-14 10:34:29 [INFO]: PasswordService compare: true
+2025-08-14 10:34:29 [INFO]: User logged in: tesla@gmail.com
+2025-08-14 10:40:52 [WARN]: Authentication required but no token provided
+2025-08-14 10:40:58 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-14 10:40:58 [INFO]: PasswordService compare: true
+2025-08-14 10:40:58 [INFO]: User logged in: tesla@gmail.com
+2025-08-14 10:52:17 [WARN]: Authentication required but no token provided
+2025-08-14 10:52:24 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-14 10:52:24 [INFO]: PasswordService compare: true
+2025-08-14 10:52:24 [INFO]: User logged in: tesla@gmail.com
+2025-08-14 10:55:40 [WARN]: Authentication required but no token provided
+2025-08-14 10:55:45 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-14 10:55:45 [INFO]: PasswordService compare: true
+2025-08-14 10:55:45 [INFO]: User logged in: tesla@gmail.com
+2025-08-14 10:57:43 [WARN]: Authentication required but no token provided
+2025-08-14 10:57:48 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-14 10:57:48 [INFO]: PasswordService compare: true
+2025-08-14 10:57:48 [INFO]: User logged in: tesla@gmail.com
+2025-08-14 11:07:49 [WARN]: Authentication required but no token provided
+2025-08-14 11:07:55 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-14 11:07:56 [INFO]: PasswordService compare: true
+2025-08-14 11:07:56 [INFO]: User logged in: tesla@gmail.com

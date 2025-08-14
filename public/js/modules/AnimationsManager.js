@@ -58,7 +58,8 @@ class AnimationsManager {
      * Animate individual counter
      */
     animateCounter(element) {
-        const target = parseInt(element.textContent.replace(/[^0-9]/g, ''));
+        const originalText = element.textContent;
+        const target = parseFloat(originalText.replace(/[^0-9.]/g, ''));
         const duration = 2000;
         const step = target / (duration / 16);
         let current = 0;
@@ -71,9 +72,8 @@ class AnimationsManager {
             }
 
             // Format number based on original content
-            const originalText = element.textContent;
             if (originalText.includes('$')) {
-                element.textContent = '$' + Math.floor(current).toFixed(2);
+                element.textContent = '$' + current.toFixed(2);
             } else {
                 element.textContent = Math.floor(current).toString();
             }

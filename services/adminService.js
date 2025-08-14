@@ -56,8 +56,13 @@ class AdminService {
         { $group: { _id: null, total: { $sum: "$totalAmount" } } },
       ]);
 
-      return revenueResult.length > 0 ? revenueResult[0].total : 0;
+      const totalRevenue = revenueResult.length > 0 ? revenueResult[0].total : 0;
+      
+      console.log("💰 Revenue calculated:", totalRevenue);
+
+      return totalRevenue;
     } catch (error) {
+      console.error("Revenue calculation error:", error);
       throw new Error(`Failed to calculate revenue: ${error.message}`);
     }
   }
@@ -526,6 +531,8 @@ class AdminService {
           $gte: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
         },
       });
+
+      console.log("📊 Final stats - Total Revenue:", totalRevenue);
 
       return {
         totalOrders,
