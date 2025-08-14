@@ -147,16 +147,20 @@ class AdminOrders extends BaseDashboard {
 
     async viewOrderDetails(orderId) {
         try {
-            // Show loading
-            Swal.fire({
-                title: 'Loading order details...',
-                allowOutsideClick: false,
-                allowEscapeKey: false,
-                showConfirmButton: false,
-                didOpen: () => {
-                    Swal.showLoading();
-                }
-            });
+            // Show loading in modal
+            const modalElement = document.getElementById('orderDetailsModal');
+            const modal = new bootstrap.Modal(modalElement);
+            
+            document.getElementById('orderDetailsContent').innerHTML = `
+                <div class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2">Loading order details...</p>
+                </div>
+            `;
+            
+            modal.show();
 
             const response = await fetch(`/admin/orders/api/${orderId}/details`);
             const data = await response.json();
@@ -164,136 +168,172 @@ class AdminOrders extends BaseDashboard {
             if (data.success) {
                 const order = data.order;
                 
-                // Prepare items HTML
-                let itemsHtml = '';
-                order.items.forEach(item => {
-                    let imagePath = item.image;
-                    if (imagePath && !imagePath.startsWith('http://') && !imagePath.startsWith('https://')) {
-                        if (imagePath.startsWith('../public/')) {
-                            imagePath = imagePath.replace('../public/', '/');
-                        } else if (!imagePath.startsWith('/')) {
-                            imagePath = '/' + imagePath;
-                        }
-                    }
-                    
-                    itemsHtml += `
-                        <div class="order-item">
-                            <div class="order-item-image-container">
-                                ${imagePath ? 
-                                    `<img src="${imagePath}" alt="${item.title}" class="order-item-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                     <div class="no-image" style="display: none; width: 50px; height: 50px; background: #f3f4f6; border-radius: 6px; align-items: center; justify-content: center; color: #9ca3af;"><i class="fas fa-image"></i></div>` :
-                                    `<div class="no-image" style="width: 50px; height: 50px; background: #f3f4f6; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #9ca3af;"><i class="fas fa-image"></i></div>`
-                                }
-                            </div>
-                            <div class="order-item-details">
-                                <div class="order-item-title">${item.title}</div>
-                                <div class="order-item-price">$${item.price} each</div>
-                            </div>
-                            <div class="order-item-quantity">x${item.qty}</div>
-                        </div>
-                    `;
-                });
+                // Format date
+                const orderDate = new Date(order.createdAt).toLocaleString();
                 
-                Swal.fire({
-                    title: `Order Details - #${order.orderNumber}`,
-                    html: `
-                        <div class="order-details-modal text-start">
-                            <div class="order-details-content">
-                                <div class="order-info-section">
-                                    <h5><i class="fas fa-info-circle text-primary"></i> Order Information</h5>
-                                    <div class="order-info-item">
-                                        <span class="order-info-label">Order Number:</span>
-                                        <span class="order-info-value">#${order.orderNumber}</span>
-                                    </div>
-                                    <div class="order-info-item">
-                                        <span class="order-info-label">Total Amount:</span>
-                                        <span class="order-info-value">$${order.totalAmount.toFixed(2)}</span>
-                                    </div>
-                                    <div class="order-info-item">
-                                        <span class="order-info-label">Payment Status:</span>
-                                        <span class="badge ${order.isPaid ? 'bg-success' : 'bg-warning'}">${order.isPaid ? 'Paid' : 'Unpaid'}</span>
-                                    </div>
-                                    <div class="order-info-item">
-                                        <span class="order-info-label">Payment Method:</span>
-                                        <span class="order-info-value">${order.paymentMethod || 'Cash on Delivery'}</span>
-                                    </div>
-                                    <div class="order-info-item">
-                                        <span class="order-info-label">Order Date:</span>
-                                        <span class="order-info-value">${new Date(order.createdAt).toLocaleDateString()}</span>
-                                    </div>
+                // Calculate total
+                const total = order.items.reduce((sum, item) => sum + (item.price * item.qty), 0);
+                
+                // Build order details HTML
+                const orderDetailsHTML = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <h6 class="mb-0"><i class="fas fa-info-circle me-2"></i>Order Information</h6>
                                 </div>
-                                
-                                <div class="order-info-section">
-                                    <h5><i class="fas fa-user text-primary"></i> Customer Information</h5>
-                                    ${order.user ? `
-                                        <div class="order-info-item">
-                                            <span class="order-info-label">Name:</span>
-                                            <span class="order-info-value">${order.user.username}</span>
-                                        </div>
-                                        <div class="order-info-item">
-                                            <span class="order-info-label">Email:</span>
-                                            <span class="order-info-value">${order.user.email}</span>
-                                        </div>
-                                    ` : `
-                                        <div class="order-info-item">
-                                            <span class="order-info-value text-muted">Guest User</span>
-                                        </div>
-                                    `}
-                                    ${order.shippingInfo ? `
-                                        <div class="order-info-item">
-                                            <span class="order-info-label">Full Name:</span>
-                                            <span class="order-info-value">${order.shippingInfo.fullName}</span>
-                                        </div>
-                                        <div class="order-info-item">
-                                            <span class="order-info-label">Address:</span>
-                                            <span class="order-info-value">${order.shippingInfo.address}</span>
-                                        </div>
-                                        <div class="order-info-item">
-                                            <span class="order-info-label">City:</span>
-                                            <span class="order-info-value">${order.shippingInfo.city}</span>
-                                        </div>
-                                        <div class="order-info-item">
-                                            <span class="order-info-label">Country:</span>
-                                            <span class="order-info-value">${order.shippingInfo.country}</span>
-                                        </div>
-                                        <div class="order-info-item">
-                                            <span class="order-info-label">Postal Code:</span>
-                                            <span class="order-info-value">${order.shippingInfo.postalCode}</span>
-                                        </div>
-                                    ` : ''}
-                                </div>
-                                
-                                <div class="order-items-list">
-                                    <h5><i class="fas fa-shopping-bag text-primary"></i> Order Items (${order.items.length})</h5>
-                                    ${itemsHtml}
+                                <div class="card-body">
+                                    <table class="table table-borderless table-sm">
+                                        <tr>
+                                            <td class="fw-bold">Order ID:</td>
+                                            <td>${order._id}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Order Number:</td>
+                                            <td>#${order.orderNumber}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Date:</td>
+                                            <td>${orderDate}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Payment Status:</td>
+                                            <td><span class="badge bg-${order.isPaid ? 'success' : 'warning'}">${order.isPaid ? 'Paid' : 'Unpaid'}</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Payment Method:</td>
+                                            <td>${order.paymentMethod || 'Cash on Delivery'}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Total:</td>
+                                            <td class="fw-bold text-primary">$${order.totalAmount.toFixed(2)}</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                    `,
-                    width: '700px',
-                    showConfirmButton: true,
-                    confirmButtonText: 'Close',
-                    confirmButtonColor: '#1e40af',
-                    customClass: {
-                        popup: 'admin-swal-popup-large',
-                        title: 'admin-swal-title',
-                        confirmButton: 'admin-swal-confirm'
-                    }
-                });
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <h6 class="mb-0"><i class="fas fa-user me-2"></i>Customer Information</h6>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-borderless table-sm">
+                                        ${order.user ? `
+                                            <tr>
+                                                <td class="fw-bold">Name:</td>
+                                                <td>${order.user.username}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Email:</td>
+                                                <td>${order.user.email}</td>
+                                            </tr>
+                                        ` : `
+                                            <tr>
+                                                <td colspan="2" class="text-muted">Guest User</td>
+                                            </tr>
+                                        `}
+                                        ${order.shippingInfo ? `
+                                            <tr>
+                                                <td class="fw-bold">Full Name:</td>
+                                                <td>${order.shippingInfo.fullName}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Address:</td>
+                                                <td>${order.shippingInfo.address}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">City:</td>
+                                                <td>${order.shippingInfo.city}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Country:</td>
+                                                <td>${order.shippingInfo.country}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Postal Code:</td>
+                                                <td>${order.shippingInfo.postalCode}</td>
+                                            </tr>
+                                        ` : ''}
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="mb-0"><i class="fas fa-shopping-cart me-2"></i>Order Items (${order.items.length})</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Image</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${order.items.map(item => {
+                                            let imagePath = item.image;
+                                            if (imagePath && !imagePath.startsWith('http://') && !imagePath.startsWith('https://')) {
+                                                if (imagePath.startsWith('../public/')) {
+                                                    imagePath = imagePath.replace('../public/', '/');
+                                                } else if (!imagePath.startsWith('/')) {
+                                                    imagePath = '/' + imagePath;
+                                                }
+                                            }
+                                            
+                                            return `
+                                                <tr>
+                                                    <td class="fw-medium">${item.title}</td>
+                                                    <td>
+                                                        ${imagePath ? 
+                                                            `<img src="${imagePath}" alt="${item.title}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                             <div class="bg-light d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; border-radius: 4px; display: none;"><i class="fas fa-image text-muted"></i></div>` :
+                                                            '<div class="bg-light d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; border-radius: 4px;"><i class="fas fa-image text-muted"></i></div>'
+                                                        }
+                                                    </td>
+                                                    <td>$${item.price.toFixed(2)}</td>
+                                                    <td>${item.qty}</td>
+                                                    <td class="fw-medium">$${(item.price * item.qty).toFixed(2)}</td>
+                                                </tr>
+                                            `;
+                                        }).join('')}
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="table-light">
+                                            <th colspan="4" class="text-end">Total:</th>
+                                            <th class="text-primary">$${order.totalAmount.toFixed(2)}</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                // Update modal content
+                document.getElementById('orderDetailsContent').innerHTML = orderDetailsHTML;
+                
             } else {
                 throw new Error(data.error || 'Failed to fetch order details');
             }
         } catch (error) {
             console.error('Error fetching order details:', error);
-            Swal.fire({
-                title: 'Error!',
-                text: 'Failed to load order details. Please try again.',
-                icon: 'error',
-                confirmButtonText: 'OK',
-                customClass: {
-                    popup: 'admin-swal-popup'
-                }
-            });
+            
+            // Show error in modal
+            document.getElementById('orderDetailsContent').innerHTML = `
+                <div class="text-center text-danger">
+                    <i class="fas fa-exclamation-triangle fa-2x mb-3"></i>
+                    <h5>Error Loading Order Details</h5>
+                    <p>Failed to load order details. Please try again.</p>
+                </div>
+            `;
         }
     }
 
@@ -308,135 +348,59 @@ class AdminOrders extends BaseDashboard {
             }
 
             const order = data.order;
-
-            Swal.fire({
-                title: `Edit Order #${order.orderNumber}`,
+            
+            // Show status edit dialog
+            const result = await Swal.fire({
+                title: `Edit Order Status - #${order.orderNumber}`,
                 html: `
-                    <form id="editOrderForm" class="edit-order-form text-start">
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="editPaymentMethod" class="form-label">Payment Method</label>
-                                    <select class="form-control" id="editPaymentMethod">
-                                        <option value="Cash on Delivery" ${order.paymentMethod === 'Cash on Delivery' ? 'selected' : ''}>Cash on Delivery</option>
-                                        <option value="Credit Card" ${order.paymentMethod === 'Credit Card' ? 'selected' : ''}>Credit Card</option>
-                                        <option value="PayPal" ${order.paymentMethod === 'PayPal' ? 'selected' : ''}>PayPal</option>
-                                        <option value="Bank Transfer" ${order.paymentMethod === 'Bank Transfer' ? 'selected' : ''}>Bank Transfer</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="editFullName" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="editFullName" value="${order.shippingInfo?.fullName || ''}">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="editCity" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="editCity" value="${order.shippingInfo?.city || ''}">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="editAddress" class="form-label">Address</label>
-                                    <textarea class="form-control" id="editAddress" rows="2">${order.shippingInfo?.address || ''}</textarea>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="editCountry" class="form-label">Country</label>
-                                    <input type="text" class="form-control" id="editCountry" value="${order.shippingInfo?.country || ''}">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="editPostalCode" class="form-label">Postal Code</label>
-                                    <input type="text" class="form-control" id="editPostalCode" value="${order.shippingInfo?.postalCode || ''}">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="editIsPaid" ${order.isPaid ? 'checked' : ''}>
-                                    <label class="form-check-label" for="editIsPaid">Order is Paid</label>
-                                </div>
-                            </div>
+                    <div class="text-start">
+                        <div class="mb-3">
+                            <label for="orderStatus" class="form-label fw-bold">Order Status</label>
+                            <select class="form-control" id="orderStatus">
+                                <option value="pending" ${order.status === 'pending' ? 'selected' : ''}>Pending</option>
+                                <option value="processing" ${order.status === 'processing' ? 'selected' : ''}>Processing</option>
+                                <option value="shipped" ${order.status === 'shipped' ? 'selected' : ''}>Shipped</option>
+                                <option value="delivered" ${order.status === 'delivered' ? 'selected' : ''}>Delivered</option>
+                                <option value="cancelled" ${order.status === 'cancelled' ? 'selected' : ''}>Cancelled</option>
+                            </select>
                         </div>
-                    </form>
+                        <div class="alert alert-info">
+                            <small><i class="fas fa-info-circle me-2"></i>Current status: <strong>${order.status.charAt(0).toUpperCase() + order.status.slice(1)}</strong></small>
+                        </div>
+                    </div>
                 `,
-                width: '500px',
                 showCancelButton: true,
-                confirmButtonText: 'Update Order',
+                confirmButtonText: 'Update Status',
                 cancelButtonText: 'Cancel',
-                confirmButtonColor: '#1e40af',
-                cancelButtonColor: '#64748b',
-                customClass: {
-                    popup: 'admin-swal-popup',
-                    title: 'admin-swal-title',
-                    confirmButton: 'admin-swal-confirm',
-                    cancelButton: 'admin-swal-cancel'
-                },
+                confirmButtonColor: '#007bff',
+                width: '400px',
                 preConfirm: () => {
-                    return {
-                        paymentMethod: document.getElementById('editPaymentMethod').value,
-                        isPaid: document.getElementById('editIsPaid').checked,
-                        shippingInfo: {
-                            fullName: document.getElementById('editFullName').value,
-                            address: document.getElementById('editAddress').value,
-                            city: document.getElementById('editCity').value,
-                            country: document.getElementById('editCountry').value,
-                            postalCode: document.getElementById('editPostalCode').value
-                        }
-                    };
-                }
-            }).then(async (result) => {
-                if (result.isConfirmed) {
-                    try {
-                        // Show loading
-                        Swal.fire({
-                            title: 'Updating order...',
-                            allowOutsideClick: false,
-                            allowEscapeKey: false,
-                            showConfirmButton: false,
-                            didOpen: () => {
-                                Swal.showLoading();
-                            }
-                        });
-
-                        const updateResponse = await fetch(`/admin/orders/api/${orderId}/update`, {
-                            method: 'PUT',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify(result.value)
-                        });
-
-                        const updateData = await updateResponse.json();
-
-                        if (updateData.success) {
-                            Swal.fire({
-                                title: 'Success!',
-                                text: 'Order updated successfully',
-                                icon: 'success',
-                                timer: 2000,
-                                showConfirmButton: false
-                            }).then(() => {
-                                window.location.reload();
-                            });
-                        } else {
-                            throw new Error(updateData.error || 'Failed to update order');
-                        }
-                    } catch (error) {
-                        console.error('Error updating order:', error);
-                        Swal.fire({
-                            title: 'Error!',
-                            text: 'Failed to update order. Please try again.',
-                            icon: 'error',
-                            confirmButtonText: 'OK'
-                        });
+                    const status = document.getElementById('orderStatus').value;
+                    if (!status) {
+                        Swal.showValidationMessage('Please select a status');
+                        return false;
                     }
+                    return status;
                 }
             });
+
+            if (result.isConfirmed) {
+                const newStatus = result.value;
+                
+                // Only update if status changed
+                if (newStatus !== order.status) {
+                    await this.updateOrderStatus(orderId, newStatus);
+                } else {
+                    Swal.fire({
+                        title: 'No Changes',
+                        text: 'Status was not changed.',
+                        icon: 'info',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }
+            }
+
         } catch (error) {
             console.error('Error loading order for edit:', error);
             Swal.fire({
@@ -518,11 +482,63 @@ class AdminOrders extends BaseDashboard {
             }
         }
     }
+
+    /**
+     * Update order status
+     */
+    async updateOrderStatus(orderId, newStatus) {
+        try {
+            this.animations.showLoader();
+
+            const response = await fetch(`/admin/orders/api/${orderId}/status`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ status: newStatus })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Status Updated!',
+                    text: result.message,
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+
+                // Reload the page to show updated status
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1500);
+            } else {
+                throw new Error(result.error || 'Failed to update status');
+            }
+        } catch (error) {
+            console.error('Error updating order status:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: error.message || 'Failed to update order status',
+            });
+        } finally {
+            this.animations.hideLoader();
+        }
+    }
 }
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.ordersPage = new AdminOrders();
 });
+
+// Make updateOrderStatus available globally
+window.updateOrderStatus = (orderId, newStatus) => {
+    if (window.ordersPage) {
+        window.ordersPage.updateOrderStatus(orderId, newStatus);
+    }
+};
 
 export default AdminOrders;

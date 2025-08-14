@@ -703,6 +703,39 @@ class AdminService {
   }
 
   /**
+   * Update order status
+   * @param {string} orderId - Order ID
+   * @param {string} status - New status
+   * @returns {Object} Update result
+   */
+  async updateOrderStatus(orderId, status) {
+    try {
+      const order = await Order.findByIdAndUpdate(
+        orderId,
+        { status },
+        { new: true, runValidators: true }
+      );
+
+      if (!order) {
+        throw new Error("Order not found");
+      }
+
+      return {
+        success: true,
+        message: "Order status updated successfully",
+        order: {
+          id: order._id,
+          orderNumber: order.orderNumber,
+          status: order.status,
+        },
+      };
+    } catch (error) {
+      console.error("Error updating order status:", error);
+      throw new Error(`Failed to update order status: ${error.message}`);
+    }
+  }
+
+  /**
    * Delete an order
    * @param {string} orderId - Order ID
    * @returns {Object} Delete result

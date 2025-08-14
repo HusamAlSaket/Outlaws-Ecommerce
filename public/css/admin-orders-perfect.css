@@ -845,6 +845,29 @@ select.form-select:not([multiple]):not([size]) {
     transform: scale(1.05) !important;
 }
 
+/* Status Dropdown Styling */
+.status-dropdown {
+    border: 1px solid #d1d5db !important;
+    border-radius: 4px !important;
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    background-color: white !important;
+    color: #374151 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.status-dropdown:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1) !important;
+    outline: none !important;
+}
+
+.status-dropdown:hover {
+    border-color: #9ca3af !important;
+}
+
 /* CRITICAL: Force dropdown text visibility - Override everything */
 .form-select,
 select.form-select,

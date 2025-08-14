@@ -4826,3 +4826,22 @@ Cannot read properties of undefined (reading 'charAt')
 2025-08-14 11:07:55 [INFO]: Login attempt: tesla@gmail.com, userFound: true
 2025-08-14 11:07:56 [INFO]: PasswordService compare: true
 2025-08-14 11:07:56 [INFO]: User logged in: tesla@gmail.com
+2025-08-14 11:15:06 [WARN]: Authentication required but no token provided
+2025-08-14 11:15:14 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-14 11:15:15 [INFO]: PasswordService compare: true
+2025-08-14 11:15:15 [INFO]: User logged in: tesla@gmail.com
+2025-08-14 11:24:50 [WARN]: Authentication required but no token provided
+2025-08-14 11:27:23 [WARN]: Authentication required but no token provided
+2025-08-14 11:27:29 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-14 11:27:29 [INFO]: PasswordService compare: true
+2025-08-14 11:27:29 [INFO]: User logged in: tesla@gmail.com
+2025-08-14 11:33:05 [WARN]: Authentication required but no token provided
+2025-08-14 11:33:12 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-14 11:33:12 [INFO]: PasswordService compare: true
+2025-08-14 11:33:12 [INFO]: User logged in: tesla@gmail.com
+2025-08-14 11:33:25 [WARN]: Authentication required but no token provided
+2025-08-14 11:33:35 [WARN]: Authentication required but no token provided
+2025-08-14 11:56:48 [WARN]: Authentication required but no token provided
+2025-08-14 11:56:54 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-14 11:56:54 [INFO]: PasswordService compare: true
+2025-08-14 11:56:54 [INFO]: User logged in: tesla@gmail.com

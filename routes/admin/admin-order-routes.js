@@ -8,6 +8,7 @@ router.get('/', adminOrderController.getOrders);
 
 // API endpoints for order management
 router.post('/api/:orderId/toggle-payment', adminOrderController.toggleOrderPaymentStatus);
+router.put('/api/:orderId/status', adminOrderController.updateOrderStatus);
 router.get('/api/:orderId/details', adminOrderController.getOrderDetails);
 
 // CRUD operations

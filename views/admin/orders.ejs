@@ -170,6 +170,7 @@
                                 <th>Items</th>
                                 <th>Total Amount</th>
                                 <th>Payment</th>
+                                <th>Status</th>
                                 <th>Shipping Info</th>
                                 <th>Date</th>
                                 <th>Actions</th>
@@ -206,9 +207,20 @@
                                             <div class="order-amount">$<%= order.totalAmount.toFixed(2) %></div>
                                         </td>
                                         <td>
-                                            <span class="payment-status <%= order.isPaid ? 'paid' : 'unpaid' %>">
+                                            <span class="badge bg-<%= order.isPaid ? 'success' : 'warning' %>">
                                                 <%= order.isPaid ? 'Paid' : 'Unpaid' %>
                                             </span>
+                                        </td>
+                                        <td>
+                                            <select class="form-select form-select-sm status-dropdown" 
+                                                    onchange="updateOrderStatus('<%= order._id %>', this.value)"
+                                                    style="min-width: 120px;">
+                                                <option value="pending" <%= (!order.status || order.status === 'pending') ? 'selected' : '' %>>Pending</option>
+                                                <option value="processing" <%= order.status === 'processing' ? 'selected' : '' %>>Processing</option>
+                                                <option value="shipped" <%= order.status === 'shipped' ? 'selected' : '' %>>Shipped</option>
+                                                <option value="delivered" <%= order.status === 'delivered' ? 'selected' : '' %>>Delivered</option>
+                                                <option value="cancelled" <%= order.status === 'cancelled' ? 'selected' : '' %>>Cancelled</option>
+                                            </select>
                                         </td>
                                         <td>
                                             <% if (order.shippingInfo) { %>
@@ -230,15 +242,10 @@
                                         </td>
                                         <td>
                                             <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-info table-action-btn" 
+                                                <button type="button" class="btn btn-info btn-sm table-action-btn" 
                                                         onclick="viewOrderDetails('<%= order._id %>')" 
                                                         title="View Details">
                                                     <i class="fas fa-eye"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-primary table-action-btn" 
-                                                        onclick="editOrder('<%= order._id %>')" 
-                                                        title="Edit Order">
-                                                    <i class="fas fa-edit"></i>
                                                 </button>
                                                 <div class="form-check form-switch d-inline-block ms-2 me-2">
                                                     <input class="form-check-input toggle-switch" type="checkbox" 
@@ -248,7 +255,7 @@
                                                            title="<%= order.isPaid ? 'Mark as Unpaid' : 'Mark as Paid' %>">
                                                     <label class="form-check-label visually-hidden" for="togglePayment<%= order._id %>">Toggle Payment</label>
                                                 </div>
-                                                <button type="button" class="btn btn-danger table-action-btn" 
+                                                <button type="button" class="btn btn-danger btn-sm table-action-btn" 
                                                         onclick="deleteOrder('<%= order._id %>', '<%= order.orderNumber %>')" 
                                                         title="Delete Order">
                                                     <i class="fas fa-trash"></i>
@@ -259,7 +266,7 @@
                                 <% }) %>
                             <% } else { %>
                                 <tr>
-                                    <td colspan="8" class="text-center py-5">
+                                    <td colspan="9" class="text-center py-5">
                                         <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
                                         <p class="text-muted">No orders found</p>
                                     </td>
@@ -299,6 +306,31 @@
                         </ul>
                     </nav>
                 <% } %>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Details Modal -->
+    <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderDetailsModalLabel">
+                        <i class="fas fa-eye text-primary me-2"></i>Order Details
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="orderDetailsContent">
+                    <!-- Order details will be loaded here -->
+                    <div class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>

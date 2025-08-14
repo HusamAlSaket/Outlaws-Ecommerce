@@ -96,6 +96,25 @@ class AdminOrderController {
   }
 
   /**
+   * API endpoint to update order status
+   */
+  async updateOrderStatus(req, res) {
+    try {
+      const { orderId } = req.params;
+      const { status } = req.body;
+      
+      const result = await adminService.updateOrderStatus(orderId, status);
+      res.json(result);
+    } catch (error) {
+      console.error("Error updating order status:", error);
+      res.status(HTTP_STATUS.BAD_REQUEST).json({
+        success: false,
+        error: error.message,
+      });
+    }
+  }
+
+  /**
    * API endpoint to delete an order
    */
   async deleteOrder(req, res) {
