@@ -3,13 +3,15 @@ const express = require('express');
 const router = express.Router();
 const adminOrderController = require('../../controllers/admin/admin-order-controller');
 
+
+// Render order details page
+router.get('/details/:orderId', adminOrderController.renderOrderDetailsPage);
+
 // Orders management routes
 router.get('/', adminOrderController.getOrders);
-router.get('/:orderId', adminOrderController.getOrderDetailsPage);
 
 // API endpoints for order management
 router.post('/api/:orderId/toggle-payment', adminOrderController.toggleOrderPaymentStatus);
-router.put('/api/:orderId/status', adminOrderController.updateOrderStatus);
 router.get('/api/:orderId/details', adminOrderController.getOrderDetails);
 
 // CRUD operations

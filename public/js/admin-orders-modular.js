@@ -53,9 +53,9 @@ class AdminOrders extends BaseDashboard {
     setupGlobalFunctions() {
         // Make order management functions available globally
         window.toggleOrderPaymentStatus = this.toggleOrderPaymentStatus.bind(this);
+        window.viewOrderDetails = this.viewOrderDetails.bind(this);
         window.editOrder = this.editOrder.bind(this);
         window.deleteOrder = this.deleteOrder.bind(this);
-        window.updateOrderStatus = this.updateOrderStatus.bind(this);
     }
 
     async toggleOrderPaymentStatus(orderId, orderNumber, newStatus) {
@@ -96,7 +96,8 @@ class AdminOrders extends BaseDashboard {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                    }
+                    },
+                    credentials: 'include'
                 });
 
                 const data = await response.json();
@@ -145,6 +146,158 @@ class AdminOrders extends BaseDashboard {
         }
     }
 
+    async viewOrderDetails(orderId) {
+        try {
+            // Show loading
+            Swal.fire({
+                title: 'Loading order details...',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                showConfirmButton: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            const response = await fetch(`/admin/orders/api/${orderId}/details`);
+            const data = await response.json();
+
+            if (data.success) {
+                const order = data.order;
+                
+                // Prepare items HTML
+                let itemsHtml = '';
+                order.items.forEach(item => {
+                    let imagePath = item.image;
+                    if (imagePath && !imagePath.startsWith('http://') && !imagePath.startsWith('https://')) {
+                        if (imagePath.startsWith('../public/')) {
+                            imagePath = imagePath.replace('../public/', '/');
+                        } else if (!imagePath.startsWith('/')) {
+                            imagePath = '/' + imagePath;
+                        }
+                    }
+                    
+                    itemsHtml += `
+                        <div class="order-item">
+                            <div class="order-item-image-container">
+                                ${imagePath ? 
+                                    `<img src="${imagePath}" alt="${item.title}" class="order-item-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                     <div class="no-image" style="display: none; width: 50px; height: 50px; background: #f3f4f6; border-radius: 6px; align-items: center; justify-content: center; color: #9ca3af;"><i class="fas fa-image"></i></div>` :
+                                    `<div class="no-image" style="width: 50px; height: 50px; background: #f3f4f6; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #9ca3af;"><i class="fas fa-image"></i></div>`
+                                }
+                            </div>
+                            <div class="order-item-details">
+                                <div class="order-item-title">${item.title}</div>
+                                <div class="order-item-price">$${item.price} each</div>
+                            </div>
+                            <div class="order-item-quantity">x${item.qty}</div>
+                        </div>
+                    `;
+                });
+                
+                Swal.fire({
+                    title: `Order Details - #${order.orderNumber}`,
+                    html: `
+                        <div class="order-details-modal text-start">
+                            <div class="order-details-content">
+                                <div class="order-info-section">
+                                    <h5><i class="fas fa-info-circle text-primary"></i> Order Information</h5>
+                                    <div class="order-info-item">
+                                        <span class="order-info-label">Order Number:</span>
+                                        <span class="order-info-value">#${order.orderNumber}</span>
+                                    </div>
+                                    <div class="order-info-item">
+                                        <span class="order-info-label">Total Amount:</span>
+                                        <span class="order-info-value">$${order.totalAmount.toFixed(2)}</span>
+                                    </div>
+                                    <div class="order-info-item">
+                                        <span class="order-info-label">Payment Status:</span>
+                                        <span class="badge ${order.isPaid ? 'bg-success' : 'bg-warning'}">${order.isPaid ? 'Paid' : 'Unpaid'}</span>
+                                    </div>
+                                    <div class="order-info-item">
+                                        <span class="order-info-label">Payment Method:</span>
+                                        <span class="order-info-value">${order.paymentMethod || 'Cash on Delivery'}</span>
+                                    </div>
+                                    <div class="order-info-item">
+                                        <span class="order-info-label">Order Date:</span>
+                                        <span class="order-info-value">${new Date(order.createdAt).toLocaleDateString()}</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-info-section">
+                                    <h5><i class="fas fa-user text-primary"></i> Customer Information</h5>
+                                    ${order.user ? `
+                                        <div class="order-info-item">
+                                            <span class="order-info-label">Name:</span>
+                                            <span class="order-info-value">${order.user.username}</span>
+                                        </div>
+                                        <div class="order-info-item">
+                                            <span class="order-info-label">Email:</span>
+                                            <span class="order-info-value">${order.user.email}</span>
+                                        </div>
+                                    ` : `
+                                        <div class="order-info-item">
+                                            <span class="order-info-value text-muted">Guest User</span>
+                                        </div>
+                                    `}
+                                    ${order.shippingInfo ? `
+                                        <div class="order-info-item">
+                                            <span class="order-info-label">Full Name:</span>
+                                            <span class="order-info-value">${order.shippingInfo.fullName}</span>
+                                        </div>
+                                        <div class="order-info-item">
+                                            <span class="order-info-label">Address:</span>
+                                            <span class="order-info-value">${order.shippingInfo.address}</span>
+                                        </div>
+                                        <div class="order-info-item">
+                                            <span class="order-info-label">City:</span>
+                                            <span class="order-info-value">${order.shippingInfo.city}</span>
+                                        </div>
+                                        <div class="order-info-item">
+                                            <span class="order-info-label">Country:</span>
+                                            <span class="order-info-value">${order.shippingInfo.country}</span>
+                                        </div>
+                                        <div class="order-info-item">
+                                            <span class="order-info-label">Postal Code:</span>
+                                            <span class="order-info-value">${order.shippingInfo.postalCode}</span>
+                                        </div>
+                                    ` : ''}
+                                </div>
+                                
+                                <div class="order-items-list">
+                                    <h5><i class="fas fa-shopping-bag text-primary"></i> Order Items (${order.items.length})</h5>
+                                    ${itemsHtml}
+                                </div>
+                            </div>
+                        </div>
+                    `,
+                    width: '700px',
+                    showConfirmButton: true,
+                    confirmButtonText: 'Close',
+                    confirmButtonColor: '#1e40af',
+                    customClass: {
+                        popup: 'admin-swal-popup-large',
+                        title: 'admin-swal-title',
+                        confirmButton: 'admin-swal-confirm'
+                    }
+                });
+            } else {
+                throw new Error(data.error || 'Failed to fetch order details');
+            }
+        } catch (error) {
+            console.error('Error fetching order details:', error);
+            Swal.fire({
+                title: 'Error!',
+                text: 'Failed to load order details. Please try again.',
+                icon: 'error',
+                confirmButtonText: 'OK',
+                customClass: {
+                    popup: 'admin-swal-popup'
+                }
+            });
+        }
+    }
+
     async editOrder(orderId) {
         try {
             // First fetch the order details
@@ -156,59 +309,87 @@ class AdminOrders extends BaseDashboard {
             }
 
             const order = data.order;
-            
-            // Show status edit dialog
-            const result = await Swal.fire({
-                title: `Edit Order Status - #${order.orderNumber}`,
+
+            Swal.fire({
+                title: `Edit Order Status (#${order.orderNumber})`,
                 html: `
-                    <div class="text-start">
-                        <div class="mb-3">
-                            <label for="orderStatus" class="form-label fw-bold">Order Status</label>
-                            <select class="form-control" id="orderStatus">
-                                <option value="pending" ${order.status === 'pending' ? 'selected' : ''}>Pending</option>
+                    <form id="editOrderForm" class="edit-order-form text-start">
+                        <div class="form-group mb-3">
+                            <label for="editStatus" class="form-label">Order Status</label>
+                            <select class="form-select" id="editStatus">
                                 <option value="processing" ${order.status === 'processing' ? 'selected' : ''}>Processing</option>
                                 <option value="shipped" ${order.status === 'shipped' ? 'selected' : ''}>Shipped</option>
-                                <option value="delivered" ${order.status === 'delivered' ? 'selected' : ''}>Delivered</option>
-                                <option value="cancelled" ${order.status === 'cancelled' ? 'selected' : ''}>Cancelled</option>
+                                <option value="completed" ${order.status === 'completed' ? 'selected' : ''}>Completed</option>
+                                <option value="canceled" ${order.status === 'canceled' ? 'selected' : ''}>Canceled</option>
                             </select>
                         </div>
-                        <div class="alert alert-info">
-                            <small><i class="fas fa-info-circle me-2"></i>Current status: <strong>${order.status.charAt(0).toUpperCase() + order.status.slice(1)}</strong></small>
-                        </div>
-                    </div>
+                    </form>
                 `,
+                width: '500px',
                 showCancelButton: true,
-                confirmButtonText: 'Update Status',
+                confirmButtonText: 'Update Order',
                 cancelButtonText: 'Cancel',
-                confirmButtonColor: '#007bff',
-                width: '400px',
+                confirmButtonColor: '#1e40af',
+                cancelButtonColor: '#64748b',
+                customClass: {
+                    popup: 'admin-swal-popup',
+                    title: 'admin-swal-title',
+                    confirmButton: 'admin-swal-confirm',
+                    cancelButton: 'admin-swal-cancel'
+                },
                 preConfirm: () => {
-                    const status = document.getElementById('orderStatus').value;
-                    if (!status) {
-                        Swal.showValidationMessage('Please select a status');
-                        return false;
+                    return {
+                        status: document.getElementById('editStatus').value
+                    };
+                }
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    try {
+                        // Show loading
+                        Swal.fire({
+                            title: 'Updating order...',
+                            allowOutsideClick: false,
+                            allowEscapeKey: false,
+                            showConfirmButton: false,
+                            didOpen: () => {
+                                Swal.showLoading();
+                            }
+                        });
+
+                        const updateResponse = await fetch(`/admin/orders/api/${orderId}/update`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(result.value)
+                        });
+
+                        const updateData = await updateResponse.json();
+
+                        if (updateData.success) {
+                            Swal.fire({
+                                title: 'Success!',
+                                text: 'Order updated successfully',
+                                icon: 'success',
+                                timer: 2000,
+                                showConfirmButton: false
+                            }).then(() => {
+                                window.location.reload();
+                            });
+                        } else {
+                            throw new Error(updateData.error || 'Failed to update order');
+                        }
+                    } catch (error) {
+                        console.error('Error updating order:', error);
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'Failed to update order. Please try again.',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
                     }
-                    return status;
                 }
             });
-
-            if (result.isConfirmed) {
-                const newStatus = result.value;
-                
-                // Only update if status changed
-                if (newStatus !== order.status) {
-                    await this.updateOrderStatus(orderId, newStatus);
-                } else {
-                    Swal.fire({
-                        title: 'No Changes',
-                        text: 'Status was not changed.',
-                        icon: 'info',
-                        timer: 1500,
-                        showConfirmButton: false
-                    });
-                }
-            }
-
         } catch (error) {
             console.error('Error loading order for edit:', error);
             Swal.fire({
@@ -290,63 +471,11 @@ class AdminOrders extends BaseDashboard {
             }
         }
     }
-
-    /**
-     * Update order status
-     */
-    async updateOrderStatus(orderId, newStatus) {
-        try {
-            this.animations.showLoader();
-
-            const response = await fetch(`/admin/orders/api/${orderId}/status`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ status: newStatus })
-            });
-
-            const result = await response.json();
-
-            if (result.success) {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Status Updated!',
-                    text: result.message,
-                    timer: 2000,
-                    showConfirmButton: false
-                });
-
-                // Reload the page to show updated status
-                setTimeout(() => {
-                    window.location.reload();
-                }, 1500);
-            } else {
-                throw new Error(result.error || 'Failed to update status');
-            }
-        } catch (error) {
-            console.error('Error updating order status:', error);
-            Swal.fire({
-                icon: 'error',
-                title: 'Error!',
-                text: error.message || 'Failed to update order status',
-            });
-        } finally {
-            this.animations.hideLoader();
-        }
-    }
 }
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.ordersPage = new AdminOrders();
 });
-
-// Make updateOrderStatus available globally
-window.updateOrderStatus = (orderId, newStatus) => {
-    if (window.ordersPage) {
-        window.ordersPage.updateOrderStatus(orderId, newStatus);
-    }
-};
 
 export default AdminOrders;

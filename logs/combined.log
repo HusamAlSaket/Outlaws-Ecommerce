@@ -4873,3 +4873,60 @@ Cannot read properties of undefined (reading 'charAt')
 2025-08-14 12:37:56 [INFO]: Fetching popular products
 2025-08-14 12:37:56 [INFO]: Found 6 popular products
 2025-08-14 12:37:56 [INFO]: Home page data loaded successfully
+2025-08-20 10:47:24 [INFO]: Home page requested
+2025-08-20 10:47:24 [INFO]: Fetching trending products
+2025-08-20 10:47:26 [INFO]: Found 6 trending products
+2025-08-20 10:47:26 [INFO]: Fetching popular products
+2025-08-20 10:47:26 [INFO]: Found 6 popular products
+2025-08-20 10:47:26 [INFO]: Home page data loaded successfully
+2025-08-20 10:47:35 [INFO]: Product details requested
+2025-08-20 10:47:35 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b36e
+2025-08-20 10:47:36 [INFO]: Product details loaded successfully
+2025-08-20 10:47:41 [WARN]: Authentication required but no token provided
+2025-08-20 10:47:48 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 10:47:48 [INFO]: PasswordService compare: true
+2025-08-20 10:47:48 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 10:54:26 [WARN]: Authentication required but no token provided
+2025-08-20 10:54:31 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 10:54:31 [INFO]: PasswordService compare: true
+2025-08-20 10:54:31 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 10:57:59 [WARN]: Authentication required but no token provided
+2025-08-20 10:58:03 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 10:58:03 [INFO]: PasswordService compare: true
+2025-08-20 10:58:03 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 11:00:03 [WARN]: Authentication required but no token provided
+2025-08-20 11:00:08 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 11:00:08 [INFO]: PasswordService compare: true
+2025-08-20 11:00:08 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 11:15:17 [WARN]: Authentication required but no token provided
+2025-08-20 11:15:22 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 11:15:23 [INFO]: PasswordService compare: true
+2025-08-20 11:15:23 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 11:19:04 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\admin\order-details.ejs:50
+    48|                                 <% let imgSrc = item.image || item.productId?.image; %>
+    49|                                 let displaySrc = imgSrc ? (imgSrc.startsWith('uploads/') ? '/' + imgSrc : (imgSrc.startsWith('images/') ? '/' + imgSrc : '/images/default-user.png')) : '/images/default-user.png'; %>
+ >> 50|                                 <img src="<%= displaySrc %>" class="card-img-top" alt="<%= item.title %>" style="max-height:180px;object-fit:cover;">
+    51|                                 <div class="card-body">
+    52|                                     <h6 class="card-title"><%= item.title %></h6>
+    53|                                     <p class="card-text">Price: $<%= item.price.toFixed(2) %></p>
+
+displaySrc is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\admin\order-details.ejs:50
+    48|                                 <% let imgSrc = item.image || item.productId?.image; %>
+    49|                                 let displaySrc = imgSrc ? (imgSrc.startsWith('uploads/') ? '/' + imgSrc : (imgSrc.startsWith('images/') ? '/' + imgSrc : '/images/default-user.png')) : '/images/default-user.png'; %>
+ >> 50|                                 <img src="<%= displaySrc %>" class="card-img-top" alt="<%= item.title %>" style="max-height:180px;object-fit:cover;">
+    51|                                 <div class="card-body">
+    52|                                     <h6 class="card-title"><%= item.title %></h6>
+    53|                                     <p class="card-text">Price: $<%= item.price.toFixed(2) %></p>
+
+displaySrc is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\order-details.ejs":73:26)
+    at Proxy.forEach (<anonymous>)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\order-details.ejs":65:20)
+    at order-details (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)

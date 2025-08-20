@@ -1,330 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head') %>
-
-<!-- Additional head content for admin -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %> - E-commerce Admin</title>
+    <title><%= title %></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
-    <!-- Custom Admin Dashboard Styles -->
     <link href="/css/admin-dashboard.css" rel="stylesheet">
-    <!-- Admin Orders Page Styles -->
     <link href="/css/admin-orders-perfect.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Sidebar Overlay -->
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-    
-    <!-- Include Admin Sidebar -->
     <%- include('../partials/admin-sidebar', { currentPage: 'orders' }) %>
-
-    <!-- Main Content -->
     <div class="main-content shifted" id="mainContent">
-        <!-- Top Navigation -->
-        <div class="top-nav">
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <div class="breadcrumb">
-                <a href="/admin/orders" class="text-decoration-none">Admin / Orders</a> / Order Details
-            </div>
-            
-            <div class="user-info">
-                <span>Welcome, <%= user.username %></span>
-                <div class="user-avatar">
-                    <i class="fas fa-user"></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- Page Content -->
         <div class="content">
-            <!-- Page Header -->
-            <div class="page-header">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h1 class="page-title">
-                            <i class="fas fa-file-invoice text-primary"></i>
-                            Order Details - #<%= order.orderNumber %>
-                        </h1>
-                        <p class="page-subtitle">Complete order information and items</p>
-                    </div>
-                    <div>
-                        <a href="/admin/orders" class="btn btn-outline-primary">
-                            <i class="fas fa-arrow-left"></i> Back to Orders
-                        </a>
-                    </div>
-                </div>
+            <div class="page-header mb-4">
+                <h1 class="page-title">
+                    <i class="fas fa-file-invoice"></i>
+                    Order Details - #<%= order.orderNumber %>
+                </h1>
             </div>
-
-            <!-- Order Status Cards -->
-            <div class="row g-4 mb-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="content-card text-center">
-                        <div class="card-body">
-                            <i class="fas fa-receipt text-muted mb-2" style="font-size: 1.5rem;"></i>
-                            <h6 class="text-muted mb-1">Order Number</h6>
-                            <h5 class="mb-0">#<%= order.orderNumber %></h5>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="content-card text-center">
-                        <div class="card-body">
-                            <i class="fas fa-<%= order.isPaid ? 'check-circle' : 'clock' %> text-<%= order.isPaid ? 'success' : 'warning' %> mb-2" style="font-size: 1.5rem;"></i>
-                            <h6 class="text-muted mb-1">Payment Status</h6>
-                            <h5 class="mb-0 text-<%= order.isPaid ? 'success' : 'warning' %>"><%= order.isPaid ? 'Paid' : 'Unpaid' %></h5>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="content-card text-center">
-                        <div class="card-body">
-                            <i class="fas fa-shipping-fast text-info mb-2" style="font-size: 1.5rem;"></i>
-                            <h6 class="text-muted mb-1">Order Status</h6>
-                            <h5 class="mb-0 text-info"><%= (order.status || 'pending').charAt(0).toUpperCase() + (order.status || 'pending').slice(1) %></h5>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="content-card text-center">
-                        <div class="card-body">
-                            <i class="fas fa-dollar-sign text-primary mb-2" style="font-size: 1.5rem;"></i>
-                            <h6 class="text-muted mb-1">Total Amount</h6>
-                            <h5 class="mb-0 text-primary">$<%= order.totalAmount.toFixed(2) %></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Order Information Cards -->
-            <div class="row g-4 mb-4">
-                <!-- Order Info -->
-                <div class="col-lg-6">
-                    <div class="content-card">
-                        <div class="card-header">
-                            <h5 class="card-title mb-0">
-                                <i class="fas fa-info-circle me-2 text-muted"></i>
-                                Order Information
-                            </h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <div class="col-6">
-                                    <div class="info-item">
-                                        <label class="info-label">Order Number</label>
-                                        <div class="info-value fw-semibold">#<%= order.orderNumber %></div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="info-item">
-                                        <label class="info-label">Order Date</label>
-                                        <div class="info-value"><%= new Date(order.createdAt).toLocaleDateString() %></div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="info-item">
-                                        <label class="info-label">Payment Status</label>
-                                        <div class="info-value">
-                                            <span class="badge bg-<%= order.isPaid ? 'success' : 'warning' %> rounded-pill">
-                                                <%= order.isPaid ? 'Paid' : 'Unpaid' %>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="info-item">
-                                        <label class="info-label">Order Status</label>
-                                        <div class="info-value">
-                                            <span class="badge bg-info rounded-pill">
-                                                <%= (order.status || 'pending').charAt(0).toUpperCase() + (order.status || 'pending').slice(1) %>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="info-item">
-                                        <label class="info-label">Payment Method</label>
-                                        <div class="info-value"><%= order.paymentMethod || 'Cash on Delivery' %></div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="info-item">
-                                        <label class="info-label">Total Amount</label>
-                                        <div class="info-value fw-bold text-primary fs-5">$<%= order.totalAmount.toFixed(2) %></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Customer Info -->
-                <div class="col-lg-6">
-                    <div class="content-card">
-                        <div class="card-header">
-                            <h5 class="card-title mb-0">
-                                <i class="fas fa-user me-2 text-muted"></i>
-                                Customer Information
-                            </h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="row g-3">
-                                <% if (order.user) { %>
-                                    <div class="col-6">
-                                        <div class="info-item">
-                                            <label class="info-label">Username</label>
-                                            <div class="info-value fw-semibold"><%= order.user.username %></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="info-item">
-                                            <label class="info-label">Email</label>
-                                            <div class="info-value"><%= order.user.email %></div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                <% } else { %>
-                                    <div class="col-12">
-                                        <div class="info-item">
-                                            <div class="info-value text-muted">Guest User</div>
-                                        </div>
-                                    </div>
-                                <% } %>
-                                
-                                <% if (order.shippingInfo) { %>
-                                    <div class="col-12">
-                                        <hr class="my-3">
-                                        <h6 class="text-muted mb-3">Shipping Information</h6>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="info-item">
-                                            <label class="info-label">Full Name</label>
-                                            <div class="info-value fw-semibold"><%= order.shippingInfo.fullName %></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="info-item">
-                                            <label class="info-label">City</label>
-                                            <div class="info-value"><%= order.shippingInfo.city %></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="info-item">
-                                            <label class="info-label">Address</label>
-                                            <div class="info-value"><%= order.shippingInfo.address %></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="info-item">
-                                            <label class="info-label">Country</label>
-                                            <div class="info-value"><%= order.shippingInfo.country %></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="info-item">
-                                            <label class="info-label">Postal Code</label>
-                                            <div class="info-value"><%= order.shippingInfo.postalCode %></div>
-                                        </div>
-                                    </div>
-                                <% } %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Order Items -->
-            <div class="content-card">
-                <div class="card-header">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-shopping-cart me-2 text-muted"></i>
-                        Order Items (<%= order.items.length %>)
-                    </h5>
-                </div>
+            <div class="card mb-4">
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead class="table-light">
-                                <tr>
-                                    <th style="width: 80px;">Image</th>
-                                    <th>Product</th>
-                                    <th style="width: 100px;">Price</th>
-                                    <th style="width: 80px;">Quantity</th>
-                                    <th style="width: 120px;">Subtotal</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <% order.items.forEach(item => { %>
-                                    <tr>
-                                        <td>
-                                            <% 
-                                                let imagePath = item.image;
-                                                if (imagePath && !imagePath.startsWith('http://') && !imagePath.startsWith('https://')) {
-                                                    if (imagePath.startsWith('../public/')) {
-                                                        imagePath = imagePath.replace('../public/', '/');
-                                                    } else if (!imagePath.startsWith('/')) {
-                                                        imagePath = '/' + imagePath;
-                                                    }
-                                                }
-                                            %>
-                                            <% if (imagePath) { %>
-                                                <img src="<%= imagePath %>" alt="<%= item.title %>" 
-                                                     class="product-image" 
-                                                     style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px; border: 1px solid #dee2e6;"
-                                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                                <div class="bg-light d-flex align-items-center justify-content-center" 
-                                                     style="width: 60px; height: 60px; border-radius: 8px; border: 1px solid #dee2e6; display: none;">
-                                                    <i class="fas fa-image text-muted"></i>
-                                                </div>
-                                            <% } else { %>
-                                                <div class="bg-light d-flex align-items-center justify-content-center" 
-                                                     style="width: 60px; height: 60px; border-radius: 8px; border: 1px solid #dee2e6;">
-                                                    <i class="fas fa-image text-muted"></i>
-                                                </div>
-                                            <% } %>
-                                        </td>
-                                        <td>
-                                            <div class="fw-semibold"><%= item.title %></div>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">$<%= item.price.toFixed(2) %></span>
-                                        </td>
-                                        <td>
-                                            <span class="badge bg-light text-dark border"><%= item.qty %></span>
-                                        </td>
-                                        <td>
-                                            <span class="fw-semibold">$<%= (item.price * item.qty).toFixed(2) %></span>
-                                        </td>
-                                    </tr>
-                                <% }) %>
-                            </tbody>
-                            <tfoot>
-                                <tr class="table-light border-top">
-                                    <th colspan="4" class="text-end fs-6 fw-semibold">Total:</th>
-                                    <th class="text-primary fs-5 fw-bold">$<%= order.totalAmount.toFixed(2) %></th>
-                                </tr>
-                            </tfoot>
-                        </table>
+                    <h5><i class="fas fa-info-circle text-primary"></i> Order Information</h5>
+                    <ul class="list-unstyled mb-3">
+                        <li><strong>Order Number:</strong> #<%= order.orderNumber %></li>
+                        <li><strong>Total Amount:</strong> $<%= order.totalAmount.toFixed(2) %></li>
+                        <li><strong>Payment Status:</strong> <span class="badge <%= order.isPaid ? 'bg-success' : 'bg-warning' %>"><%= order.isPaid ? 'PAID' : 'UNPAID' %></span></li>
+                        <li><strong>Payment Method:</strong> <%= order.paymentMethod %></li>
+                        <li><strong>Order Date:</strong> <%= new Date(order.createdAt).toLocaleDateString() %></li>
+                    </ul>
+                    <h5><i class="fas fa-user text-primary"></i> Customer Information</h5>
+                    <ul class="list-unstyled mb-3">
+                        <li><strong>Name:</strong> <%= order.user?.username %></li>
+                        <li><strong>Email:</strong> <%= order.user?.email %></li>
+                        <li><strong>Full Name:</strong> <%= order.shippingInfo?.fullName %></li>
+                        <li><strong>Address:</strong> <%= order.shippingInfo?.address %></li>
+                        <li><strong>City:</strong> <%= order.shippingInfo?.city %></li>
+                        <li><strong>Country:</strong> <%= order.shippingInfo?.country %></li>
+                        <li><strong>Postal Code:</strong> <%= order.shippingInfo?.postalCode %></li>
+                    </ul>
+                    <h5><i class="fas fa-box text-primary"></i> Order Items (<%= order.items.length %>)</h5>
+                    <div class="row">
+                        <% order.items.forEach(item => { %>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                                                                                <% 
+                                    let imagePath = item.image || item.productId?.image;
+                                    if (imagePath) {
+                                        if (!imagePath.startsWith('http://') && !imagePath.startsWith('https://')) {
+                                            if (imagePath.startsWith('../public/')) {
+                                                imagePath = imagePath.replace('../public/', '/');
+                                            } else if (!imagePath.startsWith('/')) {
+                                                imagePath = '/' + imagePath;
+                                            }
+                                        }
+                                    } else {
+                                        imagePath = '/images/default-user.png';
+                                    }
+                                %>
+                                                                                                <img src="<%= imagePath %>" class="card-img-top" alt="<%= item.title %>" style="max-height:180px;object-fit:cover;">
+                                <div class="card-body">
+                                    <h6 class="card-title"><%= item.title %></h6>
+                                    <p class="card-text">Price: $<%= item.price.toFixed(2) %></p>
+                                    <p class="card-text">Quantity: <%= item.qty %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Orders Management JavaScript -->
-    <script type="module" src="/js/admin-orders-modular.js"></script>
 </body>
 </html>

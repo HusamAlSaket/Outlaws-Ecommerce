@@ -5,6 +5,26 @@ const { HTTP_STATUS } = require("../../config/constants");
 
 class AdminOrderController {
   /**
+   * Render order details page
+   */
+  async renderOrderDetailsPage(req, res) {
+    try {
+      const { orderId } = req.params;
+      const order = await adminService.getOrderById(orderId);
+      if (!order) {
+        return res.status(404).render('error', { title: 'Order Not Found', message: 'Order not found.' });
+      }
+      res.render('admin/order-details', {
+        title: `Order Details - #${order.orderNumber}`,
+        order,
+        user: req.user
+      });
+    } catch (error) {
+      console.error('Error rendering order details page:', error);
+      res.status(500).render('error', { title: 'Order Details Error', message: 'Unable to load order details.' });
+    }
+  }
+  /**
    * Render orders management page
    */
   async getOrders(req, res) {
@@ -78,29 +98,6 @@ class AdminOrderController {
   }
 
   /**
-   * Render order details page
-   */
-  async getOrderDetailsPage(req, res) {
-    try {
-      const { orderId } = req.params;
-      const order = await adminService.getOrderById(orderId);
-      
-      res.render("admin/order-details", {
-        title: "Order Details",
-        user: req.user,
-        order,
-      });
-    } catch (error) {
-      console.error("Order details page error:", error);
-      res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).render("error", {
-        title: "Order Details Error",
-        message: "Unable to load order details page",
-        error: process.env.NODE_ENV === "development" ? error : {},
-      });
-    }
-  }
-
-  /**
    * API endpoint to update an order
    */
   async updateOrder(req, res) {
@@ -111,25 +108,6 @@ class AdminOrderController {
       res.json(result);
     } catch (error) {
       console.error("Error updating order:", error);
-      res.status(HTTP_STATUS.BAD_REQUEST).json({
-        success: false,
-        error: error.message,
-      });
-    }
-  }
-
-  /**
-   * API endpoint to update order status
-   */
-  async updateOrderStatus(req, res) {
-    try {
-      const { orderId } = req.params;
-      const { status } = req.body;
-      
-      const result = await adminService.updateOrderStatus(orderId, status);
-      res.json(result);
-    } catch (error) {
-      console.error("Error updating order status:", error);
       res.status(HTTP_STATUS.BAD_REQUEST).json({
         success: false,
         error: error.message,

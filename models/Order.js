@@ -39,12 +39,12 @@ const orderSchema = new mongoose.Schema({
     type: String,
     default: 'Cash on Delivery'
   },
+  totalAmount: Number,
   status: {
     type: String,
-    enum: ['pending', 'processing', 'shipped', 'delivered', 'cancelled'],
-    default: 'pending'
+    enum: ['processing', 'shipped', 'completed', 'canceled'],
+    default: 'processing'
   },
-  totalAmount: Number,
   createdAt: {
     type: Date,
     default: Date.now

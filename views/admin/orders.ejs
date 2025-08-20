@@ -152,7 +152,7 @@
 
             <!-- Orders Table -->
             <div class="content-card">
-                <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="card-header">
                     <h5 class="card-title">
                         <i class="fas fa-table"></i>
                         Orders List
@@ -161,33 +161,44 @@
                         <span class="badge bg-primary"><%= pagination.totalOrders %> Total Orders</span>
                     </div>
                 </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Order</th>
-                                    <th>Customer</th>
-                                    <th>Total Amount</th>
-                                    <th>Payment</th>
-                                    <th>Status</th>
-                                    <th>Date</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Order #</th>
+                                <th>Customer</th>
+                                <th>Items</th>
+                                <th>Total Amount</th>
+                                <th>Payment</th>
+                                <th>Shipping Info</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <% if (orders && orders.length > 0) { %>
                                 <% orders.forEach(order => { %>
                                     <tr>
                                         <td>
-                                            <div class="order-number">#<%= order.orderNumber %></div>
+                                            <div class="order-number">OUTLAW <%= order.orderNumber.slice(-4) %></div>
                                         </td>
                                         <td>
                                             <div class="order-customer">
                                                 <% if (order.user) { %>
                                                     <%= order.user.username %>
+                                                    <div class="order-customer-email"><%= order.user.email %></div>
                                                 <% } else { %>
                                                     <span class="text-muted">Guest User</span>
+                                                <% } %>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="order-items-count">
+                                                <%= order.items.length %> item<%= order.items.length !== 1 ? 's' : '' %>
+                                            </span>
+                                            <div class="order-items-preview">
+                                                <% if (order.items.length > 0) { %>
+                                                    <%= order.items[0].title %><% if (order.items.length > 1) { %>, +<%= order.items.length - 1 %> more<% } %>
                                                 <% } %>
                                             </div>
                                         </td>
@@ -195,20 +206,19 @@
                                             <div class="order-amount">$<%= order.totalAmount.toFixed(2) %></div>
                                         </td>
                                         <td>
-                                            <span class="badge bg-<%= order.isPaid ? 'success' : 'warning' %>">
+                                            <span class="payment-status <%= order.isPaid ? 'paid' : 'unpaid' %>">
                                                 <%= order.isPaid ? 'Paid' : 'Unpaid' %>
                                             </span>
                                         </td>
                                         <td>
-                                            <select class="form-select form-select-sm status-dropdown" 
-                                                    onchange="updateOrderStatus('<%= order._id %>', this.value)"
-                                                    style="min-width: 120px;">
-                                                <option value="pending" <%= (!order.status || order.status === 'pending') ? 'selected' : '' %>>Pending</option>
-                                                <option value="processing" <%= order.status === 'processing' ? 'selected' : '' %>>Processing</option>
-                                                <option value="shipped" <%= order.status === 'shipped' ? 'selected' : '' %>>Shipped</option>
-                                                <option value="delivered" <%= order.status === 'delivered' ? 'selected' : '' %>>Delivered</option>
-                                                <option value="cancelled" <%= order.status === 'cancelled' ? 'selected' : '' %>>Cancelled</option>
-                                            </select>
+                                            <% if (order.shippingInfo) { %>
+                                                <div class="order-shipping-info">
+                                                    <div class="order-shipping-city"><%= order.shippingInfo.city %></div>
+                                                    <div><%= order.shippingInfo.country %></div>
+                                                </div>
+                                            <% } else { %>
+                                                <span class="text-muted">N/A</span>
+                                            <% } %>
                                         </td>
                                         <td>
                                             <div class="order-date">
@@ -220,10 +230,10 @@
                                         </td>
                                         <td>
                                             <div class="btn-group" role="group">
-                                                <a href="/admin/orders/<%= order._id %>" class="btn btn-info btn-sm table-action-btn" 
-                                                   title="View Details">
+                                                <a href="/admin/orders/details/<%= order._id %>" class="btn btn-outline-primary table-action-btn view-btn" title="View Details">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
+                                    
                                                 <div class="form-check form-switch d-inline-block ms-2 me-2">
                                                     <input class="form-check-input toggle-switch" type="checkbox" 
                                                            id="togglePayment<%= order._id %>" 
@@ -232,7 +242,7 @@
                                                            title="<%= order.isPaid ? 'Mark as Unpaid' : 'Mark as Paid' %>">
                                                     <label class="form-check-label visually-hidden" for="togglePayment<%= order._id %>">Toggle Payment</label>
                                                 </div>
-                                                <button type="button" class="btn btn-danger btn-sm table-action-btn" 
+                                                <button type="button" class="btn btn-danger table-action-btn ms-2" 
                                                         onclick="deleteOrder('<%= order._id %>', '<%= order.orderNumber %>')" 
                                                         title="Delete Order">
                                                     <i class="fas fa-trash"></i>
@@ -243,7 +253,7 @@
                                 <% }) %>
                             <% } else { %>
                                 <tr>
-                                    <td colspan="9" class="text-center py-5">
+                                    <td colspan="8" class="text-center py-5">
                                         <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
                                         <p class="text-muted">No orders found</p>
                                     </td>
@@ -252,10 +262,10 @@
                         </tbody>
                     </table>
                 </div>
-                
+
                 <!-- Pagination -->
                 <% if (pagination.totalPages > 1) { %>
-                    <nav aria-label="Orders pagination" class="pagination-container">
+                    <nav aria-label="Orders pagination" class="mt-4 mb-4 pb-4">
                         <ul class="pagination justify-content-center">
                             <% if (pagination.hasPrev) { %>
                                 <li class="page-item">
@@ -283,7 +293,6 @@
                         </ul>
                     </nav>
                 <% } %>
-                </div>
             </div>
         </div>
     </div>
