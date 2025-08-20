@@ -695,3 +695,116 @@ Cannot read properties of undefined (reading 'charAt')
 2025-08-11 13:10:06 [ERROR]: Login error from service: Invalid email or password
 2025-08-14 12:00:57 [ERROR]: Login failed: invalid password for email tesla@gmail.com
 2025-08-14 12:00:57 [ERROR]: Login error from service: Invalid email or password
+2025-08-20 11:19:04 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\admin\order-details.ejs:50
+    48|                                 <% let imgSrc = item.image || item.productId?.image; %>
+    49|                                 let displaySrc = imgSrc ? (imgSrc.startsWith('uploads/') ? '/' + imgSrc : (imgSrc.startsWith('images/') ? '/' + imgSrc : '/images/default-user.png')) : '/images/default-user.png'; %>
+ >> 50|                                 <img src="<%= displaySrc %>" class="card-img-top" alt="<%= item.title %>" style="max-height:180px;object-fit:cover;">
+    51|                                 <div class="card-body">
+    52|                                     <h6 class="card-title"><%= item.title %></h6>
+    53|                                     <p class="card-text">Price: $<%= item.price.toFixed(2) %></p>
+
+displaySrc is not defined
+ReferenceError: C:\Users\ADMIN\Documents\node-ecommerce\views\admin\order-details.ejs:50
+    48|                                 <% let imgSrc = item.image || item.productId?.image; %>
+    49|                                 let displaySrc = imgSrc ? (imgSrc.startsWith('uploads/') ? '/' + imgSrc : (imgSrc.startsWith('images/') ? '/' + imgSrc : '/images/default-user.png')) : '/images/default-user.png'; %>
+ >> 50|                                 <img src="<%= displaySrc %>" class="card-img-top" alt="<%= item.title %>" style="max-height:180px;object-fit:cover;">
+    51|                                 <div class="card-body">
+    52|                                     <h6 class="card-title"><%= item.title %></h6>
+    53|                                     <p class="card-text">Price: $<%= item.price.toFixed(2) %></p>
+
+displaySrc is not defined
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\order-details.ejs":73:26)
+    at Proxy.forEach (<anonymous>)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\order-details.ejs":65:20)
+    at order-details (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-08-20 12:22:01 [ERROR]: JWT verification failed: jwt expired
+2025-08-20 13:18:30 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+TypeError: C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":33:41)
+    at Array.forEach (<anonymous>)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":27:16)
+    at reviews (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-08-20 13:20:21 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+TypeError: C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":33:41)
+    at Array.forEach (<anonymous>)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":27:16)
+    at reviews (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-08-20 13:20:35 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+TypeError: C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":33:41)
+    at Array.forEach (<anonymous>)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":27:16)
+    at reviews (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)

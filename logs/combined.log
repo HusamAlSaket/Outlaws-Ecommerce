@@ -4930,3 +4930,187 @@ displaySrc is not defined
     at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
     at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
     at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-08-20 13:12:46 [WARN]: Authentication required but no token provided
+2025-08-20 13:12:51 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 13:12:51 [INFO]: PasswordService compare: true
+2025-08-20 13:12:51 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 13:13:13 [WARN]: Authentication required but no token provided
+2025-08-20 13:13:17 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 13:13:17 [INFO]: PasswordService compare: true
+2025-08-20 13:13:17 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 13:16:31 [WARN]: Authentication required but no token provided
+2025-08-20 13:16:37 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 13:16:37 [INFO]: PasswordService compare: true
+2025-08-20 13:16:37 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 13:17:02 [WARN]: Authentication required but no token provided
+2025-08-20 13:17:08 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 13:17:08 [INFO]: PasswordService compare: true
+2025-08-20 13:17:08 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 13:18:20 [WARN]: Authentication required but no token provided
+2025-08-20 13:18:24 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 13:18:24 [INFO]: PasswordService compare: true
+2025-08-20 13:18:24 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 13:18:30 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+TypeError: C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":33:41)
+    at Array.forEach (<anonymous>)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":27:16)
+    at reviews (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-08-20 13:20:13 [WARN]: Authentication required but no token provided
+2025-08-20 13:20:17 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 13:20:18 [INFO]: PasswordService compare: true
+2025-08-20 13:20:18 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 13:20:21 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+TypeError: C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":33:41)
+    at Array.forEach (<anonymous>)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":27:16)
+    at reviews (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-08-20 13:20:28 [WARN]: Authentication required but no token provided
+2025-08-20 13:20:31 [INFO]: Login attempt: tesla@gmail.com, userFound: true
+2025-08-20 13:20:31 [INFO]: PasswordService compare: true
+2025-08-20 13:20:31 [INFO]: User logged in: tesla@gmail.com
+2025-08-20 13:20:35 [ERROR]: Application Error C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+TypeError: C:\Users\ADMIN\Documents\node-ecommerce\views\admin\reviews.ejs:83
+    81|                                 <tr>
+    82|                                     <td><%= review.user.username %></td>
+ >> 83|                                     <td><%= review.product.name %></td>
+    84|                                     <td>
+    85|                                         <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+    86|                                     </td>
+
+Cannot read properties of null (reading 'name')
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":33:41)
+    at Array.forEach (<anonymous>)
+    at eval ("C:\\Users\\ADMIN\\Documents\\node-ecommerce\\views\\admin\\reviews.ejs":27:16)
+    at reviews (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\view.js:139:8)
+    at tryRender (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:627:10)
+    at Function.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\application.js:574:3)
+    at ServerResponse.render (C:\Users\ADMIN\Documents\node-ecommerce\node_modules\express\lib\response.js:909:7)
+2025-08-20 13:23:57 [INFO]: Home page requested
+2025-08-20 13:23:57 [INFO]: Fetching trending products
+2025-08-20 13:23:57 [INFO]: Found 6 trending products
+2025-08-20 13:23:57 [INFO]: Fetching popular products
+2025-08-20 13:23:57 [INFO]: Found 6 popular products
+2025-08-20 13:23:57 [INFO]: Home page data loaded successfully
+2025-08-20 13:23:59 [INFO]: Products page requested
+2025-08-20 13:23:59 [INFO]: Fetching all products with filters:
+2025-08-20 13:23:59 [INFO]: Found 5 products (12 total)
+2025-08-20 13:23:59 [INFO]: Products page data loaded successfully
+2025-08-20 13:24:02 [INFO]: Cart add request
+2025-08-20 13:24:02 [INFO]: Adding item to cart
+2025-08-20 13:24:02 [INFO]: Item added to cart successfully
+2025-08-20 13:24:02 [INFO]: Cart page requested
+2025-08-20 13:24:02 [INFO]: Cart page loaded
+2025-08-20 13:24:04 [INFO]: Cart page requested
+2025-08-20 13:24:04 [INFO]: Cart page loaded
+2025-08-20 13:24:07 [INFO]: Checkout page requested
+2025-08-20 13:24:07 [INFO]: Checkout page loaded
+2025-08-20 13:24:25 [INFO]: Processing checkout
+2025-08-20 13:24:25 [INFO]: Creating new order
+2025-08-20 13:24:25 [INFO]: Validating cart for checkout
+2025-08-20 13:24:25 [INFO]: Cart validation successful
+2025-08-20 13:24:25 [INFO]: Updating product stock
+2025-08-20 13:24:25 [INFO]: Stock updated
+2025-08-20 13:24:25 [INFO]: Order created successfully
+2025-08-20 13:24:25 [INFO]: Cart cleared
+2025-08-20 13:24:25 [INFO]: Checkout completed successfully
+2025-08-20 13:24:25 [INFO]: Orders page requested
+2025-08-20 13:24:25 [INFO]: Fetching user orders
+2025-08-20 13:24:25 [INFO]: Orders retrieved successfully
+2025-08-20 13:24:25 [INFO]: Orders page loaded
+2025-08-20 13:24:32 [INFO]: Products page requested
+2025-08-20 13:24:32 [INFO]: Fetching all products with filters:
+2025-08-20 13:24:32 [INFO]: Found 5 products (12 total)
+2025-08-20 13:24:32 [INFO]: Products page data loaded successfully
+2025-08-20 13:24:34 [INFO]: Product details requested
+2025-08-20 13:24:34 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b36d
+2025-08-20 13:24:34 [INFO]: Product details loaded successfully
+2025-08-20 13:24:52 [INFO]: Product details requested
+2025-08-20 13:24:52 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b36d
+2025-08-20 13:24:52 [INFO]: Product details loaded successfully
+2025-08-20 13:24:58 [INFO]: Home page requested
+2025-08-20 13:24:58 [INFO]: Fetching trending products
+2025-08-20 13:24:58 [INFO]: Found 6 trending products
+2025-08-20 13:24:58 [INFO]: Fetching popular products
+2025-08-20 13:24:58 [INFO]: Found 6 popular products
+2025-08-20 13:24:58 [INFO]: Home page data loaded successfully
+2025-08-20 13:26:09 [INFO]: Home page requested
+2025-08-20 13:26:09 [INFO]: Fetching trending products
+2025-08-20 13:26:09 [INFO]: Found 6 trending products
+2025-08-20 13:26:09 [INFO]: Fetching popular products
+2025-08-20 13:26:09 [INFO]: Found 6 popular products
+2025-08-20 13:26:09 [INFO]: Home page data loaded successfully
+2025-08-20 13:26:29 [INFO]: Product details requested
+2025-08-20 13:26:29 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b36d
+2025-08-20 13:26:29 [INFO]: Product details loaded successfully
+2025-08-20 13:26:58 [INFO]: Product details requested
+2025-08-20 13:26:58 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b36d
+2025-08-20 13:26:58 [INFO]: Product details loaded successfully
+2025-08-20 13:26:59 [INFO]: Product details requested
+2025-08-20 13:26:59 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b36d
+2025-08-20 13:26:59 [INFO]: Product details loaded successfully
+2025-08-20 13:26:59 [INFO]: Product details requested
+2025-08-20 13:26:59 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b36d
+2025-08-20 13:27:00 [INFO]: Product details loaded successfully
+2025-08-20 13:27:00 [INFO]: Product details requested
+2025-08-20 13:27:00 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b36d
+2025-08-20 13:27:01 [INFO]: Product details loaded successfully
+2025-08-20 13:27:02 [INFO]: Product details requested
+2025-08-20 13:27:02 [INFO]: Fetching product with ID: 6899ad0542ae9a5bf534b36d
+2025-08-20 13:27:02 [INFO]: Product details loaded successfully

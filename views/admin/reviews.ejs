@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews Management - E-commerce Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="/css/admin-dashboard.css" rel="stylesheet">
+    <link href="/css/admin-products.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <%- include('../partials/admin-sidebar', { currentPage: 'reviews' }) %>
+    <div class="main-content shifted" id="mainContent">
+        <div class="top-nav">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="breadcrumb">Admin / Reviews</div>
+            <div class="user-info">
+                <span>Welcome, <%= user.username %></span>
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="page-header">
+                <h1 class="page-title">
+                    <i class="fas fa-star"></i>
+                    Reviews Management
+                </h1>
+                <p class="page-subtitle">Manage product reviews, ratings, and visibility</p>
+            </div>
+            <div class="row g-4 mb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon products-total">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number"><%= reviewStats.totalReviews %></div>
+                            <div class="stat-label">Total Reviews</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-icon products-active">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number"><%= reviewStats.visibleReviews %></div>
+                            <div class="stat-label">Visible Reviews</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card content-card">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                    <h2 class="card-title mb-0"><i class="fas fa-comments"></i> All Reviews</h2>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Product</th>
+                                    <th>Rating</th>
+                                    <th>Comment</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% reviews.forEach(function(review) { %>
+                                <tr>
+                                    <td><%= review.user.username %></td>
+                                    <td><%= review.product ? review.product.title : 'N/A' %></td>
+                                    <td>
+                                        <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+                                    </td>
+                                    <td><%= review.comment %></td>
+                                    <td>
+                                        <div class="form-check form-switch d-inline-block ms-2 me-2">
+                                            <input class="form-check-input toggle-switch" type="checkbox" 
+                                                   id="toggleReview<%= review._id %>" 
+                                                   <%= review.isVisible ? 'checked' : '' %>
+                                                   onchange="toggleReviewStatus('<%= review._id %>', this.checked)"
+                                                   title="<%= review.isVisible ? 'Visible' : 'Hidden' %>">
+                                            <label class="form-check-label visually-hidden" for="toggleReview<%= review._id %>">Toggle Status</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger table-action-btn ms-2" 
+                                                onclick="deleteReview('<%= review._id %>')" 
+                                                title="Delete Review">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/admin-reviews-modular.js"></script>
+</body>
+</html>
