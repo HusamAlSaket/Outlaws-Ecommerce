@@ -170,7 +170,7 @@
                                 <th>Items</th>
                                 <th>Total Amount</th>
                                 <th>Payment</th>
-                                <th>Shipping Info</th>
+                                <th>Status</th>
                                 <th>Date</th>
                                 <th>Actions</th>
                             </tr>
@@ -186,7 +186,6 @@
                                             <div class="order-customer">
                                                 <% if (order.user) { %>
                                                     <%= order.user.username %>
-                                                    <div class="order-customer-email"><%= order.user.email %></div>
                                                 <% } else { %>
                                                     <span class="text-muted">Guest User</span>
                                                 <% } %>
@@ -211,14 +210,7 @@
                                             </span>
                                         </td>
                                         <td>
-                                            <% if (order.shippingInfo) { %>
-                                                <div class="order-shipping-info">
-                                                    <div class="order-shipping-city"><%= order.shippingInfo.city %></div>
-                                                    <div><%= order.shippingInfo.country %></div>
-                                                </div>
-                                            <% } else { %>
-                                                <span class="text-muted">N/A</span>
-                                            <% } %>
+                                            <span class="badge" style="background:none; color:inherit; font-size:0.85rem; padding: 0.35em 0.8em; border:1px solid #e5e7eb;"> <%= order.status.charAt(0).toUpperCase() + order.status.slice(1) %> </span>
                                         </td>
                                         <td>
                                             <div class="order-date">
@@ -230,19 +222,23 @@
                                         </td>
                                         <td>
                                             <div class="btn-group" role="group">
-                                                <a href="/admin/orders/details/<%= order._id %>" class="btn btn-outline-primary table-action-btn view-btn" title="View Details">
+                                                <a href="/admin/orders/details/<%= order._id %>" class="btn table-action-btn view-btn" style="background:#04c3ec;color:#fff;border:none;" title="View Details">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
-                                    
+                                                <button type="button" class="btn table-action-btn edit-btn ms-2" style="background:#2343b4;color:#fff;border:none;" 
+                                                        onclick="editOrder('<%= order._id %>')" 
+                                                        title="Edit Status">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
                                                 <div class="form-check form-switch d-inline-block ms-2 me-2">
-                                                    <input class="form-check-input toggle-switch" type="checkbox" 
-                                                           id="togglePayment<%= order._id %>" 
+                                                    <input class="form-check-input toggle-switch" type="checkbox"
+                                                           id="togglePayment<%= order._id %>"
                                                            <%= order.isPaid ? 'checked' : '' %>
                                                            onchange="toggleOrderPaymentStatus('<%= order._id %>', '<%= order.orderNumber %>', this.checked)"
                                                            title="<%= order.isPaid ? 'Mark as Unpaid' : 'Mark as Paid' %>">
                                                     <label class="form-check-label visually-hidden" for="togglePayment<%= order._id %>">Toggle Payment</label>
                                                 </div>
-                                                <button type="button" class="btn btn-danger table-action-btn ms-2" 
+                                                <button type="button" class="btn table-action-btn ms-2" style="background:#f44336;color:#fff;border:none;" 
                                                         onclick="deleteOrder('<%= order._id %>', '<%= order.orderNumber %>')" 
                                                         title="Delete Order">
                                                     <i class="fas fa-trash"></i>
