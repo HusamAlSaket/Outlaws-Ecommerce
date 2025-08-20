@@ -27,6 +27,6 @@ exports.createReview = async (req, res) => {
 
 exports.getProductReviews = async (req, res) => {
   const { productId } = req.params;
-  const reviews = await Review.find({ product: productId }).populate('user', 'username');
+  const reviews = await Review.find({ product: productId, isVisible: true }).populate('user', 'username');
   res.json(reviews);
 };

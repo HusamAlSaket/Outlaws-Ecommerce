@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     Swal.fire({
                         icon: 'success',
                         title: 'Review status updated',
-                        timer: 1200,
+                        timer: 800,
                         showConfirmButton: false
                     });
+                    setTimeout(() => window.location.reload(), 850);
                 } else {
                     Swal.fire({
                         icon: 'error',

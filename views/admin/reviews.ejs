@@ -73,7 +73,7 @@
                                     <th>Rating</th>
                                     <th>Comment</th>
                                     <th>Status</th>
-                                    <th>Actions</th>
+                                    <!-- Actions column removed -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -82,7 +82,7 @@
                                     <td><%= review.user.username %></td>
                                     <td><%= review.product ? review.product.title : 'N/A' %></td>
                                     <td>
-                                        <span class="badge bg-warning text-dark"><%= review.rating %> <i class="fas fa-star"></i></span>
+                                        <span class="badge" style="background:#1e40af;color:#fff;font-size:1.1em;padding:8px 18px;border-radius:10px;"><%= review.rating %> <i class="fas fa-star"></i></span>
                                     </td>
                                     <td><%= review.comment %></td>
                                     <td>
@@ -95,13 +95,7 @@
                                             <label class="form-check-label visually-hidden" for="toggleReview<%= review._id %>">Toggle Status</label>
                                         </div>
                                     </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger table-action-btn ms-2" 
-                                                onclick="deleteReview('<%= review._id %>')" 
-                                                title="Delete Review">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
+                                    <!-- Actions cell removed -->
                                 </tr>
                                 <% }) %>
                             </tbody>

@@ -177,7 +177,7 @@
           <div class="reviews-list">
             <h4 class="mb-4 text-navy">All Reviews (<%= reviews.length %>)</h4>
             
-            <% reviews.forEach(function(review, index) { %>
+            <% reviews.forEach(function(review, index) { if (review.isVisible !== false) { %>
               <div class="review-item">
                 <div class="review-header">
                   <div class="reviewer-info">
@@ -221,7 +221,7 @@
                   </div>
                 </div>
               </div>
-            <% }) %>
+            <% }} ) %>
           </div>
         <% } else { %>
           <div class="no-reviews">
